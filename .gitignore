@@ -1,12 +1,5 @@
 # Eleventy build
-_site
-
-# vscode settings
-.vscode
+dist
 
 # Dependency directories
 node_modules/
-
-# dotenv environment variables file
-.env
-.env.test
