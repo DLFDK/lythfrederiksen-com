@@ -1,20 +1,26 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./src/images/");
+    // eleventyConfig.addPassthroughCopy("./src/images/");
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addWatchTarget("./src/css/");
 
     if (process.argv.includes('--serve')) {
         const { createProxyMiddleware } = require('http-proxy-middleware');
-        const proxy_dmi = createProxyMiddleware('/images', {
-            target: 'https://res.cloudinary.com/dypwsyigo/image/upload/lythfrederiksen-com',
+        const proxy = createProxyMiddleware('/cloudinary', {
+            target: 'http://localhost:8080/images/',
             changeOrigin: true,
-            pathRewrite: {
-                '^/images*': '/' // remove base path
+            pathRewrite: function(path, req){
+                return path.slice(path.lastIndexOf("/"));
             }
         });
         eleventyConfig.setBrowserSyncConfig({
-            open: true,
-            middleware: [proxy_dmi]
+            // open: true,
+            middleware: [proxy],
+            server: {
+                baseDir: "./dist",
+                routes: {
+                    "/images": "./images"
+                }
+            }
         });
     }
 

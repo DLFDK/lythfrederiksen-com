@@ -1,9 +1,10 @@
 [build]
     publish = "dist"
     command = "npm run build"
+    NODE_ENV = "production"
 
 [[redirects]]
-  from = "/images/*"
-  to = "https://res.cloudinary.com/dypwsyigo/image/upload/v1583543487/lythfrederiksen-com/:splat"
+  from = "/cloudinary/*"
+  to = ":splat"
   status = 200
   force = true
