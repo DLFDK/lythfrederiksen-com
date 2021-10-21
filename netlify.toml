@@ -1,10 +1,9 @@
 [build]
     publish = "dist"
     command = "npm run build"
-    NODE_ENV = "production"
 
-[[redirects]]
-  from = "/cloudinary/*"
-  to = ":splat"
-  status = 200
-  force = true
+# [[redirects]]
+#   from = "/cloudinary/*"
+#   to = ":splat"
+#   status = 200y
+#   force = true
