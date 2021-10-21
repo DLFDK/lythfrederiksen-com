@@ -3,8 +3,29 @@ title: A dark place...
 layout: base.njk
 templateEngineOverride: njk,md
 ---
-<!-- {% include "postlist.njk" %} -->
+```javascript
+const htmlmin = require("html-minifier");
 
-<!-- <img src="images/two-day-forecast.png" alt=""> -->
-<!-- <img src="../images/two-day-forecast.png" alt=""> -->
-<!-- <img src="cloudinary/https://res.cloudinary.com/dypwsyigo/image/upload/f_auto,q_auto,w_320/v1583543487/lythfrederiksen-com/two-day-forecast.png" alt=""> -->
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("./src/css/");
+    eleventyConfig.addWatchTarget("./src/css/");
+
+    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+            if ( outputPath && outputPath.endsWith("html")){
+                let minified = htmlmin.minify(content, {
+                    removeComments: true
+                });
+                return minified;
+            } else {
+                return content;
+            }
+        });
+
+    return {
+        dir: {
+            input: "src",
+            output: "dist"
+        }
+    }
+}
+```
