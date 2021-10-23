@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 
-body{
+body {
     background: #000;
     height: 100%;
     display: flex;
@@ -13,14 +13,12 @@ body{
 
 main {
     color: white;
-    
 }
 
 code {
     display: block;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-weight: 400;
-    /* margin-left: 100px; */
     margin: auto;
     width: min-content;
 }
