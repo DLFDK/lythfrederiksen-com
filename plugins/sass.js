@@ -1,24 +1,38 @@
 const sass = require("sass");
 const fs = require("fs");
 
-module.exports = function (content, outputPath, src = ".", dest = "_site", options) {
+module.exports = function (content, outputPath, options) {
     if (outputPath && outputPath.endsWith("html")) {
         const styleLinks = content.matchAll(/<link.*rel="stylesheet".*>/g);
-        if(styleLinks){
+        if (styleLinks) {
             let output = content;
             for (const [string] of styleLinks) {
                 const [, path, file, extension] = string.match(/href="[\.\/]*(.*\/)(.*)\.(s?[ac]ss)"/);
                 try {
                     const result = sass.renderSync({
-                        file: `${src}/${path}${file}.${extension}`,
-                        ...options
+                        file: `${options.src}/${path}${file}.${extension}`,
+                        ...options.sass
                     });
-                    if (string.includes("inline")) {
-                        output = output.replace(string, `<style>${result.css}</style>`)
-                    } else {
-                        fs.mkdirSync(`${dest}/${path}`, { recursive: true })
-                        fs.writeFileSync(`${dest}/${path}${file}.css`, result.css);
-                        output = output.replace(string, `<link rel="stylesheet" href="/${path}${file}.css">`)
+
+                    switch (options.inline) {
+                        case "all":
+                            output = output.replace(string, `<style>${result.css}</style>`);
+                            break;
+                        case "selected":
+                            if (string.includes("inline")) {
+                                output = output.replace(string, `<style>${result.css}</style>`)
+                            } else {
+                                fs.mkdirSync(`${options.dest}/${path}`, { recursive: true })
+                                fs.writeFileSync(`${options.dest}/${path}${file}.css`, result.css);
+                                output = output.replace(string, `<link rel="stylesheet" href="/${path}${file}.css">`)
+                            }
+                            break;
+                        default:
+                        case "none":
+                            fs.mkdirSync(`${options.dest}/${path}`, { recursive: true })
+                            fs.writeFileSync(`${options.dest}/${path}${file}.css`, result.css);
+                            output = output.replace(string, `<link rel="stylesheet" href="/${path}${file}.css">`)
+                            break;
                     }
                 } catch (error) {
                     console.log(error);
