@@ -1,7 +1,7 @@
 const sass = require("sass");
 const fs = require("fs");
 
-module.exports = function (content, outputPath, options) {
+module.exports = function (content, outputPath, src = ".", dest = "_site", options) {
     if (outputPath && outputPath.endsWith("html")) {
         const styleLinks = content.matchAll(/<link.*rel="stylesheet".*>/g);
         if(styleLinks){
@@ -10,14 +10,14 @@ module.exports = function (content, outputPath, options) {
                 const [, path, file, extension] = string.match(/href="[\.\/]*(.*\/)(.*)\.(s?[ac]ss)"/);
                 try {
                     const result = sass.renderSync({
-                        file: `src/${path}${file}.${extension}`,
+                        file: `${src}/${path}${file}.${extension}`,
                         ...options
                     });
                     if (string.includes("inline")) {
                         output = output.replace(string, `<style>${result.css}</style>`)
                     } else {
-                        fs.mkdirSync(`dist/${path}`, { recursive: true })
-                        fs.writeFileSync(`dist/${path}${file}.css`, result.css);
+                        fs.mkdirSync(`${dest}/${path}`, { recursive: true })
+                        fs.writeFileSync(`${dest}/${path}${file}.css`, result.css);
                         output = output.replace(string, `<link rel="stylesheet" href="/${path}${file}.css">`)
                     }
                 } catch (error) {

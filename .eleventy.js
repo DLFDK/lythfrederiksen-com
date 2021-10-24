@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addTransform("sass", (content, outputPath) => {
-        return sass(content, outputPath, {
+        return sass(content, outputPath, "src", "dist", {
             outputStyle: "expanded"
         });
     });
