@@ -1,7 +1,7 @@
 const sass = require("sass");
 const fs = require("fs");
 
-module.exports = function (content, outputPath) {
+module.exports = function (content, outputPath, options) {
     if (outputPath && outputPath.endsWith("html")) {
         const styleLinks = content.matchAll(/<link.*rel="stylesheet".*>/g);
         if(styleLinks){
@@ -10,7 +10,8 @@ module.exports = function (content, outputPath) {
                 const [, path, file, extension] = string.match(/href="[\.\/]*(.*\/)(.*)\.(s?[ac]ss)"/);
                 try {
                     const result = sass.renderSync({
-                        file: `src/${path}${file}.${extension}`
+                        file: `src/${path}${file}.${extension}`,
+                        ...options
                     });
                     if (string.includes("inline")) {
                         output = output.replace(string, `<style>${result.css}</style>`)

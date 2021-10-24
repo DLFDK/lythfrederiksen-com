@@ -1,11 +1,8 @@
 const htmlmin = require("html-minifier");
 
-module.exports = function (content, outputPath) {
+module.exports = function (content, outputPath, options) {
     if (outputPath && outputPath.endsWith("html")) {
-        let minified = htmlmin.minify(content, {
-            removeComments: true
-        });
-        return minified;
+        return htmlmin.minify(content, options);
     } else {
         return content;
     }
