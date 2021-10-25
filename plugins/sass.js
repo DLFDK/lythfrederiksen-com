@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports = function (content, outputPath, options) {
     if (outputPath && outputPath.endsWith("html")) {
-        const styleLinks = content.matchAll(/<link.*?(rel="stylesheet").*?>/g);
+        const styleLinks = content.matchAll(/<link.*?rel="stylesheet".*?>/g);
         if (styleLinks) {
             let output = content;
             for (const [string] of styleLinks) {
