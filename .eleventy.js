@@ -2,25 +2,43 @@ const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget("./src/css/");
-
-    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-        return htmlmin(content, outputPath, {
-            removeComments: true
+    if( process.argv.includes("--serve")){
+        eleventyConfig.addWatchTarget("./src/css/");
+        eleventyConfig.addTransform("sass", (content, outputPath) => {
+            return sass(content, outputPath, {
+                src: "src",
+                dest: "dist",
+                inline: "none",
+                sass: {
+                    outputStyle: "expanded"
+                }
+            },
+            );
         });
-    });
-
-    eleventyConfig.addTransform("sass", (content, outputPath) => {
-        return sass(content, outputPath, {
-            src: "src",
-            dest: "dist",
-            inline: "none",
-            sass: {
-                outputStyle: "expanded"
-            }
-        },
-        );
-    });
+        eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+            return htmlmin(content, outputPath, {
+                removeComments: true
+            });
+        });
+    } else {
+        eleventyConfig.addTransform("sass", (content, outputPath) => {
+            return sass(content, outputPath, {
+                src: "src",
+                dest: "dist",
+                inline: "all",
+                sass: {
+                    outputStyle: "compressed"
+                }
+            },
+            );
+        });
+        eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+            return htmlmin(content, outputPath, {
+                collapseWhitespace: true,
+                removeComments: true
+            });
+        });
+    }
 
     // if (process.argv.includes('--serve')) {
     //     const { createProxyMiddleware } = require('http-proxy-middleware');
