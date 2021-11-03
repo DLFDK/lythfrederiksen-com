@@ -2,7 +2,7 @@ const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
-    if( process.argv.includes("--serve")){
+    if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
@@ -62,6 +62,9 @@ module.exports = function (eleventyConfig) {
     // }
 
     return {
+        markdownTemplateEngine: 'njk',
+        dataTemplateEngine: 'njk',
+        htmlTemplateEngine: 'njk',
         dir: {
             input: "src",
             output: "dist"
