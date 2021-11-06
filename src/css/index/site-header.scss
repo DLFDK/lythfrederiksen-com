@@ -1,0 +1,106 @@
+.site-header {
+    --transition-duration: 150ms cubic-bezier(0.215,0.61,0.355,1);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px 0px;
+
+    &__logo {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__nav {
+        padding: 0 16px;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: .2px;
+    }
+
+    &__list {
+        padding: 0;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__list-item {
+        list-style: none;
+    }
+
+    &__list-button {
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+        color: white;
+        background: transparent;
+        transition: var(--transition-duration);
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        @media (hover: none) {
+            &:focus {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    // &__login {
+    // }
+
+    // &__login-link {
+    //     text-decoration: none;
+    //     color: white;
+    //     background-color: rgba($color: white, $alpha: 0.2);
+    //     padding: 3px 12px 6px 16px;
+    //     border-radius: 16.5px;
+    //     transition: background-color var(--transition-duration);
+
+    //     &:hover {
+    //         background-color: rgba($color: white, $alpha: 0.4);
+    //     }
+    // }
+
+    // &__login-text {
+    //     font-size: 15px;
+    //     font-weight: 425;
+    // }
+
+    // &__login-svg {
+    //     padding-left: 5px;
+    //     position: relative;
+    //     top: 1px;
+    //     stroke-width: 2px;
+    //     fill: none;
+    //     stroke: white;
+    // }
+
+    // &__arrow-line {
+    //     opacity: 0;
+    //     transition: opacity var(--transition-duration);
+    // }
+
+    // &__arrow-point {
+    //     transition: transform var(--transition-duration);
+    // }
+
+    // &__login:hover &__arrow-line {
+    //     opacity: 1;
+    // }
+
+    // &__login:hover &__arrow-point {
+    //     transform: translateX(3px);
+    // }
+}

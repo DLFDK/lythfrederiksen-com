@@ -1,0 +1,24 @@
+body {
+    font-family: var(--font-family);
+    background: white;
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) [wrapper-start] minmax(320px, 1080px) [wrapper-end] minmax(0px, 1fr);
+    grid-template-areas: 
+    "left header right"
+    "left hero right";
+    // overflow-x: hidden;
+
+    // & > * {
+    //     grid-column: wrapper-start / wrapper-end;
+    // }
+
+    // @media not screen and (prefers-reduced-motion) {
+    //     background: blue;
+    // }
+
+    // @media (hover) {
+    //     background: blue;
+    // }
+    
+}

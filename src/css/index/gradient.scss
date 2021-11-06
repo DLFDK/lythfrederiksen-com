@@ -1,0 +1,56 @@
+.gradient {
+    position: relative;
+    grid-column: left/right;
+    grid-row: header/hero;
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 65%);
+    z-index: -1;
+    overflow: hidden;
+
+    &__conic {
+        position: absolute;
+        left: -150%;
+        top: -120%;
+        height: 400%;
+        width: 400%;
+        background: repeating-conic-gradient(#a960ee, #90e0ff, #ff333d, #ffcb57, #a960ee);
+        animation: conic-animation linear 40s infinite;
+        transform-origin: center center;
+    }
+
+    &__linear {
+        position: absolute;
+        top: -50%;
+        height: 200%;
+        width: 800%;
+        background: linear-gradient(120deg, #a960ee, transparent, #90e0ff, transparent, #ffcb57, transparent, #90e0ff,);
+        animation: linear-animation linear 60s infinite alternate;
+    }
+
+    &__vignette {
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        background: linear-gradient(rgba(255, 51, 61, 0.5), transparent);
+    }
+}
+
+@keyframes conic-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes linear-animation {
+    0% {
+        transform: translateX(0%) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(-80%) rotate(5deg);
+    }
+}
