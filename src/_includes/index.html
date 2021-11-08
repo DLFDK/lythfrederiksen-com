@@ -8,15 +8,15 @@
         <link rel="stylesheet" href="../css/index.scss" />
     </head>
     <body>
-        <div class="hero-gradient">
-            <div class="hero-gradient__conic"></div>
-            <div class="hero-gradient__linear"></div>
-            <div class="hero-gradient__vignette"></div>
-        </div>
         <header class="site-header">
-            <div class="site-header__content">
+            <div class="site-header__background">
+                <div class="site-header__conic"></div>
+                <div class="site-header__linear"></div>
+                <div class="site-header__vignette"></div>
+            </div>
+            <div class="site-header__navbar">
                 <a class="site-header__logo" href="/">lyth</a>
-                <nav class="site-header__nav">
+                <nav class="site-header__nav-list">
                     <ul class="site-header__list">
                         <li class="site-header__list-item"><button class="site-header__list-button">Projects</button></li>
                         <li class="site-header__list-item"><button class="site-header__list-button">Blog</button></li>
@@ -35,14 +35,12 @@
                     </a>
                 </div>
             </div>
-        </header>
-        <section class="hero">
-            <div class="hero__content">
-                <h1 class="hero__title">Payments infrastructure for the internet</h1>
-                <div class="hero__title hero__title--overlay" style="display: none">Payments infrastructure for the internet</div>
-                <div class="hero__title hero__title--overlay hero__title--burn">Payments infrastructure for the internet</div>
-                <p class="hero__text">Millions of businesses of all sizes—from startups to large enterprises—use Stripe’s software and APIs to accept payments, send payouts, and manage their businesses online.</p>
-                <div class="hero__cta">
+            <div class="site-header__hero">
+                <h1 class="site-header__title">Payments infrastructure for the internet</h1>
+                <div class="site-header__title site-header__title--overlay" style="display: none">Payments infrastructure for the internet</div>
+                <div class="site-header__title site-header__title--overlay site-header__title--burn">Payments infrastructure for the internet</div>
+                <p class="site-header__text">Millions of businesses of all sizes—from startups to large enterprises—use Stripe’s software and APIs to accept payments, send payouts, and manage their businesses online.</p>
+                <div class="site-header__cta">
                     <a class="link-button link-button--contact" href="">
                         <span class="link-button__text">Start now</span>
                         <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
@@ -53,12 +51,12 @@
                         </svg>
                     </a>
                 </div>
-                <div class="hero__image">
-                    <div class="hero__first-image"></div>
-                    <div class="hero__second-image"></div>
+                <div class="site-header__image">
+                    <div class="site-header__first-image"></div>
+                    <div class="site-header__second-image"></div>
                 </div>
             </div>
-        </section>
+        </header>
         <section class="first-section">
             <div class="first-section__background"></div>
             <div class="first-section__content">
