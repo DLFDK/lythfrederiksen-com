@@ -1,0 +1,11 @@
+.first-section {
+    grid-area: first;
+    background: transparent;
+    height: 600px;
+
+    &__background {
+        grid-row: first;
+        grid-column: left/right;
+        background: #f6f9fc;
+    }
+}

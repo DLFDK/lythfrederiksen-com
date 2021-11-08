@@ -6,8 +6,10 @@ body {
     grid-template-columns: minmax(0px, 1fr) [wrapper-start] minmax(320px, 1080px) [wrapper-end] minmax(0px, 1fr);
     grid-template-areas: 
     "left header right"
-    "left hero right";
-    // overflow-x: hidden;
+    "left hero right"
+    "left first right"
+    "left second right";
+    overflow-x: hidden;
 
     // & > * {
     //     grid-column: wrapper-start / wrapper-end;
