@@ -1,7 +1,5 @@
 .site-header {
     --transition-duration: 150ms cubic-bezier(0.215,0.61,0.355,1);
-    grid-row: 1;
-    grid-column: 1;
     display: grid;
     grid-template-columns: var(--grid-content-columns);
     grid-row: auto auto;
