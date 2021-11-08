@@ -1,14 +1,15 @@
 body {
     font-family: var(--font-family);
-    background: white;
     margin: 0;
     display: grid;
-    grid-template-columns: minmax(0px, 1fr) [wrapper-start] minmax(320px, 1080px) [wrapper-end] minmax(0px, 1fr);
-    grid-template-areas: 
-    "left header right"
-    "left hero right"
-    "left first right"
-    "left second right";
+    grid-template-columns: 1fr;
+    // grid-template-rows: auto auto;
+    // grid-template-columns: minmax(0px, 1fr) [wrapper-start] minmax(320px, 1080px) [wrapper-end] minmax(0px, 1fr);
+    // grid-template-areas: 
+    // "left header right"
+    // "left hero right"
+    // "left first right"
+    // "left second right";
     overflow-x: hidden;
 
     // & > * {

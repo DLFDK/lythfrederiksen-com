@@ -1,11 +1,28 @@
 .first-section {
-    grid-area: first;
+    grid-column: 1;
+    grid-row: 3;
     background: transparent;
     height: 600px;
+    display: grid;
+    grid-template-columns: var(--grid-content-columns);
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: 32px;
+    }
 
     &__background {
-        grid-row: first;
-        grid-column: left/right;
+        grid-column: 1/-1;
+        grid-row: 1;
+        // grid-row: 3;
+        // grid-column: left/right;
         background: #f6f9fc;
+
+        &--slant {
+            // height: 100px;
+            background: #0a2540;
+            clip-path: polygon(0% 100%, 100% calc(100% - 100px), 100% 100%, 0% 100%);
+        }
     }
 }

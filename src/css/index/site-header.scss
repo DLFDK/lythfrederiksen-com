@@ -1,13 +1,25 @@
 .site-header {
     --transition-duration: 150ms cubic-bezier(0.215,0.61,0.355,1);
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 32px 0px;
+    // grid-area: header;
+    grid-row: 1;
+    grid-column: 1;
+    background: transparent;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 12px 32px 0px;
+    display: grid;
+    grid-template-columns: var(--grid-content-columns);
+
+    &__content {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 32px 0px;
+    }
 
     &__logo {
-        // align-self: center;
         padding-bottom: 4px;
         text-decoration: none;
         color: white;

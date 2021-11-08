@@ -1,4 +1,5 @@
 :root{
     --sass-variables-are-still-a-thing: "What can be compiled, should be compiled";
     --font-family: "sohne-var", "Arial",sans-serif;
+    --grid-content-columns: minmax(0px, 1fr) minmax(320px, 1080px) minmax(0px, 1fr);
 }
