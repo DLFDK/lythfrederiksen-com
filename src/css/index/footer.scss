@@ -1,19 +1,19 @@
-.second-section {
+.footer {
     display: grid;
     grid-template-columns: var(--grid-content-columns);
-    background: #0a2540;
+    background: #f6f9fc;
 
     &__content {
         grid-column: 2;
         grid-row: 1;
         padding-left: 32px;
-        height: 600px;
+        height: 100px;
     }
 
     // &__slant {
     //     grid-column: 1/-1;
     //     grid-row: 1/-1;
-    //     background: white;
+    //     background: #f6f9fc;
     //     clip-path: polygon(0% 100%, 100% calc(100% - 100px), 100% 100%, 0% 100%);
     // }
 }

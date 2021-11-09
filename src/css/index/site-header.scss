@@ -12,7 +12,6 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% min(260px - 7vw, 270px), 0% min(15vw + 258px, 640px));
         z-index: -1;
         overflow: hidden;
-
     }
         
     &__conic {
@@ -123,17 +122,26 @@
         grid-column: 2;
         grid-row: 2;
         display: grid;
-        grid-template-columns: 4fr 1fr minmax(100px, 3fr);
+        display: grid;
+        // grid-template-columns: 4fr 1.5fr minmax(100px, 3fr);
+        // grid-template-columns: 4fr min(44vw + 145px - 4fr, 624px - 4fr) minmax(100px, 3fr);
+        grid-template-columns: min(53vw + 48px, 624px) minmax(100px, 1fr);
         grid-template-rows: 100px auto auto auto;
         padding-top: clamp(0px, 8vw - 28px, 48px);
         padding-left: 32px;
+
+        @media (max-width: 599px){
+            grid-template-columns: 1fr;
+            padding-right: 32px;
+            // gap: 32px;
+        }
     }
 
     &__title {
-        grid-column: 1/3;
+        grid-column: 1/2;
         grid-row: 2/3;
         margin: 0;
-        font-size: min(9vw, 98px);
+        font-size: min(10vw, 98px);
         font-weight: 500;
         line-height: 1.04;
         letter-spacing: -0.04em;
@@ -150,6 +158,10 @@
             mix-blend-mode: color-burn;
             opacity: 1;
         }
+
+        @media (max-width: 599px){
+            font-size: min(13vw, 78px);
+        }
     }
 
     &__text {
@@ -159,9 +171,14 @@
         font-weight: 300;
         line-height: 28px;
         letter-spacing: 0.2px;
-        padding-right: 32px;
-        padding-top: 16px;
+        // padding-right: 32px;
+        padding-top: 32px;
+        max-width: min(53vw - 84px, 492px);
         color: rgb(66, 84, 102);
+
+        @media (max-width: 599px){
+            max-width: initial;
+        }
     }
 
     &__cta {
@@ -172,12 +189,16 @@
     }
 
     &__image {
-        grid-column: 3/4;
+        grid-column: 2/3;
         grid-row: 1/-1;
         display: grid;
-        grid-template-columns: 100px 180px 1fr;
+        grid-template-columns: 100px 210px 1fr;
         grid-template-rows: 1fr 8fr 1fr;
         height: 600px;
+
+        @media (max-width: 599px){
+            display: none;
+        }
     }
 
     &__first-image {
@@ -197,6 +218,6 @@
         box-shadow: 0 50px 100px -20px rgba(50,50,93,.25),0 30px 60px -30px rgba(0,0,0,.3),inset 0 -2px 6px 0 rgba(10,37,64,.35);
         border-radius: 36px;
         background: #f6f9fc;
-        margin-left: 20px;
+        margin-left: 40px;
     }
 }
