@@ -1,0 +1,128 @@
+.burger {
+    display: none;
+
+    @media (max-width: 599px) {
+        display: block;
+    }
+
+    &__open {
+        cursor: pointer;
+        width: 48px;
+        height: 32px;
+        padding: 0;
+        background-color: rgba($color: white, $alpha: 0.2);
+        border: none;
+        border-radius: 32px;
+        transition: background-color var(--transition-duration);
+
+        &:hover {
+            background-color: rgba($color: white, $alpha: 0.4);
+        }
+    }
+
+    &__svg {
+        fill: white;
+    }
+
+    &__content {
+        visibility: hidden;
+        font-family: var(--font-family);
+        cursor: initial;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 320px;
+        border-radius: 8px;
+        background: white;
+        z-index: 1;
+        opacity: 1;
+        transform: scale(0.95);
+        transition-property: opacity, transform;
+        transition-duration: 250ms;
+        transform-origin: 100% 0;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    &__open:focus &__content, &__open:focus-within &__content {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: #8898aa;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        text-align: left;
+        padding-left: 24px;
+    }
+
+    &__title:first-of-type {
+        padding-top: 24px;
+    }
+
+    &__title:not(:first-of-type) {
+        padding-top: 48px;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 36px;
+        padding-top: 18px;
+        text-align: left;
+    }
+
+    &__list:last-of-type  {
+        padding-bottom: 24px;
+    }
+
+    &__item {
+        margin: 14px 0px;
+    }
+
+    &__item + &__item {
+        margin-top: 8px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 425;
+        letter-spacing: 0.2px;
+        color: #0a2540;
+    }
+
+    &__login {
+        background: #f6f9fc;
+        height: 73px;
+        margin: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close {
+        visibility: hidden;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        padding: 1px 4px;
+        border: none;
+        background: transparent;
+        z-index: 1;
+        transition-property: opacity, transform;
+        transition-duration: 250ms;
+        transform-origin: 100% 0;
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    &__open:focus + &__close,
+    &__open:focus-within + &__close {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+}

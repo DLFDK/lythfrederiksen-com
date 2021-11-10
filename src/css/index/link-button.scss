@@ -30,6 +30,14 @@
         }
     }
 
+    &--burger {
+        background-color: rgb(99, 91, 255);
+
+        &:hover {
+            background-color: rgb(10, 37, 64);
+        }
+    }
+
     &__text {
         font-size: 15px;
         font-weight: 425;

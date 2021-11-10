@@ -14,15 +14,13 @@
                 <div class="site-header__linear"></div>
                 <div class="site-header__vignette"></div>
             </div>
-            <div class="site-header__navbar">
+            <nav class="site-header__navbar">
                 <a class="site-header__logo" href="/">lyth</a>
-                <nav class="site-header__nav-list">
-                    <ul class="site-header__list">
-                        <li class="site-header__list-item"><button class="site-header__list-button">Projects</button></li>
-                        <li class="site-header__list-item"><button class="site-header__list-button">Blog</button></li>
-                        <li class="site-header__list-item"><button class="site-header__list-button">Contact</button></li>
-                    </ul>
-                </nav>
+                <ul class="site-header__list">
+                    <li class="site-header__list-item"><button class="site-header__list-button">Projects</button></li>
+                    <li class="site-header__list-item"><button class="site-header__list-button">Blog</button></li>
+                    <li class="site-header__list-item"><button class="site-header__list-button">Contact</button></li>
+                </ul>
                 <div class="site-header__login">
                     <a class="link-button link-button--sign-in" href="">
                         <span class="link-button__text">Sign in</span>
@@ -34,7 +32,50 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+                <div class="burger">
+                    <button class="burger__open">
+                        <svg class="burger__svg" width="16" height="10" viewBox="0 0 16 10">
+                            <title>Open navigation</title>
+                            <g fill-rule="evenodd">
+                                <rect y="8" width="16" height="2" rx="1"></rect>
+                                <rect y="4" width="16" height="2" rx="1"></rect>
+                                <rect width="16" height="2" rx="1"></rect>
+                            </g>
+                        </svg>
+                        <div class="burger__content">
+                            <p class="burger__title">This site</p>
+                            <ul class="burger__list">
+                                <li class="burger__item"><a class="burger__link" href="">Blog</a></li>
+                                <li class="burger__item"><a class="burger__link" href="">Projects</a></li>
+                                <li class="burger__item"><a class="burger__link" href="">About</a></li>
+                            </ul>
+                            <p class="burger__title">My socials</p>
+                            <ul class="burger__list">
+                                <li class="burger__item"><a class="burger__link" href="">Github</a></li>
+                                <li class="burger__item"><a class="burger__link" href="">Linkedin</a></li>
+                                <li class="burger__item"><a class="burger__link" href="">Facebook</a></li>
+                            </ul>
+                            <div class="burger__login">
+                                <a class="link-button link-button--burger" href="">
+                                    <span class="link-button__text">Sign in</span>
+                                    <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                                        <g fill-rule="evenodd">
+                                            <path class="link-button__arrow-line" d="M0 5h7"></path>
+                                            <path class="link-button__arrow-point" d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="burger__close">
+                        <svg width="40" height="40" viewBox="0 0 40 40">
+                            <title>Close navigation</title>
+                            <path d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z" fill="#8898AA" fill-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
             <div class="site-header__hero">
                 <h1 class="site-header__title">Payments infrastructure for the internet</h1>
                 <div class="site-header__title site-header__title--overlay">Payments infrastructure for the internet</div>
@@ -90,15 +131,5 @@
         <footer class="footer">
             <div class="footer__content"></div>
         </footer>
-
-        <!-- <section class="section">
-                <h2>The things I've done</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eveniet quia ducimus quod modi fuga quas consequatur hic atque ipsa. Nobis consequuntur facilis natus dolore ab maiores odio voluptates iure? Deleniti ipsum iusto vitae, dolorem facere impedit asperiores magni dolores voluptatum cumque error officiis aperiam id amet consectetur doloremque? Nisi, doloremque odio explicabo deleniti voluptate nam ipsum ut corporis at!</p>
-            </section>
-            <section class="section">
-                <h2>My toolbox</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eveniet quia ducimus quod modi fuga quas consequatur hic atque ipsa. Nobis consequuntur facilis natus dolore ab maiores odio voluptates iure? Deleniti ipsum iusto vitae, dolorem facere impedit asperiores magni dolores voluptatum cumque error officiis aperiam id amet consectetur doloremque? Nisi, doloremque odio explicabo deleniti voluptate nam ipsum ut corporis at!</p>
-            </section> -->
-        <!-- <footer></footer> -->
     </body>
 </html>
