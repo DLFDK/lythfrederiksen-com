@@ -8,15 +8,26 @@
         grid-row: 1;
         padding-left: 32px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "title ."
+            "copy-1 copy-2"
+            "cta .";
         gap: 32px;
         padding-bottom: 200px;
         padding-top: clamp(72px, 8vw + 42px, 128px);
+
+        @media (max-width: 599px){
+            grid-template-areas: 
+                "title"
+                "copy-1"
+                "copy-2"
+                "cta";
+            padding-right: 32px;
+        }
     }
 
     &__header {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-area: title;
     }
 
     &__caption {
@@ -41,7 +52,6 @@
     }
 
     &__copy {
-        grid-row: 2;
         color: rgb(66, 84, 102);
         font-size: 18px;
         line-height: 28px;
@@ -49,17 +59,24 @@
         font-weight: 300;
 
         &--first {
-            grid-column: 1;
+            grid-area: copy-1;
             padding-right: 12px;
         }
         &--second {
-            grid-column: 2;
+            grid-area: copy-2;
             padding-right: 112px;
+
+            @media (max-width: 899px){
+                padding-right: 64px;
+            }
+            @media (max-width: 599px){
+                padding-right: 0px;
+            }
         }
     }
 
     &__cta {
-        grid-row: 3;
+        grid-area: cta;
     }
 
     &__slant {
