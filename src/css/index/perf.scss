@@ -47,7 +47,8 @@
         width: 120px;
         height: 120px;
         grid-area: center;
-        background: conic-gradient(from -3deg, #a960ee, #90e0ff, #ff333d, #ffcb57, );
+        background: conic-gradient(from -3deg, #a960ee, #90e0ff, #ff333d, #ffcb57);
+        border-radius: 50%; //Needed to get rid of 1px border on Android Chrome (bug).
     }
 
     &__gauge {
