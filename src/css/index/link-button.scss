@@ -1,10 +1,14 @@
 .link-button {
-    --transition-duration: 150ms cubic-bezier(0.215,0.61,0.355,1);
+    --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     text-decoration: none;
     color: white;
     padding: 4px 12px 8px 16px;
     border-radius: 16.5px;
     transition: background-color var(--transition-duration);
+
+    @media (prefers-reduced-motion) {
+        --transition-duration: 0 cubic-bezier(0.215, 0.61, 0.355, 1);;
+    }
 
     &--sign-in {
         background-color: rgba($color: white, $alpha: 0.2);

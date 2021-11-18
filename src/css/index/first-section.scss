@@ -80,6 +80,8 @@
     }
 
     &__slant {
+        position: relative;
+        bottom: -1px; //White line issue in chrome
         grid-column: 1/-1;
         grid-row: 1/-1;
         background: #0a2540;

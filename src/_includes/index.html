@@ -19,11 +19,10 @@
                 <ul class="site-header__list">
                     <li class="site-header__list-item"><button class="site-header__list-button">Projects</button></li>
                     <li class="site-header__list-item"><button class="site-header__list-button">Blog</button></li>
-                    <li class="site-header__list-item"><button class="site-header__list-button">Contact</button></li>
                 </ul>
                 <div class="site-header__login">
                     <a class="link-button link-button--sign-in" href="">
-                        <span class="link-button__text">Sign in</span>
+                        <span class="link-button__text">sudo</span>
                         <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                             <g fill-rule="evenodd">
                                 <path class="link-button__arrow-line" d="M0 5h7"></path>
@@ -77,13 +76,16 @@
                 </div>
             </nav>
             <div class="site-header__hero">
-                <h1 class="site-header__title">Payments infrastructure for the internet</h1>
-                <div class="site-header__title site-header__title--overlay">Payments infrastructure for the internet</div>
-                <div class="site-header__title site-header__title--overlay site-header__title--burn">Payments infrastructure for the internet</div>
-                <p class="site-header__text">Millions of businesses of all sizes—from startups to large enterprises—use Stripe’s software and APIs to accept payments, send payouts, and manage their businesses online.</p>
+                <h1 class="site-header__title">Who <br />put me <br />in charge?</h1>
+                <div class="site-header__title site-header__title--overlay site-header__title--burn">Who <br />put me <br />in charge?</div>
+                <div class="site-header__title site-header__title--overlay">You <br />put me <br />in charge !</div>
+                <p class="site-header__text">
+                    Life on Mars? Well, I clearly left and came here instead. Stop looking, you're embarrassing yourselves. <br />
+                    I’ll call you when I get home. Promise.
+                </p>
                 <div class="site-header__cta">
                     <a class="link-button link-button--contact" href="">
-                        <span class="link-button__text">Start now</span>
+                        <span class="link-button__text">Read the blog</span>
                         <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                             <g fill-rule="evenodd">
                                 <path class="link-button__arrow-line" d="M0 5h7"></path>
@@ -93,22 +95,94 @@
                     </a>
                 </div>
                 <div class="site-header__image">
-                    <div class="site-header__first-image"></div>
-                    <div class="site-header__second-image"></div>
+                    <div class="perf-desktop">
+                        <div class="perf-desktop__content"></div>
+                    </div>
+                    <div class="perf-phone">
+                        <div class="perf-phone__content">
+                            <div class="perf-phone__result">
+                                <p class="perf-phone__result-value">99</p>
+                                <!-- <div class="perf-phone__background"></div> -->
+                                <div class="perf-phone__gradient"></div>
+                                <svg class="perf-phone__gauge">
+                                    <defs>
+                                        <clipPath id="perf-phone__clipPath" clipPathUnits="objectBoundingBox">
+                                            <path d="M 0.5 0
+                                            a 0.5 0.5 0 0 1 0 1
+                                            a 0.5 0.5 0 0 1 0 -1
+                                            v 0.1
+                                            a 0.4 0.4 0 0 0 0 .8
+                                            a 0.4 0.4 0 0 0 0 -0.8" />
+                                        </clipPath>
+                                        <linearGradient id="perf-phone__gradient" x2="0.35" y2="1">
+                                            <stop offset="0%" stop-color="#a960ee" />
+                                            <stop offset="30%" stop-color="#90e0ff" />
+                                            <stop offset="100%" stop-color="#ff333d" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- <circle class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle> -->
+                                    <!-- <circle id="gauge" r="40" cx="60" cy="60"></circle> -->
+                                    <circle id="gauge" r="56" cx="60" cy="60"></circle>
+                                </svg>
+                                <p class="perf-phone__result-title">Performance</p>
+                                <p class="perf-phone__date">November 17th, 09:21, 2021</p>
+                            </div>
+                            <div class="perf-phone__details">
+                                <div class="perf-phone__details-header">
+                                    <div class="perf-phone__details-dash"></div>
+                                    <p class="perf-phone__details-title">Metrics</p>
+                                    <div class="perf-phone__details-dash"></div>
+                                </div>
+                                <ul class="perf-phone__list">
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">First contentful paint</p>
+                                        <p class="perf-phone__item-score">2.0 s</p>
+                                    </li>
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">Time to interactive</p>
+                                        <p class="perf-phone__item-score">3.1 s</p>
+                                    </li>
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">
+                                            Speed <br />
+                                            index
+                                        </p>
+                                        <p class="perf-phone__item-score">2.0 s</p>
+                                    </li>
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">Total blocking time</p>
+                                        <p class="perf-phone__item-score">30 ms</p>
+                                    </li>
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">Largest contentful paint</p>
+                                        <p class="perf-phone__item-score">2.6 s</p>
+                                    </li>
+                                    <li class="perf-phone__item">
+                                        <p class="perf-phone__item-text">Cumulative layout shift</p>
+                                        <p class="perf-phone__item-score">0</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="perf-phone__details-dash"></div>
+                            <div class="perf-phone__run">
+                                <div class="perf-phone__button">Running</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
         <section class="first-section">
             <div class="first-section__content">
                 <header class="first-section__header">
-                    <p class="first-section__caption">Unified platform</p>
-                    <h2 class="first-section__title">A fully integrated suite of payments products</h2>
+                    <p class="first-section__caption">What I build</p>
+                    <h2 class="first-section__title">A tiny house made for a big project</h2>
                 </header>
                 <p class="first-section__copy first-section__copy--first">We bring together everything that’s required to build websites and apps that accept payments and send payouts globally. Stripe’s products power payments for online and in-person retailers, subscriptions businesses, software platforms and marketplaces, and everything in between.</p>
                 <p class="first-section__copy first-section__copy--second">We also help companies beat fraud, send invoices, issue virtual and physical cards, get financing, manage business spend, and much more.</p>
                 <div class="first-section__cta">
                     <a class="link-button link-button--first-section" href="">
-                        <span class="link-button__text">Start with payments</span>
+                        <span class="link-button__text">More of what I've built</span>
                         <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                             <g fill-rule="evenodd">
                                 <path class="link-button__arrow-line" d="M0 5h7"></path>
@@ -131,5 +205,6 @@
         <footer class="footer">
             <div class="footer__content"></div>
         </footer>
+        <script src="js/lighthouse.js"></script>
     </body>
 </html>
