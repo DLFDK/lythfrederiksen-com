@@ -9,10 +9,8 @@ module.exports = function (content, outputPath, options) {
             for (const [string] of styleLinks) {
                 const [, path, file, extension] = string.match(/href="[\.\/]*(.*\/)(.*)\.(s?[ac]ss)"/);
                 try {
-                    const result = sass.renderSync({
-                        file: `${options.src}/${path}${file}.${extension}`,
-                        ...options.sass
-                    });
+                    const result = sass.compile(`${options.src}/${path}${file}.${extension}`,
+                        options.sass);
                     switch (options.inline) {
                         case "all":
                             output = output.replace(string, `<style>${result.css}</style>`);
