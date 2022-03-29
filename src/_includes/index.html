@@ -10,9 +10,6 @@
     <body>
         <header class="site-header">
             <div class="site-header__background">
-                <!-- <div class="site-header__conic"></div>
-                <div class="site-header__linear"></div>
-                <div class="site-header__vignette"></div> -->
                 <div class="site-header__stripe"></div>
             </div>
             <nav class="site-header__navbar">
@@ -341,23 +338,33 @@
             </div>
         </header>
         <section class="first-section">
-            <div class="first-section__content">
-                <header class="first-section__header">
-                    <p class="first-section__caption">What I build</p>
-                    <h2 class="first-section__title">A tiny house made for a big project</h2>
-                </header>
-                <p class="first-section__copy first-section__copy--first">We bring together everything that’s required to build websites and apps that accept payments and send payouts globally. Stripe’s products power payments for online and in-person retailers, subscriptions businesses, software platforms and marketplaces, and everything in between.</p>
-                <p class="first-section__copy first-section__copy--second">We also help companies beat fraud, send invoices, issue virtual and physical cards, get financing, manage business spend, and much more.</p>
-                <div class="first-section__cta">
-                    <a class="link-button link-button--first-section" href="">
-                        <span class="link-button__text">More of what I've built</span>
-                        <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-                            <g fill-rule="evenodd">
-                                <path class="link-button__arrow-line" d="M0 5h7"></path>
-                                <path class="link-button__arrow-point" d="M1 1l4 4-4 4"></path>
-                            </g>
-                        </svg>
-                    </a>
+            <div class="first-section__container">
+                <div class="first-section__content">
+                    <header class="first-section__header">
+                        <p class="first-section__caption">What I build</p>
+                        <h2 class="first-section__title">A tiny house made for a big project</h2>
+                    </header>
+                    {% include 'src/copy/index/first-section.html' %}
+                    <div class="first-section__cta">
+                        <a class="link-button link-button--first-section" href="">
+                            <span class="link-button__text">More of what I've built</span>
+                            <svg class="link-button__svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                                <g fill-rule="evenodd">
+                                    <path class="link-button__arrow-line" d="M0 5h7"></path>
+                                    <path class="link-button__arrow-point" d="M1 1l4 4-4 4"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="first-section__images">
+                    <div class="first-section__image-container">
+                        <img class="first-section__image first-section__image--1" src="images/Hel-side-kapitel2.jpeg" alt="" />
+                        <img class="first-section__image first-section__image--2" src="images/Byggeri 1 - færdig.jpeg" alt="" />
+                        <img class="first-section__image first-section__image--3" src="images/Ude 3 - færdig.jpeg" alt="" />
+                        <img class="first-section__image first-section__image--4" src="images/Byggeri 3 - færdig.jpeg" alt="" />
+                        <img class="first-section__image first-section__image--5" src="images/Flyttedag.jpg" alt="" />
+                    </div>
                 </div>
             </div>
             <div class="first-section__slant"></div>
@@ -373,6 +380,6 @@
         <footer class="footer">
             <div class="footer__content"></div>
         </footer>
-        <script src="js/lighthouse.js"></script>
+        <!-- <script src="js/lighthouse.js"></script> -->
     </body>
 </html>
