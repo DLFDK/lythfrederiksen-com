@@ -2,10 +2,11 @@ const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.ignores.add("./src/copy/");
+    eleventyConfig.addPassthroughCopy("./src/css/_fonts/");
+    eleventyConfig.addPassthroughCopy("./src/images/");
+    eleventyConfig.addPassthroughCopy("./src/js/");
     if (process.argv.includes("--serve")) {
-        eleventyConfig.addPassthroughCopy("./src/css/_fonts/");
-        eleventyConfig.addPassthroughCopy("./src/images/");
-        eleventyConfig.addPassthroughCopy("./src/js/");
         eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
@@ -28,7 +29,7 @@ module.exports = function (eleventyConfig) {
             return sass(content, outputPath, {
                 src: "src",
                 dest: "dist",
-                inline: "all",
+                inline: "none",
                 sass: {
                     outputStyle: "compressed"
                 }
@@ -37,7 +38,7 @@ module.exports = function (eleventyConfig) {
         });
         eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
             return htmlmin(content, outputPath, {
-                collapseWhitespace: true,
+                // collapseWhitespace: true,
                 removeComments: true
             });
         });
