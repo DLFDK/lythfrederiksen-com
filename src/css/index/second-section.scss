@@ -4,6 +4,7 @@
     background: #0a2540;
 
     &__content {
+        z-index: 100;
         grid-column: 2;
         grid-row: 1;
         padding-left: 32px;
