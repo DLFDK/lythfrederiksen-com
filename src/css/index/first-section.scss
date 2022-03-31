@@ -64,6 +64,17 @@
         letter-spacing: 0.2px;
         font-weight: 300;
 
+        & a {
+            color: var(--stripe-purple);
+            font-weight: 425;
+            text-decoration: none;
+            transition: color 150ms cubic-bezier(0.215,0.61,0.355,1);
+
+            &:hover {
+                color: #0a2540;
+            }
+        }
+
         & span {
             position: relative;
             font-size: 0.6em;
