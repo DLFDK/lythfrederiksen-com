@@ -2,7 +2,6 @@ const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.ignores.add("./src/copy/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/");
     eleventyConfig.addPassthroughCopy("./src/images/");
     eleventyConfig.addPassthroughCopy("./src/js/");
@@ -25,6 +24,7 @@ module.exports = function (eleventyConfig) {
             });
         });
     } else {
+        eleventyConfig.ignores.add("./src/copy/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
                 src: "src",
