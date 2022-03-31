@@ -1,4 +1,6 @@
 .link-button {
+    display: block;
+    width: fit-content;
     --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     text-decoration: none;
     color: white;
