@@ -11,6 +11,12 @@
         height: 600px;
     }
 
+    &__header {
+        font-size: var(--font-size-regular);
+        font-weight: var(--font-weight-regular);
+        color: var(--stripe-blue);
+    }
+
     // &__slant {
     //     grid-column: 1/-1;
     //     grid-row: 1/-1;
