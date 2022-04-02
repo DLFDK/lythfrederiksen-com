@@ -1,0 +1,165 @@
+.section-2 {
+    display: grid;
+    grid-template-columns: var(--grid-content-columns);
+    background-color: var(--stripe-dark-blue);
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: 32px;
+        padding-top: var(--section-padding-top-content);
+        padding-bottom: calc(var(--section-padding-top-content) + 9vw);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "main image"
+            "highlight image";
+        row-gap: 36px;
+
+        @media (max-width: 600px) {
+            grid-template-columns: initial;
+            grid-template-areas: 
+            "main"
+            "highlight"
+            "image";
+        }
+    }
+
+    &__main {
+        grid-area: main;
+        // grid-column: 1;
+        // // grid-row: 1;
+        margin-right: 64px;
+        display: grid;
+        gap: 24px;
+    }
+
+    &__header {
+        display: grid;
+
+        & p {
+            color: var(--stripe-blue);
+            font-size: var(--section-font-size-caption);
+            font-weight: var(--section-font-weight-caption);
+        }
+
+        & h2 {
+            color: var(--stripe-white);
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 44px;
+            letter-spacing: -0.1px;
+            margin: 24px 0 0;
+        }
+    }
+
+    &__copy {
+        color: var(--stripe-light-grey);
+        font-size: var(--section-font-size-copy);
+        line-height: var(--section-line-height-copy);
+        letter-spacing: var(--section-letter-spacing-copy);
+        font-weight: var(--section-font-weight-copy);
+    }
+
+    &__cta {
+        --color: var(--stripe-dark-blue);
+        --stroke: var(--stripe-dark-blue);
+        --bg-color: var(--stripe-blue);
+        --bg-color-hover: var(--stripe-white);
+    }
+
+    &__highlight {
+        grid-area: highlight;
+        // grid-column: 1;
+        // grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        letter-spacing: var(--section-letter-spacing-copy);
+        line-height: var(--section-line-height-highlight);
+        // margin-top: 36px;
+        margin-right: 64px;
+
+        @media (max-width: 900px) {
+            grid-template-columns: initial;
+            grid-template-rows: 1fr 1fr;
+
+        }
+    }
+
+    &__highlight-item {
+        display: grid;
+        grid-template-rows: min-content min-content 1fr min-content;
+        gap: 8px;
+        font-size: 15px;
+        // height: min-content;
+    }
+
+    &__highlight-icon {
+        width: 40px;
+
+        & path {
+            stroke: var(--stripe-purple);
+            fill: none;
+        }
+    }
+
+    &__highlight-title {
+        color: var(--stripe-white);
+        font-size: var(--section-font-size-highlight);
+        font-weight: var(--section-font-weight-highlight-title);
+        margin: 0;
+    }
+
+    &__highlight-copy {
+        color: var(--stripe-light-grey);
+        font-size: var(--section-font-size-highlight);
+        font-weight: var(--section-font-weight-highlight-copy);
+        font-style: italic;
+    }
+
+    &__highlight-link {
+        display: block;
+        text-decoration: none;
+        --color: var(--stripe-blue);
+        --bg-color: transparent;
+        --stroke: var(--stripe-blue);
+
+        & a {
+            padding: 0;
+        }
+    }
+
+    &__image {
+        grid-area: image;
+        margin-right: 16px;
+        border: 1px solid #0f395e;
+        border-radius: 8px;
+        overflow: hidden;
+        @media (max-width: 600px) {
+            max-height: 600px;
+        }
+
+        & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.2s;
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+
+    &__slant {
+        position: relative;
+        bottom: -1px; //White line issue in chrome
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        background: var(--stripe-white);
+        clip-path: polygon(0% 100%, 100% calc(100% - 9vw), 100% 100%, 0% 100%);
+    }
+}

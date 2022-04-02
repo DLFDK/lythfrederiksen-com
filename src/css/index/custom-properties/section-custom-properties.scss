@@ -1,0 +1,13 @@
+section{
+    --section-font-size-highlight: var(--font-size-small);
+    --section-font-weight-highlight-title: var(--font-weight-bold);
+    --section-font-weight-highlight-copy: var(--font-weight-regular);
+    --section-font-size-caption: var(--font-size-regular);
+    --section-font-weight-caption: 500;
+    --section-font-size-copy: var(--font-size-regular);
+    --section-font-weight-copy: 300;
+    --section-line-height-copy: 28px;
+    --section-line-height-highlight: 25px;
+    --section-letter-spacing-copy: var(--letter-spacing-copy);
+    --section-padding-top-content: clamp(72px, 8vw + 42px, 128px);
+}

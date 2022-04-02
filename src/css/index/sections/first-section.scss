@@ -50,7 +50,7 @@
         line-height: 44px;
         letter-spacing: -0.1px;
         font-weight: 500;
-        margin: 32px 0 0;
+        margin: 24px 0 0;
 
         @media (min-width: 1080px) {
             font-size: 38px;
@@ -59,10 +59,10 @@
 
     &__copy {
         color: rgb(66, 84, 102);
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.2px;
-        font-weight: 300;
+        font-size: var(--section-font-size-copy);
+        line-height: var(--section-line-height-copy);
+        letter-spacing: var(--section-letter-spacing-copy);
+        font-weight: var(--section-font-weight-copy);
 
         & a {
             color: var(--stripe-purple);
@@ -100,6 +100,10 @@
 
     &__cta {
         grid-area: cta;
+        --color: var(--stripe-white);
+        --stroke: var(--stripe-white);
+        --bg-color: var(--stripe-purple);
+        --bg-color-hover: var(--stripe-dark-blue);
     }
 
     &__image-container {

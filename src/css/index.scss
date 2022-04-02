@@ -1,5 +1,6 @@
 @use "index/custom-properties/colors.scss";
 @use "index/custom-properties/fonts.scss";
+@use "index/custom-properties/section-custom-properties.scss";
 @use "index/base/font-faces.scss";
 @use "index/base/root.scss";
 @use "index/base/reset.scss";
@@ -10,6 +11,6 @@
 @use "index/components/perf.scss";
 @use "index/sections/section.scss";
 @use "index/sections/first-section.scss";
-@use "index/sections/second-section.scss";
+@use "index/sections/section-2.scss";
 @use "index/sections/third-section.scss";
 @use "index/footer/footer.scss";

@@ -1,15 +1,21 @@
 .link-button {
+    --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     display: block;
     width: fit-content;
-    --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    height: fit-content;
     text-decoration: none;
-    color: white;
+    color: var(--color, white);
+    background-color: var(--bg-color, white);
     padding: 4px 12px 8px 16px;
     border-radius: 16.5px;
     transition: background-color var(--transition-duration);
 
+    &:hover {
+        background-color: var(--bg-color-hover, rgb(10, 37, 64));
+    }
+
     @media (prefers-reduced-motion) {
-        --transition-duration: 0 cubic-bezier(0.215, 0.61, 0.355, 1);;
+        --transition-duration: 0 cubic-bezier(0.215, 0.61, 0.355, 1);
     }
 
     &--sign-in {
@@ -25,14 +31,6 @@
 
         &:hover {
             background-color: rgba(10, 37, 64, 0.6);
-        }
-    }
-
-    &--first-section {
-        background-color: rgb(99, 91, 255);
-
-        &:hover {
-            background-color: rgb(10, 37, 64);
         }
     }
 
@@ -55,7 +53,7 @@
         top: 1px;
         stroke-width: 2px;
         fill: none;
-        stroke: white;
+        stroke: var(--stroke, white);
     }
 
     &__arrow-line {
