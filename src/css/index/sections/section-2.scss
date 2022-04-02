@@ -27,8 +27,6 @@
 
     &__main {
         grid-area: main;
-        // grid-column: 1;
-        // // grid-row: 1;
         margin-right: 64px;
         display: grid;
         gap: 24px;
@@ -70,14 +68,11 @@
 
     &__highlight {
         grid-area: highlight;
-        // grid-column: 1;
-        // grid-row: 2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
         letter-spacing: var(--section-letter-spacing-copy);
         line-height: var(--section-line-height-highlight);
-        // margin-top: 36px;
         margin-right: 64px;
 
         @media (max-width: 900px) {
@@ -92,7 +87,7 @@
         grid-template-rows: min-content min-content 1fr min-content;
         gap: 8px;
         font-size: 15px;
-        // height: min-content;
+        height:min-content;
     }
 
     &__highlight-icon {
@@ -156,7 +151,7 @@
 
     &__slant {
         position: relative;
-        bottom: -1px; //White line issue in chrome
+        // bottom: -1px; //White line issue in chrome
         grid-column: 1/-1;
         grid-row: 1/-1;
         background: var(--stripe-white);
