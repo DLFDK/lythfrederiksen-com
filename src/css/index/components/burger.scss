@@ -1,3 +1,7 @@
+@use "../_mixins/link-button.scss" as *;
+@use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
+
 .burger {
     display: none;
 
@@ -10,13 +14,13 @@
         width: 48px;
         height: 32px;
         padding: 0;
-        background-color: rgba($color: white, $alpha: 0.2);
+        background-color: rgba($stripe-white, $alpha: 0.2);
         border: none;
         border-radius: 32px;
         transition: background-color var(--transition-duration);
 
         &:hover {
-            background-color: rgba($color: white, $alpha: 0.4);
+            background-color: rgba($stripe-white, $alpha: 0.4);
         }
     }
 
@@ -26,7 +30,7 @@
 
     &__content {
         visibility: hidden;
-        font-family: var(--font-family);
+        font-family: $font-family;
         cursor: initial;
         position: absolute;
         top: 16px;
@@ -43,7 +47,8 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
-    &__open:focus &__content, &__open:focus-within &__content {
+    &__open:focus &__content,
+    &__open:focus-within &__content {
         visibility: visible;
         opacity: 1;
         transform: scale(1);
@@ -74,7 +79,7 @@
         text-align: left;
     }
 
-    &__list:last-of-type  {
+    &__list:last-of-type {
         padding-bottom: 24px;
     }
 
@@ -101,6 +106,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    &__login-button {
+        @include link-button($stripe-white, $stripe-purple, $stripe-dark-blue, $stripe-white);
     }
 
     &__close {

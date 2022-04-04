@@ -1,5 +1,7 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
+@use "../_mixins/link-button.scss" as *;
 
 .site-header {
     display: grid;
@@ -156,6 +158,7 @@
     }
 
     &__login {
+        @include link-button($stripe-white, rgba($color: white, $alpha: 0.2), rgba($color: white, $alpha: 0.4), $stripe-white);
         @media (max-width: 599px) {
             display: none;
         }
@@ -224,8 +227,9 @@
     &__cta {
         grid-column: 1/2;
         grid-row: 4/5;
-        padding-top: 32px;
-        padding-bottom: 16px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        @include link-button($stripe-white, $stripe-dark-blue, rgba($stripe-dark-blue, $alpha: 0.4), $stripe-white);
     }
 
     &__perf {

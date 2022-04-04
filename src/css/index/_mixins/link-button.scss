@@ -1,5 +1,4 @@
 @mixin link-button($color-text, $color-background, $color-hover, $color-arrow) {
-    --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     display: block;
     width: fit-content;
     height: fit-content;
@@ -17,30 +16,6 @@
     @media (prefers-reduced-motion) {
         --transition-duration: 0 cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-
-    // &--sign-in {
-    //     background-color: rgba($color: white, $alpha: 0.2);
-
-    //     &:hover {
-    //         background-color: rgba($color: white, $alpha: 0.4);
-    //     }
-    // }
-
-    // &--contact {
-    //     background-color: rgb(10, 37, 64);
-
-    //     &:hover {
-    //         background-color: rgba(10, 37, 64, 0.6);
-    //     }
-    // }
-
-    // &--burger {
-    //     background-color: rgb(99, 91, 255);
-
-    //     &:hover {
-    //         background-color: rgb(10, 37, 64);
-    //     }
-    // }
 
     & span {
         font-size: 15px;
