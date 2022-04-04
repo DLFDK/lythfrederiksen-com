@@ -1,25 +1,24 @@
-.section-1 {
-    display: grid;
-    grid-template-columns: var(--grid-content-columns);
-    background: #f6f9fc;
-    overflow: hidden;
+@use "../_variables/colors.scss" as *;
+@use "../_variables/section.scss" as *;
+@use "../_mixins/section.scss" as *;
+@use "../_mixins/link-button.scss" as *;
 
-    &__container {
-        grid-column: 2;
-        grid-row: 1;
-    }
+.section-1 {
+    @include section($stripe-background-white);
 
     &__content {
+        @include content;
+    }
+
+    &__main {
         position: relative;
         z-index: 1;
-        padding-left: 32px;
         display: grid;
         grid-template-areas:
             "title ."
             "copy-1 copy-2"
             "cta .";
         gap: 32px;
-        padding-top: clamp(72px, 8vw + 42px, 128px);
 
         @media (max-width: 599px) {
             grid-template-areas:
@@ -32,52 +31,22 @@
     }
 
     &__header {
+        @include section-header($stripe-dark-blue, $stripe-purple);
         grid-area: title;
     }
 
-    &__caption {
-        color: rgb(99, 91, 255);
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.2px;
-        font-weight: 500;
-    }
-
-    &__title {
-        color: rgb(10, 37, 64);
-        font-size: 34px;
-        line-height: 44px;
-        letter-spacing: -0.1px;
-        font-weight: 500;
-        margin: 24px 0 0;
-
-        @media (min-width: 1080px) {
-            font-size: 38px;
-        }
-    }
-
     &__copy {
-        color: rgb(66, 84, 102);
-        font-size: var(--section-font-size-copy);
-        line-height: var(--section-line-height-copy);
-        letter-spacing: var(--section-letter-spacing-copy);
-        font-weight: var(--section-font-weight-copy);
+        @include copy($stripe-cloud-blue);
 
         & a {
-            color: var(--stripe-purple);
+            color: $stripe-purple;
             font-weight: 425;
             text-decoration: none;
-            transition: color 150ms cubic-bezier(0.215,0.61,0.355,1);
+            transition: color 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 
             &:hover {
-                color: #0a2540;
+                color: $stripe-dark-blue;
             }
-        }
-
-        & span {
-            position: relative;
-            font-size: 0.6em;
-            top: -0.6em;
         }
 
         &--1 {
@@ -99,16 +68,13 @@
 
     &__cta {
         grid-area: cta;
-        --color: var(--stripe-white);
-        --stroke: var(--stripe-white);
-        --bg-color: var(--stripe-purple);
-        --bg-color-hover: var(--stripe-dark-blue);
+        @include link-button($stripe-white, $stripe-purple, $stripe-dark-blue, $stripe-white);
     }
 
     &__image-container {
         position: relative;
         top: -50px;
-        left: 20px;
+        left: -20px;
         display: grid;
         gap: 36px;
         grid-template-rows: 80px 250px auto 300px 100px;
@@ -164,11 +130,6 @@
     }
 
     &__slant {
-        position: relative;
-        bottom: -1px; //White line issue in chrome
-        grid-column: 1/-1;
-        grid-row: 1/-1;
-        background: #0a2540;
-        clip-path: polygon(0% 100%, 100% calc(100% - 9vw), 100% 100%, 0% 100%);
+        @include slant($stripe-dark-blue);
     }
 }

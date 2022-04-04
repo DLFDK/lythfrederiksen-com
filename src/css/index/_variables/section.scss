@@ -1,0 +1,15 @@
+@use "fonts.scss" as *;
+
+$section-font-size-highlight: $font-size-small;
+$section-font-weight-highlight-title: $font-weight-bold;
+$section-font-weight-highlight-copy: $font-weight-regular;
+$section-caption-font-size: $font-size-regular;
+$section-caption-font-weight: $font-weight-bolder;
+$section-caption-line-height: $line-height-copy;
+$section-caption-letter-spacing: $letter-spacing-copy;
+$section-font-size-copy: $font-size-regular;
+$section-font-weight-copy: $font-weight-regular;
+$section-line-height-copy: $line-height-copy;
+$section-line-height-highlight: 25px;
+$section-letter-spacing-copy: $letter-spacing-copy;
+$section-padding-top-content: clamp(72px, 8vw + 42px, 128px);

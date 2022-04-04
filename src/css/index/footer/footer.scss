@@ -1,7 +1,10 @@
+@use "../_variables/general.scss" as *;
+@use "../_variables/colors.scss" as *;
+
 .footer {
     display: grid;
-    grid-template-columns: var(--grid-content-columns);
-    background: #f6f9fc;
+    grid-template-columns: $grid-content-columns;
+    background: $stripe-white;
 
     &__content {
         grid-column: 2;

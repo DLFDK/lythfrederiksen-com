@@ -1,0 +1,57 @@
+@use "../_variables/general.scss" as *;
+@use "../_variables/colors.scss" as *;
+@use "../_variables/section.scss" as *;
+
+@mixin section($color-background) {
+    display: grid;
+    grid-template-columns: $grid-content-columns;
+    background: $color-background;
+    overflow: hidden;
+}
+
+@mixin content {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: $section-padding-top-content;
+    padding-left: 32px;
+}
+
+@mixin copy($color) {
+    color: $color;
+    font-size: $section-font-size-copy;
+    line-height: $section-line-height-copy;
+    letter-spacing: $section-letter-spacing-copy;
+    font-weight: $section-font-weight-copy;
+}
+
+@mixin section-header($color-heading, $color-caption) {
+    & p {
+        color: $color-caption;
+        font-size: $section-caption-font-size;
+        font-weight: $section-caption-font-weight;
+        line-height: $section-caption-line-height;
+        letter-spacing: $section-caption-letter-spacing;
+    }
+
+    & h2 {
+        color: $color-heading;
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: -0.1px;
+        margin: 24px 0 0;
+
+        @media (min-width: 1080px) {
+            font-size: 38px;
+        }
+    }
+}
+
+@mixin slant($color) {
+    position: relative;
+    bottom: -1px; //Removes single pixel line that may appear as a rounding error
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    background: $color;
+    clip-path: polygon(0% 100%, 100% calc(100% - 9vw), 100% 100%, 0% 100%);
+}
