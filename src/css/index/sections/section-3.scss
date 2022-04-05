@@ -1,19 +1,98 @@
-.third-section {
-    display: grid;
-    grid-template-columns: var(--grid-content-columns);
-    background: white;
+@use "../_variables/colors.scss" as *;
+@use "../_variables/section.scss" as *;
+@use "../_mixins/section.scss" as *;
+@use "../_mixins/link-button.scss" as *;
+
+.section-3 {
+    @include section($stripe-white);
 
     &__content {
-        grid-column: 2;
-        grid-row: 1;
-        padding-left: 32px;
-        height: 600px;
+        @include content;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 32px;
+        padding-bottom: calc($section-padding-top-content + 9vw + 24px);
+        padding-right: 32px;
+
+        @media (max-width: 900px){
+            grid-template-columns: repeat(2, 1fr)
+        }
     }
 
-    &__slant {
+    &__main {
+        grid-column: 1/4;
+        display: grid;
+        row-gap: 24px;
+    }
+
+    &__header {
+        @include section-header($stripe-dark-blue, $stripe-purple);
+    }
+
+    &__copy {
+        @include copy($stripe-cloud-blue);
+
+    }
+
+    &__cta {
+        @include link-button($stripe-white, $stripe-purple, $stripe-dark-blue, $stripe-white);
+    }
+
+    &__highlight {
         grid-column: 1/-1;
-        grid-row: 1/-1;
-        background: #f6f9fc;
-        clip-path: polygon(0% 100%, 100% calc(100% - 100px), 100% 100%, 0% 100%);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        letter-spacing: $section-letter-spacing-copy;
+        line-height: $section-line-height-highlight;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__highlight-item {
+        display: grid;
+        grid-template-rows: min-content min-content 1fr min-content;
+        gap: 8px;
+        font-size: 15px;
+        height: min-content;
+        padding-right: 36px;
+    }
+
+
+    &__highlight-icon {
+        width: 40px;
+
+        & path {
+            stroke: $stripe-blue;
+            fill: none;
+        }
+    }
+
+    &__highlight-title {
+        color: $stripe-dark-blue;
+        font-size: $section-font-size-highlight;
+        font-weight: $section-font-weight-highlight-title;
+        margin: 0;
+    }
+
+    &__highlight-copy {
+        color: $stripe-cloud-blue;
+        font-size: $section-font-size-highlight;
+        font-weight: $section-font-weight-highlight-copy;
+    }
+
+    // &__highlight-link {
+    //     @include link-button($stripe-purple, transparent, transparent, $stripe-purple);
+    //     padding: 0;
+    // }
+
+    &__slant {
+        @include slant($stripe-background-white);
     }
 }

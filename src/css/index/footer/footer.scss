@@ -4,7 +4,7 @@
 .footer {
     display: grid;
     grid-template-columns: $grid-content-columns;
-    background: $stripe-white;
+    background: $stripe-background-white;
 
     &__content {
         grid-column: 2;
@@ -13,10 +13,4 @@
         height: 100px;
     }
 
-    // &__slant {
-    //     grid-column: 1/-1;
-    //     grid-row: 1/-1;
-    //     background: #f6f9fc;
-    //     clip-path: polygon(0% 100%, 100% calc(100% - 100px), 100% 100%, 0% 100%);
-    // }
 }
