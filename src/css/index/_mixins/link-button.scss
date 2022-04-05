@@ -13,10 +13,6 @@
         background-color: $color-hover;
     }
 
-    @media (prefers-reduced-motion) {
-        --transition-duration: 0 cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
     & span {
         font-size: 15px;
         font-weight: 425;
