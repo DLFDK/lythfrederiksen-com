@@ -18,10 +18,10 @@
 
 @mixin copy($color) {
     color: $color;
-    font-size: $section-font-size-copy;
-    line-height: $section-line-height-copy;
-    letter-spacing: $section-letter-spacing-copy;
-    font-weight: $section-font-weight-copy;
+    font-size: $section-copy-font-size;
+    line-height: $section-copy-line-height;
+    letter-spacing: $section-copy-letter-spacing;
+    font-weight: $section-copy-font-weight;
 }
 
 @mixin section-header($color-heading, $color-caption) {

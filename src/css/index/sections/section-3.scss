@@ -43,8 +43,8 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 32px;
-        letter-spacing: $section-letter-spacing-copy;
-        line-height: $section-line-height-highlight;
+        letter-spacing: $section-copy-letter-spacing;
+        line-height: $section-highlight-line-height;
 
         @media (max-width: 900px) {
             grid-template-columns: repeat(2, 1fr);
@@ -76,8 +76,8 @@
 
     &__highlight-title {
         color: $stripe-dark-blue;
-        font-size: $section-font-size-highlight;
-        font-weight: $section-font-weight-highlight-title;
+        font-size: $section-highlight-font-size;
+        font-weight: $section-highlight-title-font-weight;
         margin: 0;
 
         &::before {
@@ -87,14 +87,14 @@
             border-left: 1px solid $stripe-purple;
             top: 50%;
             left: -16px;
-            height: $section-font-size-highlight;
+            height: $section-highlight-font-size;
         }
     }
 
     &__highlight-copy {
         color: $stripe-cloud-blue;
-        font-size: $section-font-size-highlight;
-        font-weight: $section-font-weight-highlight-copy;
+        font-size: $section-highlight-font-size;
+        font-weight: $section-highlight-copy-font-weight;
     }
 
     // &__highlight-link {
