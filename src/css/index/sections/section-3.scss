@@ -10,7 +10,7 @@
         @include content;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 32px;
+        row-gap: 48px;
         padding-bottom: calc($section-padding-top-content + 9vw + 24px);
         padding-right: 32px;
 
@@ -79,6 +79,16 @@
         font-size: $section-font-size-highlight;
         font-weight: $section-font-weight-highlight-title;
         margin: 0;
+
+        &::before {
+            display: block;
+            position: relative;
+            content: "";
+            border-left: 1px solid $stripe-purple;
+            top: 50%;
+            left: -16px;
+            height: $section-font-size-highlight;
+        }
     }
 
     &__highlight-copy {
