@@ -1,16 +1,68 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/colors.scss" as *;
+@use "../_variables/fonts.scss" as *;
+@use "../_variables/section.scss" as *;
+@use "../_mixins/section.scss" as *;
 
 .footer {
-    display: grid;
-    grid-template-columns: $grid-content-columns;
-    background: $stripe-background-white;
+    // display: grid;
+    // grid-template-columns: $grid-content-columns;
+    // background: $stripe-background-white;
+    @include section($stripe-background-white);
 
     &__content {
         grid-column: 2;
         grid-row: 1;
-        padding-left: 32px;
-        height: 100px;
+        padding: 64px 32px 8px 32px;
+        color: $stripe-dark-blue;
+    }
+
+    &__main {
+        width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 32px;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:visited {
+            color: inherit;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 600;
+    }
+
+    &__list {
+        justify-self: center;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        letter-spacing: $letter-spacing-copy;
+        line-height: 24px;
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        padding: 0;
+    }
+
+    &__contact {
+        color: $stripe-dark-blue;
+        justify-self: end;
+    }
+
+    &__copyright {
+        width: max-content;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        letter-spacing: $letter-spacing-copy;
+        line-height: 24px;
+        margin: 0 auto;
     }
 
 }
