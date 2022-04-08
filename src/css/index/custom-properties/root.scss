@@ -3,4 +3,7 @@
     @media (prefers-reduced-motion) {
         --transition-duration: 0;
     }
+    @media (prefers-reduced-motion) {
+        --icon-animation: none;
+    }
 }
