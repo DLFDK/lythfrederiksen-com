@@ -5,9 +5,6 @@
 @use "../_mixins/section.scss" as *;
 
 .footer {
-    // display: grid;
-    // grid-template-columns: $grid-content-columns;
-    // background: $stripe-background-white;
     @include section($stripe-background-white);
 
     &__content {
@@ -19,11 +16,20 @@
 
     &__main {
         width: 100%;
-        // display: flex;
-        // justify-content: space-between;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding-bottom: 32px;
+        grid-template-areas: 
+        "title nav contact";
+        row-gap: 32px;
+
+        @media (max-width: 799px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            "title title title"
+            "nav nav contact";
+        }
     }
 
     a {
@@ -35,11 +41,13 @@
     }
 
     &__title {
+        grid-area: title;
         margin: 0;
         font-weight: 600;
     }
 
     &__list {
+        grid-area: nav;
         justify-self: center;
         font-size: $font-size-small;
         font-weight: $font-weight-bold;
@@ -49,9 +57,18 @@
         display: flex;
         gap: 40px;
         padding: 0;
+
+        & li:last-child{
+            justify-self: center;
+        }
+
+        @media (max-width: 799px) {
+            display: contents;
+        }
     }
 
     &__contact {
+        grid-area: contact;
         color: $stripe-dark-blue;
         justify-self: end;
     }
