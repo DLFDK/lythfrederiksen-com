@@ -8,17 +8,19 @@
         <link rel="stylesheet" href="../css/index.scss" />
     </head>
     <body>
-        <header class="site-header">
-            <div class="site-header__background">
-                <div class="site-header__stripe"></div>
+        <div class="header-hero-container">
+            <div class="header-hero-container__background">
+                <div class="header-hero-container__stripe"></div>
             </div>
-            <nav class="site-header__navbar">
-                <a class="site-header__logo" href="/">lyth</a>
-                <ul class="site-header__list">
-                    <li class="site-header__list-item"><button class="site-header__list-button">Projects</button></li>
-                    <li class="site-header__list-item"><button class="site-header__list-button">Blog</button></li>
-                </ul>
-                <a class="site-header__login" href="">
+            <header class="header">
+                <a class="header__logo" href="/">lyth</a>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item"><button class="header__list-button">Projects</button></li>
+                        <li class="header__list-item"><button class="header__list-button">Blog</button></li>
+                    </ul>
+                </nav>
+                <a class="header__login" href="">
                     <span>sudo</span>
                     <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                         <g fill-rule="evenodd">
@@ -70,13 +72,13 @@
                         </svg>
                     </button>
                 </div>
-            </nav>
-            <div class="site-header__hero">
-                <h1 class="site-header__title">Who <br />put me <br />in charge?</h1>
-                <div class="site-header__title site-header__title--overlay site-header__title--burn">Who <br />put me <br />in charge?</div>
-                <div class="site-header__title site-header__title--overlay">You <br />put me <br />in charge !</div>
-                <p class="site-header__text">Hi there, I'm Dennis! I used to have a beard. Now I don't. Am I trying to grow a new one? Maybe. Who’s asking? You’ a cop?</p>
-                <a class="site-header__cta" href="">
+            </header>
+            <section class="hero">
+                <h1 class="hero__title">Who <br />put me <br />in charge?</h1>
+                <div class="hero__title hero__title--overlay hero__title--burn">Who <br />put me <br />in charge?</div>
+                <div class="hero__title hero__title--overlay">You <br />put me <br />in charge !</div>
+                <p class="hero__text">Hi there, I'm Dennis! I used to have a beard. Now I don't. Am I trying to grow a new one? Maybe. Who’s asking? You’ a cop?</p>
+                <a class="hero__cta" href="">
                     <span>Read the blog</span>
                     <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                         <g fill-rule="evenodd">
@@ -85,7 +87,7 @@
                         </g>
                     </svg>
                 </a>
-                <div class="site-header__perf">
+                <div class="hero__perf">
                     <div class="perf-desktop">
                         <div class="perf-desktop__content">
                             <div class="perf-desktop__aside">
@@ -328,9 +330,11 @@
                         </div>
                     </div>
                 </div>
-                
-            </div>
-        </header>
+            </section>
+        </div>
+        <section class="hero">
+            
+        </section>
         <section class="section-1">
             <div class="section-1__content">
                 <div class="section-1__main">

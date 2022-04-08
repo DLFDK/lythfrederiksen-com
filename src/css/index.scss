@@ -4,7 +4,9 @@
 @use "index/base/body.scss";
 @use "index/components/burger.scss";
 @use "index/components/perf.scss";
-@use "index/header/site-header.scss";
+@use "index/header-hero/header-hero-container.scss";
+@use "index/header-hero/header.scss";
+@use "index/header-hero/hero.scss";
 @use "index/sections/section-1.scss";
 @use "index/sections/section-2.scss";
 @use "index/sections/section-3.scss";
