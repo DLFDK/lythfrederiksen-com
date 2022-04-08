@@ -1,19 +1,30 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
+@use "../_mixins/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 
 .header {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 32px 0px;
+    @include section(transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 32px 0px;
+    
+        @media (max-width: 599px) {
+            height: 64px;
+            padding-top: 24px;
+        }
 
-    @media (max-width: 599px) {
-        height: 64px;
-        padding-top: 24px;
     }
     
     &__logo {
@@ -41,13 +52,14 @@
         list-style: none;
     }
 
-    &__list-button {
-        position: relative;
+    &__list-link {
+        // position: relative;
         font-family: $font-family;
         font-size: 15px;
         font-weight: 500;
         line-height: 1.6;
         letter-spacing: 0.2px;
+        text-decoration: none;
         color: white;
         background: transparent;
         transition: opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);

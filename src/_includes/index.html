@@ -8,16 +8,13 @@
         <link rel="stylesheet" href="../css/index.scss" />
     </head>
     <body>
-        <div class="header-hero-container">
-            <div class="header-hero-container__background">
-                <div class="header-hero-container__stripe"></div>
-            </div>
-            <header class="header">
+        <header class="header">
+            <div class="header__content">
                 <a class="header__logo" href="/">lyth</a>
                 <nav class="header__nav">
                     <ul class="header__list">
-                        <li class="header__list-item"><button class="header__list-button">Projects</button></li>
-                        <li class="header__list-item"><button class="header__list-button">Blog</button></li>
+                        <li class="header__list-item"><a href="" class="header__list-link">Projects</a></li>
+                        <li class="header__list-item"><a href="" class="header__list-link">Blog</a></li>
                     </ul>
                 </nav>
                 <a class="header__login" href="">
@@ -72,8 +69,13 @@
                         </svg>
                     </button>
                 </div>
-            </header>
-            <section class="hero">
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero__background">
+                <div class="hero__stripe"></div>
+            </div>
+            <div class="hero__content">
                 <h1 class="hero__title">Who <br />put me <br />in charge?</h1>
                 <div class="hero__title hero__title--overlay hero__title--burn">Who <br />put me <br />in charge?</div>
                 <div class="hero__title hero__title--overlay">You <br />put me <br />in charge !</div>
@@ -119,11 +121,11 @@
                                         <!-- <circle id="gauge" r="56" cx="60" cy="60"></circle> -->
                                         <path
                                             class="perf-phone__ring"
-                                            d="M 50 4 
-                                        a 48 48 0 0 1 0 96 
-                                        a 50 50 0 0 1 0 -100 
-                                        v 8 
-                                        a 43 43 0 0 0 0 86 
+                                            d="M 50 4
+                                        a 48 48 0 0 1 0 96
+                                        a 50 50 0 0 1 0 -100
+                                        v 8
+                                        a 43 43 0 0 0 0 86
                                         a 45 45 0 0 0 0 -90"
                                         />
                                     </svg>
@@ -137,11 +139,11 @@
                                         <!-- <circle id="gauge" r="56" cx="60" cy="60"></circle> -->
                                         <path
                                             class="perf-phone__ring"
-                                            d="M 50 4 
-                                        a 48 48 0 0 1 0 96 
-                                        a 50 50 0 0 1 0 -100 
-                                        v 8 
-                                        a 43 43 0 0 0 0 86 
+                                            d="M 50 4
+                                        a 48 48 0 0 1 0 96
+                                        a 50 50 0 0 1 0 -100
+                                        v 8
+                                        a 43 43 0 0 0 0 86
                                         a 45 45 0 0 0 0 -90"
                                         />
                                     </svg>
@@ -155,11 +157,11 @@
                                         <!-- <circle id="gauge" r="56" cx="60" cy="60"></circle> -->
                                         <path
                                             class="perf-phone__ring"
-                                            d="M 50 4 
-                                        a 48 48 0 0 1 0 96 
-                                        a 50 50 0 0 1 0 -100 
-                                        v 8 
-                                        a 43 43 0 0 0 0 86 
+                                            d="M 50 4
+                                        a 48 48 0 0 1 0 96
+                                        a 50 50 0 0 1 0 -100
+                                        v 8
+                                        a 43 43 0 0 0 0 86
                                         a 45 45 0 0 0 0 -90"
                                         />
                                     </svg>
@@ -173,11 +175,11 @@
                                         <!-- <circle id="gauge" r="56" cx="60" cy="60"></circle> -->
                                         <path
                                             class="perf-phone__ring"
-                                            d="M 50 4 
-                                        a 48 48 0 0 1 0 96 
-                                        a 50 50 0 0 1 0 -100 
-                                        v 8 
-                                        a 43 43 0 0 0 0 86 
+                                            d="M 50 4
+                                        a 48 48 0 0 1 0 96
+                                        a 50 50 0 0 1 0 -100
+                                        v 8
+                                        a 43 43 0 0 0 0 86
                                         a 45 45 0 0 0 0 -90"
                                         />
                                     </svg>
@@ -267,21 +269,21 @@
                                     <!-- <circle id="gauge" r="56" cx="60" cy="60"></circle> -->
                                     <path
                                         class="perf-phone__ring"
-                                        d="M 50 4 
-                                    a 48 48 0 0 1 0 96 
-                                    a 50 50 0 0 1 0 -100 
-                                    v 8 
-                                    a 43 43 0 0 0 0 86 
+                                        d="M 50 4
+                                    a 48 48 0 0 1 0 96
+                                    a 50 50 0 0 1 0 -100
+                                    v 8
+                                    a 43 43 0 0 0 0 86
                                     a 45 45 0 0 0 0 -90"
                                     />
                                     <path
                                         class="perf-phone__ring-overlay"
                                         id="perf-phone__ring-overlay"
-                                        d="M 50 4 
-                                    a 46 46 0 0 1 0 92 
+                                        d="M 50 4
+                                    a 46 46 0 0 1 0 92
                                     a 46 46 0 0 1 0 -92"
                                     />
-                                    <!-- <path class="perf-phone__ring-overlay" d="M 0 0 
+                                    <!-- <path class="perf-phone__ring-overlay" d="M 0 0
                                     v 10" /> -->
                                 </svg>
                                 <p class="perf-phone__result-title">Performance</p>
@@ -330,11 +332,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-        <section class="hero">
-            
+            </div>
         </section>
+        </div>
         <section class="section-1">
             <div class="section-1__content">
                 <div class="section-1__main">
