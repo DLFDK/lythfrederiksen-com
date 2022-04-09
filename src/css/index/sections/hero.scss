@@ -19,7 +19,7 @@
         column-gap: 40px;
         padding-bottom: calc($section-padding-top-content + 9vw + 24px);
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
             padding-right: 32px;
         }
@@ -73,7 +73,7 @@
             opacity: 1;
         }
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             font-size: min(13vw, 78px);
         }
     }
@@ -89,7 +89,7 @@
         max-width: min(53vw - 84px, 492px);
         color: rgb(66, 84, 102);
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             max-width: initial;
         }
     }
@@ -119,7 +119,7 @@
         grid-template-rows: 1fr 8fr 1fr;
         height: 600px;
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             display: none;
         }
     }

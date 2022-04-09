@@ -1,5 +1,6 @@
-@use "../_variables/colors.scss" as *;
+@use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 
@@ -14,7 +15,7 @@
         padding-bottom: calc($section-padding-top-content + 9vw + 24px);
         padding-right: 32px;
 
-        @media (max-width: 900px) {
+        @media (max-width: $breakpoint-large) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -45,11 +46,11 @@
         letter-spacing: $letter-spacing-copy;
         line-height: $line-height-small;
 
-        @media (max-width: 900px) {
+        @media (max-width: $breakpoint-large) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
         }
     }

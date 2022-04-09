@@ -21,7 +21,7 @@
         align-items: center;
         padding: 12px 32px 0px;
     
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             height: 64px;
             padding-top: 24px;
         }
@@ -43,14 +43,14 @@
     &__list {
         @include link($stripe-white);
         
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             display: none;
         }
     }
 
     &__login {
         @include link-button($stripe-white, rgba($color: white, $alpha: 0.2), rgba($color: white, $alpha: 0.4), $stripe-white);
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             display: none;
         }
     }

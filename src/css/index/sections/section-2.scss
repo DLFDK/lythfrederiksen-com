@@ -1,5 +1,6 @@
-@use "../_variables/colors.scss" as *;
+@use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 
@@ -16,7 +17,7 @@
             "highlight image";
         row-gap: 36px;
 
-        @media (max-width: 600px) {
+        @media (max-width: $breakpoint-medium) {
             grid-template-columns: initial;
             grid-template-areas:
                 "main"
@@ -53,7 +54,7 @@
         line-height: $line-height-small;
         margin-right: 64px;
 
-        @media (max-width: 900px) {
+        @media (max-width: $breakpoint-large) {
             grid-template-columns: initial;
             grid-template-rows: 1fr 1fr;
         }
@@ -111,7 +112,7 @@
         border: 1px solid #0f395e;
         border-radius: 8px;
         overflow: hidden;
-        @media (max-width: 600px) {
+        @media (max-width: $breakpoint-medium) {
             max-height: 400px;
         }
 

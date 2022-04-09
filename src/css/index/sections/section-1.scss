@@ -1,5 +1,6 @@
-@use "../_variables/colors.scss" as *;
+@use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 
@@ -20,7 +21,7 @@
             "cta .";
         gap: 32px;
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             grid-template-areas:
                 "title"
                 "copy-1"
@@ -57,10 +58,10 @@
             grid-area: copy-2;
             padding-right: 112px;
 
-            @media (max-width: 899px) {
+            @media (max-width: $breakpoint-large) {
                 padding-right: 64px;
             }
-            @media (max-width: 599px) {
+            @media (max-width: $breakpoint-medium) {
                 padding-right: 0px;
             }
         }
@@ -81,11 +82,11 @@
         grid-template-columns: 50px 0.6fr 1fr 0.6fr;
         width: 1300px;
 
-        @media (max-width: 900px) {
+        @media (max-width: $breakpoint-large) {
             width: 900px;
         }
 
-        @media (max-width: 599px) {
+        @media (max-width: $breakpoint-medium) {
             width: 600px;
             grid-template-rows: 40px 125px auto 150px 50px;
             grid-template-columns: 25px 0.6fr 1fr 0.6fr;
