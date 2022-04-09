@@ -212,6 +212,10 @@
                 fill: $stripe-blue;
                 animation: var(--icon-animation, highlight-icon--4-1 12s infinite);
                 animation-delay: 6s;
+                @media (prefers-reduced-motion) {
+                    left: 12px;
+                    top: 4px;
+                }
             }
 
             @keyframes highlight-icon--4-1 {
@@ -226,9 +230,6 @@
                 to {
                     opacity: 0.8;
                 }
-            }
-
-            @keyframes highlight-icon--4-2 {
             }
         }
     }
