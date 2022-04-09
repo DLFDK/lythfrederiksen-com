@@ -1,0 +1,35 @@
+@use "../_variables/general.scss" as *;
+@use "../_variables/colors.scss" as *;
+@use "../_variables/fonts.scss" as *;
+
+@mixin link($color) {
+    font-size: $font-size-smaller;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-copy;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    align-items: center;
+
+
+    & a {
+        color: $color;
+    }
+
+    & li {
+        transition: opacity var(--transition-duration);
+    }
+
+    @media (hover: hover) {
+        & li:hover {
+            opacity: 0.6;
+        }
+    }
+
+    @media (hover: none) {
+        & li:focus {
+            opacity: 0.6;
+        }
+    }
+}

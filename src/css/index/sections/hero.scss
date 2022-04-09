@@ -1,7 +1,6 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
-@use "../_variables/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 @use "../_mixins/section.scss" as *;
 
@@ -82,9 +81,9 @@
     &__text {
         grid-column: 1/2;
         grid-row: 3/4;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 28px;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
         letter-spacing: 0.2px;
         padding-top: 32px;
         max-width: min(53vw - 84px, 492px);
@@ -100,7 +99,16 @@
         grid-row: 4/5;
         margin-top: 32px;
         margin-bottom: 16px;
+        display: flex;
+        gap: 4px;
+    }
+    
+    &__read-blog {
         @include link-button($stripe-white, $stripe-dark-blue, rgba($stripe-dark-blue, $alpha: 0.4), $stripe-white);
+    }
+
+    &__contact {
+        @include link-button($stripe-dark-blue, transparent, transparent, $stripe-dark-blue);
     }
 
     &__perf {

@@ -1,8 +1,8 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_variables/fonts.scss" as *;
-@use "../_variables/section.scss" as *;
 @use "../_mixins/section.scss" as *;
+@use "../_mixins/misc.scss" as *;
 
 .footer {
     @include section($stripe-background-white);
@@ -11,7 +11,6 @@
         grid-column: 2;
         grid-row: 1;
         padding: 64px 32px 8px 32px;
-        color: $stripe-dark-blue;
     }
 
     &__main {
@@ -32,31 +31,21 @@
         }
     }
 
-    a {
-        text-decoration: none;
-
-        &:visited {
-            color: inherit;
-        }
-    }
-
     &__title {
         grid-area: title;
         margin: 0;
-        font-weight: 600;
+        font-weight: $font-weight-boldest;
+        font-size: $font-size-regular;
+
+        & a {
+            color: $stripe-dark-blue;
+        }
     }
 
     &__list {
+        @include link($stripe-dark-blue);
         grid-area: nav;
         justify-self: center;
-        font-size: $font-size-small;
-        font-weight: $font-weight-bold;
-        letter-spacing: $letter-spacing-copy;
-        line-height: 24px;
-        list-style: none;
-        display: flex;
-        gap: 40px;
-        padding: 0;
 
         & li:last-child{
             justify-self: center;
@@ -68,18 +57,18 @@
     }
 
     &__contact {
+        @include link($stripe-dark-blue);
         grid-area: contact;
-        color: $stripe-dark-blue;
         justify-self: end;
     }
 
     &__copyright {
         width: max-content;
-        font-size: $font-size-small;
+        font-size: $font-size-smaller;
         font-weight: $font-weight-regular;
         letter-spacing: $letter-spacing-copy;
-        line-height: 24px;
         margin: 0 auto;
+        color: $stripe-dark-blue;
     }
 
 }

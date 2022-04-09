@@ -1,6 +1,8 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/colors.scss" as *;
-@use "../_variables/section.scss" as *;
+@use "../_variables/fonts.scss" as *;
+
+$section-padding-top-content: clamp(72px, 8vw + 42px, 128px);
 
 @mixin section($color-background) {
     display: grid;
@@ -18,31 +20,31 @@
 
 @mixin copy($color) {
     color: $color;
-    font-size: $section-copy-font-size;
-    line-height: $section-copy-line-height;
-    letter-spacing: $section-copy-letter-spacing;
-    font-weight: $section-copy-font-weight;
+    font-size: $font-size-small;
+    line-height: $line-height-regular;
+    letter-spacing: $letter-spacing-copy;
+    font-weight: $font-weight-regular;
 }
 
 @mixin section-header($color-heading, $color-caption) {
     & p {
         color: $color-caption;
-        font-size: $section-caption-font-size;
-        font-weight: $section-caption-font-weight;
-        line-height: $section-caption-line-height;
-        letter-spacing: $section-caption-letter-spacing;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-regular;
+        letter-spacing: $letter-spacing-copy;
     }
 
     & h2 {
         color: $color-heading;
-        font-size: 34px;
-        font-weight: 500;
-        line-height: 44px;
+        font-size: $font-size-large;
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-header;
         letter-spacing: -0.1px;
         margin: 24px 0 0;
 
         @media (min-width: 1080px) {
-            font-size: 38px;
+            font-size: $font-size-large;
         }
     }
 }

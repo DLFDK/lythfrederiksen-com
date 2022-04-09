@@ -1,5 +1,5 @@
 @use "../_variables/colors.scss" as *;
-@use "../_variables/section.scss" as *;
+@use "../_variables/fonts.scss" as *;
 @use "../_mixins/section.scss" as *;
 @use "../_mixins/link-button.scss" as *;
 
@@ -49,8 +49,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
-        letter-spacing: $section-copy-letter-spacing;
-        line-height: $section-highlight-line-height;
+        letter-spacing: $letter-spacing-copy;
+        line-height: $line-height-small;
         margin-right: 64px;
 
         @media (max-width: 900px) {
@@ -78,8 +78,8 @@
 
     &__highlight-title {
         color: $stripe-white;
-        font-size: $section-highlight-font-size;
-        font-weight: $section-highlight-title-font-weight;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-bold;
         margin: 0;
         
         &::before {
@@ -89,14 +89,14 @@
             border-left: 1px solid $stripe-blue;
             top: 50%;
             left: -16px;
-            height: $section-highlight-font-size;
+            height: $font-size-smaller;
         }
     }
 
     &__highlight-copy {
         color: $stripe-light-grey;
-        font-size: $section-highlight-font-size;
-        font-weight: $section-highlight-copy-font-weight;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-regular;
         font-style: italic;
     }
 
