@@ -78,17 +78,18 @@
         left: -20px;
         display: grid;
         gap: 36px;
-        grid-template-rows: 80px 250px auto 300px 100px;
+        grid-template-rows: 80px 250px 200px 300px 100px;
         grid-template-columns: 50px 0.6fr 1fr 0.6fr;
         width: 1300px;
+        height: min-content;
 
         @media (max-width: $breakpoint-large) {
             width: 900px;
         }
 
         @media (max-width: $breakpoint-medium) {
-            width: 600px;
-            grid-template-rows: 40px 125px auto 150px 50px;
+            width: 650px;
+            grid-template-rows: 40px 125px 100px 150px 50px;
             grid-template-columns: 25px 0.6fr 1fr 0.6fr;
         }
     }

@@ -96,10 +96,10 @@
 
             @keyframes highlight-icon--1 {
                 0% {
-                    transform: 0;
+                    transform: translateX(0px);
                 }
                 5% {
-                    transform: 0;
+                    transform: translateX(0px);
                 }
                 10% {
                     transform: translateX(-6px);
