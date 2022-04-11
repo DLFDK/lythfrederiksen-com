@@ -25,7 +25,7 @@ export async function onRequest(context) {
     // return new Response('Hello, world!');
     const regex = /.*images\/(.*)/;
     const url = request.url.match(regex)[1];
-    const imageRequest = new Request(url, {
+    const imageRequest = new Request(params.path, {
         headers: request.headers
     });
     return fetch(imageRequest);
