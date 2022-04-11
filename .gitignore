@@ -5,7 +5,7 @@ dist
 node_modules
 
 # Images
-images
+src/images
 
 # Misc
 misc
