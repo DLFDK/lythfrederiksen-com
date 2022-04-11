@@ -44,26 +44,19 @@ module.exports = function (eleventyConfig) {
         });
     }
 
-    // if (process.argv.includes('--serve')) {
-    //     const { createProxyMiddleware } = require('http-proxy-middleware');
-    //     const proxy = createProxyMiddleware('/cloudinary', {
-    //         target: 'http://localhost:8080/images/',
-    //         changeOrigin: true,
-    //         pathRewrite: function(path, req){
-    //             return path.slice(path.lastIndexOf("/"));
-    //         }
-    //     });
-    //     eleventyConfig.setBrowserSyncConfig({
-    //         open: true,
-    //         middleware: [proxy],
-    //         server: {
-    //             baseDir: "./dist",
-    //             routes: {
-    //                 "/images": "./images"
-    //             }
-    //         }
-    //     });
-    // }
+    if (process.argv.includes('--serve')) {
+        const { createProxyMiddleware } = require('http-proxy-middleware');
+        const proxy = createProxyMiddleware('/images', {
+            target: 'https://ik.imagekit.io/',
+            changeOrigin: true,
+            pathRewrite: function(path, req){
+                return path.replace("images/https://ik.imagekit.io/", "");
+            }
+        });
+        eleventyConfig.setBrowserSyncConfig({
+            middleware: [proxy],
+        });
+    }
 
     return {
         markdownTemplateEngine: 'njk',
