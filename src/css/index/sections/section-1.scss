@@ -101,9 +101,10 @@
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-        filter: grayscale(100%);
-        transition: transform 0.2s, filter 0.2s;
         color: $stripe-cloud-blue;
+        filter: grayscale(100%);
+        transform: scale(0.99);
+        transition: transform 0.2s, filter 0.2s;
 
         &--1 {
             position: relative;
@@ -134,7 +135,7 @@
 
         &:hover {
             filter: none;
-            transform: scale(1.01);
+            transform: scale(1);
         }
     }
 
