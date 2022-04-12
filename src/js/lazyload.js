@@ -1,5 +1,6 @@
 lazyload();
 function lazyload() {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")?.matches;
     const images = [...document.querySelectorAll("img[data-lazy]")];
     const observer = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
@@ -10,6 +11,12 @@ function lazyload() {
                 const pixelHeight = entry.target.offsetHeight * window.devicePixelRatio.toFixed(0);
                 entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
                 observer.unobserve(entry.target);
+                if(!reducedMotion){
+                    entry.target.animate(
+                        { opacity: 0, offset: 0 },
+                        { duration: 1000 }
+                    )
+                }
             }
         }
     }, {
