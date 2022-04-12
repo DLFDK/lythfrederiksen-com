@@ -6,4 +6,7 @@
     @media (prefers-reduced-motion) {
         --icon-animation: none;
     }
+    @media (prefers-reduced-motion) {
+        --image-scale-toggle: 1;
+    }
 }

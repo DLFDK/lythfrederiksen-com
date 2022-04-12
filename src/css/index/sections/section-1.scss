@@ -103,7 +103,7 @@
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
         color: $stripe-cloud-blue;
         filter: grayscale(100%);
-        transform: scale(0.99);
+        transform: scale(var(--image-scale-toggle, 0.99));
         transition: transform 0.2s, filter 0.2s;
 
         &--1 {

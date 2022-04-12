@@ -111,7 +111,7 @@
         border: 1px solid #0f395e;
         border-radius: 8px;
         overflow: hidden;
-        transform: scale(0.99);
+        transform: scale(var(--image-scale-toggle, 0.99));
         transition: transform 0.2s;
 
         @media (max-width: $breakpoint-medium) {
