@@ -1,9 +1,0 @@
-[build]
-    publish = "dist"
-    command = "npm run build"
-
-# [[redirects]]
-#   from = "/cloudinary/*"
-#   to = ":splat"
-#   status = 200y
-#   force = true
