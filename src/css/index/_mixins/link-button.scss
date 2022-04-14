@@ -1,3 +1,5 @@
+@use "../_variables/fonts.scss" as *;
+
 @mixin link-button($color-text, $color-background, $color-hover, $color-arrow) {
     display: block;
     width: fit-content;
@@ -14,7 +16,7 @@
     }
 
     & span {
-        font-size: 15px;
+        font-size: $font-size-smaller;
         font-weight: 425;
     }
 
