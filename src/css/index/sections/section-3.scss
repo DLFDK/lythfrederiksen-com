@@ -57,11 +57,9 @@
 
     &__highlight-item {
         display: grid;
-        grid-template-rows: min-content min-content 1fr min-content;
         gap: 8px;
-        font-size: 15px;
+        font-size: $font-size-smaller;
         height: min-content;
-        // padding-right: 36px;
     }
 
     &__highlight-icon {
@@ -240,7 +238,6 @@
         font-size: $font-size-smaller;
         font-weight: $font-weight-bold;
         margin: 0;
-        // width: max-content;
 
         &::before {
             display: block;
@@ -249,6 +246,7 @@
             border-left: 1px solid $stripe-purple;
             top: 50%;
             left: -16px;
+            width: 0px;
             height: $font-size-smaller;
         }
     }
@@ -259,10 +257,10 @@
         font-weight: $font-weight-regular;
     }
 
-    // &__highlight-link {
-    //     @include link-button($stripe-purple, transparent, transparent, $stripe-purple);
-    //     padding: 0;
-    // }
+    &__highlight-link {
+        @include link-button($stripe-purple, transparent, transparent, $stripe-purple);
+        padding: 0;
+    }
 
     &__slant {
         @include slant($stripe-background-white);
