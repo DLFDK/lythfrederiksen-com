@@ -31,6 +31,10 @@
         margin-right: 64px;
         display: grid;
         gap: 24px;
+
+        @media (max-width: $breakpoint-medium) {
+            margin-right: 32px;
+        }
     }
 
     &__header {
@@ -57,6 +61,10 @@
         @media (max-width: $breakpoint-large) {
             grid-template-columns: initial;
             grid-template-rows: 1fr 1fr;
+        }
+
+        @media (max-width: $breakpoint-medium) {
+            margin-right: 32px;
         }
     }
 
