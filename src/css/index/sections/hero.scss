@@ -17,7 +17,7 @@
         padding-top: calc(60px + clamp(0px, 8vw - 28px, 48px));
         padding-left: 32px;
         column-gap: 40px;
-        padding-bottom: calc($section-padding-top-content + 9vw + 24px);
+        padding-bottom: calc($section-padding-top-content + 24px);
 
         @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
@@ -55,7 +55,7 @@
         grid-column: 1/2;
         grid-row: 2/3;
         margin: 0;
-        font-size: min(10vw, 98px);
+        font-size: min(12vw, 98px);
         font-weight: 500;
         line-height: 1.04;
         letter-spacing: -0.04em;
@@ -74,7 +74,7 @@
         }
 
         @media (max-width: $breakpoint-medium) {
-            font-size: min(13vw, 78px);
+            font-size: min(17vw, 78px);
         }
     }
 
