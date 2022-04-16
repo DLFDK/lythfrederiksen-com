@@ -1,0 +1,103 @@
+@use "../_variables/general.scss" as *;
+@use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
+@use "../_mixins/section.scss" as *;
+@use "../_mixins/link-button.scss" as *;
+
+.disclaimer {
+    display: grid;
+    grid-template-columns: minmax(32px, 1fr) minmax(0, 320px) minmax(32px, 1fr);
+    background-color: $stripe-white;
+    padding-bottom: 64px;
+    &__content {
+        grid-column: 2;
+        width: 100%;
+        aspect-ratio: 3/2;
+        display: grid;
+        grid-template-rows: 0.6fr min-content 1fr;
+        grid-template-columns: 1fr 0;
+        row-gap: 2px;
+    }
+
+    &__title {
+        color: $stripe-white;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-regular;
+        letter-spacing: 0.6px;
+        margin: 0;
+        font-style: italic;
+    }
+
+    &__line {
+        color: $stripe-white;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
+        grid-column: 1;
+        height: min-content;
+        width: max-content;
+        display: flex;
+        box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+        gap: 2px;
+        
+        & > * {
+            background: #000;
+            padding: 0 2px;
+        }
+
+        &--1 {
+            align-self: end;
+        }
+
+        &--2 {
+            margin-left: 32px;
+        }
+
+        &--3 {
+            & > p {
+                display: inline;
+            }
+        }
+    }
+
+    &__stolen-from {
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        & > p {
+            color: $stripe-purple;
+            font-size: $font-size-small;
+            font-weight: $font-weight-bold;
+            line-height: $line-height-regular;
+            position: absolute;
+            width: max-content;
+            top: -8px;
+            left: -76px;
+            padding: 0 2px;
+            transform: rotate(10deg);
+            background: white;
+            box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__stripe {
+        position: relative;
+        display: inline-block;
+        width: 72px;
+        fill: $stripe-white;
+        padding-left: 8px;
+        top: 7px;
+    }
+
+    &__strike-through {
+        text-decoration: $stripe-white 4px line-through;
+    }
+
+    &__highlight-link {
+        grid-column: 1;
+        justify-self: end;
+        @include link-button($stripe-white, transparent, transparent, $stripe-white);
+        background: #000;
+        border-radius: 0;
+    }
+}
