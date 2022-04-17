@@ -112,6 +112,7 @@
     }
 
     &__perf {
+        user-select: none;
         grid-column: 2/3;
         grid-row: 1/-1;
         display: grid;

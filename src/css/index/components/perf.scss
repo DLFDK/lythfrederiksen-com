@@ -166,7 +166,7 @@
     &__button {
         height: 24px;
         width: 100%;
-        background: #0a2540;
+        background: rgba(#0a2540, $alpha: 0.7);
         border-radius: 4px;
         box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
         display: grid;
