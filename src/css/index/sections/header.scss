@@ -35,7 +35,7 @@
         font-size: $font-size-regular;
         font-weight: $font-weight-boldest;
 
-        &:focus {
+        &:focus:not(:hover) {
             outline: none;
             text-decoration: underline;
         }

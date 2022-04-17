@@ -15,7 +15,7 @@
     
     & a {
         color: $color;
-        &:focus {
+        &:focus:not(:hover) {
             outline: none;
             text-decoration: 2px underline;
         }

@@ -49,7 +49,7 @@
                 color: $stripe-dark-blue;
             }
 
-            &:focus {
+            &:focus:not(:hover) {
                 outline: none;
                 text-decoration: 2px underline;
             }

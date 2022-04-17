@@ -98,11 +98,11 @@
             grid-area: stripe;
             width: 80px;
 
-            & a:focus{
+            & a:focus:not(:hover){
                 outline: none;
                 border-bottom: 4px $stripe-dark-blue solid;
             }
-            
+
             @media (min-width: 600px){
                 position: relative;
                 top: 4px;
