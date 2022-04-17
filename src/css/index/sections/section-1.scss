@@ -48,6 +48,11 @@
             &:hover {
                 color: $stripe-dark-blue;
             }
+
+            &:focus {
+                outline: none;
+                text-decoration: 2px underline;
+            }
         }
 
         &--1 {

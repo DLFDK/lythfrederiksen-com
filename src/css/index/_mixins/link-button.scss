@@ -16,6 +16,11 @@
         background-color: $color-hover;
     }
 
+    &:focus{
+        outline: none;
+        text-decoration: 2px underline;
+    }
+
     & span {
         font-size: $font-size-smaller;
         line-height: $line-height-small;

@@ -36,6 +36,7 @@
         font-weight: $font-weight-boldest;
 
         &:focus {
+            outline: none;
             text-decoration: underline;
         }
     }
