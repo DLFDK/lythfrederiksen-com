@@ -6,143 +6,115 @@
 
 .disclaimer {
     display: grid;
-    grid-template-columns: minmax(32px, 1fr) minmax(0, 320px) minmax(32px, 1fr);
+    grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);
     background-color: $stripe-white;
     padding-bottom: 64px;
     &__content {
+        position: relative;
         grid-column: 2;
         display: grid;
-        grid-template-rows: auto auto auto;
-        grid-template-columns: min-content min-content min-content min-content;
         gap: 8px;
-        justify-content: center;
+        grid-template-areas:
+            "design design design design"
+            "may stolen stolen stolen"
+            "the lovely folks stripe"
+            "link link link link";
+        font-size: clamp($font-size-small, 3vw, $font-size-regular);
+        color: $stripe-white;
+        font-weight: $font-weight-regular;
+        font-weight: $font-weight-regular;
+        font-weight: $font-weight-regular;
+        font-weight: $font-weight-regular;
+        font-weight: $font-weight-regular;
+        font-weight: $font-weight-regular;
+        @media (min-width: 600px) {
+            grid-template-areas:
+            "design may stolen stolen"
+            "the lovely folks stripe"
+            "link link link link";
+        }
     }
 
     &__line {
-        color: $stripe-white;
-        font-size: $font-size-small;
-        font-weight: $font-weight-regular;
-        line-height: $line-height-regular;
         width: max-content;
-        
         & > p {
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
             background: $stripe-dark-blue;
-            // background: black;
             padding: 0 3px;
         }
 
         &--1 {
-            grid-column: 1/5;
-            grid-row: 1;
-            // transform: rotate(2deg);
+            grid-area: design;
         }
-        
+
         &--2 {
             transform: rotate(-3deg);
-            grid-column: 1/2;
-            grid-row: 2;
+            grid-area: may;
         }
-        
+
         &--3 {
-            // transform: rotate(-1deg);
-            grid-column: 2/5;
-            grid-row: 2;
+            grid-area: stolen;
         }
 
         &--4 {
-            position: relative;
-            grid-column: 2/5;
-            grid-row: 2;
+            position: absolute;
+            grid-area: stolen;
             justify-self: end;
             z-index: 1;
             transform: rotate(10deg);
             top: -4px;
             right: 16px;
+            transition: transform var(--transition-duration);
+            user-select: none;
+
+            &:hover {
+                height: 60px;
+                transform: translate(10px, -20px) rotate(5deg);
+            }
+
+            @media (min-width: 600px){
+                right: 0;
+            }
         }
 
         &--5 {
-            grid-column: 1/2;
-            grid-row: 3;
+            grid-area: the;
             justify-self: end;
-            // transform: rotate(3deg);
         }
-        
+
         &--6 {
+            grid-area: lovely;
             position: relative;
-            grid-column: 2/3;
-            grid-row: 3;
             top: 3px;
             transform: rotate(3deg);
         }
 
         &--7 {
-            grid-column: 3/4;
-            grid-row: 3;
+            grid-area: folks;
         }
 
         &--8 {
-            grid-column: 4/5;
-            grid-row: 3;
+            grid-area: stripe;
             width: 80px;
-            // padding: 6px;
+
+            @media (min-width: 600px){
+                position: relative;
+                top: 4px;
+                width: 100px;
+            }
         }
 
         &--9 {
-            grid-column: 1/5;
-            grid-row: 4;
+            grid-area: link;
             justify-self: end;
             & > a {
-                // background: $stripe-dark-blue;
-                // @include link-button($stripe-white, $stripe-dark-blue, $stripe-dark-blue, $stripe-white);
                 @include link-button($stripe-dark-blue, transparent, transparent, $stripe-dark-blue);
             }
-
         }
 
         &--highlight > p {
             background: $stripe-purple;
         }
     }
-
-    // &__stolen-from {
-    //     grid-column: 2;
-    //     grid-row: 2;
-    //     position: relative;
-    //     & > p {
-    //         color: $stripe-purple;
-    //         font-size: $font-size-small;
-    //         font-weight: $font-weight-bold;
-    //         line-height: $line-height-regular;
-    //         position: absolute;
-    //         width: max-content;
-    //         top: -8px;
-    //         left: -76px;
-    //         padding: 0 2px;
-    //         transform: rotate(10deg);
-    //         background: white;
-    //         box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
-    //     }
-    // }
-
-    // &__stripe {
-    //     position: relative;
-    //     display: inline-block;
-    //     width: 72px;
-    //     fill: $stripe-white;
-    //     padding-left: 8px;
-    //     top: 7px;
-    // }
-
-    // &__strike-through {
-    //     text-decoration: $stripe-white 4px line-through;
-    // }
-
-    // &__highlight-link {
-    //     grid-column: 1;
-    //     justify-self: end;
-    //     @include link-button($stripe-white, transparent, transparent, $stripe-white);
-    //     background: #000;
-    //     border-radius: 0;
-    // }
 }
