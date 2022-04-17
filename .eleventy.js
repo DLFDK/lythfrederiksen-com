@@ -3,7 +3,6 @@ const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/");
-    eleventyConfig.addPassthroughCopy("./src/images/");
     eleventyConfig.addPassthroughCopy("./src/js/");
     if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/css/");
