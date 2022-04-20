@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);
     background-color: $stripe-white;
-    padding-bottom: 64px;
+    padding-bottom: 128px;
     &__content {
         position: relative;
         grid-column: 2;
@@ -21,11 +21,6 @@
             "link link link link";
         font-size: clamp($font-size-small, 3vw, $font-size-regular);
         color: $stripe-white;
-        font-weight: $font-weight-regular;
-        font-weight: $font-weight-regular;
-        font-weight: $font-weight-regular;
-        font-weight: $font-weight-regular;
-        font-weight: $font-weight-regular;
         font-weight: $font-weight-regular;
         @media (min-width: 600px) {
             grid-template-areas:
