@@ -9,6 +9,7 @@
     @include section(transparent);
 
     &__content {
+        position: relative;
         grid-column: 2;
         grid-row: 1;
         display: grid;
@@ -17,7 +18,7 @@
         padding-top: calc(60px + clamp(0px, 8vw - 28px, 48px));
         padding-left: 32px;
         column-gap: 40px;
-        padding-bottom: calc($section-padding-top-content + 24px);
+        padding-bottom: calc($section-padding-top-content + 96px);
 
         @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
@@ -109,6 +110,34 @@
 
     &__contact {
         @include link-button($stripe-dark-blue, transparent, transparent, $stripe-dark-blue);
+    }
+
+    &__message {
+        position: absolute;
+        grid-column: 2;
+        grid-row: 2;
+        color: white;
+        top: -90px;
+        left: -100px;
+        transform: rotate(-13deg);
+        display: grid;
+        gap: 2px;
+        justify-items: center;
+        font-size: $font-size-smaller;
+        width: 140px;
+    }
+    
+    &__message-text {
+        fill: $stripe-white;
+        fill-rule: evenodd;
+    }
+
+    &__message-hand {
+        fill: white;
+        stroke: white;
+        stroke-width: 2px;
+        width: 40px;
+        transform: rotate(30deg);
     }
 
     &__perf {
