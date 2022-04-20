@@ -11,11 +11,16 @@ function lazyload() {
                 const pixelHeight = entry.target.offsetHeight * window.devicePixelRatio.toFixed(0);
                 entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
                 observer.unobserve(entry.target);
-                if(!reducedMotion){
-                    entry.target.animate(
-                        { opacity: 0, offset: 0 },
-                        { duration: 1000 }
-                    )
+                if (!reducedMotion) {
+                    entry.target.onload = () => {
+                        entry.target.style.opacity = "1";
+                        entry.target.animate(
+                            { opacity: 0, offset: 0 },
+                            { duration: 1000 }
+                        )
+                    }
+                } else {
+                    entry.target.style.opacity = "1";
                 }
             }
         }
@@ -24,6 +29,7 @@ function lazyload() {
     });
 
     for (const image of images) {
+        image.style.opacity = "0";
         observer.observe(image);
     }
 }
