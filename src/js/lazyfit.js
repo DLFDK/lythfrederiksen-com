@@ -11,14 +11,20 @@ function lazyfit() {
                 entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
                 observer.unobserve(entry.target);
                 entry.target.addEventListener("load", () => {
-                    for (const className of entry.target.dataset.addClass.split(" ")) {
-                        entry.target.classList.add(className);
+                    if (entry.target.dataset.addClass) {
+                        for (const className of entry.target.dataset.addClass.split(" ")) {
+                            entry.target.classList.add(className);
+                        }
                     }
-                    for (const className of entry.target.dataset.removeClass.split(" ")) {
-                        entry.target.classList.remove(className);
+                    if (entry.target.dataset.removeClass) {
+                        for (const className of entry.target.dataset.removeClass.split(" ")) {
+                            entry.target.classList.remove(className);
+                        }
                     }
-                    for (const className of entry.target.dataset.toggleClass.split(" ")) {
-                        entry.target.classList.toggle(className);
+                    if (entry.target.dataset.toggleClass) {
+                        for (const className of entry.target.dataset.toggleClass.split(" ")) {
+                            entry.target.classList.toggle(className);
+                        }
                     }
                 });
             }
