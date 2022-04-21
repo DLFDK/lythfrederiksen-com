@@ -2,7 +2,7 @@
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
-@use "../_mixins/link-button.scss" as *;
+// @use "../_mixins/link-button.scss" as *;
 
 .section-2 {
     @include section($stripe-dark-blue);
@@ -46,7 +46,10 @@
     }
 
     &__cta {
-        @include link-button($stripe-dark-blue, $stripe-blue, $stripe-white, $stripe-dark-blue);
+        // @include link-button($stripe-dark-blue, $stripe-blue, $stripe-white, $stripe-dark-blue);
+        --link-button-text-color: #{$stripe-dark-blue};
+        --link-button-bg-color: #{$stripe-blue};
+        --link-button-hover-color: #{$stripe-white};
     }
 
     &__highlight {
@@ -110,8 +113,12 @@
     }
 
     &__highlight-link {
-        @include link-button($stripe-blue, transparent, transparent, $stripe-blue);
-        padding: 0;
+        --link-button-text-color: #{$stripe-blue};
+        --link-button-bg-color: transparent;
+        & a {
+            padding: 0;
+        }
+            
     }
 
     &__image {

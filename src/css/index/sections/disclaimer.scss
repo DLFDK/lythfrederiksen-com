@@ -2,8 +2,6 @@
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
-@use "../_mixins/link-button.scss" as *;
-
 .disclaimer {
     display: grid;
     grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);
@@ -108,9 +106,8 @@
         &--9 {
             grid-area: link;
             justify-self: end;
-            & > a {
-                @include link-button($stripe-dark-blue, transparent, transparent, $stripe-dark-blue);
-            }
+            --link-button-text-color: #{$stripe-dark-blue};
+            --link-button-bg-color: transparent;
         }
 
         &--highlight > p {

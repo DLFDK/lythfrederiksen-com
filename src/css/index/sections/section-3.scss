@@ -2,7 +2,6 @@
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
-@use "../_mixins/link-button.scss" as *;
 
 .section-3 {
     @include section($stripe-white);
@@ -35,7 +34,9 @@
     }
 
     &__cta {
-        @include link-button($stripe-white, $stripe-purple, $stripe-dark-blue, $stripe-white);
+        --link-button-text-color: #{$stripe-white};
+        --link-button-bg-color: #{$stripe-purple};
+        --link-button-hover-color: #{$stripe-dark-blue};
     }
 
     &__highlight {
@@ -258,8 +259,11 @@
     }
 
     &__highlight-link {
-        @include link-button($stripe-purple, transparent, transparent, $stripe-purple);
-        padding: 0;
+        --link-button-text-color: #{$stripe-purple};
+        --link-button-bg-color: transparent;
+        & a {
+            padding: 0;
+        }
     }
 
     &__slant {

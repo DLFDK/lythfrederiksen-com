@@ -1,19 +1,25 @@
 @use "../_variables/fonts.scss" as *;
+@use "../_variables/colors.scss" as *;
 
-@mixin link-button($color-text, $color-background, $color-hover, $color-arrow) {
-    display: block;
+.link-button{
+    display: flex;
+    align-items: center;
     width: fit-content;
     height: fit-content;
     text-decoration: none;
-    color: $color-text;
-    background-color: $color-background;
-    // padding: 3px 12px 8px 16px;
+    color: var(--link-button-text-color);
+    background-color: var(--link-button-bg-color);
     padding: 3px 16px 6px;
     border-radius: 16.5px;
     transition: background-color var(--transition-duration);
 
+    font-size: $font-size-smaller;
+    line-height: $line-height-small;
+    letter-spacing: 0.2px;
+    font-weight: 425;
+
     &:hover {
-        background-color: $color-hover;
+        background-color: var(--link-button-hover-color);
     }
 
     &:focus:not(:hover){
@@ -21,21 +27,14 @@
         text-decoration: 2px underline;
     }
 
-    & span {
-        font-size: $font-size-smaller;
-        line-height: $line-height-small;
-        letter-spacing: 0.2px;
-        font-weight: 425;
-    }
-
     & svg {
         box-sizing: content-box;
-        padding-left: 5px;
+        padding-left: 10px;
         position: relative;
-        top: 1px;
+        top: 2px;
         stroke-width: 2px;
         fill: none;
-        stroke: $color-arrow;
+        stroke: var(--link-button-text-color);
     }
 
     & path:first-child {

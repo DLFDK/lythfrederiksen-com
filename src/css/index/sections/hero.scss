@@ -1,7 +1,7 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
-@use "../_mixins/link-button.scss" as *;
+// @use "../_mixins/link-button.scss" as *;
 @use "../_mixins/section.scss" as *;
 
 .hero {
@@ -103,39 +103,14 @@
     }
 
     &__read-blog {
-        @include link-button($stripe-white, $stripe-dark-blue, rgba($stripe-dark-blue, $alpha: 0.4), $stripe-white);
+        --link-button-text-color: #{$stripe-white};
+        --link-button-bg-color: #{$stripe-dark-blue};
+        --link-button-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
     }
 
     &__contact {
-        @include link-button($stripe-dark-blue, transparent, transparent, $stripe-dark-blue);
-    }
-
-    &__message {
-        position: absolute;
-        grid-column: 2;
-        grid-row: 2;
-        color: white;
-        top: -90px;
-        left: -100px;
-        transform: rotate(-13deg);
-        display: grid;
-        gap: 2px;
-        justify-items: center;
-        font-size: $font-size-smaller;
-        width: 140px;
-    }
-
-    &__message-text {
-        fill: $stripe-white;
-        fill-rule: evenodd;
-    }
-
-    &__message-hand {
-        fill: white;
-        stroke: white;
-        stroke-width: 2px;
-        width: 40px;
-        transform: rotate(30deg);
+        --link-button-text-color: #{$stripe-dark-blue};
+        --link-button-bg-color: transparent;
     }
 
     &__perf {

@@ -2,7 +2,7 @@
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
-@use "../_mixins/link-button.scss" as *;
+// @use "../_mixins/link-button.scss" as *;
 @use "../_mixins/misc.scss" as *;
 
 .header {
@@ -50,7 +50,9 @@
     }
 
     &__login {
-        @include link-button($stripe-white, rgba($color: white, $alpha: 0.2), rgba($color: white, $alpha: 0.4), $stripe-white);
+        --link-button-text-color: #{$stripe-white};
+        --link-button-bg-color: #{rgba($color: white, $alpha: 0.2)};
+        --link-button-hover-color: #{rgba($color: white, $alpha: 0.4)};
         @media (max-width: $breakpoint-medium) {
             display: none;
         }

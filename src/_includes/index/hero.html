@@ -7,24 +7,12 @@
     <div class="hero__title hero__title--overlay">You <br />put me <br />in charge !</div>
     <p class="hero__text">Hi there, I'm Dennis! I used to have a beard. Now I don't. Am I trying to grow a new one? Maybe. Who’s asking? You’ a cop?</p>
     <div class="hero__cta">
-        <a class="hero__read-blog" href="">
-            <span>Read the blog</span>
-            <svg role="presentation" width="10" height="10" viewBox="0 0 10 10">
-                <g fill-rule="evenodd">
-                    <path d="M0 5h7"></path>
-                    <path d="M1 1l4 4-4 4"></path>
-                </g>
-            </svg>
-        </a>
-        <a class="hero__contact" href="">
-            <span>Contact</span>
-            <svg role="presentation" width="10" height="10" viewBox="0 0 10 10">
-                <g fill-rule="evenodd">
-                    <path d="M0 5h7"></path>
-                    <path d="M1 1l4 4-4 4"></path>
-                </g>
-            </svg>
-        </a>
+        <div class="hero__read-blog">
+            {{ linkButton({ text: 'Read the blog', href: "/blog" }) }}
+        </div>
+        <div class="hero__contact">
+            {{ linkButton({ text: 'Contact', href: "/contact" }) }}
+        </div>
     </div>
     {% include 'src/_includes/index/perf.html' %}
 </div>
