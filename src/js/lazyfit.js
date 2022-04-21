@@ -1,7 +1,6 @@
-lazyload();
-function lazyload() {
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")?.matches;
-    const images = [...document.querySelectorAll("img[data-lazy]")];
+lazyfit();
+function lazyfit() {
+    const images = [...document.querySelectorAll("img[data-lazyfit]")];
     const observer = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
             if (entry.isIntersecting) {
@@ -11,17 +10,17 @@ function lazyload() {
                 const pixelHeight = entry.target.offsetHeight * window.devicePixelRatio.toFixed(0);
                 entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
                 observer.unobserve(entry.target);
-                if (!reducedMotion) {
-                    entry.target.onload = () => {
-                        entry.target.style.opacity = "1";
-                        entry.target.animate(
-                            { opacity: 0, offset: 0 },
-                            { duration: 1000 }
-                        )
+                entry.target.addEventListener("load", () => {
+                    for (const className of entry.target.dataset.addClass.split(" ")) {
+                        entry.target.classList.add(className);
                     }
-                } else {
-                    entry.target.style.opacity = "1";
-                }
+                    for (const className of entry.target.dataset.removeClass.split(" ")) {
+                        entry.target.classList.remove(className);
+                    }
+                    for (const className of entry.target.dataset.toggleClass.split(" ")) {
+                        entry.target.classList.toggle(className);
+                    }
+                });
             }
         }
     }, {
@@ -29,7 +28,6 @@ function lazyload() {
     });
 
     for (const image of images) {
-        image.style.opacity = "0";
         observer.observe(image);
     }
 }
