@@ -111,7 +111,7 @@
         color: $stripe-cloud-blue;
         filter: grayscale(100%);
         transform: scale(var(--image-scale-toggle, 0.99));
-        transition: transform 0.2s, filter 0.2s;
+        transition: opacity 1s, transform 0.2s, filter 0.2s;
 
         &--1 {
             position: relative;
