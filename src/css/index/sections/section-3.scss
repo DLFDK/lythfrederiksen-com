@@ -4,6 +4,7 @@
 @use "../_mixins/section.scss" as *;
 
 .section-3 {
+    position: relative;
     @include section($stripe-white);
 
     &__content {
@@ -268,5 +269,9 @@
 
     &__slant {
         @include slant($stripe-background-white);
+    }
+
+    &__slant-flair {
+        @include slant-flair-bottom;
     }
 }

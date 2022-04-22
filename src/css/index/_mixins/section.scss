@@ -3,6 +3,8 @@
 @use "../_variables/fonts.scss" as *;
 
 $section-padding-top-content: clamp(72px, 8vw + 42px, 128px);
+$slant-flair-height: 70px;
+$slant-height: 10.5104235266vw;
 
 @mixin section($color-background) {
     display: grid;
@@ -55,5 +57,76 @@ $section-padding-top-content: clamp(72px, 8vw + 42px, 128px);
     grid-column: 1/-1;
     grid-row: 1/-1;
     background: $color;
-    clip-path: polygon(0% 100%, 100% calc(100% - 9vw), 100% 100%, 0% 100%);
+    clip-path: polygon(0% calc(100% - $slant-flair-height), 100% calc(100% - $slant-flair-height - $slant-height), 100% 100%, 0% 100%);
+}
+
+@mixin slant-flair-top {
+    position: absolute;
+    display: grid;
+    grid-template-columns: minmax(32px, 1fr) minmax(0, 1080px) minmax(32px, 1fr);
+    grid-template-rows: 30px 10px 30px;
+    transform-origin: 0% 0%;
+    transform: skewY(-6deg);
+    width: 100%;
+    height: 20px;
+    top: calc(100% - $slant-flair-height + 1px); //Corrects for 1px offset of slant
+    z-index: 10;
+
+    & div:nth-child(1) {
+        grid-column: 3;
+        grid-row: 1/3;
+        background: #80e9ff;
+        width: calc(100% + min(10vw, 140px));
+        justify-self: end;
+    }
+
+    & div:nth-child(2) {
+        grid-column: 3;
+        grid-row: 2/3;
+        width: 160px;
+        background: #0048e5;
+        z-index: 1;
+    }
+
+    & div:nth-child(3) {
+        grid-column: 3;
+        grid-row: 2/4;
+        background: #7a73ff;
+        width: 160px;
+    }
+}
+
+@mixin slant-flair-bottom {
+    position: absolute;
+    display: grid;
+    grid-template-columns: minmax(16px, 1fr) minmax(0, 1080px) minmax(16px, 1fr);
+    grid-template-rows: 30px 10px 30px;
+    transform-origin: 0% 0%;
+    transform: skewY(-6deg);
+    width: 100%;
+    top: calc(100% - 2 * $slant-flair-height + 1px); //Corrects for 1px offset of slant
+
+    & div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 2/4;
+        background: #7a73ff;
+        width: calc(100% + min(5vw, 70px));
+    }
+
+    & div:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2/3;
+        width: 160px;
+        background: #0048e5;
+        z-index: 1;
+        justify-self: end;
+    }
+
+    & div:nth-child(3) {
+        grid-column: 1;
+        grid-row: 1/3;
+        background: #80e9ff;
+        width: 160px;
+        justify-self: end;
+    }
 }
