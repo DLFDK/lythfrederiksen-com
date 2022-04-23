@@ -6,6 +6,7 @@
 
 html {
     box-sizing: border-box;
+    overflow-x: hidden; //Needed on both html and body - issue due to mobile browers
 }
 
 p,

@@ -3,5 +3,5 @@
 body {
     font-family: $font-family;
     margin: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden; //Needed on both html and body - issue due to mobile browers
 }
