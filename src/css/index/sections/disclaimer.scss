@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);
     background-color: $stripe-white;
-    padding-bottom: 128px;
+    padding-bottom: $section-padding-top-content;
     &__content {
         position: relative;
         grid-column: 2;

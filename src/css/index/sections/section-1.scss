@@ -2,7 +2,6 @@
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
 @use "../_mixins/section.scss" as *;
-// @use "../_mixins/link-button.scss" as *;
 
 .section-1 {
     @include section($stripe-background-white);
@@ -144,9 +143,5 @@
             filter: none;
             transform: scale(1);
         }
-    }
-
-    &__slant {
-        @include slant($stripe-dark-blue);
     }
 }

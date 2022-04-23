@@ -3,18 +3,5 @@
 body {
     font-family: $font-family;
     margin: 0;
-    overflow-x: hidden;
-
-    // & > * {
-    //     grid-column: wrapper-start / wrapper-end;
-    // }
-
-    // @media not screen and (prefers-reduced-motion) {
-    //     background: blue;
-    // }
-
-    // @media (hover) {
-    //     background: blue;
-    // }
-    
+    overflow-x: hidden; 
 }

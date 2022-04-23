@@ -1,7 +1,6 @@
 @use "../_variables/general.scss" as *;
 @use "../_variables/fonts.scss" as *;
 @use "../_variables/colors.scss" as *;
-// @use "../_mixins/link-button.scss" as *;
 @use "../_mixins/section.scss" as *;
 
 .hero {
@@ -16,7 +15,7 @@
         padding-top: calc(60px + clamp(0px, 8vw - 28px, 48px));
         padding-left: 32px;
         column-gap: 40px;
-        padding-bottom: calc($section-padding-top-content + 72px);
+        padding-bottom: $section-padding-top-content;
 
         @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
