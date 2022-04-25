@@ -101,11 +101,11 @@
         font-size: 14px;
         font-weight: 425;
         letter-spacing: 0.2px;
-        color: #0a2540;
+        color: $stripe-dark-blue;
     }
 
     &__login {
-        background: #f6f9fc;
+        background: $stripe-background-white;
         height: 73px;
         margin: 4px;
         display: flex;
