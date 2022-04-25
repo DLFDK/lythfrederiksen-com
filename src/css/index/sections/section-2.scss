@@ -118,6 +118,10 @@
         & a {
             padding: 0;
         }
+
+        & a:hover {
+            color: $stripe-white;
+        }
     }
 
     &__image {

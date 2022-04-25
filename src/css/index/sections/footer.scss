@@ -39,11 +39,6 @@
 
         & a {
             color: $stripe-dark-blue;
-
-            &:focus:not(:hover) {
-                outline: none;
-                text-decoration: underline;
-            }
         }
     }
 

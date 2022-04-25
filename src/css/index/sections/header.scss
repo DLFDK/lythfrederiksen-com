@@ -29,15 +29,9 @@
     
     &__logo {
         padding-bottom: 4px;
-        text-decoration: none;
         color: white;
         font-size: $font-size-regular;
         font-weight: $font-weight-boldest;
-
-        &:focus:not(:hover) {
-            outline: none;
-            text-decoration: underline;
-        }
     }
 
     &__list {

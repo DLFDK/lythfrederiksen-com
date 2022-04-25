@@ -1,0 +1,8 @@
+a {
+    text-decoration: 0.2em underline rgba($color: #000000, $alpha: 0);
+    transition: text-decoration-color var(--transition-duration);
+    &:focus:not(:hover) {
+        outline: none;
+        text-decoration: 0.2em underline currentColor;
+    }
+}

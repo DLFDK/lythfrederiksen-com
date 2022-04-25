@@ -110,6 +110,9 @@
     &__contact {
         --link-button-text-color: #{$stripe-dark-blue};
         --link-button-bg-color: transparent;
+        & a:hover {
+            color: rgba($stripe-dark-blue, $alpha: 0.4);
+        }
     }
 
     &__perf {

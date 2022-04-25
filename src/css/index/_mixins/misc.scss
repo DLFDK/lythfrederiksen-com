@@ -12,13 +12,8 @@
     padding: 0;
     align-items: center;
 
-    
     & a {
         color: $color;
-        &:focus:not(:hover) {
-            outline: none;
-            text-decoration: 2px underline;
-        }
     }
 
     & li {

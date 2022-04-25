@@ -6,12 +6,11 @@
     align-items: center;
     width: max-content;
     height: fit-content;
-    text-decoration: none;
     color: var(--link-button-text-color);
     background-color: var(--link-button-bg-color);
     padding: 3px 16px 6px;
     border-radius: 16.5px;
-    transition: background-color var(--transition-duration);
+    transition: color var(--transition-duration), background-color var(--transition-duration), text-decoration-color var(--transition-duration);
 
     font-size: $font-size-smaller;
     line-height: $line-height-small;
@@ -20,11 +19,6 @@
 
     &:hover {
         background-color: var(--link-button-hover-color);
-    }
-
-    &:focus:not(:hover){
-        outline: none;
-        text-decoration: 2px underline;
     }
 
     & svg {
