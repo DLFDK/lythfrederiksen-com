@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
             return sass(content, outputPath, {
                 src: "src",
                 dest: "dist",
-                inline: "none",
+                inline: "all",
                 sass: {
                     outputStyle: "compressed"
                 }
