@@ -2,8 +2,8 @@ gradient();
 function gradient() {
     const container = document.getElementById("hero__background");
     const canvas = document.getElementById("hero__canvas");
-    const width = canvas.offsetWidth;
-    const height = canvas.offsetHeight;
+    const width = container.offsetWidth;
+    const height = container.offsetHeight;
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext("2d");
