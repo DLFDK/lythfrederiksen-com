@@ -32,62 +32,31 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% min(260px - 7vw, 270px), 0% min(15vw + 258px, 640px));
         z-index: -1;
         overflow: hidden;
-
-        // & img {
-        //     width: 100%;
-        //     height: 100%;
-        //     // object-fit: cover;
-        // }
     }
 
     &__canvas {
         display: block;
-        // position: absolute;
         height: 100%;
         width: 100%;
         min-width: 1000px;
+        opacity: 0;
+        transition: var(--icon-animation, opacity 1s);
     }
 
-    &__stripe {
-        // position: absolute;
-        height: 100%;
-        width: 100%;
-        // height: 100%;
-        // width: 100%;
-        min-width: 1000px;
-        $gradientColorZero: #a960ee;
-        $gradientColorOne: #ff333d;
-        $gradientColorTwo: #90e0ff;
-        $gradientColorThree: #ffcb57;
-        $gradientColorZeroTransparent: rgba(169, 96, 238, 0);
-        $gradientColorOneTransparent: rgba(255, 51, 61, 0);
-        $gradientColorTwoTransparent: rgba(144, 224, 255, 0);
-        $gradientColorThreeTransparent: rgba(255, 203, 87, 0);
-        background: radial-gradient($gradientColorThree 23%, $gradientColorThreeTransparent 67% 100%) 385px -24px, radial-gradient($gradientColorOne 0, $gradientColorOneTransparent 60% 100%) -940px 290px, radial-gradient($gradientColorTwo 10%, $gradientColorTwoTransparent 60% 100%) -120px 250px, radial-gradient($gradientColorOne 40%, $gradientColorOneTransparent 57% 100%) 495px -44px, radial-gradient($gradientColorZero 30%, $gradientColorZeroTransparent 67% 100%) 122px -120px, radial-gradient($gradientColorZero 10%, $gradientColorZeroTransparent 60% 100%) -420px 120px, radial-gradient($gradientColorTwo 15%, $gradientColorTwoTransparent 50% 100%) -620px 0, radial-gradient($gradientColorTwo 25%, $gradientColorTwoTransparent 50% 100%) 520px -250px, $gradientColorZero;
-        // background: 
-        //     radial-gradient($gradientColorThree 23%, $gradientColorThreeTransparent 67%) 385px -24px, 
-        //     radial-gradient($gradientColorOne 0%, $gradientColorOneTransparent 60%) -940px 290px, 
-        //     radial-gradient($gradientColorTwo 10%, $gradientColorTwoTransparent 60%) -120px 250px, 
-        //     radial-gradient($gradientColorOne 40%, $gradientColorOneTransparent 57%) 495px -44px, 
-        //     radial-gradient($gradientColorZero 30%, $gradientColorZeroTransparent 67%) 122px -120px, 
-        //     radial-gradient($gradientColorZero 10%, $gradientColorZeroTransparent 60%) -420px 120px, 
-        //     radial-gradient($gradientColorTwo 15%, $gradientColorTwoTransparent 50%) -620px 0, 
-        //     radial-gradient($gradientColorTwo 25%, $gradientColorTwoTransparent 50%) 520px -250px, 
-            // $gradientColorZero;
-
-        // background: radial-gradient($gradientColorThree 23%, $gradientColorThreeTransparent 67% 99%, black 99%) 385px -100px;
-        
-
-        // background: radial-gradient($gradientColorThree 23%, $gradientColorThreeTransparent 67%) 385px -24px, $gradientColorZero;
-        // background: radial-gradient($gradientColorOne 0%, $gradientColorOneTransparent 60%) -940px 290px;
-        // background: radial-gradient($gradientColorTwo 10%, $gradientColorTwoTransparent 60%) -120px 250px;
-        // background: radial-gradient($gradientColorOne 40%, $gradientColorOneTransparent 57%) 495px -44px;
-        // background: radial-gradient($gradientColorZero 30%, $gradientColorZeroTransparent 67%) 122px -120px;
-        // background: radial-gradient($gradientColorZero 10%, $gradientColorZeroTransparent 60%) -420px 120px;
-        // background: radial-gradient($gradientColorTwo 15%, $gradientColorTwoTransparent 50%) -620px 0;
-        // background: radial-gradient($gradientColorTwo 25%, $gradientColorTwoTransparent 50%) 520px -250px;
-        // background: $gradientColorZero;
-    }
+    // &__stripe {
+    //     height: 100%;
+    //     width: 100%;
+    //     min-width: 1000px;
+    //     $gradientColorZero: #a960ee;
+    //     $gradientColorOne: #ff333d;
+    //     $gradientColorTwo: #90e0ff;
+    //     $gradientColorThree: #ffcb57;
+    //     $gradientColorZeroTransparent: rgba(169, 96, 238, 0);
+    //     $gradientColorOneTransparent: rgba(255, 51, 61, 0);
+    //     $gradientColorTwoTransparent: rgba(144, 224, 255, 0);
+    //     $gradientColorThreeTransparent: rgba(255, 203, 87, 0);
+    //     background: radial-gradient($gradientColorThree 23%, $gradientColorThreeTransparent 67% 100%) 385px -24px, radial-gradient($gradientColorOne 0, $gradientColorOneTransparent 60% 100%) -940px 290px, radial-gradient($gradientColorTwo 10%, $gradientColorTwoTransparent 60% 100%) -120px 250px, radial-gradient($gradientColorOne 40%, $gradientColorOneTransparent 57% 100%) 495px -44px, radial-gradient($gradientColorZero 30%, $gradientColorZeroTransparent 67% 100%) 122px -120px, radial-gradient($gradientColorZero 10%, $gradientColorZeroTransparent 60% 100%) -420px 120px, radial-gradient($gradientColorTwo 15%, $gradientColorTwoTransparent 50% 100%) -620px 0, radial-gradient($gradientColorTwo 25%, $gradientColorTwoTransparent 50% 100%) 520px -250px, $gradientColorZero;
+    // }
 
     &__title {
         grid-column: 1/2;
