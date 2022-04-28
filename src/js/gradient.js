@@ -58,6 +58,8 @@ function gradient() {
         [gradientColorThree, 0.23],
         [gradientColorThreeTransparent, 0.67],
     ], 385, -24 * ratio);
+
+    canvas.style.opacity = "1";
     
     // createGradient([
     //     [gradientColorThree, 0.23],
