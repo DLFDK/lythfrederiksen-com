@@ -9,6 +9,8 @@ function gradient() {
     canvas.width = width;
     canvas.height = height;
 
+    const ratio = canvas.offsetWidth / container.offsetHeight;
+
     const halfWidth = width / 2;
     const halfHeight = height / 2;
 
@@ -27,36 +29,35 @@ function gradient() {
     createGradient([
         [gradientColorTwo, 0.25],
         [gradientColorTwoTransparent, 0.50],
-    ], 520, -250 * 2.5);
+    ], 520, -250 * ratio);
     createGradient([
         [gradientColorTwo, 0.15],
         [gradientColorTwoTransparent, 0.50],
-    ], -620, 0 * 2.5);
+    ], -620, 0 * ratio);
     createGradient([
         [gradientColorZero, 0.10],
         [gradientColorZeroTransparent, 0.60],
-    ], -420, 120 * 2.5);
+    ], -420, 120 * ratio);
     createGradient([
         [gradientColorZero, 0.30],
         [gradientColorZeroTransparent, 0.67],
-    ], 122, -120 * 2.5);
+    ], 122, -120 * ratio);
     createGradient([
         [gradientColorOne, 0.4],
         [gradientColorOneTransparent, 0.57],
-    ], 495, -44 * 2.5);
+    ], 495, -44 * ratio);
     createGradient([
         [gradientColorTwo, 0.1],
         [gradientColorTwoTransparent, 0.60],
-    ], -120, 250 * 2.5);
+    ], -120, 250 * ratio);
     createGradient([
         [gradientColorOne, 0],
         [gradientColorOneTransparent, 0.60],
-    ], -940, 290 * 2.5);
+    ], -940, 290 * ratio);
     createGradient([
         [gradientColorThree, 0.23],
         [gradientColorThreeTransparent, 0.67],
-    ], 385, -24 * 2.5);
-    
+    ], 385, -24 * ratio);
     
     // createGradient([
     //     [gradientColorThree, 0.23],
