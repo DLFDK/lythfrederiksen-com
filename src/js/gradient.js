@@ -3,15 +3,17 @@ function gradient() {
     const container = document.getElementById("hero__background");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-    const width = container.offsetWidth > 1000 ? container.offsetWidth: 1000;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const width = containerWidth > 1000 ? containerWidth: 1000;
     const height = width;
-    canvas.style.height = container.offsetHeight + "px";
+    canvas.style.height = containerHeight + "px";
     canvas.style.width = width + "px";
     canvas.width = width;
     canvas.height = height;
-
-    const ratio = canvas.offsetWidth / container.offsetHeight;
-
+    
+    const ratio = width / containerHeight;
+    
     const halfWidth = width / 2;
     const halfHeight = height / 2;
 
