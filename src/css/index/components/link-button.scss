@@ -8,14 +8,14 @@
     height: fit-content;
     color: var(--link-button-text-color);
     background-color: var(--link-button-bg-color);
-    padding: 3px 16px 6px;
+    padding: 4px 16px 5px;
     border-radius: 16.5px;
     transition: color var(--transition-duration), background-color var(--transition-duration), text-decoration-color var(--transition-duration);
 
     font-size: $font-size-smaller;
     line-height: $line-height-small;
     letter-spacing: 0.2px;
-    font-weight: 425;
+    font-weight: $font-weight-bold;
 
     &:hover {
         background-color: var(--link-button-hover-color);
@@ -25,7 +25,7 @@
         box-sizing: content-box;
         padding-left: 10px;
         position: relative;
-        top: 2px;
+        top: 1px;
         stroke-width: 2px;
         fill: none;
         stroke: var(--link-button-text-color);

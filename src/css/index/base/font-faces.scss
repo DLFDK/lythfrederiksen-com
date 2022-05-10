@@ -1,5 +1,10 @@
+// @font-face {
+//     font-family: sohne-var;
+//     font-weight: 1 999; //Needed in Chromium
+//     src: url("../_fonts/sohne.woff2");
+// }
 @font-face {
-    font-family: sohne-var;
+    font-family: "Roboto Flex";
     font-weight: 1 999; //Needed in Chromium
-    src: url("css/_fonts/sohne.woff2");
+    src: url("../_fonts/roboto.woff2");
 }

@@ -40,7 +40,7 @@
 
         & a {
             color: $stripe-purple;
-            font-weight: 425;
+            font-weight: $font-weight-bold;
             transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
 
             &:hover {

@@ -58,7 +58,7 @@
         text-transform: uppercase;
         color: #8898aa;
         font-size: 13px;
-        font-weight: 500;
+        font-weight: $font-weight-bolder;
         letter-spacing: 0.4px;
         text-align: left;
         padding-left: 24px;
@@ -93,7 +93,7 @@
 
     &__link {
         font-size: 14px;
-        font-weight: 425;
+        font-weight: $font-weight-bold;
         letter-spacing: 0.2px;
         color: $stripe-dark-blue;
     }
