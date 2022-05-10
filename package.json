@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DLFDK/lythfrederiksen-com#readme",
   "devDependencies": {
+    "glyphhanger": "^5.0.0",
     "http-proxy-middleware": "^2.0.4"
   },
   "dependencies": {

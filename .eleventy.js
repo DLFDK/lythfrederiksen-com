@@ -2,7 +2,7 @@ const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./src/css/_fonts/");
+    eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/css/");
