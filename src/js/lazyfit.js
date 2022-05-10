@@ -1,7 +1,8 @@
 lazyfit();
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
-    const images = [...document.querySelectorAll("img[data-lazyfit]")];
+    // const images = [...document.querySelectorAll("img[data-lazyfit]")];
+    const images = [...document.getElementsByClassName("lazyfit")];
     const observer = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
             if (entry.isIntersecting) {
@@ -33,7 +34,6 @@ function lazyfit() {
     }, {
         rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     });
-
     for (const image of images) {
         observer.observe(image);
     }
