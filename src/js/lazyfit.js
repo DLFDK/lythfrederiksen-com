@@ -1,7 +1,6 @@
 lazyfit();
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
-    // const images = [...document.querySelectorAll("img[data-lazyfit]")];
     const images = [...document.getElementsByClassName("lazyfit")];
     const observer = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
