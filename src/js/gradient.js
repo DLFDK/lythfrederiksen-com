@@ -5,15 +5,15 @@ function gradient() {
     const ctx = canvas.getContext("2d");
     const containerWidth = container.offsetWidth;
     const containerHeight = container.offsetHeight;
-    const width = containerWidth > 1000 ? containerWidth : 1000;
+    const width = containerWidth > 1000 ? containerWidth: 1000;
     const height = width;
     canvas.style.height = containerHeight + "px";
     canvas.style.width = width + "px";
     canvas.width = width;
     canvas.height = height;
-
+    
     const ratio = width / containerHeight;
-
+    
     const halfWidth = width / 2;
     const halfHeight = height / 2;
 
@@ -68,16 +68,14 @@ function gradient() {
         createGradient(...grad);
     }
 
-    setTimeout(() => {
-        container.append(canvas);
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            canvas.animate(
-                { opacity: 0, offset: 0 },
-                { duration: 1000 }
-            );
-        }
-    }, 0)
+    container.append(canvas);
 
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        canvas.animate(
+            { opacity: 0, offset: 0 },
+            { duration: 1000 }
+        );
+    }
 
     function createGradient(colorStops, positionX, positionY) {
         const centerX = halfWidth + positionX;
