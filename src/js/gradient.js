@@ -1,10 +1,10 @@
 gradient();
 function gradient() {
     const container = document.getElementById("hero__background");
-    const canvas = document.getElementById("hero__canvas");
+    const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     canvas.style.height = container.offsetHeight + "px";
-    const width = canvas.offsetWidth;
+    const width = container.offsetWidth;
     const height = width;
     canvas.width = width;
     canvas.height = height;
@@ -26,47 +26,53 @@ function gradient() {
     ctx.fillStyle = gradientColorZero;
     ctx.fillRect(0, 0, width, height);
 
-    createGradient([
-        [gradientColorTwo, 0.25],
-        [gradientColorTwoTransparent, 0.50],
-    ], 520, -250 * ratio);
-    createGradient([
-        [gradientColorTwo, 0.15],
-        [gradientColorTwoTransparent, 0.50],
-    ], -620, 0 * ratio);
-    createGradient([
-        [gradientColorZero, 0.10],
-        [gradientColorZeroTransparent, 0.60],
-    ], -420, 120 * ratio);
-    createGradient([
-        [gradientColorZero, 0.30],
-        [gradientColorZeroTransparent, 0.67],
-    ], 122, -120 * ratio);
-    createGradient([
-        [gradientColorOne, 0.4],
-        [gradientColorOneTransparent, 0.57],
-    ], 495, -44 * ratio);
-    createGradient([
-        [gradientColorTwo, 0.1],
-        [gradientColorTwoTransparent, 0.60],
-    ], -120, 250 * ratio);
-    createGradient([
-        [gradientColorOne, 0],
-        [gradientColorOneTransparent, 0.60],
-    ], -940, 290 * ratio);
-    createGradient([
-        [gradientColorThree, 0.23],
-        [gradientColorThreeTransparent, 0.67],
-    ], 385, -24 * ratio);
+    const grads = [
+        [[
+            [gradientColorTwo, 0.25],
+            [gradientColorTwoTransparent, 0.50],
+        ], 520, -250 * ratio],
+        [[
+            [gradientColorTwo, 0.15],
+            [gradientColorTwoTransparent, 0.50],
+        ], -620, 0 * ratio],
+        [[
+            [gradientColorZero, 0.10],
+            [gradientColorZeroTransparent, 0.60],
+        ], -420, 120 * ratio],
+        [[
+            [gradientColorZero, 0.30],
+            [gradientColorZeroTransparent, 0.67],
+        ], 122, -120 * ratio],
+        [[
+            [gradientColorOne, 0.4],
+            [gradientColorOneTransparent, 0.57],
+        ], 495, -44 * ratio],
+        [[
+            [gradientColorTwo, 0.1],
+            [gradientColorTwoTransparent, 0.60],
+        ], -120, 250 * ratio],
+        [[
+            [gradientColorOne, 0],
+            [gradientColorOneTransparent, 0.60],
+        ], -940, 290 * ratio],
+        [[
+            [gradientColorThree, 0.23],
+            [gradientColorThreeTransparent, 0.67],
+        ], 385, -24 * ratio],
+    ];
 
-    canvas.style.opacity = "1";
-    
-    // createGradient([
-    //     [gradientColorThree, 0.23],
-    //     [gradientColorThreeTransparent, 0.67],
-    //     [gradientColorThreeTransparent, 0.99],
-    //     ["black", 0.99],
-    // ], 385, -100 * 2.5);
+    for (const grad of grads) {
+        createGradient(...grad);
+    }
+
+    container.append(canvas);
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        canvas.animate(
+            { opacity: 0, offset: 0 },
+            { duration: 1000 }
+        );
+    }
 
     function createGradient(colorStops, positionX, positionY) {
         const centerX = halfWidth + positionX;

@@ -25,23 +25,25 @@
     }
 
     &__background {
-        // background: white;
         position: relative;
         grid-row: 1/2;
         grid-column: 1/-1;
         clip-path: polygon(0% 0%, 100% 0%, 100% min(260px - 7vw, 270px), 0% min(15vw + 258px, 640px));
         z-index: -1;
         overflow: hidden;
+
+        & > canvas {
+            display: block;
+            height: 100%;
+            width: 100%;
+            min-width: 1000px;
+            // opacity: 0;
+            // transition: var(--icon-animation, opacity 1s);
+        }
     }
 
-    &__canvas {
-        display: block;
-        height: 100%;
-        width: 100%;
-        min-width: 1000px;
-        opacity: 0;
-        transition: var(--icon-animation, opacity 1s);
-    }
+    // &__canvas {
+    // }
 
     // &__stripe {
     //     height: 100%;
