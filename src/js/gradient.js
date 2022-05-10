@@ -1,19 +1,31 @@
-gradient();
+setTimeout(()=>{
+    gradient();
+}, 100)
+
 function gradient() {
     const container = document.getElementById("hero__background");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
+    // console.time("Loop")
+    // for(let i = 0; i < 1000; i++){
+    //     container.getBoundingClientRect()
+    // }
+    // console.timeEnd("Loop")
+    // console.time("Gradient")
     const containerWidth = container.offsetWidth;
     const containerHeight = container.offsetHeight;
-    const width = containerWidth > 1000 ? containerWidth: 1000;
+    // console.log(container.getBoundingClientRect());
+    // const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect()
+    // console.timeEnd("Gradient")
+    const width = containerWidth > 1000 ? containerWidth : 1000;
     const height = width;
     canvas.style.height = containerHeight + "px";
     canvas.style.width = width + "px";
     canvas.width = width;
     canvas.height = height;
-    
+
     const ratio = width / containerHeight;
-    
+
     const halfWidth = width / 2;
     const halfHeight = height / 2;
 
@@ -76,6 +88,8 @@ function gradient() {
             { duration: 1000 }
         );
     }
+
+
 
     function createGradient(colorStops, positionX, positionY) {
         const centerX = halfWidth + positionX;
