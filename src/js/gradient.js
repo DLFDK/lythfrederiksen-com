@@ -3,9 +3,10 @@ function gradient() {
     const container = document.getElementById("hero__background");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-    canvas.style.height = container.offsetHeight + "px";
-    const width = container.offsetWidth;
+    const width = container.offsetWidth > 1000 ? container.offsetWidth: 1000;
     const height = width;
+    canvas.style.height = container.offsetHeight + "px";
+    canvas.style.width = width + "px";
     canvas.width = width;
     canvas.height = height;
 

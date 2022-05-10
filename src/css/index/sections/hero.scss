@@ -32,14 +32,11 @@
         z-index: -1;
         overflow: hidden;
 
-        & > canvas {
-            display: block;
-            height: 100%;
-            width: 100%;
-            min-width: 1000px;
-            // opacity: 0;
-            // transition: var(--icon-animation, opacity 1s);
-        }
+        // & > canvas {
+        //     display: block;
+        //     height: 100%;
+        //     width: 100%;
+        // }
     }
 
     // &__canvas {
