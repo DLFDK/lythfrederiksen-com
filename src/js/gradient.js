@@ -1,22 +1,9 @@
-setTimeout(()=>{
-    gradient();
-}, 100)
-
+gradient();
 function gradient() {
     const container = document.getElementById("hero__background");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-    // console.time("Loop")
-    // for(let i = 0; i < 1000; i++){
-    //     container.getBoundingClientRect()
-    // }
-    // console.timeEnd("Loop")
-    // console.time("Gradient")
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
-    // console.log(container.getBoundingClientRect());
-    // const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect()
-    // console.timeEnd("Gradient")
+    const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect();
     const width = containerWidth > 1000 ? containerWidth : 1000;
     const height = width;
     canvas.style.height = containerHeight + "px";
