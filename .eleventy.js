@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     if (process.argv.includes("--serve")) {
+        eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
         eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
