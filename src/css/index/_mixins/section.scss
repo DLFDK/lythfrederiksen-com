@@ -1,6 +1,6 @@
-@use "../_variables/general.scss" as *;
-@use "../_variables/colors.scss" as *;
-@use "../_variables/fonts.scss" as *;
+@use "index/_variables/general.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "global/_variables/fonts.scss" as *;
 
 $section-padding-top-content: clamp(72px, 8vw + 42px, 128px);
 $slant-flair-height: 70px;

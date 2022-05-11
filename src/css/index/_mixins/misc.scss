@@ -1,6 +1,6 @@
-@use "../_variables/general.scss" as *;
-@use "../_variables/colors.scss" as *;
-@use "../_variables/fonts.scss" as *;
+@use "index/_variables/general.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "global/_variables/fonts.scss" as *;
 
 @mixin link($color) {
     font-size: $font-size-smaller;

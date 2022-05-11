@@ -1,7 +1,7 @@
-@use "../_variables/general.scss" as *;
-@use "../_variables/fonts.scss" as *;
-@use "../_variables/colors.scss" as *;
-@use "../_mixins/section.scss" as *;
+@use "index/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "index/_mixins/section.scss" as *;
 .disclaimer {
     display: grid;
     grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);

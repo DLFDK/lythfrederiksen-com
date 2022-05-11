@@ -12,7 +12,8 @@ module.exports = function (eleventyConfig) {
                 dest: "dist",
                 inline: "none",
                 sass: {
-                    outputStyle: "expanded"
+                    outputStyle: "expanded",
+                    loadPaths: ["./src/css/"]
                 }
             },
             );
