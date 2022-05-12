@@ -18,7 +18,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 32px 0px;
+        padding: 18px 32px 0px;
     
         @media (max-width: $breakpoint-medium) {
             height: 64px;
@@ -46,6 +46,7 @@
         --link-button-text-color: #{$stripe-white};
         --link-button-bg-color: #{rgba($color: white, $alpha: 0.2)};
         --link-button-bg-hover-color: #{rgba($color: white, $alpha: 0.4)};
+        --link-button-text-hover-color: #{$stripe-white};
         @media (max-width: $breakpoint-medium) {
             display: none;
         }
