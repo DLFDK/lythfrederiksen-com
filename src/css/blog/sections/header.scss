@@ -1,0 +1,30 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.header {
+    display: grid;
+    grid-template-columns: $grid-content-columns;
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 32px 0px;
+    
+        // @media (max-width: $breakpoint-medium) {
+        //     height: 64px;
+        //     padding-top: 24px;
+        // }
+
+    }
+
+    &__logo {
+        padding-bottom: 4px;
+        color: $stripe-dark-blue;
+        font-size: $font-size-regular;
+        font-weight: $font-weight-boldest;
+    }
+}

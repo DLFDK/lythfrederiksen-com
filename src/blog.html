@@ -1,12 +1,44 @@
+{%- from "src/_includes/index/components/link-button.njk" import linkButton -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lyth frederiksen | blog</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preload" href="/css/_fonts/roboto.ttf" as="font" type="font/truetype" crossorigin />
+    <link rel="stylesheet" href="css/blog/blog.scss" />
 </head>
 <body>
-    Hello1
+    <header class="header">
+        <div class="header__content">
+            <a class="header__logo" href="/">lyth frederiksen</a>
+        </div>
+    </header>
+    <main>
+        <header class="title">
+            <div class="title__content">
+                <h1>Blog</h1>
+            </div>
+        </header>
+        <section class="featured">
+            <div class="featured__content">
+                <div class="featured__box">
+                    <p class="featured__caption">Featured</p>
+                    <h2 class="featured__title">This is a title</h2>
+                    <div class="featured__main">
+                        <div class="featured__cta">
+                            {{ linkButton({ text: 'The why and how', href: "/blog" }) }}
+                        </div>
+                    </div>
+                    <div class="featured__image"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <!-- <script defer src="/js/lazyfit.js"></script> -->
+    <!-- <script defer src="/js/gradient.js"></script> -->
 </body>
+
 </html>

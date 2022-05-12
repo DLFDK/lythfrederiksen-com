@@ -1,0 +1,19 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.title {
+    display: grid;
+    grid-template-columns: $grid-content-columns;
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 12px 32px 32px;
+        & h1 {
+            color: $stripe-purple;
+            font-size: $font-size-small;
+            font-weight: $font-weight-bolder;
+        }
+    }
+}
