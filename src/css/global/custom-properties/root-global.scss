@@ -2,7 +2,5 @@
     --transition-duration: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     @media (prefers-reduced-motion) {
         --transition-duration: 0;
-        --icon-animation: none;
-        --image-scale-toggle: 1;
     }
 }
