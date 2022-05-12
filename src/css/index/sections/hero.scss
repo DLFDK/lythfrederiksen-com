@@ -1,4 +1,4 @@
-@use "index/_variables/general.scss" as *;
+@use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "index/_mixins/section.scss" as *;
@@ -113,15 +113,15 @@
     &__read-blog {
         --link-button-text-color: #{$stripe-white};
         --link-button-bg-color: #{$stripe-dark-blue};
-        --link-button-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
+        --link-button-bg-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
+        --link-button-text-hover-color: #{$stripe-white};
     }
 
     &__contact {
         --link-button-text-color: #{$stripe-dark-blue};
         --link-button-bg-color: transparent;
-        & a:hover {
-            color: rgba($stripe-dark-blue, $alpha: 0.4);
-        }
+        --link-button-bg-hover-color: transparent;
+        --link-button-text-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
     }
 
     &__perf {

@@ -1,4 +1,4 @@
-@use "index/_variables/general.scss" as *;
+@use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "index/_mixins/section.scss" as *;
@@ -45,7 +45,7 @@
     &__login {
         --link-button-text-color: #{$stripe-white};
         --link-button-bg-color: #{rgba($color: white, $alpha: 0.2)};
-        --link-button-hover-color: #{rgba($color: white, $alpha: 0.4)};
+        --link-button-bg-hover-color: #{rgba($color: white, $alpha: 0.4)};
         @media (max-width: $breakpoint-medium) {
             display: none;
         }

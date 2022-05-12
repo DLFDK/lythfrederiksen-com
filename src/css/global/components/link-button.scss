@@ -18,7 +18,12 @@
     font-weight: $font-weight-bold;
 
     &:hover {
-        background-color: var(--link-button-hover-color);
+        background-color: var(--link-button-bg-hover-color);
+        color: var(--link-button-text-hover-color);
+    }
+    
+    &:hover svg {
+        stroke: var(--link-button-text-hover-color);
     }
 
     & svg {

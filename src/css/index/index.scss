@@ -1,12 +1,13 @@
 @use "global/lazyfit/lazyfit.scss";
-@use "index/custom-properties/root.scss";
+@use "global/custom-properties/root-global.scss";
+@use "index/custom-properties/root-local.scss";
 @use "index/base/font-faces.scss";
 @use "index/base/reset.scss";
 @use "index/base/body.scss";
-@use "index/base/a.scss";
+@use "global/base/a.scss";
 @use "index/components/burger.scss";
 @use "index/components/perf.scss";
-@use "index/components/link-button.scss";
+@use "global/components/link-button.scss";
 @use "index/sections/header.scss";
 @use "index/sections/hero.scss";
 @use "index/sections/disclaimer.scss";

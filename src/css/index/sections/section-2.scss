@@ -1,4 +1,4 @@
-@use "index/_variables/general.scss" as *;
+@use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "index/_mixins/section.scss" as *;
@@ -49,7 +49,9 @@
     &__cta {
         --link-button-text-color: #{$stripe-dark-blue};
         --link-button-bg-color: #{$stripe-blue};
-        --link-button-hover-color: #{$stripe-white};
+        --link-button-bg-hover-color: #{$stripe-white};
+        --link-button-text-hover-color: #{$stripe-dark-blue};
+        
     }
 
     &__highlight {
@@ -115,13 +117,16 @@
     &__highlight-link {
         --link-button-text-color: #{$stripe-blue};
         --link-button-bg-color: transparent;
+        --link-button-bg-hover-color: transparent;
+        --link-button-text-hover-color: #{$stripe-white};
+
         & a {
             padding: 0;
         }
 
-        & a:hover {
-            color: $stripe-white;
-        }
+        // & a:hover {
+        //     color: $stripe-white;
+        // }
     }
 
     &__image {

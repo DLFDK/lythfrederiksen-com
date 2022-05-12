@@ -1,4 +1,4 @@
-@use "index/_variables/general.scss" as *;
+@use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "index/_mixins/section.scss" as *;
@@ -73,7 +73,8 @@
         grid-area: cta;
         --link-button-text-color: #{$stripe-white};
         --link-button-bg-color: #{$stripe-purple};
-        --link-button-hover-color: #{$stripe-dark-blue};
+        --link-button-bg-hover-color: #{$stripe-dark-blue};
+        --link-button-text-hover-color: #{$stripe-white};
     }
 
     &__image-container {
