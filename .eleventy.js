@@ -1,7 +1,12 @@
 const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addFilter("postDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
+    });
+
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     if (process.argv.includes("--serve")) {
@@ -49,7 +54,7 @@ module.exports = function (eleventyConfig) {
         const proxy = createProxyMiddleware('/images', {
             target: 'https://ik.imagekit.io/',
             changeOrigin: true,
-            pathRewrite: function(path, req){
+            pathRewrite: function (path, req) {
                 return path.replace("images/https://ik.imagekit.io/", "");
             }
         });
