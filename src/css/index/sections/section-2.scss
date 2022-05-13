@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
@@ -90,20 +91,31 @@
     }
 
     &__highlight-title {
+        position: relative;
         color: $stripe-white;
         font-size: $font-size-smaller;
         font-weight: $font-weight-bold;
         margin: 0;
 
+        // &::before {
+        //     display: block;
+        //     position: relative;
+        //     content: "";
+        //     border-left: 1px solid $stripe-blue;
+        //     top: 50%;
+        //     left: -16px;
+        //     height: $font-size-smaller;
+        //     width: 0px;
+        // }
+
         &::before {
-            display: block;
-            position: relative;
+            position: absolute;
             content: "";
             border-left: 1px solid $stripe-blue;
-            top: 50%;
             left: -16px;
             height: $font-size-smaller;
-            width: 0px;
+            height: 100%;
+            transform: scaleY(math.div($font-size-smaller, $line-height-small));
         }
     }
 
@@ -123,10 +135,6 @@
         & a {
             padding: 0;
         }
-
-        // & a:hover {
-        //     color: $stripe-white;
-        // }
     }
 
     &__image {
