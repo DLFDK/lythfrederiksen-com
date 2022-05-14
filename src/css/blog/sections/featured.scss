@@ -5,6 +5,7 @@
 .featured {
     display: grid;
     grid-template-columns: $grid-content-columns;
+    padding-bottom: 36px;
 
     &__content {
         grid-column: 2;
@@ -13,17 +14,19 @@
     }
 
     &__box {
-        height: 320px;
         background: $stripe-white;
         border-radius: 8px;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
         padding: 16px 16px 16px 32px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
         grid-template-areas:
             "caption image"
             "title image"
-            "main image";
+            "date image"
+            "copy image"
+            "cta image";
     }
 
     &__caption {
@@ -40,21 +43,56 @@
         font-size: $font-size-larger;
         font-weight: $font-weight-bold;
         letter-spacing: -0.2px;
+        margin: 0;
+        padding-right: 32px;
     }
-    &__main {
-        grid-area: main;
+
+    &__date {
+        grid-area: date;
+        height: 0;
+        padding-bottom: 8px;
+        color: $stripe-cloud-blue;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-copy;
+    }
+
+    &__copy {
+        grid-area: copy;
+        color: $stripe-cloud-blue;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
+        letter-spacing: $letter-spacing-copy;
+        padding-right: 64px;
     }
 
     &__cta {
+        grid-area: cta;
         --link-button-text-color: #{$stripe-purple};
         --link-button-bg-color: transparent;
         --link-button-bg-hover-color: transparent;
         --link-button-text-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
-        // & a:hover {
-        //     color: rgba($stripe-dark-blue, $alpha: 0.4);
-        // }
+        padding-bottom: 16px;
+        & a {
+            padding-left: 0;
+        }
     }
+
     &__image {
         grid-area: image;
+        border-radius: 4px;
+        overflow: hidden;
+
+        & img {
+            display: block;
+            height: 0;
+            width: 0;
+            min-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
     }
 }
