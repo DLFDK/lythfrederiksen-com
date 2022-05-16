@@ -4,8 +4,5 @@
 @use "blog/base/body.scss";
 @use "global/base/a.scss";
 @use "global/components/link-button.scss";
-@use "blog/components/post-card.scss";
-@use "blog/sections/header.scss";
-@use "blog/sections/title.scss";
-@use "blog/sections/featured.scss";
-@use "blog/sections/post-list.scss";
+@use "blog/components/header.scss";
+@use "blog/components/title.scss";

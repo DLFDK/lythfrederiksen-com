@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.post {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) minmax(320px, 720px) minmax(0px, 1fr);;
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 12px 32px 0px;
+
+        & h1 {
+            margin: 0;
+            color: $stripe-dark-blue;
+            font-size: $font-size-xxlarge;
+            font-weight: $font-weight-bold;
+            // line-height: $line-height-small;
+            letter-spacing: $letter-spacing-copy;
+        }
+
+        & h2 {
+            color: $stripe-cloud-blue;
+            font-size: $font-size-smaller;
+            font-weight: $font-weight-regular;
+            line-height: $line-height-small;
+            letter-spacing: $letter-spacing-copy;
+        }
+
+        & p {
+            color: $stripe-cloud-blue;
+            font-size: $font-size-smaller;
+            font-weight: $font-weight-regular;
+            line-height: $line-height-small;
+            letter-spacing: $letter-spacing-copy;
+        }
+    }
+
+    &__date {
+        position: relative;
+        color: $stripe-cloud-blue;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-copy;
+        justify-self: end;
+        padding-right: 32px;
+        height: min-content;
+
+        &::before {
+            position: absolute;
+            content: "";
+            border-left: 1px solid $stripe-purple;
+            left: -16px;
+            height: 100%;
+            transform: scaleY(math.div($font-size-smaller, $line-height-small));
+        }
+    }
+}

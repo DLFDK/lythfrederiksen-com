@@ -2,8 +2,10 @@
 @use "global/_variables/colors.scss" as *;
 
 body {
-    background-color: $stripe-background-white;
+    background-color: var(--background-color);
     font-family: $font-family;
     margin: 0;
-    // overflow-x: hidden; //Needed on both html and body - issue due to mobile browers
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }

@@ -1,56 +1,37 @@
+---
+layout: blog/blog-base.html
+title: Blog
+style: css/blog/blog-main.scss
+---
+
 {%- from "src/_includes/index/components/link-button.njk" import linkButton -%}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preload" href="/css/_fonts/roboto.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="stylesheet" href="css/blog/blog.scss" />
-        <title>lyth frederiksen | Blog</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__content">
-                <a class="header__logo" href="/">lyth frederiksen</a>
-            </div>
-        </header>
-        <main>
-            <header class="title">
-                <div class="title__content">
-                    <h1>Blog</h1>
-                </div>
-            </header>
-            <section class="featured">
-                <div class="featured__content">
-                    <article class="featured__box">
-                        <p class="featured__caption">Featured</p>
-                        <h2 class="featured__title">10 things I learned from imitating Stripe</h2>
-                        <p class="featured__date">12th of May, 2022</p>
-                        <p class="featured__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.</p>
-                        <div class="featured__cta">{{ linkButton({ text: "Read post", href: "/blog" }) }}</div>
-                        <div class="featured__image">
-                            <img src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" class="lazyfit" data-src="images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" alt="" />
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="post-list">
-                <div class="post-list__content">
-                    <div class="post-list__selector">
-                        <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
-                        <label for="theme-all">All</label>
-                        <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
-                        <label for="theme-build">Build</label>
-                        <input type="radio" id="theme-write" name="thene-selector" value="write" checked />
-                        <label for="theme-write">Write</label>
-                        <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
-                        <label for="theme-code">Code</label>
-                    </div>
-                    <div class="post-list__list">{%- for post in collections.post -%} {% include "blog/components/post-card.html" %} {%- endfor -%}</div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer"></footer>
-    </body>
-</html>
+<section class="featured">
+    <div class="featured__content">
+        {%- for post in collections.post -%} 
+            {% if post.data.featured %} 
+                {% include "blog/components/post-card-featured.html" %}
+            {% endif %}  
+        {%- endfor -%}
+    </div>
+</section>
+<section class="post-list">
+    <div class="post-list__content">
+        <div class="post-list__selector">
+            <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
+            <label for="theme-all">All</label>
+            <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
+            <label for="theme-build">Build</label>
+            <input type="radio" id="theme-write" name="thene-selector" value="write" checked />
+            <label for="theme-write">Write</label>
+            <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
+            <label for="theme-code">Code</label>
+        </div>
+        <div class="post-list__list">
+            {%- for post in collections.post -%} 
+                {% if not post.data.featured %} 
+                    {% include "blog/components/post-card.html" %}
+                {% endif %}  
+            {%- endfor -%}
+        </div>
+    </div>
+</section>

@@ -39,12 +39,15 @@
     }
     &__title {
         grid-area: title;
-        color: $stripe-dark-blue;
-        font-size: $font-size-larger;
-        font-weight: $font-weight-bold;
-        letter-spacing: -0.2px;
         margin: 0;
         padding-right: 32px;
+
+        & a {
+            color: $stripe-dark-blue;
+            font-size: $font-size-larger;
+            font-weight: $font-weight-bold;
+            letter-spacing: -0.2px;
+        }
     }
 
     &__date {

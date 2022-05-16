@@ -1,0 +1,10 @@
+---
+layout: blog/blog-base.html
+---
+<article class="post">
+    <div class="post__content">
+        <h1 class="post__title">{{title}}</h1>
+        <p class="post__date">{{ date | postDate }}</p>
+        {{content | safe}}
+    </div>
+</article>

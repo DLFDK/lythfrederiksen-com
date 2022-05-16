@@ -1,4 +1,6 @@
 {
-    "tags":"post",
-    "permalink": false
+    "layout": "blog/components/blog-post.html",
+    "style": "css/blog/blog-post.scss",
+    "tags": "post",
+    "permalink": "/blog/{{ title | slug }}/index.html"
 }

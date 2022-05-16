@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preload" href="/css/_fonts/roboto.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="stylesheet" href="{{style}}" />
+        <title>lyth frederiksen | {{title}}</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <a class="header__logo" href="/">lyth frederiksen</a>
+            </div>
+        </header>
+        <main>
+            <header class="title">
+                <div class="title__content">
+                    <h1><a href="/blog/">Blog</a></h1>
+                </div>
+            </header>
+            {{content | safe}}
+        </main>
+        <footer class="footer"></footer>
+    </body>
+</html>

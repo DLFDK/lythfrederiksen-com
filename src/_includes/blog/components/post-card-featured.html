@@ -1,0 +1,10 @@
+<article class="featured__box">
+    <p class="featured__caption">Featured</p>
+    <h2 class="featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
+    <p class="featured__date">{{ post.data.date | postDate }}</p>
+    <p class="featured__copy">{{ post.data.snippet }}</p>
+    <div class="featured__cta">{{ linkButton({ text: "Read post", href: post.url }) }}</div>
+    <div class="featured__image">
+        <img src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" class="lazyfit" data-src="images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" alt="" />
+    </div>
+</article>
