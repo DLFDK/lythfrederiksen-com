@@ -1,7 +1,7 @@
 @use "global/custom-properties/root-global.scss";
 @use "blog/base/font-faces.scss";
 @use "blog/base/reset.scss";
-@use "blog/base/body.scss";
+@forward "blog/base/body.scss";
 @use "global/base/a.scss";
 @use "global/components/link-button.scss";
 @use "blog/components/header.scss";
