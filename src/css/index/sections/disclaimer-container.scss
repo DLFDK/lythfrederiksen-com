@@ -1,0 +1,11 @@
+@use "index/_mixins/section.scss" as *;
+
+.disclaimer-container {
+    @include section(transparent);
+    padding-bottom: $section-padding-top-content;
+
+    & > section {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}

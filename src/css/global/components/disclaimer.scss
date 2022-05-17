@@ -1,12 +1,10 @@
 @use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
-@use "index/_mixins/section.scss" as *;
 .disclaimer {
     display: grid;
-    grid-template-columns: minmax(32px, 1fr) auto minmax(32px, 1fr);
+    grid-template-columns: minmax(0px, 1fr) auto minmax(0px, 1fr);
     background-color: $stripe-white;
-    padding-bottom: $section-padding-top-content;
     &__content {
         position: relative;
         grid-column: 2;
