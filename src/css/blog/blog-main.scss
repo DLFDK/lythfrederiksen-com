@@ -1,5 +1,7 @@
 @use "global/_variables/colors.scss" as *;
 @use "blog/base/blog-base.scss" with ($background-color: $stripe-background-white);
 @use "blog/components/post-card-featured.scss";
+@use "blog/components/disclaimer-container.scss";
+@use "global/components/disclaimer.scss";
 @use "blog/components/post-card.scss";
 @use "blog/components/post-list.scss";

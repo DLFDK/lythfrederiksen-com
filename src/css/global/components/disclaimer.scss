@@ -4,7 +4,6 @@
 .disclaimer {
     display: grid;
     grid-template-columns: minmax(0px, 1fr) auto minmax(0px, 1fr);
-    background-color: $stripe-white;
     &__content {
         position: relative;
         grid-column: 2;

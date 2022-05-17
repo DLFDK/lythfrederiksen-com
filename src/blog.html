@@ -6,6 +6,8 @@ style: css/blog/blog-main.scss
 
 {%- from "src/_includes/index/components/link-button.njk" import linkButton -%}
 <section class="featured">
+    <div id="canvas-gradient" class="featured__slant"></div>
+    <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
         {%- for post in collections.post -%} 
             {% if post.data.featured %} 
@@ -14,9 +16,12 @@ style: css/blog/blog-main.scss
         {%- endfor -%}
     </div>
 </section>
+<!-- <div class="slant-container">
+</div> -->
+<div class="disclaimer-container">{% include 'src/_includes/global/disclaimer.html' %}</div>
 <section class="post-list">
     <div class="post-list__content">
-        <div class="post-list__selector">
+        <!-- <div class="post-list__selector">
             <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
             <label for="theme-all">All</label>
             <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
@@ -25,7 +30,7 @@ style: css/blog/blog-main.scss
             <label for="theme-write">Write</label>
             <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
             <label for="theme-code">Code</label>
-        </div>
+        </div> -->
         <div class="post-list__list">
             {%- for post in collections.post -%} 
                 {% if not post.data.featured %} 

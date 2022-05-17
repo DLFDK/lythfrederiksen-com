@@ -1,11 +1,11 @@
 @use "global/_variables/general.scss" as *;
-@use "global/_variables/colors.scss" as *;
 @use "global/_variables/fonts.scss" as *;
-@use "index/_mixins/section.scss" as *;
+@use "global/_variables/colors.scss" as *;
 @use "global/_mixins/link.scss" as *;
 
 .footer {
-    @include section($stripe-background-white);
+    display: grid;
+    grid-template-columns: $grid-content-columns;
 
     &__content {
         grid-column: 2;

@@ -2,7 +2,7 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "index/_mixins/section.scss" as *;
-@use "index/_mixins/misc.scss" as *;
+@use "global/_mixins/link.scss" as *;
 
 .header {
     @include section(transparent);
