@@ -14,19 +14,7 @@
             </div>
         </header>
         <main>
-            <header class="title">
-                <div class="title__content">
-                    <h1>
-                        <a href="/blog/">Blog</a>
-                        {% if project %} 
-                            <p>/</p>
-                            <a>{{category}}</a>
-                            <p>/</p>
-                            <a>{{project}}</a>
-                        {% endif %}  
-                    </h1>
-                </div>
-            </header>
+
             {{content | safe}}
         </main>
         <footer class="footer">

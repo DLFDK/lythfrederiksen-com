@@ -1,6 +1,19 @@
 ---
 layout: blog/blog-base.html
 ---
+<nav class="navigation">
+    <div class="navigation__content">
+        <h1>
+            <a href="/blog/">Blog</a>
+            {% if project %} 
+                <p>/</p>
+                <a>{{category}}</a>
+                <p>/</p>
+                <a>{{project}}</a>
+            {% endif %}  
+        </h1>
+    </div>
+</nav>
 <article class="post">
     <div class="post__content">
         <div class="post__topics">

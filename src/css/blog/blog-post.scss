@@ -1,3 +1,4 @@
 @use "global/_variables/colors.scss" as *;
 @use "blog/base/blog-base.scss" with ($background-color: $stripe-white);
+@use "blog/components/navigation.scss";
 @use "blog/components/post.scss";

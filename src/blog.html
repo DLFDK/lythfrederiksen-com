@@ -5,6 +5,19 @@ style: css/blog/blog-main.scss
 ---
 
 {%- from "src/_includes/index/components/link-button.njk" import linkButton -%}
+<header class="title">
+    <div class="title__content">
+        <h1>
+            <a href="/blog/">Blog</a>
+            {% if project %} 
+                <p>/</p>
+                <a>{{category}}</a>
+                <p>/</p>
+                <a>{{project}}</a>
+            {% endif %}  
+        </h1>
+    </div>
+</header>
 <section class="featured">
     <div id="canvas-gradient" class="featured__slant"></div>
     <script defer src="/js/gradient.js"></script>
