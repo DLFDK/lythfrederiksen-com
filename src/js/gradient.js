@@ -1,6 +1,6 @@
 gradient();
 function gradient() {
-    const container = document.getElementById("hero__background");
+    const container = document.getElementById("canvas-gradient");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect();
