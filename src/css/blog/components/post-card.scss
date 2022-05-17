@@ -13,7 +13,8 @@
         "title title"
         "topics image"
         "copy image"
-        "cta image";
+        "cta image"
+        "project image";
 
     &__category {
         position: relative;
@@ -23,29 +24,31 @@
         font-weight: $font-weight-bold;
         line-height: $line-height-small;
         letter-spacing: $letter-spacing-copy;
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
-        &::before {
-            position: absolute;
-            content: "";
-            border-left: 1px solid $stripe-purple;
-            left: -16px;
-            height: $font-size-smaller;
-            height: 100%;
-            transform: scaleY(math.div($font-size-smaller, $line-height-small));
-        }
+        // &::before {
+        //     position: absolute;
+        //     content: "";
+        //     border-left: 1px solid $stripe-purple;
+        //     left: -16px;
+        //     height: $font-size-smaller;
+        //     height: 100%;
+        //     transform: scaleY(math.div($font-size-smaller, $line-height-small));
+        // }
     }
     &__title {
         grid-area: title;
         margin: 0;
         padding-bottom: 8px;
-        
+
         & a {
             color: $stripe-dark-blue;
             font-size: $font-size-larger;
             font-weight: $font-weight-bold;
             letter-spacing: -0.2px;
             padding-right: 32px;
-
         }
     }
 
@@ -86,13 +89,13 @@
             letter-spacing: $letter-spacing-copy;
         }
 
-        & p:nth-child(3n - 2){
+        & p:nth-child(3n - 2) {
             background-color: #def8dd;
         }
-        & p:nth-child(3n - 1){
+        & p:nth-child(3n - 1) {
             background: #f6e6b9;
         }
-        & p:nth-child(3n){
+        & p:nth-child(3n) {
             background: rgba($stripe-blue, $alpha: 0.25);
         }
     }
@@ -112,7 +115,7 @@
         --link-button-text-color: #{$stripe-purple};
         --link-button-bg-color: transparent;
         --link-button-bg-hover-color: transparent;
-        --link-button-text-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
+        --link-button-text-hover-color: #{$stripe-dark-blue};
         padding-bottom: 16px;
         & a {
             padding-left: 0;
