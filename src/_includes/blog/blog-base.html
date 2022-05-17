@@ -16,7 +16,15 @@
         <main>
             <header class="title">
                 <div class="title__content">
-                    <h1><a href="/blog/">Blog</a></h1>
+                    <h1>
+                        <a href="/blog/">Blog</a>
+                        <p>/</p>
+                        <a>{{category}}</a>
+                        {% if project %} 
+                            <p>/</p>
+                            <a>{{project}}</a>
+                        {% endif %}  
+                    </h1>
                 </div>
             </header>
             {{content | safe}}
