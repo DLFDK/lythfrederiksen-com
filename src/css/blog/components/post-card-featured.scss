@@ -92,7 +92,7 @@
         --link-button-text-color: #{$stripe-purple};
         --link-button-bg-color: transparent;
         --link-button-bg-hover-color: transparent;
-        --link-button-text-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
+        --link-button-text-hover-color: #{$stripe-dark-blue};
         padding-bottom: 16px;
         & a {
             padding-left: 0;

@@ -1,0 +1,13 @@
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.logo {
+    color: var(--logo-text-color);
+    font-size: $font-size-regular;
+    font-weight: $font-weight-boldest;
+    transition: color var(--transition-duration), opacity var(--transition-duration), text-decoration-color var(--transition-duration);
+
+    &:hover {
+        opacity: 0.6;
+    }
+}

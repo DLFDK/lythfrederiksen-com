@@ -21,9 +21,21 @@
         }
         
         & a, & div {
-            color: $stripe-purple;
             font-size: $font-size-small;
             font-weight: $font-weight-bolder;
+        }
+
+        & div {
+            color: #adbdcc;
+        }
+        
+        & a {
+            color: $stripe-purple;
+            transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
+        }
+
+        & a:hover {
+            color: $stripe-dark-blue;
         }
     }
 }

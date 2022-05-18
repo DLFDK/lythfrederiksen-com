@@ -10,17 +10,18 @@
     <body>
         <header class="header">
             <div class="header__content">
-                <a class="header__logo" href="/">lyth frederiksen</a>
+                <div class="header__logo-container">
+                    <a class="logo" href="/">lyth frederiksen</a>
+                </div>
             </div>
         </header>
-        <main>
-
-            {{content | safe}}
-        </main>
+        <main>{{content | safe}}</main>
         <footer class="footer">
             <div class="footer__content">
                 <div class="footer__main">
-                    <h2 class="footer__title"><a href="">lyth frederiksen</a></h2>
+                    <div class="footer__logo-container">
+                        <a class="logo" href="/">lyth frederiksen</a>
+                    </div>
                     <ul class="footer__list">
                         <li><a href="">Projects</a></li>
                         <li><a href="">Blog</a></li>
