@@ -36,7 +36,8 @@ module.exports = function (eleventyConfig) {
                 dest: "dist",
                 inline: "all",
                 sass: {
-                    outputStyle: "compressed"
+                    outputStyle: "compressed",
+                    loadPaths: ["./src/css/"]
                 }
             },
             );
