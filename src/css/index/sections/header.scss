@@ -27,11 +27,9 @@
 
     }
     
-    &__logo {
+    &__logo-container {
         padding-bottom: 4px;
-        color: $stripe-white;
-        font-size: $font-size-regular;
-        font-weight: $font-weight-boldest;
+        --logo-text-color: #{$stripe-white};
     }
 
     &__list {

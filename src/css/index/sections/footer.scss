@@ -19,27 +19,21 @@
         grid-template-columns: repeat(3, 1fr);
         padding-bottom: 32px;
         grid-template-areas: 
-        "title nav contact";
+        "logo nav contact";
         row-gap: 32px;
 
         @media (max-width: 799px) {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-template-areas: 
-            "title title title"
+            "logo logo logo"
             "nav nav contact";
         }
     }
 
-    &__title {
-        grid-area: title;
-        margin: 0;
-        font-weight: $font-weight-boldest;
-        font-size: $font-size-regular;
-
-        & a {
-            color: $stripe-dark-blue;
-        }
+    &__logo-container {
+        grid-area: logo;
+        --logo-text-color: #{$stripe-dark-blue};
     }
 
     &__list {
