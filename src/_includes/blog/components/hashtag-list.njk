@@ -1,0 +1,7 @@
+{% macro hashtagList(params) %}
+    <ul class="hashtag-list"> 
+    {%- for hashtag in params.hashtags -%}
+        <li>{{hashtag}}</p>
+    {%-endfor-%}
+    </ul>
+{% endmacro %}

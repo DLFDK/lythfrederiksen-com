@@ -1,0 +1,32 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.hashtag-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    & li {
+        padding: 0 4px;
+        text-transform: uppercase;
+        color: $stripe-cloud-blue;
+        font-size: 12px;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-copy;
+        border-radius: 2px;
+    }
+
+    & li:nth-child(3n - 2) {
+        background-color: #def8dd;
+    }
+    & li:nth-child(3n - 1) {
+        background: #f6e6b9;
+    }
+    & li:nth-child(3n) {
+        background: rgba($stripe-blue, $alpha: 0.25);
+    }
+}

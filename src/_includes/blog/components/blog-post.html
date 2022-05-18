@@ -1,6 +1,7 @@
 ---
 layout: blog/blog-base.html
 ---
+{%- from "src/_includes/blog/components/hashtag-list.njk" import hashtagList -%}
 <nav class="navigation">
     <div class="navigation__content">
         <ul>
@@ -15,9 +16,7 @@ layout: blog/blog-base.html
 <article class="post">
     <div class="post__content">
         <div class="post__topics">
-            {%- for topic in topics -%}
-            <p>{{topic}}</p>
-            {%-endfor-%}
+            {{ hashtagList({ hashtags: hashtags}) }}
         </div>
         <h1 class="post__title">{{title}}</h1>
         <p class="post__date">{{ date | postDate }}</p>

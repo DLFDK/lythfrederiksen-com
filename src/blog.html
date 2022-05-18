@@ -4,6 +4,7 @@ title: Blog
 style: css/blog/blog-main.scss
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+{%- from "src/_includes/blog/components/hashtag-list.njk" import hashtagList -%}
 <header class="title">
     <div class="title__content">
         <h1>
@@ -22,7 +23,7 @@ style: css/blog/blog-main.scss
         {%- endfor -%}
     </div>
 </section>
-<div class="disclaimer-container">{% include 'src/_includes/global/disclaimer.html' %}</div>
+<div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
 <section class="post-list">
     <div class="post-list__content">
         <!-- <div class="post-list__selector">

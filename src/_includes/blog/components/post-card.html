@@ -9,9 +9,7 @@
     <h2 class="post-card__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="post-card__date">{{ post.data.date | postDate }}</p>
     <div class="post-card__topics">
-        {%- for topic in post.data.topics -%}
-        <p>{{topic}}</p>
-        {%-endfor-%}
+        {{ hashtagList({ hashtags: post.data.hashtags}) }}
     </div>
     <p class="post-card__copy">{{ post.data.snippet }}</p>
     <div class="post-card__cta">{{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}</div>
