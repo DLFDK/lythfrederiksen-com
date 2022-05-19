@@ -3,6 +3,7 @@ const sass = require("./plugins/sass.js");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
+    //https://11ty.rocks/eleventyjs/dates/
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
     });
