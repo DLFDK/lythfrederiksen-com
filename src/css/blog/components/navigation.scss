@@ -3,13 +3,13 @@
 @use "global/_variables/colors.scss" as *;
 
 .navigation {
-    display: grid;
-    grid-template-columns: $grid-content-columns;
+    // display: grid;
+    // grid-template-columns: $grid-content-columns;
 
-    &__content {
-        grid-column: 2;
-        grid-row: 1;
-        padding: 32px 32px 32px;
+    // &__content {
+    //     grid-column: 2;
+    //     grid-row: 1;
+    //     padding: 32px 32px 32px;
         
         & ul {
             display: flex;
@@ -20,10 +20,12 @@
             padding: 0;
         }
         
-        & a, & div {
-            font-size: $font-size-small;
-            font-weight: $font-weight-bolder;
-        }
+        // & a, & div {
+        //     font-size: var(--navigation-font-size);
+        //     font-weight: var(--navigation-font-weight);
+        //     // font-size: $font-size-small;
+        //     // font-weight: $font-weight-bolder;
+        // }
 
         & div {
             color: #adbdcc;
@@ -37,5 +39,5 @@
         & a:hover {
             color: $stripe-dark-blue;
         }
-    }
+    // }
 }

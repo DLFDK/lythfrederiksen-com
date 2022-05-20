@@ -2,23 +2,16 @@
 layout: blog/layouts/blog-base.html
 ---
 {%- from "src/_includes/blog/components/hashtag-list.njk" import hashtagList -%}
-<nav class="navigation">
-    <div class="navigation__content">
-        <ul>
-            <li><a href="/blog/">Blog</a></li>
-            <div>/</div>
-            <li><a href="">{{category}}</a></li>
-            <div>/</div>
-            <li><a href="">{{project}}</a></li>
-        </ul>
-    </div>
-</nav>
+{%- from "src/_includes/blog/components/navigation.njk" import navigation -%}
+<div class="navigation-container">
+    {{ navigation({ blog: "true", category: category, topic: topic}) }}
+</div>
 <article class="post">
     <div class="post__content">
-        <div class="post__topics">
+        <h1 class="post__title">{{title}}</h1>
+        <div class="post__hashtags">
             {{ hashtagList({ hashtags: hashtags}) }}
         </div>
-        <h1 class="post__title">{{title}}</h1>
         <p class="post__date">{{ date | postDate }}</p>
         <div class="post__copy">{{content | safe}}</div>
     </div>

@@ -9,35 +9,33 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 16px;
     grid-template-areas:
-        "category date"
+        "navigation date"
         "title title"
         "topics image"
         "copy image"
         "cta image"
         "project image";
 
-    &__category {
+    &__navigation-container {
+        grid-area: navigation;
+        align-self: center;
         position: relative;
-        grid-area: category;
-        color: $stripe-purple;
-        font-size: $font-size-smaller;
-        font-weight: $font-weight-bold;
         line-height: $line-height-small;
         letter-spacing: $letter-spacing-copy;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-bold;
 
-        // &::before {
-        //     position: absolute;
-        //     content: "";
-        //     border-left: 1px solid $stripe-purple;
-        //     left: -16px;
-        //     height: $font-size-smaller;
-        //     height: 100%;
-        //     transform: scaleY(math.div($font-size-smaller, $line-height-small));
-        // }
+        &::before {
+            position: absolute;
+            content: "";
+            border-left: 1px solid $stripe-purple;
+            left: -16px;
+            height: $font-size-smaller;
+            height: 100%;
+            transform: scaleY(math.div($font-size-smaller, $line-height-small));
+        }
     }
+
     &__title {
         grid-area: title;
         margin: 0;
@@ -74,7 +72,7 @@
         }
     }
 
-    &__topics {
+    &__hashtags {
         padding-right: 32px;
     }
 

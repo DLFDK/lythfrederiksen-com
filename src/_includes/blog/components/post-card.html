@@ -1,14 +1,11 @@
+{%- from "src/_includes/blog/components/navigation.njk" import navigation -%}
 <article class="post-card">
-    <div class="post-card__category">
-        <p>{{ post.data.category }}</p>
-        {% if post.data.project %} 
-        <p>/</p>
-        <p>{{post.data.project}}</p>
-        {% endif %}  
+    <div class="post-card__navigation-container">
+        {{ navigation({ category: post.data.category, topic: post.data.topic}) }}
     </div>
     <h2 class="post-card__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="post-card__date">{{ post.data.date | postDate }}</p>
-    <div class="post-card__topics">
+    <div class="post-card__hashtags">
         {{ hashtagList({ hashtags: post.data.hashtags}) }}
     </div>
     <p class="post-card__copy">{{ post.data.snippet }}</p>

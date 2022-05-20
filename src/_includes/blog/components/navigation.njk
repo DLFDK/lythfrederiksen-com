@@ -1,0 +1,17 @@
+{% macro navigation(params) %}
+<nav class="navigation">
+    <ul>
+        {% if params.blog %} 
+        <li><a href="/blog/">Blog</a></li>
+        <div>/</div>
+        {% endif %}  
+        <li>
+            <a href="">{{ params.category }}</a>
+        </li>
+        <div>/</div>
+        <li>
+            <a href="">{{ params.topic }}</a>
+        </li>
+    </ul>
+</nav>
+{% endmacro %}
