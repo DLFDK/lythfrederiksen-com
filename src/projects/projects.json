@@ -1,0 +1,5 @@
+{
+    "layout": "blog/layouts/blog-post.html",
+    "style": "css/blog/blog-post.scss",
+    "permalink": "/projects/{{ title | slug }}/index.html"
+}
