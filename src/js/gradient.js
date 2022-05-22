@@ -3,7 +3,9 @@ function gradient() {
     const container = document.getElementById("canvas-gradient");
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-    const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect();
+
+    const containerWidth = window.innerWidth;
+    let containerHeight = container.dataset.gradientHeight;
     const width = containerWidth > 1000 ? containerWidth : 1000;
     const height = width;
     canvas.style.height = containerHeight + "px";
