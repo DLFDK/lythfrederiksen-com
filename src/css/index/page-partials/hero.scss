@@ -95,7 +95,7 @@
         letter-spacing: $letter-spacing-copy;
         padding-top: 32px;
         max-width: min(53vw - 84px, 492px);
-        color: rgb(66, 84, 102);
+        color: $stripe-cloud-blue;
 
         @media (max-width: $breakpoint-medium) {
             max-width: initial;
