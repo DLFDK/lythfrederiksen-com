@@ -11,6 +11,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
+
+    eleventyConfig.addCollection("posts", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/posts/*.md");
+    });
+    eleventyConfig.addCollection("projects", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/projects/*.md");
+    });
+
+    //Serve specific
     if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
@@ -19,7 +28,7 @@ module.exports = function (eleventyConfig) {
                 dest: "dist",
                 inline: "none",
                 sass: {
-                    outputStyle: "expanded",
+                    style: "expanded",
                     loadPaths: ["./src/css/"]
                 }
             },
@@ -37,7 +46,7 @@ module.exports = function (eleventyConfig) {
                 dest: "dist",
                 inline: "all",
                 sass: {
-                    outputStyle: "compressed",
+                    style: "compressed",
                     loadPaths: ["./src/css/"]
                 }
             },
@@ -51,6 +60,7 @@ module.exports = function (eleventyConfig) {
         });
     }
 
+    //Proxy
     if (process.argv.includes('--serve')) {
         const { createProxyMiddleware } = require('http-proxy-middleware');
         const proxy = createProxyMiddleware('/images', {
