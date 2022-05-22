@@ -1,0 +1,45 @@
+---
+layout: blog/layouts/blog-base.html
+title: Projects
+style: css/projects/projects-main.scss
+---
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+{%- from "src/_includes/blog/components/hashtag-list.njk" import hashtagList -%}
+<header class="title">
+    <div class="title__content">
+        <h1>
+            <a href="/projects/">Projects</a>
+        </h1>
+    </div>
+</header>
+<section class="introduction">
+    <div class="introduction__content">
+        <header>
+            <h2 class="introduction__heading">What I've been up to</h2>
+        </header>
+    </div>
+    <div id="canvas-gradient" class="introduction__slant"></div>
+    <script defer src="/js/gradient.js"></script>
+</section>
+<div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
+<section class="post-list">
+    <div class="post-list__content">
+        <div class="post-list__selector">
+            <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
+            <label for="theme-all">All</label>
+            <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
+            <label for="theme-build">Build</label>
+            <input type="radio" id="theme-write" name="thene-selector" value="write" checked />
+            <label for="theme-write">Write</label>
+            <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
+            <label for="theme-code">Code</label>
+        </div>
+        <div class="post-list__list">
+            {%- for project in collections.projects -%} 
+                {% if not project.data.featured %} 
+                    {% include "blog/components/post-card.html" %}
+                {% endif %}  
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
