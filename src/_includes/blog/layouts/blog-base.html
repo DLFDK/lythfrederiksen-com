@@ -1,3 +1,4 @@
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,15 +10,21 @@
         <title>lyth frederiksen | {{title}}</title>
     </head>
     <body>
-        <header class="header">
+        <div class="header-container">
+            {% include 'src/_includes/global/components/header.html' %}
+        </div>
+        <!-- <header class="header">
             <div class="header__content">
                 <div class="header__logo-container">
                     <a class="logo" href="/">lyth frederiksen</a>
                 </div>
             </div>
-        </header>
+        </header> -->
         <main>{{content | safe}}</main>
-        <footer class="footer">
+        <div class="footer-container">
+            {% include 'src/_includes/global/components/footer.html' %}
+        </div>
+        <!-- <footer class="footer">
             <div class="footer__content">
                 <div class="footer__main">
                     <div class="footer__logo-container">
@@ -33,6 +40,6 @@
                 </div>
                 <p class="footer__copyright">© 2022 Dennis Lyth Frederiksen</p>
             </div>
-        </footer>
+        </footer> -->
     </body>
 </html>

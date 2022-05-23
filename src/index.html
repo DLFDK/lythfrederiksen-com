@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/index/index.scss" />
     </head>
     <body>
-        {% include 'src/_includes/index/page-partials/header.html' %}
+        <div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
         <main>
             {% include 'src/_includes/index/page-partials/hero.html' %}
             <div class="disclaimer-container">
@@ -20,7 +20,7 @@
             {% include 'src/_includes/index/page-partials/section-2.html' %}
             {% include 'src/_includes/index/page-partials/section-3.html' %}
         </main>
-        {% include 'src/_includes/index/page-partials/footer.html' %}
+        {% include 'src/_includes/global/components/footer.html' %}
         <script defer src="js/lazyfit.js"></script>
         <script defer src="js/gradient.js"></script>
     </body>

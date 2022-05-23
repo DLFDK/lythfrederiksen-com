@@ -1,0 +1,88 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+
+.footer {
+    display: grid;
+    grid-template-columns: $grid-content-columns;
+    background: $stripe-background-white;
+
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 64px 32px 8px 32px;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: end;
+        column-gap: 32px;
+        row-gap: 16px;
+        padding-bottom: 32px;
+
+        @media (max-width: $breakpoint-medium) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    // &__logo-container {
+    //     --logo-text-color: #{$stripe-dark-blue};
+    // }
+
+    &__navigation {
+        display: contents;
+
+        & ul {
+            display: contents;
+            list-style: none;
+        }
+
+        & li {
+            font-size: $font-size-smaller;
+            font-weight: $font-weight-bold;
+            letter-spacing: $letter-spacing-copy;
+            transition: opacity var(--transition-duration);
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            @media (max-width: $breakpoint-medium) {
+                grid-row: 2;
+            }
+        }
+
+        & li:nth-child(1) {
+            justify-self: end;
+            @media (max-width: $breakpoint-medium) {
+                justify-self: start;
+            }
+        }
+
+        & li:nth-child(2) {
+            justify-self: start;
+            @media (max-width: $breakpoint-medium) {
+                justify-self: center;
+            }
+        }
+
+        & li:nth-child(3) {
+            justify-self: end;
+        }
+
+        & a {
+            color: $stripe-dark-blue;
+        }
+    }
+
+    &__copyright {
+        width: max-content;
+        font-size: $font-size-smaller;
+        font-weight: $font-weight-regular;
+        letter-spacing: $letter-spacing-copy;
+        margin: 0 auto;
+        color: $stripe-dark-blue;
+    }
+}

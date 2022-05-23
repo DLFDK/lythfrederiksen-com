@@ -5,7 +5,7 @@
 .header {
     display: grid;
     grid-template-columns: $grid-content-columns;
-
+    
     &__content {
         grid-column: 2;
         grid-row: 1;
@@ -13,15 +13,11 @@
         justify-content: space-between;
         align-items: center;
         padding: 18px 32px 0px;
+    
+        @media (max-width: $breakpoint-medium) {
+            height: 64px;
+            padding-top: 24px;
+        }
 
-        // @media (max-width: $breakpoint-medium) {
-        //     height: 64px;
-        //     padding-top: 24px;
-        // }
-    }
-
-    &__logo-container {
-        --logo-text-color: #{$stripe-dark-blue};
-        padding-bottom: 4px;
     }
 }

@@ -4,5 +4,7 @@
 @forward "blog/base/body.scss";
 @use "global/base/a.scss";
 @use "global/components/link-button.scss";
-@use "blog/components/header.scss";
-@use "blog/components/footer.scss";
+@use "global/components/header.scss";
+@use "global/components/footer.scss";
+@use "blog/components/header-container.scss";
+@use "blog/components/footer-container.scss";

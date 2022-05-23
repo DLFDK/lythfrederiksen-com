@@ -8,12 +8,13 @@
 @use "index/components/burger.scss";
 @use "index/components/perf.scss";
 @use "global/components/link-button.scss";
-@use "index/page-partials/header.scss";
 @use "index/page-partials/hero.scss";
 @use "index/page-partials/disclaimer-container.scss";
+@use "global/components/header.scss";
 @use "global/components/logo.scss";
 @use "global/components/disclaimer.scss";
+@use "global/components/footer.scss";
+@use "index/page-partials/header-container.scss";
 @use "index/page-partials/section-1.scss";
 @use "index/page-partials/section-2.scss";
 @use "index/page-partials/section-3.scss";
-@use "index/page-partials/footer.scss";
