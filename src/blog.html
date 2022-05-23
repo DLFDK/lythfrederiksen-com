@@ -13,10 +13,10 @@ style: css/blog/blog-main.scss
     </div>
 </header>
 <section class="featured">
-    <div id="canvas-gradient" class="featured__slant"></div>
+    <div id="canvas-gradient" data-gradient-height="300" class="featured__slant"></div>
     <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
-        {%- for post in collections.post -%} 
+        {%- for post in collections.posts -%} 
             {% if post.data.featured %} 
                 {% include "blog/components/post-card-featured.html" %}
             {% endif %}  
@@ -37,7 +37,7 @@ style: css/blog/blog-main.scss
             <label for="theme-code">Code</label>
         </div> -->
         <div class="post-list__list">
-            {%- for post in collections.post -%} 
+            {%- for post in collections.posts -%} 
                 {% if not post.data.featured %} 
                     {% include "blog/components/post-card.html" %}
                 {% endif %}  
