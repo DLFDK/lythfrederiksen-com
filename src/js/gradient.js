@@ -4,16 +4,15 @@ function gradient() {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
-    const containerWidth = window.innerWidth;
-    let containerHeight = container.dataset.gradientHeight;
-    const width = containerWidth > 1000 ? containerWidth : 1000;
+    const windowWidth = window.innerWidth;
+    const width = windowWidth > 1000 ? windowWidth : 1000;
     const height = width;
-    canvas.style.height = containerHeight + "px";
     canvas.style.width = width + "px";
     canvas.width = width;
     canvas.height = height;
 
-    const ratio = width / containerHeight;
+    const containerHeight = container.dataset.gradientHeight;
+    const ratio = width / (containerHeight ? containerHeight : width);
 
     const halfWidth = width / 2;
     const halfHeight = height / 2;
