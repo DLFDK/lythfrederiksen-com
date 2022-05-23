@@ -3,12 +3,6 @@
 @use "global/_variables/colors.scss" as *;
 
 .disclaimer-container {
-    grid-template-columns: $grid-content-columns;
     padding-top: 128px;
     background: linear-gradient($stripe-background-white, $stripe-white);
-
-    & > section {
-        grid-column: 2;
-        grid-row: 1;
-    }
 }
