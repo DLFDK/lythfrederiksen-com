@@ -1,0 +1,20 @@
+{%- from "src/_includes/blog/components/navigation.njk" import navigation -%}
+{%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+{% macro card(params) %}
+<article class="card">
+    <div class="card__navigation-container">
+        {{ navigation({ category: params.item.data.category, topic: params.item.data.topic}) }}
+    </div>
+    <h2 class="card__title"><a href="{{params.item.url}}">{{ params.item.data.title }}</a></h2>
+    <p class="card__date">{{ params.item.data.date | postDate }}</p>
+    <div class="card__hashtags">
+        {{ hashtagList({ hashtags: params.item.data.hashtags}) }}
+    </div>
+    <p class="card__copy">{{ params.item.data.snippet }}</p>
+    <div class="card__cta">{{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "Read post"), href: params.item.url }) }}</div>
+    <div class="card__image">
+        <img src="{{params.item.data.img}}" class="lazyfit" data-src="images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" alt="" />
+    </div>
+</article>
+{% endmacro %}

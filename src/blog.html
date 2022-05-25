@@ -4,7 +4,7 @@ title: Blog
 style: css/blog/blog-main.scss
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
-{%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
+{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
 <header class="title">
     <div class="title__content">
         <h1>
@@ -24,4 +24,4 @@ style: css/blog/blog-main.scss
     </div>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-{% include 'src/_includes/global/components/card-list.html' %}
+{{ cardList({ collection: collections.posts}) }}

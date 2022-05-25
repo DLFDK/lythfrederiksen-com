@@ -1,0 +1,14 @@
+{%- from "src/_includes/global/components/card.njk" import card -%}
+{% macro cardList(params) %}
+<section class="card-list">
+    <div class="card-list__content">
+        <div class="card-list__list">
+            {%- for item in params.collection -%} 
+                {% if not item.data.featured %} 
+                    {{ card({ item: item}) }}
+                {% endif %}  
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+{% endmacro %}

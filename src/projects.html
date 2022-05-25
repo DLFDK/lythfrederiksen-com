@@ -5,6 +5,8 @@ style: css/projects/projects-main.scss
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
+{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
+
 <header class="title">
     <div class="title__content">
         <h1>
@@ -25,4 +27,4 @@ style: css/projects/projects-main.scss
     <script defer src="/js/gradient.js"></script>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-{% include 'src/_includes/global/components/card-list.html' %}
+{{ cardList({ collection: collections.projects}) }}
