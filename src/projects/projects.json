@@ -1,5 +1,5 @@
 {
-    "layout": "blog/layouts/blog-post.html",
+    "layout": "global/layouts/article.html",
     "style": "css/blog/blog-post.scss",
     "permalink": "/projects/{{ title | slug }}/index.html"
 }
