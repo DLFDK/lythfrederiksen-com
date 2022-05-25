@@ -3,7 +3,7 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 
-.post-card {
+.card {
     border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr;

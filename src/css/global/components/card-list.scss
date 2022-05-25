@@ -2,7 +2,7 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 
-.post-list {
+.card-list {
     display: grid;
     grid-template-columns: $grid-content-columns;
     padding-bottom: 128px;

@@ -1,10 +1,10 @@
 @use "global/custom-properties/root-global.scss";
-@use "blog/base/font-faces.scss";
-@use "blog/base/reset.scss";
-@forward "blog/base/body.scss";
 @use "global/base/a.scss";
 @use "global/components/link-button.scss";
 @use "global/components/header.scss";
 @use "global/components/footer.scss";
+@forward "blog/base/body.scss";
+@use "blog/base/font-faces.scss";
+@use "blog/base/reset.scss";
 @use "blog/components/header-container.scss";
 @use "blog/components/footer-container.scss";

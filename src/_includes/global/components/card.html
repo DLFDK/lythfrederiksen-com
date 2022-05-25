@@ -1,0 +1,16 @@
+{%- from "src/_includes/blog/components/navigation.njk" import navigation -%}
+<article class="card">
+    <div class="card__navigation-container">
+        {{ navigation({ category: post.data.category, topic: post.data.topic}) }}
+    </div>
+    <h2 class="card__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
+    <p class="card__date">{{ post.data.date | postDate }}</p>
+    <div class="card__hashtags">
+        {{ hashtagList({ hashtags: post.data.hashtags}) }}
+    </div>
+    <p class="card__copy">{{ post.data.snippet }}</p>
+    <div class="card__cta">{{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}</div>
+    <div class="card__image">
+        <img src="{{post.data.img}}" class="lazyfit" data-src="images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" alt="" />
+    </div>
+</article>

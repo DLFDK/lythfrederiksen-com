@@ -24,14 +24,4 @@ style: css/blog/blog-main.scss
     </div>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-<section class="post-list">
-    <div class="post-list__content">
-        <div class="post-list__list">
-            {%- for post in collections.posts -%} 
-                {% if not post.data.featured %} 
-                    {% include "blog/components/post-card.html" %}
-                {% endif %}  
-            {%- endfor -%}
-        </div>
-    </div>
-</section>
+{% include 'src/_includes/global/components/card-list.html' %}
