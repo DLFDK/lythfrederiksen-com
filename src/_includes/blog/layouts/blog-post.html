@@ -1,7 +1,7 @@
 ---
 layout: blog/layouts/blog-base.html
 ---
-{%- from "src/_includes/blog/components/hashtag-list.njk" import hashtagList -%}
+{%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
 {%- from "src/_includes/blog/components/navigation.njk" import navigation -%}
 <div class="navigation-container">
     {{ navigation({ blog: "true", category: category, topic: topic}) }}
