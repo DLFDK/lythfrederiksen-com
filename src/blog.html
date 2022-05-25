@@ -26,16 +26,6 @@ style: css/blog/blog-main.scss
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
 <section class="post-list">
     <div class="post-list__content">
-        <!-- <div class="post-list__selector">
-            <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
-            <label for="theme-all">All</label>
-            <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
-            <label for="theme-build">Build</label>
-            <input type="radio" id="theme-write" name="thene-selector" value="write" checked />
-            <label for="theme-write">Write</label>
-            <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
-            <label for="theme-code">Code</label>
-        </div> -->
         <div class="post-list__list">
             {%- for post in collections.posts -%} 
                 {% if not post.data.featured %} 

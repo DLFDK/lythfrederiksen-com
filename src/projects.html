@@ -15,25 +15,18 @@ style: css/projects/projects-main.scss
 <section class="introduction">
     <div class="introduction__content">
         <header>
-            <h2 class="introduction__heading">What I've been up to</h2>
+            <h2 class="introduction__heading">What I've been up to all these years</h2>
         </header>
+        <div class="introduction__copy">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione est, maxime ex officia aut eius molestias modi nulla illum laudantium voluptas repudiandae perspiciatis doloremque magnam sed in error laborum deleniti.</p>
+        </div>
     </div>
-    <div id="canvas-gradient" class="introduction__slant"></div>
+    <div id="canvas-gradient" data-gradient-height="300" class="introduction__slant"></div>
     <script defer src="/js/gradient.js"></script>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
 <section class="post-list">
     <div class="post-list__content">
-        <div class="post-list__selector">
-            <input type="radio" id="theme-all" name="thene-selector" value="all" checked />
-            <label for="theme-all">All</label>
-            <input type="radio" id="theme-build" name="thene-selector" value="build" checked />
-            <label for="theme-build">Build</label>
-            <input type="radio" id="theme-write" name="thene-selector" value="write" checked />
-            <label for="theme-write">Write</label>
-            <input type="radio" id="theme-code" name="thene-selector" value="code" checked />
-            <label for="theme-code">Code</label>
-        </div>
         <div class="post-list__list">
             {%- for project in collections.projects -%} 
                 {% if not project.data.featured %} 
