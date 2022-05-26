@@ -1,6 +1,6 @@
 @use "global/_variables/colors.scss" as *;
-@use "global/components/hashtag-list.scss";
 @use "global/layouts/base.scss" with ($background-color: $stripe-white);
+@use "global/components/hashtag-list.scss";
 @use "blog/components/navigation.scss";
 @use "blog/post/post.scss";
 @use "blog/post/navigation-container.scss";
