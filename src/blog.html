@@ -16,12 +16,10 @@ style: css/blog/blog-main.scss
     <div id="canvas-gradient" data-gradient-height="300" class="featured__slant"></div>
     <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
-        {%- for post in collections.posts -%} 
-            {% if post.data.featured %} 
-                {% include "blog/components/post-card-featured.html" %}
-            {% endif %}  
+        {%- for post in collections.featuredPost -%} 
+            {% include "blog/components/post-card-featured.html" %}
         {%- endfor -%}
     </div>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-{{ cardList({ collection: collections.posts}) }}
+{{ cardList({ collection: collections.notFeatured}) }}

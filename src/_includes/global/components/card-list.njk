@@ -4,9 +4,7 @@
     <div class="card-list__content">
         <div class="card-list__list">
             {%- for item in params.collection -%} 
-                {% if not item.data.featured %} 
-                    {{ card({ item: item}) }}
-                {% endif %}  
+                {{ card({ item: item}) }}
             {%- endfor -%}
         </div>
     </div>

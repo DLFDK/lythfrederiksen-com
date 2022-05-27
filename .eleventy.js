@@ -15,6 +15,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("posts", function (collectionApi) {
         return collectionApi.getFilteredByGlob("./src/posts/*.md");
     });
+    eleventyConfig.addCollection("featuredPost", function (collectionApi) {
+        const featuredPost = collectionApi.getFilteredByTag("featured").pop();
+        featuredPost.data.featured = true;
+        return [featuredPost];
+    });
+    eleventyConfig.addCollection("notFeatured", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/posts/*.md").filter(item => {
+            return !item.data.featured;
+        });
+    });
     eleventyConfig.addCollection("projects", function (collectionApi) {
         return collectionApi.getFilteredByGlob("./src/projects/*.md");
     });
