@@ -14,11 +14,16 @@
 
         & div {
             color: #adbdcc;
+
+            &:last-of-type{
+                display: none;
+            }
         }
-        
+
         & a {
             color: $stripe-purple;
             transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
+            text-transform: capitalize;
         }
 
         & a:hover {

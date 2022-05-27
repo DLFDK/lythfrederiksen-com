@@ -4,7 +4,7 @@
 {% macro card(params) %}
 <article class="card">
     <div class="card__navigation-container">
-        {{ navigation({ category: params.item.data.category, topic: params.item.data.topic}) }}
+        {{ navigation({ items:[ [params.item.data.category + "/", params.item.data.category]]}) }}
     </div>
     <h2 class="card__title"><a href="{{params.item.url}}">{{ params.item.data.title }}</a></h2>
     <p class="card__date">{{ params.item.data.date | postDate }}</p>

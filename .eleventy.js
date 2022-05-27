@@ -21,7 +21,7 @@ module.exports = function (eleventyConfig) {
         return [featuredPost];
     });
     eleventyConfig.addCollection("notFeatured", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("./src/posts/*.md").filter(item => {
+        return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse().filter(item => {
             return !item.data.featured;
         });
     });
