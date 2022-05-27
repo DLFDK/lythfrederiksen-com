@@ -45,7 +45,7 @@
             "cta image";
     }
 
-    &__caption {
+    &__navigation-container {
         padding-top: 16px;
         grid-area: caption;
         color: $stripe-purple;
@@ -53,6 +53,7 @@
         font-weight: $font-weight-bold;
         letter-spacing: $letter-spacing-copy;
     }
+    
     &__title {
         grid-area: title;
         margin: 0;

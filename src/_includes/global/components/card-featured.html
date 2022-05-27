@@ -1,5 +1,8 @@
+{%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 <article class="featured__box">
-    <p class="featured__caption">Featured</p>
+    <div class="featured__navigation-container">
+        {{ navigation({ items:[ ["featured/", "Featured"]]}) }}
+    </div>
     <h2 class="featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="featured__date">{{ post.data.date | postDate }}</p>
     <p class="featured__copy">{{ post.data.snippet }}</p>
