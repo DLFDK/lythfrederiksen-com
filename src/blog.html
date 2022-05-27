@@ -17,7 +17,7 @@ style: css/blog/blog-main.scss
     <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
         {%- for post in collections.featuredPost -%} 
-            {% include "blog/components/post-card-featured.html" %}
+            {% include "global/components/card-featured.html" %}
         {%- endfor -%}
     </div>
 </section>
