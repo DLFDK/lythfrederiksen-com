@@ -1,6 +1,14 @@
 gradient();
 function gradient() {
+    const colorOne = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-1");
+    const colorTwo = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-2");
+    const colorThree = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-3");
+    const colorFour = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-4");
+    if(!(colorOne && colorTwo && colorThree && colorFour)) return;
+
     const container = document.getElementById("canvas-gradient");
+    if(!container) return;
+
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
@@ -17,50 +25,46 @@ function gradient() {
     const halfWidth = width / 2;
     const halfHeight = height / 2;
 
-    const gradientColorZero = "#a960ee";
-    const gradientColorOne = "#ff333d";
-    const gradientColorTwo = "#90e0ff";
-    const gradientColorThree = "#ffcb57";
-    const gradientColorZeroTransparent = "rgba(169, 96, 238, 0)";
-    const gradientColorOneTransparent = "rgba(255, 51, 61, 0)";
-    const gradientColorTwoTransparent = "rgba(144, 224, 255, 0)";
-    const gradientColorThreeTransparent = "rgba(255, 203, 87, 0)";
+    const colorOneTransparent = colorOne + "00";
+    const colorTwoTransparent = colorTwo + "00";
+    const colorThreeTransparent = colorThree + "00";
+    const colorFourTransparent = colorFour + "00";
 
-    ctx.fillStyle = gradientColorZero;
+    ctx.fillStyle = colorOne;
     ctx.fillRect(0, 0, width, height);
 
     const grads = [
         [[
-            [gradientColorTwo, 0.25],
-            [gradientColorTwoTransparent, 0.50],
+            [colorThree, 0.25],
+            [colorThreeTransparent, 0.50],
         ], 520, -250 * ratio],
         [[
-            [gradientColorTwo, 0.15],
-            [gradientColorTwoTransparent, 0.50],
+            [colorThree, 0.15],
+            [colorThreeTransparent, 0.50],
         ], -620, 0 * ratio],
         [[
-            [gradientColorZero, 0.10],
-            [gradientColorZeroTransparent, 0.60],
+            [colorOne, 0.10],
+            [colorOneTransparent, 0.60],
         ], -420, 120 * ratio],
         [[
-            [gradientColorZero, 0.30],
-            [gradientColorZeroTransparent, 0.67],
+            [colorOne, 0.30],
+            [colorOneTransparent, 0.67],
         ], 122, -120 * ratio],
         [[
-            [gradientColorOne, 0.4],
-            [gradientColorOneTransparent, 0.57],
+            [colorTwo, 0.4],
+            [colorTwoTransparent, 0.57],
         ], 495, -44 * ratio],
         [[
-            [gradientColorTwo, 0.1],
-            [gradientColorTwoTransparent, 0.60],
+            [colorThree, 0.1],
+            [colorThreeTransparent, 0.60],
         ], -120, 250 * ratio],
         [[
-            [gradientColorOne, 0],
-            [gradientColorOneTransparent, 0.60],
+            [colorTwo, 0],
+            [colorTwoTransparent, 0.60],
         ], -940, 290 * ratio],
         [[
-            [gradientColorThree, 0.23],
-            [gradientColorThreeTransparent, 0.67],
+            [colorFour, 0.23],
+            [colorFourTransparent, 0.67],
         ], 385, -24 * ratio],
     ];
 
