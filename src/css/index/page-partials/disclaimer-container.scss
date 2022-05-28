@@ -1,5 +1,10 @@
 @use "index/_mixins/section.scss" as *;
+@use "global/_variables/colors.scss" as *;
 
 .disclaimer-container {
     padding-bottom: $section-padding-top-content;
+    --link-button-text-color: var(--color-primary, #{$stripe-dark-blue});
+    --link-button-bg-color: transparent;
+    --link-button-bg-hover-color: transparent;
+    --link-button-text-hover-color: #{rgba($color: $stripe-dark-blue, $alpha: 0.4)};
 }

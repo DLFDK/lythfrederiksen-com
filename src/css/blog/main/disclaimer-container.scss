@@ -5,4 +5,8 @@
 .disclaimer-container {
     padding-top: 128px;
     background: linear-gradient($stripe-background-white, $stripe-white);
+    --link-button-text-color: var(--color-primary, #{$stripe-dark-blue});
+    --link-button-bg-color: transparent;
+    --link-button-bg-hover-color: transparent;
+    --link-button-text-hover-color: #{$stripe-dark-blue};
 }
