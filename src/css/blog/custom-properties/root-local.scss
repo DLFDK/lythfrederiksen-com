@@ -3,6 +3,9 @@
 @use "global/_variables/colors.scss" as *;
 
 :root {
-    --color-primary: #{$stripe-green};
-    // --color-primary: green;
+    --color-gradient-1: #4436ff;
+    --color-gradient-2: #5566ff;
+    --color-gradient-3: #d679ff;
+    --color-gradient-4: #11efe3;
+    --color-primary: #9966ff;
 }
