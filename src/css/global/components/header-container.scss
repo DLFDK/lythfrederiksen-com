@@ -4,8 +4,8 @@
 
 .header-container {
     --link-button-text-color: #{$stripe-white};
-    --link-button-bg-color: #{$stripe-dark-blue};
-    --link-button-bg-hover-color: #{rgba($color: $stripe-dark-blue, $alpha: 0.4)};
+    --link-button-bg-color: var(--color-primary, #{$stripe-dark-blue});
+    --link-button-bg-hover-color: #{$stripe-dark-blue};
     --link-button-text-hover-color: #{$stripe-white};
     --logo-text-color: #{$stripe-dark-blue};
 }
