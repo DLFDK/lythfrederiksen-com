@@ -90,7 +90,7 @@
 
     &__cta {
         grid-area: cta;
-        --link-button-text-color: #{$stripe-purple};
+        --link-button-text-color: var(--color-primary, #{$stripe-purple});
         --link-button-bg-color: transparent;
         --link-button-bg-hover-color: transparent;
         --link-button-text-hover-color: #{$stripe-dark-blue};

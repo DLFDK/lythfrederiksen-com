@@ -21,7 +21,7 @@
         }
 
         & a {
-            color: $stripe-purple;
+            color: var(--color-primary, $stripe-purple);
             transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
             text-transform: capitalize;
         }

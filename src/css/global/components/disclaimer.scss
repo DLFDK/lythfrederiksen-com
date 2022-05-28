@@ -104,14 +104,14 @@
         &--9 {
             grid-area: link;
             justify-self: end;
-            --link-button-text-color: #{$stripe-dark-blue};
+            --link-button-text-color: var(--color-primary, #{$stripe-dark-blue});
             --link-button-bg-color: transparent;
             --link-button-bg-hover-color: transparent;
-            --link-button-text-hover-color: #{rgba($stripe-dark-blue, $alpha: 0.4)};
+            --link-button-text-hover-color: #{$stripe-dark-blue};
         }
 
         &--highlight > p {
-            background: $stripe-purple;
+            background: var(--color-primary, $stripe-purple);
         }
     }
 }

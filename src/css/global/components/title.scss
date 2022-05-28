@@ -18,7 +18,7 @@
         }
         
         & a {
-            color: $stripe-purple;
+            color: var(--color-primary, $stripe-purple);
             font-size: $font-size-small;
             font-weight: $font-weight-bolder;
             transition: color var(--transition-duration), text-decoration-color var(--transition-duration);;

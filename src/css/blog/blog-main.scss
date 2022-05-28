@@ -6,5 +6,6 @@
 @use "global/components/hashtag-list.scss";
 @use "global/components/card-featured.scss";
 @use "global/components/navigation.scss";
-@use "blog/main/disclaimer-container.scss";
 @use "global/components/title.scss";
+@use "blog/custom-properties/root-local.scss";
+@use "blog/main/disclaimer-container.scss";

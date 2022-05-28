@@ -6,5 +6,6 @@
 @use "global/components/navigation.scss";
 @use "global/layouts/base.scss" with ($background-color: $stripe-background-white);
 @use "global/components/title.scss";
+@use "projects/custom-properties/root-local.scss";
 @use "projects/main/disclaimer-container.scss";
 @use "projects/main/introduction.scss";

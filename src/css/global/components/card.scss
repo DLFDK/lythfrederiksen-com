@@ -28,7 +28,7 @@
         &::before {
             position: absolute;
             content: "";
-            border-left: 1px solid $stripe-purple;
+            border-left: 1px solid var(--color-primary, $stripe-purple);
             left: -16px;
             height: $font-size-smaller;
             height: 100%;
@@ -65,7 +65,7 @@
         &::before {
             position: absolute;
             content: "";
-            border-left: 1px solid $stripe-purple;
+            border-left: 1px solid var(--color-primary, $stripe-purple);
             left: -16px;
             height: 100%;
             transform: scaleY(math.div($font-size-smaller, $line-height-small));
@@ -88,7 +88,7 @@
 
     &__cta {
         grid-area: cta;
-        --link-button-text-color: #{$stripe-purple};
+        --link-button-text-color: var(--color-primary, #{$stripe-purple});
         --link-button-bg-color: transparent;
         --link-button-bg-hover-color: transparent;
         --link-button-text-hover-color: #{$stripe-dark-blue};
