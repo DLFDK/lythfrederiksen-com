@@ -1,4 +1,6 @@
 {
+    "home": "projects",
+    "tags": [],
     "layout": "global/layouts/article.html",
     "style": "css/projects/projects-project.scss",
     "permalink": "/projects/{{ title | slug }}/index.html"

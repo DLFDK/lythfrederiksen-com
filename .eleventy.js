@@ -12,22 +12,64 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
 
-    eleventyConfig.addCollection("posts", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("./src/posts/*.md");
-    });
-    eleventyConfig.addCollection("featuredPost", function (collectionApi) {
-        const featuredPost = collectionApi.getFilteredByTag("featured").pop();
-        featuredPost.data.featured = true;
-        return [featuredPost];
-    });
-    eleventyConfig.addCollection("notFeatured", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse().filter(item => {
-            return !item.data.featured;
-        });
-    });
-    eleventyConfig.addCollection("projects", function (collectionApi) {
-        return collectionApi.getFilteredByGlob("./src/projects/*.md");
-    });
+    const collectionRoots = ["posts", "projects"];
+    const categories = ["All", "Build", "Write", "Code"];
+    for(const root of collectionRoots){
+        for(const category of categories) {
+            eleventyConfig.addCollection(`${root}${category}Featured`, function (collectionApi) {
+                const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*.md`).filter(item => {
+                    if (category === "All"){
+                        return item.data.tags.includes("featured");
+                    } else {
+                        return category === item.data.category && item.data.tags.includes("featured");
+                    }
+                }).pop();
+                if(singleFeatured){
+                    singleFeatured.data.featured = true;
+                }
+                return [singleFeatured];
+            });
+            eleventyConfig.addCollection(`${root}${category}NotFeatured`, function (collectionApi) {
+                return collectionApi.getFilteredByGlob(`./src/${root}/*.md`).filter(item => {
+                    if (category === "All"){
+                        return !item.data.featured;
+                    } else {
+                        return category === item.data.category && !item.data.featured;
+                    }
+                });
+            });
+        }
+    }
+
+    // eleventyConfig.addCollection("whatever", function (collectionApi) {
+    //      console.log(collectionApi.getAll()[6].data);
+    //      return collectionApi.getFilteredByGlob("./src/posts/*.md")
+    // });
+
+    // eleventyConfig.addCollection("asd", function (collectionApi) {
+
+    //     const collection = collectionApi.getFilteredByGlob("./src/posts/*.md");
+    //     const newCollection = collection.getFilteredByTag("write");
+    //     console.log(collectionApi);
+    //     return collectionApi.getFilteredByGlob("./src/posts/*.md");
+    // });
+
+    // eleventyConfig.addCollection("posts", function (collectionApi) {
+    //     return collectionApi.getFilteredByGlob("./src/posts/*.md");
+    // });
+    // eleventyConfig.addCollection("featuredPost", function (collectionApi) {
+    //     const featuredPost = collectionApi.getFilteredByTag("featured").pop();
+    //     featuredPost.data.featured = true;
+    //     return [featuredPost];
+    // });
+    // eleventyConfig.addCollection("notFeatured", function (collectionApi) {
+    //     return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse().filter(item => {
+    //         return !item.data.featured;
+    //     });
+    // });
+    // eleventyConfig.addCollection("projects", function (collectionApi) {
+    //     return collectionApi.getFilteredByGlob("./src/projects/*.md");
+    // });
 
     //Serve specific
     if (process.argv.includes("--serve")) {
