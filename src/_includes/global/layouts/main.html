@@ -3,15 +3,14 @@ layout: global/layouts/base.html
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {%- from "src/_includes/global/components/card-list.njk" import cardList -%}
+{{content | safe}}
 <header class="title">
     <div class="title__content">
         <h1>
-            {% if root %}
-                <a href="/{{root | lower}}/">{{root}}</a>
+            <a href="/{{root | lower}}/">{{root}}</a>
+            {% if category !== "All" %}
                 <div>/</div>
                 <a href="/{{root | lower}}/{{category | lower}}/">{{category}}</a>
-            {% else %}
-                <a href="/{{title | lower}}/">{{title}}</a>
             {% endif %}
         </h1>
     </div>

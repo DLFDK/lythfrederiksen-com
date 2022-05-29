@@ -1,5 +1,5 @@
 const rootsAndTypes = [["Blog", "posts"], ["Projects", "projects"]];
-const categories = ["Build", "Write", "Code"];
+const categories = ["All", "Build", "Write", "Code"];
 const combination = [];
 for(const item of rootsAndTypes){
     for(const category of categories){

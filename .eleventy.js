@@ -8,6 +8,21 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
     });
 
+    eleventyConfig.addFilter("urlFormatter", (categories) => {
+        if(categories[2] === "All") {
+            return categories[0];
+        } else {
+            return categories[0] + "/" + categories[2];
+        }
+    });
+    eleventyConfig.addFilter("titleFormatter", (categories) => {
+        if(categories[2] === "All") {
+            return categories[0];
+        } else {
+            return categories[0] + " / " + categories[2];
+        }
+    });
+
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
@@ -40,36 +55,6 @@ module.exports = function (eleventyConfig) {
             });
         }
     }
-
-    // eleventyConfig.addCollection("whatever", function (collectionApi) {
-    //      console.log(collectionApi.getAll()[6].data);
-    //      return collectionApi.getFilteredByGlob("./src/posts/*.md")
-    // });
-
-    // eleventyConfig.addCollection("asd", function (collectionApi) {
-
-    //     const collection = collectionApi.getFilteredByGlob("./src/posts/*.md");
-    //     const newCollection = collection.getFilteredByTag("write");
-    //     console.log(collectionApi);
-    //     return collectionApi.getFilteredByGlob("./src/posts/*.md");
-    // });
-
-    // eleventyConfig.addCollection("posts", function (collectionApi) {
-    //     return collectionApi.getFilteredByGlob("./src/posts/*.md");
-    // });
-    // eleventyConfig.addCollection("featuredPost", function (collectionApi) {
-    //     const featuredPost = collectionApi.getFilteredByTag("featured").pop();
-    //     featuredPost.data.featured = true;
-    //     return [featuredPost];
-    // });
-    // eleventyConfig.addCollection("notFeatured", function (collectionApi) {
-    //     return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse().filter(item => {
-    //         return !item.data.featured;
-    //     });
-    // });
-    // eleventyConfig.addCollection("projects", function (collectionApi) {
-    //     return collectionApi.getFilteredByGlob("./src/projects/*.md");
-    // });
 
     //Serve specific
     if (process.argv.includes("--serve")) {
