@@ -1,25 +1,6 @@
 ---
-layout: global/layouts/base.html
+layout: global/layouts/main.html
 title: Blog
 style: css/blog/blog-main.scss
+type: posts
 ---
-{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
-{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
-<header class="title">
-    <div class="title__content">
-        <h1>
-            <a href="/blog/">Blog</a>
-        </h1>
-    </div>
-</header>
-<section class="featured">
-    <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
-    <script defer src="/js/gradient.js"></script>
-    <div class="featured__content">
-        {%- for post in collections.featuredPost -%} 
-            {% include "global/components/card-featured.html" %}
-        {%- endfor -%}
-    </div>
-</section>
-<div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-{{ cardList({ collection: collections.notFeatured}) }}
