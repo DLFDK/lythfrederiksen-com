@@ -1,7 +1,7 @@
 {%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 <article class="featured__box">
     <div class="featured__navigation-container">
-        {{ navigation({ items:[ [post.data.category, post.data.category]]}) }}
+        {{ navigation({ items:[ [post.data.home + "/" + post.data.category | lower, post.data.category]]}) }}
     </div>
     <h2 class="featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="featured__date">{{ post.data.date | postDate }}</p>

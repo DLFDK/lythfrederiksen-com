@@ -6,7 +6,13 @@ layout: global/layouts/base.html
 <header class="title">
     <div class="title__content">
         <h1>
-            <a href="/{{title}}/">{{title}}</a>
+            {% if root %}
+                <a href="/{{root | lower}}/">{{root}}</a>
+                <div>/</div>
+                <a href="/{{root | lower}}/{{category | lower}}/">{{category}}</a>
+            {% else %}
+                <a href="/{{title | lower}}/">{{title}}</a>
+            {% endif %}
         </h1>
     </div>
 </header>
@@ -14,10 +20,10 @@ layout: global/layouts/base.html
     <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
     <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
-        {%- for post in collections[type + 'AllFeatured'] -%} 
+        {%- for post in collections[type + 'Featured'] -%} 
             {% include "global/components/card-featured.html" %}
         {%- endfor -%}
     </div>
 </section>
 <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
-{{ cardList({ collection: collections[type + 'AllNotFeatured']}) }}
+{{ cardList({ collection: collections[type + 'NotFeatured']}) }}

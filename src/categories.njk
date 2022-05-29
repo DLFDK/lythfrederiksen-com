@@ -1,0 +1,14 @@
+---
+pagination:
+ data: categories
+ size: 1
+ alias: categories
+layout: global/layouts/main.html
+eleventyComputed:
+ title: "{{categories[0]}} / {{categories[2]}}"
+ root: "{{categories[0]}}"
+ category: "{{categories[2]}}"
+ style: "css/{{categories[0] | lower}}/{{categories[0] | lower}}-main.scss"
+ type: "{{categories[1]}}{{categories[2]}}"
+permalink: "/{{ categories[0] | slug }}/{{ categories[2] | slug }}/index.html"
+---

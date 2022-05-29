@@ -2,7 +2,7 @@
 <nav class="navigation">
     <ul>
         {%- for item in params.items -%}
-            <li><a href="{{item[0]}}">{{item[1]}}</a></li>
+            <li><a href="/{{item[0] | lower}}">{{item[1]}}</a></li>
             <div>/</div>
         {%- endfor -%}
     </ul>

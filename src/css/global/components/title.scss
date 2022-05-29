@@ -15,17 +15,22 @@
             display: flex;
             align-items: center;
             margin: 0;
+            gap: 8px;
+            font-size: $font-size-small;
+            font-weight: $font-weight-bolder;
         }
         
         & a {
             color: var(--color-primary, $stripe-purple);
-            font-size: $font-size-small;
-            font-weight: $font-weight-bolder;
             transition: color var(--transition-duration), text-decoration-color var(--transition-duration);;
 
             &:hover {
                 color: $stripe-dark-blue;
             }
+        }
+
+        & div {
+            color: #adbdcc;
         }
     }
 }
