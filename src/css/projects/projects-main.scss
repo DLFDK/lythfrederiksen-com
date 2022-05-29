@@ -1,11 +1,2 @@
-@use "global/_variables/colors.scss" as *;
-@use "global/components/disclaimer.scss";
-@use "global/components/hashtag-list.scss";
-@use "global/components/card.scss";
-@use "global/components/card-list.scss";
-@use "global/components/navigation.scss";
-@use "global/layouts/base.scss" with ($background-color: $stripe-background-white);
-@use "global/components/title.scss";
+@use "global/layouts/main.scss";
 @use "projects/custom-properties/root-local.scss";
-@use "projects/main/disclaimer-container.scss";
-@use "projects/main/introduction.scss";

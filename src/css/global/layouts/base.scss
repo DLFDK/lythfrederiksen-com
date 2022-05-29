@@ -1,11 +1,11 @@
 @use "global/custom-properties/root-global.scss";
+@use "global/fonts/font-faces.scss";
 @use "global/html/a.scss";
+@use "global/html/base-body.scss";
+@use "global/html/base-reset.scss";
 @use "global/components/link-button.scss";
 @use "global/components/header.scss";
 @use "global/components/footer.scss";
 @use "global/components/logo.scss";
-@forward "global/html/base-body.scss";
-@use "global/fonts/font-faces.scss";
-@use "global/html/base-reset.scss";
 @use "global/components/header-container.scss";
 @use "global/components/footer-container.scss";

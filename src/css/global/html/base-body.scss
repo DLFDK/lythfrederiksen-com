@@ -1,9 +1,8 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
-$background-color: $stripe-background-white !default;
 
 body {
-    background-color: $background-color;
+    background-color: var(--color-body-bg, $stripe-background-white);
     font-family: $font-family;
     margin: 0;
     flex-grow: 1;
