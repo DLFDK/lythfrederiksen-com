@@ -1,14 +1,14 @@
 ---
 pagination:
- data: categories
+ data: paginationData
  size: 1
- alias: categories
+ alias: pd
 layout: global/layouts/main.html
 eleventyComputed:
- title: "{{categories | titleFormatter}}"
- root: "{{categories[0]}}"
- category: "{{categories[2]}}"
- style: "css/{{categories[0] | lower}}/{{categories[0] | lower}}-main.scss"
- type: "{{categories[1]}}{{categories[2]}}"
-permalink: "/{{categories | urlFormatter | lower}}/index.html"
+ title: "{{pd | titleFormatter}}"
+ root: "{{pd[0]}}"
+ category: "{{pd[2]}}"
+ style: "css/{{pd[0] | lower}}/{{pd[0] | lower}}-main.scss"
+ type: "{{pd[1]}}{{pd[2]}}"
+permalink: "/{{pd | urlFormatter | lower}}/index.html"
 ---
