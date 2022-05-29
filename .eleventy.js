@@ -3,11 +3,16 @@ const sass = require("./plugins/sass.js");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
+    //Passthroughs
+    eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
+    eleventyConfig.addPassthroughCopy("./src/js/");
+    eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
+
+    //Filters
     //https://11ty.rocks/eleventyjs/dates/
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
     });
-
     eleventyConfig.addFilter("urlFormatter", (categories) => {
         if(categories[2] === "All") {
             return categories[0];
@@ -23,10 +28,7 @@ module.exports = function (eleventyConfig) {
         }
     });
 
-    eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
-    eleventyConfig.addPassthroughCopy("./src/js/");
-    eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
-
+    //Collections
     const collectionRoots = ["posts", "projects"];
     const categories = ["All", "Build", "Write", "Code"];
     for(const root of collectionRoots){
@@ -56,7 +58,7 @@ module.exports = function (eleventyConfig) {
         }
     }
 
-    //Serve specific
+    //Dependent on "serve"
     if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
