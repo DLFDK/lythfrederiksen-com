@@ -2,13 +2,13 @@
 pagination:
  data: paginationData
  size: 1
- alias: pd
+ alias: pagiData
 layout: global/layouts/main.html
 eleventyComputed:
- title: "{{pd | titleFormatter}}"
- root: "{{pd[0]}}"
- category: "{{pd[2]}}"
- style: "css/{{pd[0] | lower}}/{{pd[0] | lower}}-main.scss"
- type: "{{pd[1]}}{{pd[2]}}"
-permalink: "/{{pd | urlFormatter | lower}}/index.html"
+ title: "{{pagiData | titleFormatter}}"
+ root: "{{pagiData[0]}}"
+ category: "{{pagiData[2]}}"
+ style: "css/{{pagiData[0] | lower}}/{{pagiData[0] | lower}}-main.scss"
+ type: "{{pagiData[1]}}{{pagiData[2]}}"
+permalink: "/{{pagiData | urlFormatter | lower}}/index.html"
 ---
