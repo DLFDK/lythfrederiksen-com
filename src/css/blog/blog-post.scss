@@ -1,7 +1,2 @@
-@use "global/_variables/colors.scss" as *;
-@use "global/layouts/base.scss";
-@use "global/components/hashtag-list.scss";
-@use "global/components/navigation.scss";
+@use "global/layouts/article.scss";
 @use "blog/custom-properties/root-local.scss";
-@use "blog/post/post.scss";
-@use "blog/post/navigation-container.scss";
