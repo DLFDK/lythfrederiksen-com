@@ -11,10 +11,27 @@
     grid-template-areas:
         "navigation date"
         "title title"
-        "topics image"
+        "hashtags image"
         "copy image"
         "cta image"
         "project image";
+
+    @media (max-width: $breakpoint-xlmedium) {
+        grid-template-areas:
+            "navigation date"
+            "title title"
+            "hashtags hashtags"
+            "image image"
+            "copy copy"
+            "cta cta";
+         > .card__image {
+            height: 60vw;
+        }
+    }
+
+    & > :not(:last-child) {
+        padding-left: 16px;
+    }
 
     &__navigation-container {
         grid-area: navigation;
@@ -29,7 +46,7 @@
             position: absolute;
             content: "";
             border-left: 1px solid var(--color-primary, $stripe-purple);
-            left: -16px;
+            left: 0px;
             height: $font-size-smaller;
             height: 100%;
             transform: scaleY(math.div($font-size-smaller, $line-height-small));
@@ -39,7 +56,7 @@
     &__title {
         grid-area: title;
         margin: 0;
-        padding-bottom: 8px;
+        // padding-bottom: 8px;
 
         & a {
             color: $stripe-dark-blue;
@@ -47,6 +64,12 @@
             font-weight: $font-weight-bold;
             letter-spacing: -0.2px;
             padding-right: 32px;
+
+            @media (max-width: $breakpoint-small) {
+                padding-right: 16px;
+                font-size: $font-size-large;
+                line-height: $line-height-large;
+            }
         }
     }
 
@@ -73,6 +96,7 @@
     }
 
     &__hashtags {
+        grid-area: hashtags;
         padding-right: 32px;
     }
 
@@ -84,6 +108,14 @@
         line-height: $line-height-regular;
         letter-spacing: $letter-spacing-copy;
         padding-right: 64px;
+
+        @media (max-width: $breakpoint-medium) {
+            padding-right: 16px;
+        }
+        @media (max-width: $breakpoint-small) {
+            font-size: $font-size-smaller;
+            line-height: $line-height-small;
+        }
     }
 
     &__cta {
@@ -100,10 +132,15 @@
 
     &__image {
         grid-area: image;
-        border-radius: 4px;
+        border-radius: 8px;
         overflow: hidden;
         background: white;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+        @media (max-width: $breakpoint-xlmedium){
+            box-shadow: 0 6px 12px -2px rgba(50,50,93,0.25),0 3px 7px -3px rgba(0,0,0,0.3);
+            margin: 8px 0;
+        }
 
         & img {
             display: block;
