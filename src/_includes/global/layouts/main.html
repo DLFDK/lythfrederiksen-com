@@ -24,5 +24,7 @@ layout: global/layouts/base.html
         {%- endfor -%}
     </div>
 </section>
-<div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
+{% if category === "All" %}
+    <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
+{% endif %}
 {{ cardList({ collection: collections[type + 'NotFeatured']}) }}
