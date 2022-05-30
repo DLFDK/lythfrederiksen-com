@@ -33,7 +33,7 @@
         background: $stripe-white;
         border-radius: 8px;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-        padding: 16px 16px 16px 32px;
+        padding: 16px 16px 16px 16px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 16px;
@@ -43,17 +43,41 @@
             "copy image"
             "copy image"
             "cta image";
+
+        @media (max-width: $breakpoint-large) {
+            grid-template-areas:
+                "caption caption"
+                "title title"
+                "copy image"
+                "copy image"
+                "cta image";
+        }
+        @media (max-width: $breakpoint-xlmedium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto 80vw;
+            grid-template-areas:
+                "caption"
+                "title"
+                "copy"
+                "cta"
+                "image";
+        }
+
+        & > :not(:last-child) {
+            padding-left: 16px;
+        }
     }
 
     &__navigation-container {
         padding-top: 16px;
+        padding-left: 16px;
         grid-area: caption;
         color: $stripe-purple;
         font-size: $font-size-smaller;
         font-weight: $font-weight-bold;
         letter-spacing: $letter-spacing-copy;
     }
-    
+
     &__title {
         grid-area: title;
         margin: 0;
@@ -63,7 +87,14 @@
             color: $stripe-dark-blue;
             font-size: $font-size-larger;
             font-weight: $font-weight-bold;
+            line-height: $line-height-xlheader;
             letter-spacing: -0.2px;
+
+            @media (max-width: $breakpoint-small) {
+                padding-right: 16px;
+                font-size: $font-size-large;
+                line-height: $line-height-large;
+            }
         }
     }
 
@@ -75,6 +106,14 @@
         line-height: $line-height-regular;
         letter-spacing: $letter-spacing-copy;
         padding-right: 64px;
+
+        @media (max-width: $breakpoint-medium) {
+            padding-right: 16px;
+        }
+        @media (max-width: $breakpoint-small) {
+            font-size: $font-size-smaller;
+            line-height: $line-height-small;
+        }
     }
 
     &__cta {
