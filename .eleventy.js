@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     for(const root of collectionRoots){
         for(const category of categories) {
             eleventyConfig.addCollection(`${root}${category}Featured`, function (collectionApi) {
-                const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*.md`).filter(item => {
+                const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
                     if (category === "All"){
                         return item.data.tags.includes("featured");
                     } else {
@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
                 return [singleFeatured];
             });
             eleventyConfig.addCollection(`${root}${category}NotFeatured`, function (collectionApi) {
-                return collectionApi.getFilteredByGlob(`./src/${root}/*.md`).filter(item => {
+                return collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
                     if (category === "All"){
                         return !item.data.featured;
                     } else {
