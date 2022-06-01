@@ -3,7 +3,7 @@
 @use "global/_variables/colors.scss" as *;
 
 .disclaimer-container {
-    padding-top: 128px;
+    padding-top: 92px;
     background: linear-gradient($stripe-background-white, $stripe-white);
     --link-button-text-color: var(--color-primary, #{$stripe-dark-blue});
     --link-button-bg-color: transparent;
