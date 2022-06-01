@@ -32,7 +32,7 @@
             font-size: $font-size-larger;
         }
     }
-    
+
     &__topics {
     }
 
@@ -68,6 +68,10 @@
             font-weight: $font-weight-regular;
             line-height: $line-height-regular;
             letter-spacing: $letter-spacing-copy;
+
+            @media (max-width: $breakpoint-small) {
+                font-size: $font-size-smaller;
+            }
         }
 
         & h2 {
@@ -88,6 +92,10 @@
             font-size: 0.6em;
         }
 
+        & a {
+            color: var(--color-primary, $stripe-purple);
+        }
+
         & ul {
             color: $stripe-cloud-blue;
             font-size: $font-size-smaller;
@@ -99,25 +107,6 @@
 
         & li {
             margin-bottom: 16px;
-
-            & a {
-                color: var(--color-primary, $stripe-purple);
-            }
-        }
-
-        & figure {
-            position: relative;
-            margin: 0;
-            left: -16px;
-        }
-
-        & figcaption {
-            text-align: center;
-            color: $stripe-dark-blue;
-            font-style: italic;
-            position: relative;
-            top: -8px;
-            letter-spacing: $letter-spacing-copy;
         }
     }
 }
