@@ -25,18 +25,31 @@
     }
     &__data-label {
         fill: rgba($color: $stripe-dark-blue, $alpha: 0.8);
+
+        &--secondary {
+            fill: rgba($color: $stripe-dark-blue, $alpha: 0.6);
+        }
     }
     &__vertical-lines {
         stroke: $stripe-light-grey;
     }
     &__data-line {
         stroke: var(--color-primary);
+
+        &--secondary {
+            stroke: $stripe-light-grey;
+        }
     }
     &__data-points {
         fill: var(--color-primary);
+
+        &--secondary {
+            fill: $stripe-light-grey;
+        }
     }
 
-    &__y-label > p, &__x-label > p{
+    &__y-label > p,
+    &__x-label > p {
         color: rgba($color: $stripe-dark-blue, $alpha: 0.8);
         @media (max-width: $breakpoint-medium) {
             font-size: $font-size-smaller;
@@ -71,7 +84,6 @@
         padding-top: 8px;
         @media (max-width: $breakpoint-small) {
             padding-top: 0px;
-
         }
     }
 }
