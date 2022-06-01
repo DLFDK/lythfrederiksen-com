@@ -23,6 +23,14 @@
         font-size: $font-size-xxlarge;
         font-weight: $font-weight-bold;
         letter-spacing: $letter-spacing-copy;
+
+        @media (max-width: $breakpoint-xlsmall) {
+            font-size: $font-size-xlarge;
+        }
+
+        @media (max-width: $breakpoint-small) {
+            font-size: $font-size-larger;
+        }
     }
     
     &__topics {
@@ -69,6 +77,10 @@
             font-size: $font-size-large;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-copy;
+
+            @media (max-width: $breakpoint-xlsmall) {
+                font-size: $font-size-regular;
+            }
         }
 
         & sup {
@@ -87,6 +99,10 @@
 
         & li {
             margin-bottom: 16px;
+
+            & a {
+                color: var(--color-primary, $stripe-purple);
+            }
         }
 
         & figure {
@@ -101,6 +117,7 @@
             font-style: italic;
             position: relative;
             top: -8px;
+            letter-spacing: $letter-spacing-copy;
         }
     }
 }
