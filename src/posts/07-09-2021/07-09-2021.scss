@@ -21,7 +21,7 @@
     }
 
     &__axis-labels {
-        fill: rgba($color: $stripe-dark-blue, $alpha: 0.6);
+        fill: rgba($color: $stripe-dark-blue, $alpha: 0.7);
     }
     &__data-label {
         fill: rgba($color: $stripe-dark-blue, $alpha: 0.8);
@@ -29,6 +29,7 @@
         &--secondary {
             fill: rgba($color: $stripe-dark-blue, $alpha: 0.6);
         }
+
     }
     &__vertical-lines {
         stroke: $stripe-light-grey;
@@ -39,12 +40,24 @@
         &--secondary {
             stroke: $stripe-light-grey;
         }
+
+        &--lower {
+            stroke: $stripe-blue;
+        }
     }
     &__data-points {
         fill: var(--color-primary);
 
         &--secondary {
             fill: $stripe-light-grey;
+        }
+
+        &--lower {
+            fill: $stripe-blue;
+        }
+
+        &--special {
+            fill: $stripe-cloud-blue;
         }
     }
 
