@@ -60,8 +60,8 @@ module.exports = function (eleventyConfig) {
 
     //Dependent on "serve"
     if (process.argv.includes("--serve")) {
-        eleventyConfig.addWatchTarget("./src/posts/*/*");
-        eleventyConfig.addWatchTarget("./src/css/");
+        eleventyConfig.addWatchTarget("./src/**/*");
+        // eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
                 src: "src",
