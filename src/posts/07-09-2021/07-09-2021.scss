@@ -1,0 +1,77 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "blog/blog-post.scss";
+
+.graph {
+    position: relative;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 0 1fr;
+    grid-template-areas:
+        "y-label graph"
+        ". x-label"
+        "caption caption";
+    color: $stripe-dark-blue;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    letter-spacing: $letter-spacing-copy;
+    @media (max-width: $breakpoint-small) {
+        font-size: $font-size-smaller;
+    }
+
+    &__axis-labels {
+        fill: rgba($color: $stripe-dark-blue, $alpha: 0.6);
+    }
+    &__data-label {
+        fill: rgba($color: $stripe-dark-blue, $alpha: 0.8);
+    }
+    &__vertical-lines {
+        stroke: $stripe-light-grey;
+    }
+    &__data-line {
+        stroke: var(--color-primary);
+    }
+    &__data-points {
+        fill: var(--color-primary);
+    }
+
+    &__y-label > p, &__x-label > p{
+        color: rgba($color: $stripe-dark-blue, $alpha: 0.8);
+        @media (max-width: $breakpoint-medium) {
+            font-size: $font-size-smaller;
+        }
+    }
+
+    &__y-label {
+        grid-area: y-label;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-55%) rotate(-90deg);
+        width: max-content;
+    }
+    &__x-label {
+        grid-area: x-label;
+        justify-self: center;
+    }
+
+    & svg {
+        grid-area: graph;
+        margin-bottom: -20px;
+
+        @media (max-width: $breakpoint-medium) {
+            margin-bottom: -10px;
+        }
+    }
+
+    & figcaption {
+        grid-area: caption;
+        text-align: center;
+        font-style: italic;
+        padding-top: 8px;
+        @media (max-width: $breakpoint-small) {
+            padding-top: 0px;
+
+        }
+    }
+}
