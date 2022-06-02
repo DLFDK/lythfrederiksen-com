@@ -1,0 +1,7 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+:root {
+    --color-body-bg: #{$stripe-white};
+}
