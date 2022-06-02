@@ -6,13 +6,13 @@ layout: global/layouts/base.html
 <div class="navigation-container">
     {{ navigation({ items:[[home + "/", home], [home + "/" + category, category]]}) }}
 </div>
-<article class="post">
-    <div class="post__content">
-        <h1 class="post__title">{{title}}</h1>
-        <div class="post__hashtags">
+<article class="article">
+    <div class="article__content">
+        <h1 class="article__title">{{title}}</h1>
+        <div class="article__hashtags">
             {{ hashtagList({ hashtags: hashtags}) }}
         </div>
-        <p class="post__date">{{ date | postDate }}</p>
-        <div class="post__copy">{{content | safe}}</div>
+        <p class="article__date">{{ date | postDate }}</p>
+        <div class="article__copy">{{content | safe}}</div>
     </div>
 </article>
