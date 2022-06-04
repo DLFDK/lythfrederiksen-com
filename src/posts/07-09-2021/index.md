@@ -1,7 +1,7 @@
 ---
 title: Myten om det åndbare hus
 date: 2021-09-07
-hashtags: [Danish, Nonsens, Fra det pseudovidenskabelige faktultet]
+hashtags: [Danish, Nonsens, Fra det pseudo-videnskabelige faktultet]
 category: Write
 topic: Building Science
 snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
@@ -20,7 +20,7 @@ Efter godt fire års målinger af hus og indeklima i samarbejde med Teknologisk 
 
 Det ellers prisværdige projekt undermineres dog af en række helt centrale misforståelser, der i sidste ende reducerer nyhedsværdien til nærved nul. Man finder kort sagt det forkerte svar på det forkerte spørgsmål stillet ud fra den forkerte antagelse. Med rapportens egne tal vil jeg i det følgende argumentere for, at fugttransport ved diffusion gennem klimaskærmen ingen betydning har for med hvilket udstyr eller med hvilken mængde, et hus bør ventileres.
 
-## Hvor bliver fugten af?
+<h2 id="hvor-bliver-fugten-af"><a title="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
 
 Dissekeres projektets hypotese og rapportens argumentation finder vi antagelsen, at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Heraf følger, at kan fugten håndteres ved diffusion gennem klimaskærmen, vil ventilationsbehovet reduceres. Det mekaniske ventilationsanlæg kan nu undværes til fordel for naturlig ventilation med tilhørende besparelser på både anlægs- og driftsomkostninger.
 
@@ -54,27 +54,29 @@ Skal fugttransporten ved diffusion højere op, skal Z-værdien altså væsentlig
     <figcaption>Fugttransport per døgn ved diffusion som en funktion af klimaskærmens gennemsnitlige Z-værdi</figcaption>
 </figure>
 
-Ja, faktisk skal vi helt ned på 1,6 GPa s m<sup>2</sup>/kg, førend der kan transporteres så meget vand per døgn. Alene de 410 mm indblæst papiruld i testhuset har en Z-værdi 4 GPa s m<sup>2</sup>/kg (Papiruld Danmark, 2020).
+Ja, faktisk skal vi helt ned på 1,6 GPa s m<sup>2</sup>/kg, førend der kan transporteres så meget vand per døgn. Alene de 410 mm indblæst papiruld i testhuset har en Z-værdi på 4 GPa s m<sup>2</sup>/kg (Papiruld Danmark, 2020).
 
 Men hvordan slipper alt det vand så ud? Holder vi fast i de 7-10 L/døgn fra koldfordamperen, må der nødvendigvis være en anden mekanisme på spil. Kan det være exfiltration?
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport L/døgn</p></div>
     {% include 'src/posts/07-09-2021/svg/figure-2.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
-    <figcaption>Samlet fugttransport per døgn som en funktion af luftskifte</figcaption>
+    <figcaption>Samlet fugttransport per døgn som en funktion af luftskifte.</figcaption>
 </figure>
 
-Grafen viser den samlede fugttransport per døgn, hvis vi tager højde for både diffusion og exfiltration. Skal den ligge mellem 7 og 10 liter, kræver det et luftskifte mellem 0,15 h<sup>-1</sup> og 0,25 h<sup>-1</sup>. Kan det lade sig gøre for testhuset, der jo helt bevidst er holdt lukket og så tæt som muligt?
+Grafen viser den samlede fugttransport per døgn, hvis vi tager højde for både diffusion og exfiltration. Skal den ligge mellem 7 og 10 liter, kræver det et luftskifte mellem 0,15 h<sup>-1</sup> og 0,25 h<sup>-1</sup>. 
 
-Undervejs i projektet laver TI blandt andet to målinger af husets luftskifte, hvor anden måling foretages i den periode, jeg har udvalgt til analysen her. Den 20. november 2017 måles luftskiftet til 0,1 h<sup>-1</sup> med sporgas. TI karakteriserer ikke vejrforholdene på dagen, så for at kunne bedømme, hvor godt de beskriver perioden som helhed, er det endnu engang vejrdata fra DMI, der skal i spil. Gennemsnittet af middeltemperatur og middelvind for tidsrummet 8-16 er henholdsvis 3,8 &deg;C og 1,8 m/s. For perioden som helhed ligger de to på 2,7 &deg;C og 4,3 m/s. Både temperatur og vind taler altså for, at luftskiftet i perioden i gennemsnit har ligget højere end 0,1 h<sup>-1</sup>.
+Kan det lade sig gøre for testhuset, der jo helt bevidst er holdt lukket og så tæt som muligt?
 
-Ved første måling med sporgas er resultatet et luftskifte på 0,4 h<sup>-1</sup> på en dag, hvor middeltemperatur og middelvind ligger på henholdsvis 11 &deg;C og 6,6 m/s. En simpel lineær interpolation mellem de to målinger baseret på middelvind giver et luftskifte på 0,25 h<sup>-1</sup> for perioden analyseret her, men hvor det dog bør bemærkes, at huset imellem de to målinger bliver tætnet yderligere. Den betydelige forskel i temperatur mellem de to komplicerer også sammenligningen.
+Undervejs i projektet laver TI blandt andet to målinger af husets luftskifte, hvor anden måling foretages i den periode, jeg har udvalgt til analysen her. Den 20. november 2017 måles luftskiftet til 0,1 h<sup>-1</sup> med sporgas. TI karakteriserer ikke vejrforholdene på dagen, så for at kunne bedømme, hvor godt de beskriver perioden som helhed, er det endnu engang vejrdata fra DMI, der skal i spil. For husets omtrentlige placering er gennemsnittet af middeltemperatur og middelvind for tidsrummet 8-16 henholdsvis 3,8 &deg;C og 1,8 m/s. For perioden som helhed ligger de to på 2,7 &deg;C og 4,3 m/s. Både temperatur og vind taler altså for, at luftskiftet i perioden i gennemsnit har ligget højere end 0,1 h<sup>-1</sup>.
+
+Ved første måling med sporgas er resultatet et luftskifte på 0,4 h<sup>-1</sup> på en dag, hvor middeltemperatur og middelvind ligger på henholdsvis 11 &deg;C og 6,6 m/s. En simpel lineær interpolation mellem de to målinger baseret på middelvind giver et luftskifte på 0,25 h<sup>-1</sup> for perioden analyseret her, men hvor det dog bør bemærkes, at huset imellem de to målinger bliver tætnet yderligere. Den betydelige forskel i temperatur mellem de to målinger komplicerer også sammenligningen.
 
 Ovenstående taget i betragtning er det ikke utænkeligt, at luftskiftet i perioden befinder sig på et niveau, som giver en samlet fugttransport på 7-10 L/døgn.
 
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport ved diffusion %</p></div>
     {% include 'src/posts/07-09-2021/svg/figure-3.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
-    <figcaption>Andel af fugttransport ved diffusion som en funktion af luftskifte</figcaption>
+    <figcaption>Andel af fugttransport ved diffusion som en funktion af luftskifte.</figcaption>
 </figure>
 
 Uagtet er vi dog allerede ved det målte luftskifte på 0,1 h<sup>-1</sup> langt fra EVD’s konklusion. Hverken en analyse af Z-værdien eller luftskiftet kan sandsynliggøre, at det vitterligt udelukkende er ved diffusion, at de 7-10 L/døgn transporteres bort.
@@ -91,7 +93,8 @@ Intet i denne analyse kræver reelt set, at der bygges et testhus, og man må i 
 
 **Fugten fra én familie kan altså ikke håndteres ved diffusion gennem klimaskærmen.**
 
-## Der er noget i luften
+
+<h2 id="der-er-noget-i-luften"><a title="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
 
 Lad os vende tilbage til rapportens centrale antagelse: At det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Kun når det er tilfældet, har den diffusionsåbne konstruktion en chance for indflydelse herpå. Men holder antagelsen?
 
@@ -118,7 +121,7 @@ Og for netop den situation er det oplagt at sammenligne det diffusionsåbne hus 
 <figure class="graph">
     <div  class="graph__y-label"><p>Relativ luftfugtighed %</p></div>
     {% include 'src/posts/07-09-2021/svg/figure-4.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
-    <figcaption>Relativ luftfugtighed i et diffusionstæt hus (lilla kurve) og testhuset (blå kurve) som en funktion af luftskifte</figcaption>
+    <figcaption>Relativ luftfugtighed i et diffusionstæt hus (lilla kurve) og testhuset (blå kurve) som en funktion af luftskifte. De sorte prikker markerer et luftskifte, der overholder bygningsreglementet.</figcaption>
 </figure>
 
 
@@ -132,7 +135,7 @@ Konklusionen er klar: Den centrale antagelse - at det i boliger primært er fugt
 
 For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til udelukkende at være testhusets diffusionsåbne konstruktioner, der tilskrives indflydelse på ventilationsbehovet og derfor undersøges eksperimentelt. Termerne “buffer” og “fugtbuffer” anvendes en enkelt gang hver, og de hygroskopiske kvaliteter omtales ikke nærmere. Termen “hygroskopi” og variationer heraf bliver ikke brugt. Vi kan med rimelighed aflede, at EVD kun tilskriver dette aspekt beskeden indflydelse.
 
-## Byg tæt, ventilér korrekt
+<h2 id="byg-tæt,-ventilér-korrekt"><a title="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
 
 Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at anholde den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
 
