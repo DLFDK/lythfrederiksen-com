@@ -124,8 +124,11 @@
                         left: -16px;
                         margin-right: -8px;
                     }
+                }
 
-                    // font-size: $font-size-xlarge;
+                &:focus-visible {
+                    outline: none;
+                    text-decoration: 0.2em underline var(--color-primary);
                 }
             }
         }
