@@ -50,7 +50,6 @@
         display: grid;
         grid-template-columns: minmax(0px, 1fr) minmax(0, 600px) minmax(0px, 1fr);
         padding: 0px 32px 0px;
-
     }
 
     &__title {
@@ -72,6 +71,7 @@
 
     &__hashtags {
         grid-column: 2;
+        padding-top: 8px;
     }
 
     &__date {
@@ -96,11 +96,18 @@
             height: 100%;
             transform: scaleY(math.div($font-size-smaller, $line-height-small));
         }
+
+        @media (max-width: 850px) {
+            justify-self: start;
+            grid-column: 2;
+            grid-row: 1;
+            margin: 0;
+        }
     }
 
     &__copy {
+        padding-top: 16px;
         grid-column: 2;
-        grid-row: 3;
         display: flex;
         flex-direction: column;
         gap: 32px;
