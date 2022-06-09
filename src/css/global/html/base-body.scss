@@ -2,6 +2,7 @@
 @use "global/_variables/colors.scss" as *;
 
 body {
+    overflow-y: scroll;
     background-color: var(--color-body-bg, $stripe-background-white);
     font-family: $font-family;
     margin: 0;
