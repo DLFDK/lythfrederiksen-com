@@ -3,5 +3,6 @@
     "tags": [],
     "layout": "global/layouts/article.html",
     "style": "css/projects/projects-project.scss",
+    "linkButtonData": ["Contact", "/contact/"],
     "permalink": "/projects/{{ title | slug }}/index.html"
 }

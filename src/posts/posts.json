@@ -3,5 +3,6 @@
     "tags": [],
     "layout": "global/layouts/article.html",
     "style": "css/blog/blog-post.scss",
+    "linkButtonData": ["Contact", "/contact/"],
     "permalink": "/blog/{{ title | slug }}/index.html"
 }
