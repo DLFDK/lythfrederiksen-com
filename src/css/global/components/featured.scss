@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: $grid-content-columns;
     padding-bottom: 36px;
+    background: linear-gradient($stripe-background-white, $stripe-white);
 
     &__slant {
         align-self: end;
@@ -19,6 +20,8 @@
 
         & > canvas {
             display: block;
+            height: 100%;
+            width: 100%;
         }
     }
 
