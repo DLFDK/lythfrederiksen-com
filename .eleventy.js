@@ -13,14 +13,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
     });
-    eleventyConfig.addFilter("urlFormatter", (categories) => {
+    eleventyConfig.addFilter("urlFormatter", categories => {
         if(categories[2] === "All") {
             return categories[0];
         } else {
             return categories[0] + "/" + categories[2];
         }
     });
-    eleventyConfig.addFilter("titleFormatter", (categories) => {
+    eleventyConfig.addFilter("titleFormatter", categories => {
         if(categories[2] === "All") {
             return categories[0];
         } else {
