@@ -2,70 +2,42 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 
-.featured {
+.card-featured {
+    background: $stripe-white;
+    border-radius: 8px;
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    padding: 16px 16px 16px 16px;
     display: grid;
-    grid-template-columns: $grid-content-columns;
-    padding-bottom: 36px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    grid-template-areas:
+        "caption image"
+        "title image"
+        "copy image"
+        "copy image"
+        "cta image";
 
-    &__slant {
-        align-self: end;
-        height: 300px;
-        overflow: hidden;
-        // transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
-        transform-origin: 50% 100%;
-        grid-column: 1/-1;
-        grid-row: 1/-1;
-        transform: skewY(-12deg);
-
-        & > canvas {
-            display: block;
-        }
-    }
-
-    &__content {
-        z-index: 1;
-        grid-column: 2;
-        grid-row: 1;
-        padding: 12px 16px 0px;
-    }
-
-    &__box {
-        background: $stripe-white;
-        border-radius: 8px;
-        box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-        padding: 16px 16px 16px 16px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 16px;
+    @media (max-width: $breakpoint-large) {
         grid-template-areas:
-            "caption image"
-            "title image"
+            "caption caption"
+            "title title"
             "copy image"
             "copy image"
             "cta image";
+    }
+    @media (max-width: $breakpoint-xlmedium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto 80vw;
+        grid-template-areas:
+            "caption"
+            "title"
+            "copy"
+            "cta"
+            "image";
+    }
 
-        @media (max-width: $breakpoint-large) {
-            grid-template-areas:
-                "caption caption"
-                "title title"
-                "copy image"
-                "copy image"
-                "cta image";
-        }
-        @media (max-width: $breakpoint-xlmedium) {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto 80vw;
-            grid-template-areas:
-                "caption"
-                "title"
-                "copy"
-                "cta"
-                "image";
-        }
-
-        & > :not(:last-child) {
-            padding-left: 16px;
-        }
+    & > :not(:last-child) {
+        padding-left: 16px;
     }
 
     &__navigation-container {

@@ -1,13 +1,13 @@
 {%- from "src/_includes/global/components/navigation.njk" import navigation -%}
-<article class="featured__box">
-    <div class="featured__navigation-container">
+<article class="card-featured">
+    <div class="card-featured__navigation-container">
         {{ navigation({ items:[ [post.data.home + "/" + post.data.category | lower, post.data.category]]}) }}
     </div>
-    <h2 class="featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
-    <p class="featured__copy">{{ post.data.snippet }}</p>
-    <div class="featured__cta">{{ linkButton({ text: "Read post", href: post.url }) }}</div>
-    <div class="featured__cta">{{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}</div>
-    <div class="featured__image">
+    <h2 class="card-featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
+    <p class="card-featured__copy">{{ post.data.snippet }}</p>
+    <div class="card-featured__cta">{{ linkButton({ text: "Read post", href: post.url }) }}</div>
+    <div class="card-featured__cta">{{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}</div>
+    <div class="card-featured__image">
         <img src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" class="lazyfit" data-src="images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png" alt="" />
     </div>
 </article>
