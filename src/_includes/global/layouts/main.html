@@ -3,7 +3,6 @@ layout: global/layouts/base.html
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {%- from "src/_includes/global/components/card-list.njk" import cardList -%}
-{{content | safe}}
 <header class="title">
     <div class="title__content">
         <h1>
@@ -15,6 +14,7 @@ layout: global/layouts/base.html
         </h1>
     </div>
 </header>
+{{content | safe }}
 <section class="featured">
     <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
     <script defer src="/js/gradient.js"></script>
