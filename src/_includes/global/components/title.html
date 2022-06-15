@@ -1,0 +1,11 @@
+<header class="title">
+    <div class="title__content">
+        <h1>
+            <a href="/{{root | lower}}/">{{root}}</a>
+            {% if category !== "All" %}
+                <div>/</div>
+                <a href="/{{root | lower}}/{{category | lower}}/">{{category}}</a>
+            {% endif %}
+        </h1>
+    </div>
+</header>
