@@ -101,12 +101,20 @@
     &__photo {
         grid-area: photo;
         justify-self: center;
+        width: 100%;
+
         & > img {
-            max-width: 100%;
+            display: block;
+            aspect-ratio: 3/4;
+            // max-width: 100%;
             max-height: 500px;
             filter: grayscale(100%);
             border-radius: 8px;
             box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+            @media (max-width: $breakpoint-medium) {
+                margin: 0 auto;
+            }
         }
     }
 
