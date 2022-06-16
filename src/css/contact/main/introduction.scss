@@ -1,0 +1,128 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.introduction {
+    display: grid;
+    grid-template-columns: $grid-content-columns;
+    padding-bottom: min(64px, 10vw);
+
+    &__content {
+        grid-row: 1;
+        grid-column: 2;
+        padding: 32px 32px 32px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+        row-gap: 32px;
+        grid-template-areas:
+            "heading photo"
+            "copy photo"
+            "cta photo";
+
+        & > *:not(.introduction__photo) {
+            padding-right: 48px;
+        }
+
+        @media (max-width: $breakpoint-xlmedium) {
+            grid-template-areas:
+                "heading heading"
+                "copy photo"
+                "cta photo";
+        }
+
+        @media (max-width: $breakpoint-medium) {
+            margin-bottom: -256px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "heading"
+                "copy"
+                "cta"
+                "photo";
+
+            & > *:not(.introduction__photo) {
+                padding-right: 0px;
+            }
+        }
+    }
+
+    &__header {
+        grid-area: heading;
+    }
+
+    &__heading {
+        margin: 0;
+        font-size: $font-size-xxlarge;
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-xlheader;
+        letter-spacing: -0.02em;
+        color: $stripe-dark-blue;
+    }
+
+    &__copy {
+        grid-area: copy;
+        grid-column: 1;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
+        letter-spacing: $letter-spacing-copy;
+        color: $stripe-cloud-blue;
+    }
+
+    &__cta {
+        grid-area: cta;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        align-content: start;
+        justify-items: start;
+        padding-bottom: 36px;
+
+        @media (max-width: $breakpoint-medium) {
+            padding-bottom: clamp(0px, 10vw - 36px, 36px);
+        }
+    }
+
+    &__email {
+        --link-button-text-color: #{$stripe-white};
+        --link-button-bg-color: var(--color-primary, #{$stripe-purple});
+        --link-button-bg-hover-color: #{$stripe-dark-blue};
+        --link-button-text-hover-color: #{$stripe-white};
+    }
+
+    &__github {
+        --link-button-text-color: var(--color-primary, #{$stripe-purple});
+        --link-button-bg-color: transparent;
+        --link-button-bg-hover-color: transparent;
+        --link-button-text-hover-color: #{$stripe-dark-blue};
+    }
+
+    &__photo {
+        grid-area: photo;
+        justify-self: center;
+        & > img {
+            max-width: 100%;
+            max-height: 500px;
+            filter: grayscale(100%);
+            border-radius: 8px;
+            box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__slant {
+        height: 300px;
+        overflow: hidden;
+        // transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
+        transform-origin: 0% 100%;
+        grid-column: 1/-1;
+        transform: skewY(-12deg);
+
+
+        & > canvas {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

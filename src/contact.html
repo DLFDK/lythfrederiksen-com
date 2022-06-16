@@ -2,11 +2,31 @@
 layout: global/layouts/base.html
 style: css/contact/contact.scss
 linkButtonData: ["Home", "/"]
+root: Contact
+category: All
 ---
-<header class="title">
-    <div class="title__content">
-        <h1>
-            <a href="/contact/">Contact</a>
-        </h1>
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+{% include 'src/_includes/global/components/title.html' %}
+<section class="introduction">
+    <div class="introduction__content">
+        <header class="introduction__header">
+            <h2 class="introduction__heading">So you want to get in touch?</h2>
+        </header>
+        <div class="introduction__copy">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione est, maxime ex officia aut eius molestias modi nulla illum laudantium voluptas repudiandae perspiciatis doloremque magnam sed in error laborum deleniti.</p>
+        </div>
+        <div class="introduction__cta">
+            <div class="introduction__email">
+                {{ linkButton({ text: 'Send me an email', href: "mailto:contact@lythfrederiksen.com" }) }}
+            </div>
+            <div class="introduction__github">
+                {{ linkButton({ text: 'Go to my Github', href: "https://github.com/DLFDK" }) }}
+            </div>
+        </div>
+        <div class="introduction__photo">
+            <img src="https://ik.imagekit.io/dlfdk/lythfrederiksen/contact/20220217_163601_2_gV0ExZo7W.jpg" alt="A pasty white dude. You know the type." />
+        </div>
     </div>
-</header>
+    <div id="canvas-gradient" data-gradient-height="600" class="introduction__slant"></div>
+    <script defer src="/js/gradient.js"></script>
+</section>
