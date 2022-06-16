@@ -16,7 +16,6 @@ layout: global/layouts/base.html
 </section>
 <section class="featured">
     <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
-    <script defer src="/js/gradient.js"></script>
     <div class="featured__content">
         {%- for post in collections[type + 'Featured'] -%} 
             {% include "global/components/card-featured.html" %}
