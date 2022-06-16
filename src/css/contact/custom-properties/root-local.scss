@@ -3,5 +3,5 @@
 @use "global/_variables/colors.scss" as *;
 
 :root {
-    --color-primary: #9966ff;
+    --color-primary: #{$stripe-orange};
 }
