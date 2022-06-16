@@ -1,4 +1,29 @@
 ---
-layout: global/layouts/main.html
+layout: global/layouts/base.html
 ---
-<section>Hello!</section>
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
+{% include 'src/_includes/global/components/title.html' %}
+<section class="introduction">
+    <div class="introduction__content">
+        <header>
+            <h2 class="introduction__heading">What I've been up to all these years</h2>
+        </header>
+        <div class="introduction__copy">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione est, maxime ex officia aut eius molestias modi nulla illum laudantium voluptas repudiandae perspiciatis doloremque magnam sed in error laborum deleniti.</p>
+        </div>
+    </div>
+</section>
+<section class="featured">
+    <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
+    <script defer src="/js/gradient.js"></script>
+    <div class="featured__content">
+        {%- for post in collections[type + 'Featured'] -%} 
+            {% include "global/components/card-featured.html" %}
+        {%- endfor -%}
+    </div>
+</section>
+{% if category === "All" %}
+    <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
+{% endif %}
+{{ cardList({ collection: collections[type + 'NotFeatured']}) }}
