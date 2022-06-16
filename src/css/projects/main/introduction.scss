@@ -5,7 +5,7 @@
 .introduction {
     display: grid;
     grid-template-columns: $grid-content-columns;
-    background: linear-gradient($stripe-background-white, $stripe-white);
+    padding-bottom: min(64px, 10vw);
 
     &__content {
         grid-column: 2;
@@ -13,22 +13,21 @@
         padding: 32px 32px 32px;
         z-index: 1;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 1fr;
         row-gap: 32px;
+
+        @media (max-width: $breakpoint-medium) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__heading {
-        grid-column: 1;
         margin: 0;
         font-size: $font-size-xxlarge;
         font-weight: $font-weight-bolder;
-        line-height: 56px;
+        line-height: $line-height-xlheader;
         letter-spacing: -0.02em;
         color: $stripe-dark-blue;
-
-        // @media (max-width: $breakpoint-medium) {
-        //     font-size: min(17vw, 78px);
-        // }
     }
 
     &__copy {
@@ -39,22 +38,5 @@
         letter-spacing: $letter-spacing-copy;
         color: $stripe-cloud-blue;
 
-    }
-
-    &__slant {
-        --height: 300px;
-        margin-top: 128px;
-        height: var(--height);
-        overflow: hidden;
-        transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
-        grid-column: 1/-1;
-        grid-row: 2;
-        transform: skewY(-12deg);
-
-        & > canvas {
-            height: 0;
-            min-height: 100%;
-            display: block;
-        }
     }
 }
