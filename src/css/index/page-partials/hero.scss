@@ -20,7 +20,7 @@
         @media (max-width: $breakpoint-medium) {
             grid-template-columns: 1fr;
             padding-right: 32px;
-            padding-bottom: calc($section-padding-top-content + 32px);
+            padding-bottom: calc($section-padding-top-content);
         }
     }
 
@@ -37,7 +37,6 @@
             display: block;
         }
     }
-
 
     // &__stripe {
     //     height: 100%;
@@ -109,7 +108,8 @@
         margin-top: 32px;
         margin-bottom: 16px;
         display: flex;
-        gap: 4px;
+        gap: 12px;
+        flex-wrap: wrap;
     }
 
     &__read-blog {
