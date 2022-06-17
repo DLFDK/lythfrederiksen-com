@@ -5,7 +5,7 @@
 .introduction {
     display: grid;
     grid-template-columns: $grid-content-columns;
-    padding-bottom: min(64px, 10vw);
+    // padding-bottom: min(64px, 10vw);
 
     &__content {
         grid-row: 1;
@@ -14,29 +14,33 @@
         z-index: 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto 1fr;
+        grid-template-rows: repeat(3, auto) 1fr;
         row-gap: 32px;
         grid-template-areas:
             "heading photo"
+            "job-status photo"
             "copy photo"
             "cta photo";
 
-        & > *:not(.introduction__photo) {
+        & > *:not(.introduction__photo, .introduction__job-status) {
             padding-right: 48px;
         }
 
         @media (max-width: $breakpoint-xlmedium) {
             grid-template-areas:
                 "heading heading"
+                "job-status photo"
                 "copy photo"
                 "cta photo";
         }
 
         @media (max-width: $breakpoint-medium) {
+            padding-top: 16px;
             margin-bottom: -256px;
             grid-template-columns: 1fr;
             grid-template-areas:
                 "heading"
+                "job-status"
                 "copy"
                 "cta"
                 "photo";
@@ -60,6 +64,37 @@
         color: $stripe-dark-blue;
     }
 
+    &__job-status {
+        grid-area: job-status;
+        width: fit-content;
+        background: var(--color-gradient-3);
+        border-radius: 4px;
+        box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+        
+        & a {
+            display: flex;
+            align-items: center;
+        }
+
+        & span {
+            color: $stripe-white;
+            font-size: $font-size-smaller;
+            font-weight: $font-weight-bold;
+            letter-spacing: $letter-spacing-copy;
+            text-transform: capitalize;
+        }
+
+        & span:first-child {
+            padding: 4px 10px 4px 12px;
+        }
+
+        & span:last-child {
+            background: $stripe-cloud-blue;
+            border-radius: 2px;
+            padding: 4px 12px 4px 11px;
+        }
+    }
+
     &__copy {
         grid-area: copy;
         grid-column: 1;
@@ -68,6 +103,9 @@
         line-height: $line-height-regular;
         letter-spacing: $letter-spacing-copy;
         color: $stripe-cloud-blue;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     &__cta {
@@ -131,7 +169,6 @@
         transform-origin: 0% 100%;
         grid-column: 1/-1;
         transform: skewY(-12deg);
-
 
         & > canvas {
             display: block;
