@@ -4,7 +4,15 @@
 {% macro card(params) %}
 <article class="card">
     <div class="card__navigation-container">
-        {{ navigation({ items:[ [params.item.data.home + "/" + params.item.data.category | lower, params.item.data.category]]}) }}
+        <nav class="navigation">
+            <ul>
+                {% if params.item.data.home === "blog" %}
+                <li><a aria-label="See all blog posts in the category {{params.item.data.category}}" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                {% else %}
+                <li><a aria-label="See all projects in the category {{params.item.data.category}}" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </div>
     <h2 class="card__title"><a href="{{params.item.url}}">{{ params.item.data.title }}</a></h2>
     <p class="card__date">{{ params.item.data.date | postDate }}</p>

@@ -4,7 +4,17 @@ layout: global/layouts/base.html
 {%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
 {%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 <div class="navigation-container">
-    {{ navigation({ items:[[home + "/", home], [home + "/" + category, category]]}) }}
+    <nav class="navigation">
+        <ul>
+            <li><a href="/{{home | lower}}">{{home}}</a></li>
+            <div>/</div>
+            {% if home === "blog" %}
+            <li><a aria-label="See all blog posts in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
+            {% else %}
+            <li><a aria-label="See all projects in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
+            {% endif %}
+        </ul>
+    </nav>
 </div>
 <article class="article">
     <div class="article__slant">
