@@ -20,7 +20,7 @@ Efter godt fire års målinger af hus og indeklima i samarbejde med Teknologisk 
 
 Det ellers prisværdige projekt undermineres dog af en række helt centrale misforståelser, der i sidste ende reducerer nyhedsværdien til nærved nul. Man finder kort sagt det forkerte svar på det forkerte spørgsmål stillet ud fra den forkerte antagelse. Med rapportens egne tal vil jeg i det følgende argumentere for, at fugttransport ved diffusion gennem klimaskærmen ingen betydning har for med hvilket udstyr eller med hvilken mængde, et hus bør ventileres.
 
-<h2 id="hvor-bliver-fugten-af"><a title="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
+<h2 id="hvor-bliver-fugten-af"><a aria-label="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
 
 Dissekeres projektets hypotese og rapportens argumentation finder vi antagelsen, at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Heraf følger, at kan fugten håndteres ved diffusion gennem klimaskærmen, vil ventilationsbehovet reduceres. Det mekaniske ventilationsanlæg kan nu undværes til fordel for naturlig ventilation med tilhørende besparelser på både anlægs- og driftsomkostninger.
 
@@ -94,7 +94,7 @@ Intet i denne analyse kræver reelt set, at der bygges et testhus, og man må i 
 **Fugten fra én familie kan altså ikke håndteres ved diffusion gennem klimaskærmen.**
 
 
-<h2 id="der-er-noget-i-luften"><a title="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
+<h2 id="der-er-noget-i-luften"><a aria-label="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
 
 Lad os vende tilbage til rapportens centrale antagelse: At det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Kun når det er tilfældet, har den diffusionsåbne konstruktion en chance for indflydelse herpå. Men holder antagelsen?
 
@@ -136,7 +136,7 @@ Konklusionen er klar: Den centrale antagelse - at det i boliger primært er fugt
 
 For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til udelukkende at være testhusets diffusionsåbne konstruktioner, der tilskrives indflydelse på ventilationsbehovet og derfor undersøges eksperimentelt. Termerne “buffer” og “fugtbuffer” anvendes en enkelt gang hver, og de hygroskopiske kvaliteter omtales ikke nærmere. Termen “hygroskopi” og variationer heraf bliver ikke brugt. Vi kan med rimelighed aflede, at EVD kun tilskriver dette aspekt beskeden indflydelse.
 
-<h2 id="byg-tæt,-ventilér-korrekt"><a title="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
+<h2 id="byg-tæt,-ventilér-korrekt"><a aria-label="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
 
 Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at anholde den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
 
