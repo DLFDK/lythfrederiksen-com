@@ -20,7 +20,13 @@
         {{ hashtagList({ hashtags: params.item.data.hashtags}) }}
     </div>
     <p class="card__copy">{{ params.item.data.snippet }}</p>
-    <div class="card__cta">{{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "Read post"), href: params.item.url }) }}</div>
+    <div class="card__cta">
+        {% if params.item.data.home === "blog" %}
+        {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "Read post"), href: params.item.url }) }}
+        {% else %}
+        {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "See project"), href: params.item.url }) }}
+        {% endif %}
+    </div>
     <div class="card__image">
         <img src="" class="lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}" alt="" />
     </div>

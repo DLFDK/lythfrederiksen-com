@@ -13,8 +13,13 @@
     </div>
     <h2 class="card-featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="card-featured__copy">{{ post.data.snippet }}</p>
-    <div class="card-featured__cta">{{ linkButton({ text: "Read post", href: post.url }) }}</div>
-    <div class="card-featured__cta">{{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}</div>
+    <div class="card-featured__cta">
+        {% if post.data.home === "blog" %}
+        {{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}
+        {% else %}
+        {{ linkButton({ text: (post.data.cta if post.data.cta else "See project"), href: post.url }) }}
+        {% endif %}
+    </div>
     <div class="card-featured__image">
         <img src="" class="lazyfit" data-add-class="lazyfit--show" data-src="{{post.data.img}}" alt="" />
     </div>
