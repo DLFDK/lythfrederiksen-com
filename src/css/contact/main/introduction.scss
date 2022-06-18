@@ -17,10 +17,11 @@
         grid-template-rows: repeat(3, auto) 1fr;
         row-gap: 32px;
         grid-template-areas:
-            "heading photo"
             "job-status photo"
+            "heading photo"
             "copy photo"
-            "cta photo";
+            "cta photo"
+            ;
 
         & > *:not(.introduction__photo, .introduction__job-status) {
             padding-right: 48px;
@@ -67,6 +68,7 @@
     &__job-status {
         grid-area: job-status;
         width: fit-content;
+        height: min-content;
         background: var(--color-gradient-3);
         border-radius: 4px;
         box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
@@ -81,10 +83,10 @@
             font-size: $font-size-smaller;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-copy;
-            text-transform: capitalize;
         }
-
+        
         & span:first-child {
+            text-transform: capitalize;
             padding: 4px 10px 4px 12px;
         }
 
