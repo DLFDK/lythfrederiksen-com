@@ -40,9 +40,9 @@ Da jeg ikke har haft adgang til projektets datasæt og derfor må nøjes med de 
 
 Data fra udeklimaet henter jeg hos DMI, der har tal på timebasis for husets omtrentlige placering. Det giver knap 2900 sæt af temperatur og relativ luftfugtighed, som omregnes til damptryk og herefter reduceres til et gennemsnit for hele perioden.
 
-Og så er der husets diffusionsmodstand. Den er straks sværere. Som sagt er rapporten ikke rig på detaljer, så den kræver lidt ekstra detektivarbejde at fastlægge. For at give EVD’s konklusion de bedste chancer har jeg søgt at fastlægge en Z-værdi, der repræsenterer den mest sandsynlige mindsteværdi for konstruktionen. Med andre ord er det højst usandsynligt, at diffusionsmodstanden i praksis har ligget lavere, og at fugttransport ved diffusion derfor har været højere. Mit bud er en gennemsnitlig Z-værdi på 7 GPa s m<sup>2</sup>/kg. Denne ganges op med husets overfladeareal, der bedømt ud fra rapportens tegninger ligger omkring 284 m<sup>2</sup>.
+Og så er der husets diffusionsmodstand. Den er straks sværere. Som sagt er rapporten ikke rig på detaljer, så den kræver lidt ekstra detektivarbejde at fastlægge. For at give EVD’s konklusion de bedste chancer har jeg søgt at fastlægge en Z-værdi, der repræsenterer den mest sandsynlige mindsteværdi for konstruktionen. Med andre ord er det højst usandsynligt, at diffusionsmodstanden i praksis har ligget lavere, og at fugttransport ved diffusion derfor har været højere. Mit bud er en gennemsnitlig Z-værdi på 7 GPa s m<sup>2</sup>/kg. Denne holdes op med husets overfladeareal, der bedømt ud fra rapportens tegninger ligger omkring 284 m<sup>2</sup>. Jeg tillader mig at antage, at fugten fra koldfordamperen er jævnt fordelt i hele testhusets volumen. 
 
-Resultatet af det regnestykke bliver en gennemsnitlig, daglig fugttransport for perioden på 2,4 liter. 
+Resultatet af regnestykket bliver en gennemsnitlig, daglig fugttransport for perioden på 2,4 liter. 
 
 Der er meget langt op til 10 L/døgn. 
 
@@ -124,12 +124,13 @@ Og for netop den situation er det oplagt at sammenligne det diffusionsåbne hus 
     <figcaption>Relativ luftfugtighed i et diffusionstæt hus (lilla kurve) og testhuset (blå kurve) som en funktion af luftskifte. De sorte prikker markerer et luftskifte, der overholder bygningsreglementet.</figcaption>
 </figure>
 
-
 På grafen ovenover er det spørgsmål besvaret. Den blå kurve repræsentere testhuset med dens gennemsnitlige Z-værdi på 7 GPa s m<sup>2</sup>/kg, og den lilla kurve repræsenterer et hus af samme størrelse og udformning, der er absolut diffusionstæt. Her kan fugten altså kun slippe bort ved exfiltration og ventilation.
 
 Vurderer man udelukkende kvaliteten af indeklimaet på baggrund af den relative luftfugtighed, har den diffusionsåbne konstruktion i et dårligt ventileret hus en klar fordel over den diffusionstætte. Men det er en konkurrence kun med tabere.
 
 Så snart luftskiftet når et niveau, der tager hensyn til de mange andre elementer, som også udgør et sundt indeklima, forvises forskellen til decimalerne. Som grafen så fint illustrerer, vil der ved ventilation efter bygningsreglementets krav ikke være en forskel af betydning mellem det diffusionstætte og diffusionsåbne hus (41,3 % mod 39,6 %).
+
+Bemærk at antagelsen fra testhuset om den jævne fordeling af fugten er fastholdt her. I praksis vil udsugning nær fugtkilder - bad, køkken, etc. - reducere betydningen af den diffusionsåbne konstruktion yderligere.
 
 Konklusionen er klar: Den centrale antagelse - at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet - holder ikke, og projektets hypotese må forkastes. Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.
 
