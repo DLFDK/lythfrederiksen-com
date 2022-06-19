@@ -1,0 +1,33 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+.placeholder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 600px) minmax(0, 1fr);
+    background: $stripe-white;
+    &__content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0px 32px 64px;
+    }
+
+    & h2 {
+        margin: 0;
+        padding-bottom: 16px;
+        text-align: center;
+        color: $stripe-dark-blue;
+        font-size: $font-size-larger;
+        font-weight: $font-weight-bold;
+        letter-spacing: -0.2px;
+    }
+
+    & p {
+        text-align: center;
+        color: $stripe-cloud-blue;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
+        letter-spacing: $letter-spacing-copy;
+    }
+}
