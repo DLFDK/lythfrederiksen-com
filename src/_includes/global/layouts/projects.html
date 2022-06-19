@@ -4,20 +4,7 @@ layout: global/layouts/base.html
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {%- from "src/_includes/global/components/card-list.njk" import cardList -%}
 {% include 'src/_includes/global/components/title.html' %}
-<section class="introduction">
-    <div class="introduction__content">
-        <header>
-            <h2 class="introduction__heading">What I've been up to all these years</h2>
-        </header>
-        <div class="introduction__copy">
-            <p>
-                Other people have kids - I have projects.
-                I love my projects. Projects are life. 
-                I may have labelled them projects, but they are honestly more like obsessions. Rabbit holes, which consume all mental energy for a little while.
-            </p>
-        </div>
-    </div>
-</section>
+{{content | safe}}
 <section class="featured">
     <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
     <div class="featured__content">
