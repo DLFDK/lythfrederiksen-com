@@ -37,6 +37,8 @@
         line-height: $line-height-regular;
         letter-spacing: $letter-spacing-copy;
         color: $stripe-cloud-blue;
-
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 }
