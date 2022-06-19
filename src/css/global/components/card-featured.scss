@@ -48,8 +48,16 @@
         font-size: $font-size-smaller;
         font-weight: $font-weight-bold;
         letter-spacing: $letter-spacing-copy;
+        display: flex;
+        gap: 8px;
+
+        & div, & p {
+            color: #adbdcc;
+        }
+
     }
 
+    
     &__title {
         grid-area: title;
         margin: 0;
