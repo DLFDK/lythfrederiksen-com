@@ -8,6 +8,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
 
+    //Ignore drafts
+    if(!process.argv.includes("--serve")) {
+        eleventyConfig.ignores.add("**/_*.md");
+    }
+
     //Filters
     //https://11ty.rocks/eleventyjs/dates/
     eleventyConfig.addFilter("postDate", (dateObj) => {
@@ -122,6 +127,37 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: "src",
             output: "dist"
+        }
+    }
+}
+
+function addCollections(isServing) {
+    const collectionRoots = ["posts", "projects"];
+    const categories = ["All", "Build", "Write", "Code"];
+    for(const root of collectionRoots){
+        for(const category of categories) {
+            eleventyConfig.addCollection(`${root}${category}Featured`, function (collectionApi) {
+                const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
+                    if (category === "All"){
+                        return item.data.tags.includes("featured");
+                    } else {
+                        return category === item.data.category && item.data.tags.includes("featured");
+                    }
+                }).pop();
+                if(singleFeatured){
+                    singleFeatured.data.featured = true;
+                }
+                return [singleFeatured];
+            });
+            eleventyConfig.addCollection(`${root}${category}NotFeatured`, function (collectionApi) {
+                return collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
+                    if (category === "All"){
+                        return !item.data.featured;
+                    } else {
+                        return category === item.data.category && !item.data.featured;
+                    }
+                });
+            });
         }
     }
 }
