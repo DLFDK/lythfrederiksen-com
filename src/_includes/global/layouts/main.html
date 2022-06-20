@@ -5,14 +5,16 @@ layout: global/layouts/base.html
 {%- from "src/_includes/global/components/card-list.njk" import cardList -%}
 {% include 'src/_includes/global/components/title.html' %}
 {{content | safe}}
+{%- for post in collections[type + 'Featured'] -%} 
+{% if post.data.featured %}
 <section class="featured">
     <div id="canvas-gradient" data-gradient-height="600" class="featured__slant"></div>
     <div class="featured__content">
-        {%- for post in collections[type + 'Featured'] -%} 
             {% include "global/components/card-featured.html" %}
-        {%- endfor -%}
-    </div>
-</section>
+        </div>
+    </section>
+{% endif %}
+{%- endfor -%}
 {% if category === "All" %}
     <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
 {% endif %}
