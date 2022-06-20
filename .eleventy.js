@@ -130,34 +130,3 @@ module.exports = function (eleventyConfig) {
         }
     }
 }
-
-function addCollections(isServing) {
-    const collectionRoots = ["posts", "projects"];
-    const categories = ["All", "Build", "Write", "Code"];
-    for(const root of collectionRoots){
-        for(const category of categories) {
-            eleventyConfig.addCollection(`${root}${category}Featured`, function (collectionApi) {
-                const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
-                    if (category === "All"){
-                        return item.data.tags.includes("featured");
-                    } else {
-                        return category === item.data.category && item.data.tags.includes("featured");
-                    }
-                }).pop();
-                if(singleFeatured){
-                    singleFeatured.data.featured = true;
-                }
-                return [singleFeatured];
-            });
-            eleventyConfig.addCollection(`${root}${category}NotFeatured`, function (collectionApi) {
-                return collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
-                    if (category === "All"){
-                        return !item.data.featured;
-                    } else {
-                        return category === item.data.category && !item.data.featured;
-                    }
-                });
-            });
-        }
-    }
-}
