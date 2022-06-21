@@ -7,13 +7,17 @@
     display: grid;
     grid-template-columns: $grid-content-columns;
 
+    @media (max-width: 850px) {
+       padding-top: min(32px, 5vw);
+    }
+
     &__slant {
         margin-top: 32px;
         margin-bottom: 8px;
         height: 64px;
         grid-column: 1/-1;
         display: grid;
-        grid-template-columns: minmax(0px, 1fr) minmax(0, 240px) minmax(0px, 600px) minmax(0, 240px) minmax(0px, 1fr);
+        grid-template-columns: minmax(0px, 1fr) minmax(0, 240px) 600px minmax(0, 240px) minmax(0px, 1fr);
         grid-template-rows: 0.375fr 0.25fr 0.375fr;
         transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
         transform: skewY(-12deg);
@@ -39,7 +43,7 @@
             grid-column: 2/3;
         }
 
-        @media (max-width: calc($breakpoint-medium + 64px)) {
+        @media (max-width: 850px) {
             display: none;
         }
     }
