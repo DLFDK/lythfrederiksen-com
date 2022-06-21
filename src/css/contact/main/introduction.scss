@@ -5,7 +5,6 @@
 .introduction {
     display: grid;
     grid-template-columns: $grid-content-columns;
-    // padding-bottom: min(64px, 10vw);
 
     &__content {
         grid-row: 1;
@@ -13,24 +12,20 @@
         padding: 32px 32px 32px;
         z-index: 1;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 50%;
         grid-template-rows: repeat(3, auto) 1fr;
+        column-gap: 48px;
         row-gap: 32px;
         grid-template-areas:
-            "job-status photo"
+            "job-status job-status"
             "heading photo"
             "copy photo"
-            "cta photo"
-            ;
-
-        & > *:not(.introduction__photo, .introduction__job-status) {
-            padding-right: 48px;
-        }
+            "cta photo";
 
         @media (max-width: $breakpoint-xlmedium) {
             grid-template-areas:
+                "job-status job-status"
                 "heading heading"
-                "job-status photo"
                 "copy photo"
                 "cta photo";
         }
@@ -40,15 +35,11 @@
             margin-bottom: -256px;
             grid-template-columns: 1fr;
             grid-template-areas:
-                "heading"
                 "job-status"
+                "heading"
                 "copy"
                 "cta"
                 "photo";
-
-            & > *:not(.introduction__photo) {
-                padding-right: 0px;
-            }
         }
     }
 
@@ -69,13 +60,22 @@
         grid-area: job-status;
         width: fit-content;
         height: min-content;
-        background: var(--color-gradient-3);
         border-radius: 4px;
-        box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
         
         & a {
+            box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
             display: flex;
             align-items: center;
+
+            @media (max-width: $breakpoint-small) {
+                flex-direction: column;
+                align-items: start;
+                box-shadow: none;
+
+                & > span {
+                    box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
+                }
+            }
         }
 
         & span {
@@ -83,9 +83,11 @@
             font-size: $font-size-smaller;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-copy;
+
         }
-        
+
         & span:first-child {
+            background: var(--color-gradient-3);
             text-transform: capitalize;
             padding: 4px 10px 4px 12px;
         }
@@ -104,7 +106,7 @@
             to {
                 background: $stripe-dark-blue;
             }
-          }
+        }
     }
 
     &__copy {
