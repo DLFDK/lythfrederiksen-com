@@ -162,8 +162,7 @@
             max-height: 600px;
             object-fit: cover;
             object-position: top;
-            --in-color: "Look at you finding a way to see me in full color. Still a pasty white dude though. You didn't gain much.";
-            filter: grayscale(100%);
+            filter: var(--look-at-you-finding-a-way-to-see-me-in-full-color-Still-a-pasty-white-dude-though-You-didnt-gain-much, grayscale(100%));
             border-radius: 8px;
             box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
             transition: opacity 1s;
