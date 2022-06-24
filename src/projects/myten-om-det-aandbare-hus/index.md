@@ -50,7 +50,7 @@ Skal fugttransporten ved diffusion højere op, skal Z-værdien altså væsentlig
 
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport L/døgn</p></div>
-    {% include 'src/posts/07-09-2021/svg/figure-1.svg' %}<div  class="graph__x-label"><p>Z-værdi GPa s m<sup>2</sup>/kg</p></div>
+    {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-1.svg' %}<div  class="graph__x-label"><p>Z-værdi GPa s m<sup>2</sup>/kg</p></div>
     <figcaption>Fugttransport per døgn ved diffusion som en funktion af klimaskærmens gennemsnitlige Z-værdi</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ Ja, faktisk skal vi helt ned på 1,6 GPa s m<sup>2</sup>/kg, førend der kan tra
 Men hvordan slipper alt det vand så ud? Holder vi fast i de 7-10 L/døgn fra koldfordamperen, må der nødvendigvis være en anden mekanisme på spil. Kan det være exfiltration?
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport L/døgn</p></div>
-    {% include 'src/posts/07-09-2021/svg/figure-2.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
+    {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-2.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
     <figcaption>Samlet fugttransport per døgn som en funktion af luftskifte.</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Ovenstående taget i betragtning er det ikke utænkeligt, at luftskiftet i perio
 
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport ved diffusion %</p></div>
-    {% include 'src/posts/07-09-2021/svg/figure-3.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
+    {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-3.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
     <figcaption>Andel af fugttransport ved diffusion som en funktion af luftskifte.</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ Og for netop den situation er det oplagt at sammenligne det diffusionsåbne hus 
 
 <figure class="graph">
     <div  class="graph__y-label"><p>Relativ luftfugtighed %</p></div>
-    {% include 'src/posts/07-09-2021/svg/figure-4.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
+    {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-4.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
     <figcaption>Relativ luftfugtighed i et diffusionstæt hus (lilla kurve) og testhuset (blå kurve) som en funktion af luftskifte. De sorte prikker markerer et luftskifte, der overholder bygningsreglementet.</figcaption>
 </figure>
 
@@ -130,7 +130,7 @@ Vurderer man udelukkende kvaliteten af indeklimaet på baggrund af den relative 
 
 Så snart luftskiftet når et niveau, der tager hensyn til de mange andre elementer, som også udgør et sundt indeklima, forvises forskellen til decimalerne. Som grafen så fint illustrerer, vil der ved ventilation efter bygningsreglementets krav ikke være en forskel af betydning mellem det diffusionstætte og diffusionsåbne hus (41,3 % mod 39,6 %).
 
-Bemærk at antagelsen fra testhuset om den jævne fordeling af fugten er fastholdt her. I praksis vil udsugning nær fugtkilder - bad, køkken, etc. - reducere betydningen af den diffusionsåbne konstruktion yderligere.
+Bemærk at antagelsen fra tidligere om den jævne fordeling af fugten er fastholdt her. I praksis vil udsugning nær fugtkilder - bad, køkken, etc. - reducere betydningen af den diffusionsåbne konstruktion yderligere.
 
 Konklusionen er klar: Den centrale antagelse - at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet - holder ikke, og projektets hypotese må forkastes. Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.
 
