@@ -6,7 +6,7 @@ category: Write
 topic: Building Science
 snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
 cta: Læs mere
-style: posts/07-09-2021/07-09-2021.scss
+style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png
 ---
 
