@@ -121,10 +121,10 @@ Og for netop den situation er det oplagt at sammenligne det diffusionsåbne hus 
 <figure class="graph">
     <div  class="graph__y-label"><p>Relativ luftfugtighed %</p></div>
     {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-4.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
-    <figcaption>Relativ luftfugtighed i et diffusionstæt hus (lilla kurve) og testhuset (blå kurve) som en funktion af luftskifte. De sorte prikker markerer et luftskifte, der overholder bygningsreglementet.</figcaption>
+    <figcaption>Relativ luftfugtighed i et diffusionstæt hus (grøn kurve) og testhuset (blå kurve) som en funktion af luftskifte. De sorte prikker markerer et luftskifte, der overholder bygningsreglementet.</figcaption>
 </figure>
 
-På grafen ovenover er det spørgsmål besvaret. Den blå kurve repræsentere testhuset med dens gennemsnitlige Z-værdi på 7 GPa s m<sup>2</sup>/kg, og den lilla kurve repræsenterer et hus af samme størrelse og udformning, der er absolut diffusionstæt. Her kan fugten altså kun slippe bort ved exfiltration og ventilation.
+På grafen ovenover er det spørgsmål besvaret. Den blå kurve repræsentere testhuset med dens gennemsnitlige Z-værdi på 7 GPa s m<sup>2</sup>/kg, og den grønne kurve repræsenterer et hus af samme størrelse og udformning, der er absolut diffusionstæt. Her kan fugten altså kun slippe bort ved exfiltration og ventilation.
 
 Vurderer man udelukkende kvaliteten af indeklimaet på baggrund af den relative luftfugtighed, har den diffusionsåbne konstruktion i et dårligt ventileret hus en klar fordel over den diffusionstætte. Men det er en konkurrence kun med tabere.
 
@@ -132,13 +132,13 @@ Så snart luftskiftet når et niveau, der tager hensyn til de mange andre elemen
 
 Bemærk at antagelsen fra tidligere om den jævne fordeling af fugten er fastholdt her. I praksis vil udsugning nær fugtkilder - bad, køkken, etc. - reducere betydningen af den diffusionsåbne konstruktion yderligere.
 
-Konklusionen er klar: Den centrale antagelse - at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet - holder ikke, og projektets hypotese må forkastes. Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.
+**Konklusionen er klar: Projektets centrale antagelse - at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet - holder ikke, og dets hypotese må forkastes. Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.**
 
 For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til udelukkende at være testhusets diffusionsåbne konstruktioner, der tilskrives indflydelse på ventilationsbehovet og derfor undersøges eksperimentelt. Termerne “buffer” og “fugtbuffer” anvendes en enkelt gang hver, og de hygroskopiske kvaliteter omtales ikke nærmere. Termen “hygroskopi” og variationer heraf bliver ikke brugt. Vi kan med rimelighed aflede, at EVD kun tilskriver dette aspekt beskeden indflydelse.
 
 <h2 id="byg-tæt,-ventilér-korrekt"><a aria-label="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
 
-Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at anholde den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
+Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at påpege den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
 
 Retfærdigvis skal det siges, at EVD anerkender, at indeklimaets kvalitet bestemmes af en række faktorer, deriblandt CO2-koncentration, partikler, mv. Det gøres både i rapporten og i det tilhørende nyhedsbrev citeret tidligere. Ligeså tages TI's målinger til efterretning og man forsøger at finde en forklaring på forekomsten af de problematiske stoffer. Man går bare aldrig hele vejen og får sat spørgsmålstegn ved antagelsen om fugten som det afgørende. Det ligger hele tiden i luften, at de andre faktorer er sekundære, at det nødvendigvis må være fugten, der styrer showet. Som vist er det ganske enkelt forkert.
 
