@@ -53,16 +53,22 @@ async function lazyfit() {
     //     rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     // });
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        for (const entry of entries) {
-            if (entry.isIntersecting) {
-                observer.unobserve(entry.target);
-                setTimeout(() => {
-                    loadImage(entry.target);
-                }, 0);
-            }
-        }
-    }, {
+    // const observer = new IntersectionObserver((entries, observer) => {
+    //     console.time("Observer");
+    //     for (const entry of entries) {
+    //         if (entry.isIntersecting) {
+    //             observer.unobserve(entry.target);
+    //             setTimeout(() => {
+    //                 loadImage(entry.target);
+    //             }, 0);
+    //         }
+    //     }
+    //     console.timeEnd("Observer");
+    // }, {
+    //     rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
+    // });
+
+    const observer = new IntersectionObserver(intersectionHit, {
         rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     });
 
@@ -112,6 +118,19 @@ async function lazyfit() {
                 }, 0);
                 break;
             }
+        }
+    }
+
+    function intersectionHit(entries, observer) {
+        for (const entry of entries) {
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    observer.unobserve(entry.target);
+                    setTimeout(() => {
+                        loadImage(entry.target);
+                    }, 0);
+                }
+            }, 0)
         }
     }
 
