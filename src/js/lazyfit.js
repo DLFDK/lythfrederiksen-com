@@ -68,7 +68,13 @@ async function lazyfit() {
     //     rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     // });
 
-    const observer = new IntersectionObserver(intersectionHit, {
+    const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            setTimeout(() => {
+                intersectionTest(entry)
+            }, 0)
+        }
+    }, {
         rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     });
 
@@ -101,41 +107,41 @@ async function lazyfit() {
     // }
 
     function getImages() {
-        const images = new Set([...document.getElementsByClassName("lazyfit")]);
+        const images = [...document.getElementsByClassName("lazyfit")];
         setTimeout(() => {
-            observeImages(images)
+            observeImages(images, 0, images.length - 1)
         }, 0);
     }
-
-    function observeImages(images) {
-        const startTime = performance.now();
-        for (const image of images) {
-            observer.observe(image);
-            images.delete(image);
-            if (performance.now() - startTime > maxLoopTime) {
-                setTimeout(() => {
-                    observeImages(images)
-                }, 0);
-                break;
-            }
+    
+    function observeImages(images, index, end) {
+        observer.observe(images[index]);
+        if(index < end){
+            setTimeout(() => {
+                observeImages(images, index + 1, end)
+            }, 0);
         }
+        // for (const image of images) {
+        //     observer.observe(image);
+        //     images.delete(image);
+        //     if (performance.now() - startTime > maxLoopTime && images.size) {
+        //         setTimeout(() => {
+        //             observeImages(images)
+        //         }, 0);
+        //         break;
+        //     }
+        // }
     }
 
-    function intersectionHit(entries, observer) {
-        for (const entry of entries) {
+    function intersectionTest(entry) {
+        if (entry.isIntersecting) {
+            observer.unobserve(entry.target);
             setTimeout(() => {
-                if (entry.isIntersecting) {
-                    observer.unobserve(entry.target);
-                    setTimeout(() => {
-                        loadImage(entry.target);
-                    }, 0);
-                }
-            }, 0)
+                loadImage(entry.target);
+            }, 0);
         }
     }
 
     function loadImage(image) {
-        console.log("Loading image");
         // image.style.height = `${image.offsetHeight}px`;
         // image.style.width = `${image.offsetWidth}px`;
         const pixelWidth = image.offsetWidth * window.devicePixelRatio.toFixed(0);//Should the rounding happen after multiplication?
