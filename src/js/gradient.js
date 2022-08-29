@@ -1,7 +1,5 @@
-requestIdleCallback(gradient)
+requestIdleCallback(gradient);
 function gradient(IdleDeadline) {
-    console.log(IdleDeadline.timeRemaining());
-
     const colorOne = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-1");
     const colorTwo = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-2");
     const colorThree = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-3");
@@ -82,8 +80,6 @@ function gradient(IdleDeadline) {
             { duration: 1000 }
         );
     }
-
-    console.log(IdleDeadline.timeRemaining());
 
     function createGradient(colorStops, positionX, positionY) {
         const centerX = halfWidth + positionX;
