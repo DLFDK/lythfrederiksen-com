@@ -1,4 +1,4 @@
-lazyfit();
+requestIdleCallback(lazyfit);
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
     const images = [...document.getElementsByClassName("lazyfit")];
