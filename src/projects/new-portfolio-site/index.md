@@ -70,8 +70,6 @@ I did an even worse job at step two than I did step one. Again, I jumped too qui
 
 From here on it’s mostly webdev as usual, though there’s one particular aspect to keep in mind: Performance. Certain visual features used in a design may come with nontrivial hardware and connection demands. If the company, whose site you’re building an imitation of. mainly expects its prospective customers to use high-end phones, laptops and desktops on stable, high-speed connections, then that is bound to influence the trade-offs its designers are willing to make. What expectations do you have about the folks who will visit your site?
 
-*Video of gradient-text effect*
-
 An example: Stripe.com features a large, multilayered, animated gradient at full page-width above the fold. This gradient is created with a canvas using javascript weighing in at around 30kB (uncompressed). As the typical visitor is unlikely to stay above the fold for more than a few seconds, this visual treat is somewhat expensive. Does it make sense to have your visitors download 30kB of javascript for a two second visual treat?
 
 It’s admittedly a difficult question to answer, one that requires much more context than offered here. What else are you asking your visitors to download and execute? A full javascript framework? A bucketload of analytics? Three different, variable fonts? High-res images? It’s a complicated issue that I’d argue even the biggest sites often screw up.
