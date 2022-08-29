@@ -23,11 +23,11 @@ layout: global/layouts/base.html
         <div></div>
     </div>
     <div class="article__content">
-        <h1 class="article__title">{{title}}</h1>
-        <div class="article__hashtags">
+        <!-- <h1 class="article__title">{{title}}</h1> -->
+        <!-- <div class="article__hashtags">
             {{ hashtagList({ hashtags: hashtags}) }}
-        </div>
+        </div> -->
         <p class="article__date">{{ date | postDate }}</p>
-        <div class="article__copy">{{content | safe}}</div>
+        {{content | safe}}
     </div>
 </article>
