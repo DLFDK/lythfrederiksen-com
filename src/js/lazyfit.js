@@ -1,4 +1,4 @@
-lazyfit();
+requestIdleCallback(lazyfit);
 async function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
 
