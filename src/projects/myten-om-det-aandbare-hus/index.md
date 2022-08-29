@@ -10,7 +10,17 @@ style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png
 ---
 
-<!-- <p class="post__caption">Millionprojekt genopdager det, vi allerede vidste: Ventilation er vigtigt<p> -->
+<section>
+<h1>{{title}}</h1>
+
+<div class="highlight">
+    <p class="highlight__title">Sagt helt kort</p>
+    <ul>
+        <li>Fugtbelastningen i en normal bolig kan ikke håndteres ved diffusion gennem klimaskærmen.</li>
+        <li>Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.</li>
+        <li>Fugttransport ved diffusion i selv en ekstremt diffusionsåben konstruktion er absolut minimal</li>
+    </ul>
+</div>
 
 Byg åndbart og slip for det mekaniske ventilationsanlæg.
 
@@ -19,6 +29,10 @@ Nogenlunde sådan lyder hypotesen i projektet “Det Åndbare Hus” gennemført
 Efter godt fire års målinger af hus og indeklima i samarbejde med Teknologisk Institut (TI) lander rapporten i 2019 med resultater, der har gjort EVD _“... rigtig meget klogere.”_, som det hedder i det tilhørende nyhedsbrev. Generelt lægger rapportens konklusion og EVD’s efterfølgende formidling - eksempelvis via [detaandbarehus.dk](https://detaandbarehus.dk/) - op til, at hypotesen er bekræftet.
 
 Det ellers prisværdige projekt undermineres dog af en række helt centrale misforståelser, der i sidste ende reducerer nyhedsværdien til nærved nul. Man finder kort sagt det forkerte svar på det forkerte spørgsmål stillet ud fra den forkerte antagelse. Med rapportens egne tal vil jeg i det følgende argumentere for, at fugttransport ved diffusion gennem klimaskærmen ingen betydning har for med hvilket udstyr eller med hvilken mængde, et hus bør ventileres.
+
+</section>
+
+<section>
 
 <h2 id="hvor-bliver-fugten-af"><a aria-label="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
 
@@ -93,6 +107,9 @@ Intet i denne analyse kræver reelt set, at der bygges et testhus, og man må i 
 
 **Fugten fra én familie kan altså ikke håndteres ved diffusion gennem klimaskærmen.**
 
+</section>
+
+<section>
 
 <h2 id="der-er-noget-i-luften"><a aria-label="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
 
@@ -136,6 +153,10 @@ Bemærk at antagelsen fra tidligere om den jævne fordeling af fugten er fasthol
 
 For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til udelukkende at være testhusets diffusionsåbne konstruktioner, der tilskrives indflydelse på ventilationsbehovet og derfor undersøges eksperimentelt. Termerne “buffer” og “fugtbuffer” anvendes en enkelt gang hver, og de hygroskopiske kvaliteter omtales ikke nærmere. Termen “hygroskopi” og variationer heraf bliver ikke brugt. Vi kan med rimelighed aflede, at EVD kun tilskriver dette aspekt beskeden indflydelse.
 
+</section>
+
+<section>
+
 <h2 id="byg-tæt,-ventilér-korrekt"><a aria-label="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
 
 Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at påpege den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
@@ -150,6 +171,10 @@ Men dokumentationen findes faktisk allerede derude. I rigelige mængder. Fagfæl
 
 Sælg nu det klimavenlige, diffusionsåbne hus af hygroskopiske materialer på dets virkelige kvaliteter. Alt det andet skader vores gode sag.
 
+</section>
+
+<section>
+
 **Kilder**
 
 -   Allen, Joseph G., Piers MacNaughton, Usha Satish, Suresh Santanam, Jose Vallarino, and John D. Spengler. 2016. _“Associations of cognitive function scores with carbon dioxide, ventilation, and volatile organic compound exposures in office workers: a controlled exposure study of green and conventional office environments.”_ Environmental health perspectives 124 (6): 805-812. [nih.gov](https://ehp.niehs.nih.gov/doi/10.1289/ehp.1510037).
@@ -158,3 +183,5 @@ Sælg nu det klimavenlige, diffusionsåbne hus af hygroskopiske materialer på d
 -   Papiruld Danmark A/S. 2020. “Konstruktionskatalog.” [papiruld.dk](https://www.papiruld.dk/sites/default/files/content_files/katalog_november_2020.pdf).
 -   Persily, A., and L. de Jonge. 2017. _“Carbon dioxide generation rates for building occupants.”_ Indoor Air 27 (5): 868–879. [nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5666301/).
 -   Teknologisk Institut. 2018. Luftkvalitet i Det Åndbare Hus. [egenvinding.dk](https://egenvinding.dk/sites/default/files/Rapport%20Det%20%C3%85ndbare%20Hus%20MUDP%20978-87-7038-100-0.pdf).
+
+</section>
