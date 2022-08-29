@@ -16,9 +16,9 @@
     </div>
     <h2 class="card__title"><a href="{{params.item.url}}">{{ params.item.data.title }}</a></h2>
     <p class="card__date">{{ params.item.data.date | postDate }}</p>
-    <div class="card__hashtags">
+    <!-- <div class="card__hashtags">
         {{ hashtagList({ hashtags: params.item.data.hashtags}) }}
-    </div>
+    </div> -->
     <p class="card__copy">{{ params.item.data.snippet }}</p>
     <div class="card__cta">
         {% if params.item.data.home === "blog" %}
