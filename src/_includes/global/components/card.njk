@@ -27,8 +27,6 @@
         {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "See project"), href: params.item.url }) }}
         {% endif %}
     </div>
-    <div class="card__image">
-        <img src="" class="lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}" alt="" />
-    </div>
+    <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}" alt="" />
 </article>
 {% endmacro %}
