@@ -132,14 +132,11 @@
 
     &__image {
         grid-area: image;
-        display: block;
         border-radius: 8px;
         height: 0;
         width: 0;
         min-height: 100%;
         min-width: 100%;
-        object-fit: cover;
-        object-position: top;
         transition: opacity 1s, transform 0.2s, filter 0.2s;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
 

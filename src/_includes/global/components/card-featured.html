@@ -22,5 +22,5 @@
         {{ linkButton({ text: (post.data.cta if post.data.cta else "See project"), href: post.url }) }}
         {% endif %}
     </div>
-    <img src="" class="card-featured__image lazyfit" data-add-class="lazyfit--show" data-src="{{post.data.img}}" alt="" />
+    <img src="" class="card-featured__image lazyfit" data-add-class="lazyfit--show" data-src="{{post.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="" />
 </article>
