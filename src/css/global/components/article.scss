@@ -4,6 +4,7 @@
 @use "global/_variables/colors.scss" as *;
 
 .article {
+    position: relative;
     display: grid;
     grid-template-columns: $grid-content-columns;
 
