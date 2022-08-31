@@ -6,12 +6,16 @@ category: Write
 topic: Building Science
 snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
 cta: Læs mere
+layout: projects-project/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.html
 style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
-img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png
+scripts: ["/js/lazyfit.js"]
+img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house_is_taking_a_deep_breath__primary_color__15be53__digital_art_DXfZd7z2b.png
+img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-extended_zJUXm9fim.png
 ---
 
 <section>
-<h1>{{title}}</h1>
+
+<h1 class="title">{{title}}</h1>
 
 <div class="highlight">
     <p class="highlight__title">Sagt helt kort</p>
@@ -29,6 +33,7 @@ Nogenlunde sådan lyder hypotesen i projektet “Det Åndbare Hus” gennemført
 Efter godt fire års målinger af hus og indeklima i samarbejde med Teknologisk Institut (TI) lander rapporten i 2019 med resultater, der har gjort EVD _“... rigtig meget klogere.”_, som det hedder i det tilhørende nyhedsbrev. Generelt lægger rapportens konklusion og EVD’s efterfølgende formidling - eksempelvis via [detaandbarehus.dk](https://detaandbarehus.dk/) - op til, at hypotesen er bekræftet.
 
 Det ellers prisværdige projekt undermineres dog af en række helt centrale misforståelser, der i sidste ende reducerer nyhedsværdien til nærved nul. Man finder kort sagt det forkerte svar på det forkerte spørgsmål stillet ud fra den forkerte antagelse. Med rapportens egne tal vil jeg i det følgende argumentere for, at fugttransport ved diffusion gennem klimaskærmen ingen betydning har for med hvilket udstyr eller med hvilken mængde, et hus bør ventileres.
+
 
 </section>
 
@@ -54,11 +59,11 @@ Da jeg ikke har haft adgang til projektets datasæt og derfor må nøjes med de 
 
 Data fra udeklimaet henter jeg hos DMI, der har tal på timebasis for husets omtrentlige placering. Det giver knap 2900 sæt af temperatur og relativ luftfugtighed, som omregnes til damptryk og herefter reduceres til et gennemsnit for hele perioden.
 
-Og så er der husets diffusionsmodstand. Den er straks sværere. Som sagt er rapporten ikke rig på detaljer, så den kræver lidt ekstra detektivarbejde at fastlægge. For at give EVD’s konklusion de bedste chancer har jeg søgt at fastlægge en Z-værdi, der repræsenterer den mest sandsynlige mindsteværdi for konstruktionen. Med andre ord er det højst usandsynligt, at diffusionsmodstanden i praksis har ligget lavere, og at fugttransport ved diffusion derfor har været højere. Mit bud er en gennemsnitlig Z-værdi på 7 GPa s m<sup>2</sup>/kg. Denne holdes op med husets overfladeareal, der bedømt ud fra rapportens tegninger ligger omkring 284 m<sup>2</sup>. Jeg tillader mig at antage, at fugten fra koldfordamperen er jævnt fordelt i hele testhusets volumen. 
+Og så er der husets diffusionsmodstand. Den er straks sværere. Som sagt er rapporten ikke rig på detaljer, så den kræver lidt ekstra detektivarbejde at fastlægge. For at give EVD’s konklusion de bedste chancer har jeg søgt at fastlægge en Z-værdi, der repræsenterer den mest sandsynlige mindsteværdi for konstruktionen. Med andre ord er det højst usandsynligt, at diffusionsmodstanden i praksis har ligget lavere, og at fugttransport ved diffusion derfor har været højere. Mit bud er en gennemsnitlig Z-værdi på 7 GPa s m<sup>2</sup>/kg. Denne holdes op med husets overfladeareal, der bedømt ud fra rapportens tegninger ligger omkring 284 m<sup>2</sup>. Jeg tillader mig at antage, at fugten fra koldfordamperen er jævnt fordelt i hele testhusets volumen.
 
-Resultatet af regnestykket bliver en gennemsnitlig, daglig fugttransport for perioden på 2,4 liter. 
+Resultatet af regnestykket bliver en gennemsnitlig, daglig fugttransport for perioden på 2,4 liter.
 
-Der er meget langt op til 10 L/døgn. 
+Der er meget langt op til 10 L/døgn.
 
 Skal fugttransporten ved diffusion højere op, skal Z-værdien altså væsentligt længere ned.
 
@@ -71,17 +76,18 @@ Skal fugttransporten ved diffusion højere op, skal Z-værdien altså væsentlig
 Ja, faktisk skal vi helt ned på 1,6 GPa s m<sup>2</sup>/kg, førend der kan transporteres så meget vand per døgn. Alene de 410 mm indblæst papiruld i testhuset har en Z-værdi på 4 GPa s m<sup>2</sup>/kg (Papiruld Danmark, 2020).
 
 Men hvordan slipper alt det vand så ud? Holder vi fast i de 7-10 L/døgn fra koldfordamperen, må der nødvendigvis være en anden mekanisme på spil. Kan det være exfiltration?
+
 <figure class="graph">
     <div  class="graph__y-label"><p>Fugttransport L/døgn</p></div>
     {% include 'src/projects/myten-om-det-aandbare-hus/svg/figure-2.svg' %}<div  class="graph__x-label"><p>Luftskifte h<sup>-1</sup></p></div>
     <figcaption>Samlet fugttransport per døgn som en funktion af luftskifte.</figcaption>
 </figure>
 
-Grafen viser den samlede fugttransport per døgn, hvis vi tager højde for både diffusion og exfiltration. Skal den ligge mellem 7 og 10 liter, kræver det et luftskifte mellem 0,15 h<sup>-1</sup> og 0,25 h<sup>-1</sup>. 
+Grafen viser den samlede fugttransport per døgn, hvis vi tager højde for både diffusion og exfiltration. Skal den ligge mellem 7 og 10 liter, kræver det et luftskifte mellem 0,15 h<sup>-1</sup> og 0,25 h<sup>-1</sup>.
 
 Kan det lade sig gøre for testhuset, der jo helt bevidst er holdt lukket og så tæt som muligt?
 
-Undervejs i projektet laver TI blandt andet to målinger af husets luftskifte, hvor anden måling foretages i den periode, jeg har udvalgt til analysen her. Den 20. november 2017 måles luftskiftet til 0,1 h<sup>-1</sup> med sporgas. TI karakteriserer ikke vejrforholdene på dagen, så for at kunne bedømme, hvor godt de beskriver perioden som helhed, er det endnu engang vejrdata fra DMI, der skal i spil. For husets omtrentlige placering er gennemsnittet af middeltemperatur og middelvind for tidsrummet 8-16 henholdsvis 3,8 &deg;C og 1,8 m/s. For perioden som helhed ligger de to på 2,7 &deg;C og 4,3 m/s. Både temperatur og vind taler altså for, at luftskiftet i perioden i gennemsnit har ligget højere end 0,1 h<sup>-1</sup>.
+Undervejs i projektet laver TI blandt andet to målinger af husets luftskifte, hvor anden måling foretages i den periode, jeg har udvalgt til analysen her. Den 20. november 2017 måles luftskiftet til 0,1 h<sup>-1</sup> med sporgas. TI karakteriserer ikke vejrforholdene på dagen, så for at kunne bedømme, hvor godt de beskriver perioden som helhed, er det endnu engang vejrdata fra DMI, der skal i spil. For husets omtrentlige placering er gennemsnittet af middeltemperatur og middelvind for tidsrummet 8-16 på dagen for TI's test henholdsvis 3,8 &deg;C og 1,8 m/s. For perioden som helhed ligger de to på 2,7 &deg;C og 4,3 m/s. Både temperatur og vind taler altså for, at luftskiftet i perioden i gennemsnit har ligget højere end 0,1 h<sup>-1</sup>.
 
 Ved første måling med sporgas er resultatet et luftskifte på 0,4 h<sup>-1</sup> på en dag, hvor middeltemperatur og middelvind ligger på henholdsvis 11 &deg;C og 6,6 m/s. En simpel lineær interpolation mellem de to målinger baseret på middelvind giver et luftskifte på 0,25 h<sup>-1</sup> for perioden analyseret her, men hvor det dog bør bemærkes, at huset imellem de to målinger bliver tætnet yderligere. Den betydelige forskel i temperatur mellem de to målinger komplicerer også sammenligningen.
 
@@ -95,7 +101,7 @@ Ovenstående taget i betragtning er det ikke utænkeligt, at luftskiftet i perio
 
 Uagtet er vi dog allerede ved det målte luftskifte på 0,1 h<sup>-1</sup> langt fra EVD’s konklusion. Hverken en analyse af Z-værdien eller luftskiftet kan sandsynliggøre, at det vitterligt udelukkende er ved diffusion, at de 7-10 L/døgn transporteres bort.
 
-Heller ikke hvis vi tillader luftfugtigheden at stige over de 10 g/m<sup>3</sup>, som er niveauet for testhuset i perioden, når fugttransporten ved diffusion nogensinde målsætningen. Z-værdien er simpelthen for høj til, at det kan lade sig gøre. 
+Heller ikke hvis vi tillader luftfugtigheden at stige over de 10 g/m<sup>3</sup>, som er niveauet for testhuset i perioden, når fugttransporten ved diffusion nogensinde målsætningen. Z-værdien er simpelthen for høj til, at det kan lade sig gøre.
 
 Det, der skulle binde projektets hypotese sammen, er revet over.
 
@@ -177,6 +183,7 @@ Sælg nu det klimavenlige, diffusionsåbne hus af hygroskopiske materialer på d
 
 **Kilder**
 
+- Forsideillustration genereret af [DALL-E 2](https://openai.com/dall-e-2/) ud fra beskrivelsen "An anthropomorphized house is taking a deep breath"
 -   Allen, Joseph G., Piers MacNaughton, Usha Satish, Suresh Santanam, Jose Vallarino, and John D. Spengler. 2016. _“Associations of cognitive function scores with carbon dioxide, ventilation, and volatile organic compound exposures in office workers: a controlled exposure study of green and conventional office environments.”_ Environmental health perspectives 124 (6): 805-812. [nih.gov](https://ehp.niehs.nih.gov/doi/10.1289/ehp.1510037).
 -   Egen Vinding og Datter, ed. 2019a. Det Åndbare Hus - Afsluttende rapport: Miljøstyrelsen. [egenvinding.dk](https://egenvinding.dk/sites/default/files/Rapport%20Det%20%C3%85ndbare%20Hus%20MUDP%20978-87-7038-100-0.pdf).
 -   Egen Vinding og Datter. 2019b. “Nyhedsbrev nr. 14.” [egenvinding.dk](https://egenvinding.dk/sites/default/files/Nyhedsbrev%20nr%2014%20Det%20%C3%85ndbare%20Hus%20final_0.pdf).
