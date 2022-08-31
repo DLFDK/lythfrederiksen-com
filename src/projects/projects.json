@@ -1,7 +1,7 @@
 {
     "home": "projects",
     "tags": [],
-    "layout": "global/layouts/article.html",
+    "layout": "global/layouts/article-standard.html",
     "style": "css/projects/projects-project.scss",
     "linkButtonData": ["Contact", "/contact/"],
     "permalink": "/projects/{{ title | slug }}/index.html"

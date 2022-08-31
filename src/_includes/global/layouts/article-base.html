@@ -1,7 +1,6 @@
 ---
 layout: global/layouts/base.html
 ---
-{%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
 {%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 <div class="navigation-container">
     <nav class="navigation">
@@ -17,17 +16,5 @@ layout: global/layouts/base.html
     </nav>
 </div>
 <article class="article">
-    <div class="article__slant">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="article__content">
-        <!-- <h1 class="article__title">{{title}}</h1> -->
-        <!-- <div class="article__hashtags">
-            {{ hashtagList({ hashtags: hashtags}) }}
-        </div> -->
-        <p class="article__date">{{ date | postDate }}</p>
-        {{content | safe}}
-    </div>
+    {{content | safe}}
 </article>
