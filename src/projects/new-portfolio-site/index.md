@@ -1,11 +1,11 @@
 ---
-title: Dollar-store Stripe - or how I built my new site
+title: Dollar-store Stripe
 date: 2022-09-01
 tags: [featured]
 category: Code
 layout: projects-project/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.html
 style: projects/new-portfolio-site/new-portfolio-site.scss
-snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
+snippet: Does this site remind you of anything? Perhaps a certain well known payment provider? No, not PayPal. Come on! This is the story of why and how this site came to be a Stripe.com imitation rather than an original creation pulled from the depths of my artistic mind (ha). Time for a little introspection!
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-colored_3mieB_f-p.png
 scripts: ["/js/lazyfit.js"]
 img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png

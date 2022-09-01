@@ -4,7 +4,7 @@ date: 2021-09-07
 hashtags: [Danish, Nonsens, Fra det pseudo-videnskabelige faktultet]
 category: Write
 topic: Building Science
-snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
+snippet: Yet another one of my hobbies is the field of building science. You know, how buildings work and how we make sure they don’t poison their inhabitants. A little while ago I wrote a piece criticizing a field project and its associated report for significant oversights and errors. It’s in Danish, so you international folks might want to sit this one out. It deals with the often repeated myth that a house “needs to breathe”. 
 cta: Læs mere
 layout: projects-project/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.html
 style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
@@ -156,6 +156,8 @@ Så snart luftskiftet når et niveau, der tager hensyn til de mange andre elemen
 Bemærk at antagelsen fra tidligere om den jævne fordeling af fugten er fastholdt her. I praksis vil udsugning nær fugtkilder - bad, køkken, etc. - reducere betydningen af den diffusionsåbne konstruktion yderligere.
 
 **Konklusionen er klar: Projektets centrale antagelse - at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet - holder ikke, og dets hypotese må forkastes. Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.**
+
+Det er også nærliggende at lade en kommentar falde angående de såkaldte dampbremser, som flittigt ses i "åndbart byggeri". Denne type membran anvendes langt hen ad vejen på samme vis som den klassiske dampspærre, men har en væsentligt lavere Z-værdi. De bremser snarere end spærrer. Typisk vil Z-værdien for sådan én ligge på mellem 25 og 50 GPa s m<sup>2</sup>/kg. Med beregningerne præsenteret her in mente står det dog ganske klart, at for hvad indeklimaets indhold af fugt angår, spiller det i praksis ingen rolle, om der anvendes en dampspærrer eller dampbremse. Fugttransport ved diffusion er skrumpet til det ubetydelige før vi krydser en Z-værdi på 20 GPa s m<sup>2</sup>/kg.
 
 For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til udelukkende at være testhusets diffusionsåbne konstruktioner, der tilskrives indflydelse på ventilationsbehovet og derfor undersøges eksperimentelt. Termerne “buffer” og “fugtbuffer” anvendes en enkelt gang hver, og de hygroskopiske kvaliteter omtales ikke nærmere. Termen “hygroskopi” og variationer heraf bliver ikke brugt. Vi kan med rimelighed aflede, at EVD kun tilskriver dette aspekt beskeden indflydelse.
 
