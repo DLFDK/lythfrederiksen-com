@@ -11,7 +11,7 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 16px;
     grid-template-areas:
-        "caption image"
+        "navigation image"
         "title image"
         "copy image"
         "copy image"
@@ -19,7 +19,7 @@
 
     @media (max-width: $breakpoint-large) {
         grid-template-areas:
-            "caption caption"
+            "navigation navigation"
             "title title"
             "copy image"
             "copy image"
@@ -29,7 +29,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto 80vw;
         grid-template-areas:
-            "caption"
+            "navigation"
             "title"
             "copy"
             "cta"
@@ -43,7 +43,7 @@
     &__navigation-container {
         padding-top: 16px;
         padding-left: 16px;
-        grid-area: caption;
+        grid-area: navigation;
         color: $stripe-purple;
         font-size: $font-size-smaller;
         font-weight: $font-weight-bold;
