@@ -1,22 +1,18 @@
 requestIdleCallback(lazyfit);
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
-    performance.mark("A");
     const images = [...document.getElementsByClassName("lazyfit")];
-    performance.mark("B");
-    performance.measure("getElementsByClassName", "A", "B");
 
-    performance.mark("C");
     const observer = new IntersectionObserver((entries, observer) => {
         requestIdleCallback((IdleDeadline) => {
-            console.log(IdleDeadline.timeRemaining());
-            performance.mark("X");
             for (const entry of entries) {
                 if (entry.isIntersecting) {
-                    entry.target.style.height = `${entry.target.offsetHeight}px`;
-                    entry.target.style.width = `${entry.target.offsetWidth}px`;
-                    const pixelWidth = entry.target.offsetWidth * window.devicePixelRatio.toFixed(0);
-                    const pixelHeight = entry.target.offsetHeight * window.devicePixelRatio.toFixed(0);
+                    const offsetHeight = entry.target.offsetHeight;
+                    const offsetWidth = entry.target.offsetWidth;
+                    entry.target.style.height = `${offsetHeight}px`;
+                    entry.target.style.width = `${offsetWidth}px`;
+                    const pixelHeight = offsetHeight * window.devicePixelRatio;
+                    const pixelWidth = offsetWidth * window.devicePixelRatio;
                     entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
                     observer.unobserve(entry.target);
                     entry.target.addEventListener("load", () => {
@@ -38,32 +34,12 @@ function lazyfit() {
                     });
                 }
             }
-            performance.mark("Y");
-            performance.measure("for (const entry of entries)", "X", "Y");
-            // console.log(IdleDeadline.didTimeout, IdleDeadline.timeRemaining());
-            const measure = performance.getEntriesByType("measure")[0];
-            console.log(measure.name, measure.duration, IdleDeadline.didTimeout, IdleDeadline.timeRemaining());
-            performance.clearMeasures();
         });
     }, {
         rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     });
-    performance.mark("D");
-    performance.measure("IntersectionObserver", "C", "D");
 
-
-    performance.mark("E");
     for (const image of images) {
         observer.observe(image);
     }
-    performance.mark("F");
-    performance.measure("observer.observe(image)", "C", "D");
-
-
-    for (const entry of performance.getEntriesByType("measure")) {
-        console.log(entry.name, entry.duration);
-    }
-    performance.clearMeasures();
-    // console.log(performance.getEntriesByType("measure"));
-
 }
