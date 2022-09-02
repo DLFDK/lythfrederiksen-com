@@ -1,16 +1,24 @@
 requestIdleCallback(gradient);
 function gradient(IdleDeadline) {
+    performance.mark("Start");
     const colorOne = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-1");
     const colorTwo = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-2");
     const colorThree = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-3");
     const colorFour = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-4");
+    performance.mark("getComputedStyle");
     if(!(colorOne && colorTwo && colorThree && colorFour)) return;
+    performance.mark("if(!(colorOne &&...");
+
 
     const container = document.getElementById("canvas-gradient");
     if(!container) return;
+    performance.mark("getElementById");
+
 
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
+    performance.mark("createElement");
+
 
     const windowWidth = window.innerWidth;
     const width = windowWidth > 1000 ? windowWidth : 1000;
@@ -30,8 +38,13 @@ function gradient(IdleDeadline) {
     const colorThreeTransparent = colorThree + "00";
     const colorFourTransparent = colorFour + "00";
 
+    performance.mark("innerWidth");
+
     ctx.fillStyle = colorOne;
     ctx.fillRect(0, 0, width, height);
+
+    performance.mark("fillRect");
+
 
     const grads = [
         [[
@@ -67,18 +80,46 @@ function gradient(IdleDeadline) {
             [colorFourTransparent, 0.67],
         ], 385, -24 * ratio],
     ];
+    performance.mark("grads");
+
 
     for (const grad of grads) {
         createGradient(...grad);
     }
 
+    performance.mark("createGradient");
+
     container.append(canvas);
+
+    performance.mark("append");
 
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         canvas.animate(
             { opacity: 0, offset: 0 },
             { duration: 1000 }
         );
+    }
+    performance.mark("End");
+
+
+    performance.measure("getComputedStyle", "Start", "getComputedStyle");
+    performance.measure("if(!(colorOne &&...", "getComputedStyle", "if(!(colorOne &&...");
+    performance.measure("getElementById", "if(!(colorOne &&...", "getElementById");
+    performance.measure("createElement", "getElementById", "createElement");
+    performance.measure("innerWidth", "createElement", "innerWidth");
+    performance.measure("fillRect", "innerWidth", "fillRect");
+    performance.measure("grads", "fillRect", "grads");
+    performance.measure("createGradient", "grads", "createGradient");
+    performance.measure("append", "createGradient", "append");
+    performance.measure("End", "append", "End");
+    performance.measure("Start to end", "Start", "End");
+
+    const totalTime = performance.getEntriesByName("Start to end")[0].duration;
+    console.log("Total time: ",totalTime);
+    for(const entry of performance.getEntriesByType("measure")){
+        if(entry.duration) {
+            console.log(entry.name, ((entry.duration / totalTime) * 100).toFixed(1));
+        }
     }
 
     function createGradient(colorStops, positionX, positionY) {
