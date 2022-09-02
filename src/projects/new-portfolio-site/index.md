@@ -9,6 +9,7 @@ snippet: Does this site remind you of anything? Perhaps a certain well known pay
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-colored_3mieB_f-p.png
 scripts: ["/js/lazyfit.js"]
 img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png
+img_alt: A robot is painting a painting of another robot, pencil drawn, black and white
 ---
 <section>
 <h1 class="title">{{title}}</h1>

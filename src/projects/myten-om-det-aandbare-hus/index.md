@@ -11,6 +11,7 @@ style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
 scripts: ["/js/lazyfit.js"]
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house_is_taking_a_deep_breath__primary_color__15be53__digital_art_DXfZd7z2b.png
 img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-extended_zJUXm9fim.png
+img_alt: Et hus med arme, ben og ansigt trækker vejret dybt, tegning i sort og hvid med enkelte grønne elementer
 ---
 
 <section>
