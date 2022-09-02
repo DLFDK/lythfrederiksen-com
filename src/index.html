@@ -1,26 +1,26 @@
 ---
 linkButtonData: ["Contact", "/contact/"]
 ---
+
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="This bit is mostly here to get a score of 100 on Lighthouse. But anyway, this is the personal site of Dennis Lyth Frederiksen">
+        <meta name="description" content="This bit is mostly here to get a score of 100 on Lighthouse. But anyway, this is the personal site of Dennis Lyth Frederiksen" />
         <title>lyth frederiksen | home</title>
         <link rel="stylesheet" href="css/index/index.scss" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     </head>
     <body>
         <div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
         <main>
             {% include 'src/_includes/index/page-partials/hero.html' %}
-            <div class="disclaimer-container">
-                {% include 'src/_includes/global/components/disclaimer.html' %}
-            </div>
-            {% include 'src/_includes/index/page-partials/section-1.html' %}
-            {% include 'src/_includes/index/page-partials/section-2.html' %}
-            {% include 'src/_includes/index/page-partials/section-3.html' %}
+            <div class="disclaimer-container">{% include 'src/_includes/global/components/disclaimer.html' %}</div>
+            {% include 'src/_includes/index/page-partials/section-1.html' %} {% include 'src/_includes/index/page-partials/section-2.html' %} {% include 'src/_includes/index/page-partials/section-3.html' %}
         </main>
         {% include 'src/_includes/global/components/footer.html' %}
         <script defer src="js/lazyfit.js"></script>

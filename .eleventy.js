@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.woff2");
     eleventyConfig.addPassthroughCopy("./src/js/");
     eleventyConfig.addPassthroughCopy("./src/css/_fonts/*.ttf");
+    eleventyConfig.addPassthroughCopy("./src/favicons/*.png");
 
     //Ignore drafts
     if(!process.argv.includes("--serve")) {
