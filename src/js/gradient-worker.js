@@ -1,8 +1,6 @@
 onmessage = (message) => {
     const {canvas, width, height, colorOne, colorTwo, colorThree, colorFour, containerHeight} = message.data;
-    // return;
     const ctx = canvas.getContext("2d");
-    // performance.mark("createElement");
 
     const ratio = width / (containerHeight ? containerHeight : width);
 
@@ -14,13 +12,8 @@ onmessage = (message) => {
     const colorThreeTransparent = colorThree + "00";
     const colorFourTransparent = colorFour + "00";
 
-    // performance.mark("innerWidth");
-
     ctx.fillStyle = colorOne;
     ctx.fillRect(0, 0, width, height);
-
-    // performance.mark("fillRect");
-
 
     const grads = [
         [[
@@ -56,37 +49,12 @@ onmessage = (message) => {
             [colorFourTransparent, 0.67],
         ], 385, -24 * ratio],
     ];
-    // performance.mark("grads");
-
 
     for (const grad of grads) {
         createGradient(...grad);
     }
 
-    postMessage("Go");
-
-    // performance.mark("End");
-
-
-    // performance.measure("getComputedStyle", "Start", "getComputedStyle");
-    // performance.measure("if(!(colorOne &&...", "getComputedStyle", "if(!(colorOne &&...");
-    // performance.measure("getElementById", "if(!(colorOne &&...", "getElementById");
-    // performance.measure("createElement", "getElementById", "createElement");
-    // performance.measure("innerWidth", "createElement", "innerWidth");
-    // performance.measure("fillRect", "innerWidth", "fillRect");
-    // performance.measure("grads", "fillRect", "grads");
-    // performance.measure("createGradient", "grads", "createGradient");
-    // performance.measure("append", "createGradient", "append");
-    // performance.measure("End", "append", "End");
-    // performance.measure("Start to end", "Start", "End");
-
-    // const totalTime = performance.getEntriesByName("Start to end")[0].duration;
-    // console.log("Total time: ", totalTime);
-    // for (const entry of performance.getEntriesByType("measure")) {
-    //     if (entry.duration) {
-    //         console.log(entry.name, ((entry.duration / totalTime) * 100).toFixed(1));
-    //     }
-    // }
+    postMessage(true);
 
     function createGradient(colorStops, positionX, positionY) {
         const centerX = halfWidth + positionX;
