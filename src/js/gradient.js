@@ -6,16 +6,59 @@ function gradient(IdleDeadline) {
     const colorThree = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-3");
     const colorFour = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-4");
     performance.mark("getComputedStyle");
-    if(!(colorOne && colorTwo && colorThree && colorFour)) return;
+    if (!(colorOne && colorTwo && colorThree && colorFour)) return;
     performance.mark("if(!(colorOne &&...");
 
 
     const container = document.getElementById("canvas-gradient");
-    if(!container) return;
+    if (!container) return;
     performance.mark("getElementById");
 
-
     const canvas = document.createElement("canvas");
+
+    if (canvas.transferControlToOffscreen) {
+        const windowWidth = window.innerWidth;
+        const width = windowWidth > 1000 ? windowWidth : 1000;
+        const height = width;
+        canvas.style.width = width + "px";
+        canvas.width = width;
+        canvas.height = height;
+
+        const offscreenCanvas = canvas.transferControlToOffscreen();
+        const worker = new Worker("js/gradient-worker.js");
+
+        worker.postMessage({ canvas: offscreenCanvas, width, height, colorOne, colorTwo, colorThree, colorFour, containerHeight: container.dataset.gradientHeight }, [offscreenCanvas]);
+
+        worker.onmessage = () => {
+            container.append(canvas);
+            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                canvas.animate(
+                    { opacity: 0, offset: 0 },
+                    { duration: 1000 }
+                );
+            }
+        }
+
+        performance.mark("End");
+
+        performance.measure("getComputedStyle", "Start", "getComputedStyle");
+        performance.measure("if(!(colorOne &&...", "getComputedStyle", "if(!(colorOne &&...");
+        performance.measure("getElementById", "if(!(colorOne &&...", "getElementById");
+        performance.measure("End", "getElementById", "End");
+        performance.measure("Start to end", "Start", "End");
+
+        const totalTime = performance.getEntriesByName("Start to end")[0].duration;
+        console.log("Total time: ", totalTime);
+        for (const entry of performance.getEntriesByType("measure")) {
+            if (entry.duration) {
+                console.log(entry.name, ((entry.duration / totalTime) * 100).toFixed(1));
+            }
+        }
+
+        return;
+    }
+
+
     const ctx = canvas.getContext("2d");
     performance.mark("createElement");
 
@@ -115,9 +158,9 @@ function gradient(IdleDeadline) {
     performance.measure("Start to end", "Start", "End");
 
     const totalTime = performance.getEntriesByName("Start to end")[0].duration;
-    console.log("Total time: ",totalTime);
-    for(const entry of performance.getEntriesByType("measure")){
-        if(entry.duration) {
+    console.log("Total time: ", totalTime);
+    for (const entry of performance.getEntriesByType("measure")) {
+        if (entry.duration) {
             console.log(entry.name, ((entry.duration / totalTime) * 100).toFixed(1));
         }
     }
