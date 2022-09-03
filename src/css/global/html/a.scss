@@ -8,15 +8,23 @@ a {
     text-decoration-thickness: 0.2em;
 
     transition: text-decoration-color var(--transition-duration);
+
+    @supports not selector(:focus-visible){
+        &:focus:not(:hover) {
+            outline: none;
+            text-decoration-color: currentColor;
+        }
+    }
+
     &:focus-visible {
         outline: none;
-        // -webkit-text-decoration: underline currentColor;
         // text-decoration: 0.2em underline currentColor;
         
         text-decoration-color: currentColor;
     }
     // &:focus:not(:hover) {
     //     outline: none;
-    //     text-decoration: 0.2em underline currentColor;
+    //     // text-decoration: 0.2em underline currentColor;
+    //     text-decoration-color: currentColor;
     // }
 }
