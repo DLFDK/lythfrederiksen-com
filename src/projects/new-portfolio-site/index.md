@@ -5,7 +5,7 @@ tags: [featured]
 category: Code
 layout: projects-project/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.html
 style: projects/new-portfolio-site/new-portfolio-site.scss
-snippet: Does this site remind you of anything? Perhaps a certain well known payment provider? No, not PayPal. Come on! This is the story of why and how this site came to be a Stripe.com imitation rather than an original creation pulled from the depths of my artistic mind (ha). Time for a little introspection!
+snippet: Does this site remind you of anything? Perhaps a certain well known payment provider? No, not PayPal, come on! This is the story of why and how this site came to be a Stripe.com imitation rather than an original creation pulled from the depths of my artistic mind (ha). Time for a little introspection!
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-colored_3mieB_f-p.png
 scripts: ["/js/lazyfit.js"]
 img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png
