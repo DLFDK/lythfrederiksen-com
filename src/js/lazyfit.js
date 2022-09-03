@@ -1,10 +1,14 @@
-requestIdleCallback(lazyfit);
+if(window.requestIdleCallback){
+    requestIdleCallback(lazyfit);
+} else {
+    lazyfit();
+}
+
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
     const images = [...document.getElementsByClassName("lazyfit")];
 
     const observer = new IntersectionObserver((entries, observer) => {
-        requestIdleCallback((IdleDeadline) => {
             for (const entry of entries) {
                 if (entry.isIntersecting) {
                     const offsetHeight = entry.target.offsetHeight;
@@ -34,7 +38,6 @@ function lazyfit() {
                     });
                 }
             }
-        });
     }, {
         rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
     });
