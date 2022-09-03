@@ -27,6 +27,9 @@
         {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "See project"), href: params.item.url }) }}
         {% endif %}
     </div>
-    <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" />
+    <!-- <img src="" class="card__image" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" /> -->
+    <div class="card__image-container">
+        <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-parent="true" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" />
+    </div>
 </article>
 {% endmacro %}

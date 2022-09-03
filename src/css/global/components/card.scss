@@ -11,16 +11,13 @@
     grid-template-areas:
         "navigation date"
         "title title"
-        "hashtags image"
         "copy image"
-        "cta image"
-        "project image";
+        "cta image";
 
     @media (max-width: $breakpoint-xlmedium) {
         grid-template-areas:
             "navigation date"
             "title title"
-            "hashtags hashtags"
             "image image"
             "copy copy"
             "cta cta";
@@ -56,7 +53,6 @@
     &__title {
         grid-area: title;
         margin: 0;
-        // padding-bottom: 8px;
 
         & a {
             color: $stripe-dark-blue;
@@ -130,16 +126,18 @@
         }
     }
 
-    &__image {
+    &__image-container {
         grid-area: image;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__image {
+        display:block;
         border-radius: 8px;
-        // height: 0;
-        // width: 0;
-        // min-height: 100%;
-        // min-width: 100%;
+        width: 100%;
         transition: opacity 1s, transform 0.2s, filter 0.2s;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-
         @media (max-width: $breakpoint-xlmedium) {
             box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3);
         }
