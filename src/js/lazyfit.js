@@ -11,8 +11,15 @@ function lazyfit() {
     const observer = new IntersectionObserver((entries, observer) => {
             for (const entry of entries) {
                 if (entry.isIntersecting) {
-                    const offsetHeight = entry.target.offsetHeight;
-                    const offsetWidth = entry.target.offsetWidth;
+                    let offsetHeight;
+                    let offsetWidth
+                    if(entry.target.dataset.parent) {
+                        offsetHeight = entry.target.parentElement.offsetHeight;
+                        offsetWidth = entry.target.parentElement.offsetWidth;
+                    } else {
+                        offsetHeight = entry.target.offsetHeight;
+                        offsetWidth = entry.target.offsetWidth;
+                    }
                     entry.target.style.height = `${offsetHeight}px`;
                     entry.target.style.width = `${offsetWidth}px`;
                     const pixelHeight = offsetHeight * window.devicePixelRatio;
