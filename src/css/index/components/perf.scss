@@ -48,15 +48,26 @@
     }
 
     &__gradient {
+        position: relative;
         width: 120px;
         height: 120px;
         grid-area: center;
         // background: conic-gradient(from -5deg, transparent, #90e0ff, #a960ee, #ff333d, #ffcb57);
         // background: conic-gradient(from -1deg, transparent,#90e0ff, #515de1);
         background: conic-gradient(from -1deg, transparent, #90e0ff, $stripe-purple);
-
-        // border-radius: 50%; //Needed to get rid of 1px border on Android Chrome (bug).
-        // opacity: 0.8;
+        border-radius: 50%; 
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 85%;
+            height: 85%;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__gauge {
@@ -65,6 +76,8 @@
         height: 120px;
         grid-area: center;
         fill: black;
+        mix-blend-mode: lighten;
+        background: white;
         // stroke-width: 8px;
         // stroke: black;
         // stroke-dasharray: 352;
@@ -72,8 +85,6 @@
         // stroke-linecap: round;
         // transform-origin: 50% 50%;
         // transform: rotate(-90deg);
-        mix-blend-mode: lighten;
-        background: white;
     }
 
     &__ring {
@@ -344,7 +355,7 @@
         place-items: center;
         width: 100%;
         height: 100%;
-        padding:8px 0 24px;
+        padding: 8px 0 24px;
 
         > * {
             grid-column: 1;
@@ -352,16 +363,31 @@
     }
 
     &__score-background {
+        position: relative;
         grid-row: 1;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
         // background: conic-gradient(from -3deg, transparent, #a960ee, #90e0ff, #ff333d, #ffcb57);
         // background: conic-gradient(from -3deg, transparent, #515de1);
         // background: conic-gradient(from -1deg, transparent,#90e0ff, #515de1);
         background: conic-gradient(from -1deg, transparent, #90e0ff, $stripe-purple);
         // background: #515de1;
-        // border-radius: 50%; //Needed to get rid of 1px border on Android Chrome (bug).
+        border-radius: 50%;
         // opacity: 0.8;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 85%;
+            height: 85%;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         // &--accessibility {
         //     background: conic-gradient(from -3deg, transparent, #90e0ff);
