@@ -3,7 +3,7 @@ title: 10 things I learned from imitating Stripe
 date: 2022-05-09
 author: Dennis Lyth Frederiksen
 hashtags: [Grid is life, Html all the way down, Gratifying gradients]
-tags: [featured]
+tags:
 category: Code
 topic: New Portfolio Site
 snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
