@@ -7,8 +7,8 @@ category: Code
 topic: New Portfolio Site
 style: posts/04-09-2022/04-09-2022.scss
 scripts: ["/js/lazyfit.js", "/js/highlight.min.js"]
-snippet: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat veniam cum omnis dolorem repellat ipsam earum sed dolorum nam ab corrupti neque debitis cupiditate, unde eos similique dolore tenetur.
-img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/stripe-imitation_0GrxC5rvM.png
+snippet: "In this short post I want to highlight a neat use for Grid that I came across while building my Stripe imitation. See how you can cut down on both markup and styling complexity."
+img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/markus-spiske-ruudayIzfJI-unsplash_CftAlZkmV.jpg
 ---
 <script onload="hljs.highlightAll()"defer src="/js/highlight.min.js"></script>
 <section>
@@ -118,6 +118,12 @@ Some of the ugliness can be amended by naming the columns, using custom properti
 <div class="image" style="aspect-ratio: 1600/577">
 <img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Gnarly-grid_CXFOf1bFpu.png" alt="">
 </div>
+
+</section>
+
+<section>
+
+- Blog page snippet photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/grid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 </section>
 
