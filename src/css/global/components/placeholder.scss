@@ -4,7 +4,7 @@
 
 .placeholder {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 600px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax($content-min-width, 600px) minmax(0, 1fr);
     background: $stripe-white;
     &__content {
         grid-column: 2;

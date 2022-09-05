@@ -44,7 +44,7 @@ $slant-height: 10.5104235266vw;
         letter-spacing: -0.1px;
         margin: 24px 0 0;
 
-        @media (min-width: 1080px) {
+        @media (min-width: $content-max-width) {
             font-size: $font-size-large;
         }
     }
@@ -65,7 +65,7 @@ $slant-height: 10.5104235266vw;
 }
 
 @mixin slant($color){
-    transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
+    transform-origin: max(32px, (100vw - $content-max-width + 64px) / 2) 0;
     grid-column: 1/-1;
     grid-row: 1/-1;
     transform: skewY(-6deg);

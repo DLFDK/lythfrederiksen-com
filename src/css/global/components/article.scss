@@ -20,7 +20,7 @@
         display: grid;
         grid-template-columns: minmax(0px, 1fr) minmax(0, 240px) 600px minmax(0, 240px) minmax(0px, 1fr);
         grid-template-rows: 0.375fr 0.25fr 0.375fr;
-        transform-origin: max(32px, (100vw - 1080px + 64px) / 2) 0;
+        transform-origin: max(32px, (100vw - $content-max-width + 64px) / 2) 0;
         transform: skewY(-12deg);
         z-index: -1;
         grid-row: 1;
