@@ -1,0 +1,68 @@
+@use "sass:math";
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "blog/blog-post.scss";
+@use "code-highlight.css";
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/css/_fonts/RobotoMono-Regular-subset.woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/css/_fonts/RobotoMono-Bold-subset.woff2");
+    font-display: swap;
+}
+
+.image {
+    position: relative;
+    &__circle {
+        --size: 60px;
+        --size: clamp(60px, 32vw - 43px, 150px);
+        position: absolute;
+        right: 12%;
+        top: 6%;
+        width: calc(min(10vw, 40px) + var(--size));
+        height: var(--size);
+        background: transparent;
+        border-radius: 50%;
+        transform: translate(50%, -50%);
+        border: dashed 8px var(--color-primary);
+    }
+
+    &__arrow {
+        position: absolute;
+        --size: clamp(60px, 32vw - 43px, 150px);
+        height: var(--size);
+        width:var(--size);
+        left: 50%;
+        top: 10%;
+        fill: var(--color-primary);
+        transform: rotate(-40deg);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.code {
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    code {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        // word-wrap: break-word;
+        // white-space: pre-wrap;
+        overflow: scroll;
+    }
+}
+
