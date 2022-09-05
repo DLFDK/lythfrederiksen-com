@@ -213,5 +213,10 @@
                 margin-bottom: 16px;
             }
         }
+
+        & img {
+            transition: opacity 1s;
+            // width: 100%;
+        }
     }
 }
