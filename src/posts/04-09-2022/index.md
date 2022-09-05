@@ -7,7 +7,7 @@ category: Code
 topic: New Portfolio Site
 style: posts/04-09-2022/04-09-2022.scss
 scripts: ["/js/lazyfit.js", "/js/highlight.min.js"]
-snippet: "In this short post I want to highlight a neat use for Grid that I came across while building my Stripe imitation. See how you can cut down on both markup and styling complexity."
+snippet: "In this short post I want to highlight a neat use for Grid that I came across while building my Stripe imitation. See how you can use Grid to cut down on both markup and styling complexity."
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/markus-spiske-ruudayIzfJI-unsplash_CftAlZkmV.jpg
 ---
 <script onload="hljs.highlightAll()"defer src="/js/highlight.min.js"></script>
