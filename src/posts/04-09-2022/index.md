@@ -22,7 +22,7 @@ In this short post I’d like to highlight a neat use for Grid that I came acros
 Let's first look at what I recreated:
 
 <div class="image" style="aspect-ratio: 1600/1006">
-<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Stripe-stripes_gHiRwhHSb.png" alt="">
+<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Stripe-stripes_gHiRwhHSb.png" alt="Screenshot of Stripe.com with an arrow pointed towards a dotted circle highlighting a small part of it.">
 <div class="image__circle"></div>
 <svg class="image__arrow" viewBox="0 0 500 511.61"><path d="m281.46 249.66-15.5-101.27c-.57-3.8.47-7.81 3.19-10.93 4.92-5.64 13.5-6.24 19.14-1.32l207.07 180.38 1.53 1.59c4.77 5.76 3.96 14.32-1.8 19.08L288.02 508.53c-2.99 2.41-6.96 3.59-11.03 2.87-7.34-1.32-12.23-8.36-10.91-15.69l15.44-85.83c-17.98-2.09-37.59-6.57-57.77-13.36-52.66-17.69-109.96-51.41-153.32-100.33C26.64 246.79-3.02 181.98.25 102.58 1.42 73.66 7 42.84 17.88 10.23 19.22 4.95 23.7.78 29.43.1c7.44-.88 14.19 4.44 15.06 11.87 11.93 100.08 50.53 158.11 98.25 191.8 42.65 30.12 93.19 41.35 138.72 45.89z"></path></svg>
 </div>
@@ -36,7 +36,7 @@ The original implementation uses absolute positioning and about 16 calc(...) fun
 My implementation uses a single parent div with 6 children divs, where all styling happens on the parent with the help of child-selectors. This is what it looks like using the grid-inspector in Firefox:
 
 <div class="image" style="aspect-ratio: 1600/591">
-<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Regular-grid_uKzu3ei8x.png" alt="">
+<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Regular-grid_uKzu3ei8x.png" alt="Dotted, thin, straight lines showing off the use of CSS grid">
 </div>
 
 The parent div needs just a handful of properties on it, with each of the six children elements sitting at about the same. I chose not to implement the sliding effect as I deemed it too subtle to warrant the extra javascript, but the choice of a grid layout wouldn’t be an obstacle.
@@ -87,12 +87,12 @@ An option to further minimize the styling on the children remains. It does resul
     display: grid;
     grid-template-columns: 
         minmax(0px, 1fr) 
-        clamp(16px, 16px + 100vw - $content-max-width, 160px) 
+        clamp(16px, 16px + 100vw - 1080px, 160px) 
         min(5vw, 70px) 
-        minmax(0, calc($content-max-width / 2 - min(5vw, 70px))) 
-        minmax(0, calc($content-max-width / 2 - min(10vw, 140px))) 
+        minmax(0, calc(1080px / 2 - min(5vw, 70px))) 
+        minmax(0, calc(1080px / 2 - min(10vw, 140px))) 
         min(10vw, 140px) 
-        clamp(16px, 16px + 100vw - $content-max-width, 160px) 
+        clamp(16px, 16px + 100vw - 1080px, 160px) 
         minmax(0, 1fr);
     grid-template-rows: 30px 10px 30px 1fr 30px 10px 30px;
 
@@ -116,12 +116,14 @@ An option to further minimize the styling on the children remains. It does resul
 Some of the ugliness can be amended by naming the columns, using custom properties and sass-variables, and by recognizing the symmetry at play. Notice how both height and width of the children divs are now entirely determined by the grid.
 
 <div class="image" style="aspect-ratio: 1600/577">
-<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Gnarly-grid_CXFOf1bFpu.png" alt="">
+<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/Gnarly-grid_CXFOf1bFpu.png" alt="Dotted, thin, straight lines showing off the use of CSS grid">
 </div>
 
 </section>
 
 <section>
+
+## Notes
 
 - Blog page snippet photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/grid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
