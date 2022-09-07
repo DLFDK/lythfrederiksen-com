@@ -1,9 +1,8 @@
-// if (window.requestIdleCallback) {
-//     requestIdleCallback(gradient);
-// } else {
-//     gradient();
-// }
-gradient();
+if (window.requestIdleCallback) {
+    requestIdleCallback(gradient);
+} else {
+    gradient();
+}
 
 function gradient() {
     const colorOne = getComputedStyle(document.documentElement).getPropertyValue("--color-gradient-1");
