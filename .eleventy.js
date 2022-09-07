@@ -1,5 +1,6 @@
 const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
+const { minify } = require("terser");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
@@ -10,7 +11,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/favicons/*.png");
 
     //Ignore drafts
-    if(!process.argv.includes("--serve")) {
+    if (!process.argv.includes("--serve")) {
         eleventyConfig.ignores.add("**/_*.md");
     }
 
@@ -20,14 +21,14 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).setLocale("en-US").toLocaleString(DateTime.DATE_MED);
     });
     eleventyConfig.addFilter("urlFormatter", categories => {
-        if(categories[2] === "All") {
+        if (categories[2] === "All") {
             return categories[0];
         } else {
             return categories[0] + "/" + categories[2];
         }
     });
     eleventyConfig.addFilter("titleFormatter", categories => {
-        if(categories[2] === "All") {
+        if (categories[2] === "All") {
             return categories[0];
         } else {
             return categories[0] + " / " + categories[2];
@@ -37,24 +38,24 @@ module.exports = function (eleventyConfig) {
     //Collections
     const collectionRoots = ["posts", "projects"];
     const categories = ["All", "Build", "Write", "Code"];
-    for(const root of collectionRoots){
-        for(const category of categories) {
+    for (const root of collectionRoots) {
+        for (const category of categories) {
             eleventyConfig.addCollection(`${root}${category}Featured`, function (collectionApi) {
                 const singleFeatured = collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
-                    if (category === "All"){
+                    if (category === "All") {
                         return item.data.tags.includes("featured");
                     } else {
                         return category === item.data.category && item.data.tags.includes("featured");
                     }
                 }).pop();
-                if(singleFeatured){
+                if (singleFeatured) {
                     singleFeatured.data.featured = true;
                 }
                 return [singleFeatured];
             });
             eleventyConfig.addCollection(`${root}${category}NotFeatured`, function (collectionApi) {
                 return collectionApi.getFilteredByGlob(`./src/${root}/*/*.md`).filter(item => {
-                    if (category === "All"){
+                    if (category === "All") {
                         return !item.data.featured;
                     } else {
                         return category === item.data.category && !item.data.featured;
@@ -67,7 +68,6 @@ module.exports = function (eleventyConfig) {
     //Dependent on "serve"
     if (process.argv.includes("--serve")) {
         eleventyConfig.addWatchTarget("./src/**/*");
-        // eleventyConfig.addWatchTarget("./src/css/");
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
                 src: "src",
@@ -85,6 +85,16 @@ module.exports = function (eleventyConfig) {
                 removeComments: true
             });
         });
+        // eleventyConfig.addTemplateFormats("js");
+        // eleventyConfig.addExtension("js", {
+        //     outputFileExtension: "js",
+        //     compile: async function (inputContent) {
+        //         const result = await minify(inputContent);
+        //         return async (data) => {
+        //             return result.code;
+        //         };
+        //     }
+        // });
     } else {
         eleventyConfig.addTransform("sass", (content, outputPath) => {
             return sass(content, outputPath, {
@@ -103,6 +113,16 @@ module.exports = function (eleventyConfig) {
                 // collapseWhitespace: true,
                 removeComments: true
             });
+        });
+        eleventyConfig.addTemplateFormats("js");
+        eleventyConfig.addExtension("js", {
+            outputFileExtension: "js",
+            compile: async function (inputContent) {
+                const result = await minify(inputContent);
+                return async (data) => {
+                    return result.code;
+                };
+            }
         });
     }
 
