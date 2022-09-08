@@ -5,7 +5,7 @@ export async function onRequest(context) {
     const imageRequest = new Request(url, {
         headers: request.headers
     });
-    let response = fetch(imageRequest);
+    let response = await fetch(imageRequest);
     response = new Response(response.body, response)
     response.headers.set("myHeader", "myKey")
     // return fetch(imageRequest);
