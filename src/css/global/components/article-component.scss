@@ -13,45 +13,28 @@
         minmax(0px, 1fr);
 
     &__slant {
-        // margin-top: 32px;
-        // margin-bottom: 8px;
         height: min(64px, 6vw);
         grid-column: 2;
         display: grid;
         grid-template-columns: 16px 1fr 16px;
         grid-template-rows: 0.375fr 0.25fr 0.375fr;
-        // transform-origin: max(32px, (100vw - $content-max-width + 64px) / 2) 0;
         transform: skewY(-12deg);
         padding-left: 16px;
-        // z-index: -1;
 
         & div:nth-child(1) {
             grid-column: 2/-1;
             grid-row: 1/3;
             background: var(--color-slant-upper, #11efe3);
-            // height: 50%;
-            // width: 100%;
         }
         & div:nth-child(2) {
-            // position: relative;
             grid-column: 1/3;
             grid-row: 2/4;
             background: var(--color-slant-lower, #96f);
-            // height: 50%;
-            // width: 100%;
-            // justify-self: center;
-            // top: 40%;
-            // right: 16px;
         }
         & div:nth-child(3) {
             grid-column: 2/3;
             grid-row: 2/3;
             background: var(--color-slant-overlap, #0048e5);
-            // height: calc(min(40px, 1vw) / 2);
-            // width: calc(100% - 16px);
-            // justify-self: center;
-            // top: 50%;
-            // right: 16px;
         }
 
         @media (max-width: $breakpoint-large) {
@@ -158,6 +141,53 @@
 
                 @media (max-width: $breakpoint-small) {
                     font-size: $font-size-smaller;
+                }
+            }
+
+            & sup {
+                line-height: 0;
+                font-size: 0.6em;
+            }
+
+            & a {
+                font-weight: $font-weight-bold;
+                color: var(--color-primary, $stripe-purple);
+                transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
+
+                &:hover {
+                    color: $stripe-dark-blue;
+                }
+            }
+
+            & blockquote {
+                max-width: $text-max-width;
+                margin: 32px auto 0 auto;
+                padding: 0px 16px;
+                & > p {
+                    margin-top: 32px;
+                    color: $stripe-cloud-blue;
+                    font-size: $font-size-small;
+                    font-weight: $font-weight-regular;
+                    line-height: $line-height-regular;
+                    letter-spacing: $letter-spacing-copy;
+                    @media (max-width: $breakpoint-small) {
+                        font-size: $font-size-smaller;
+                    }
+                }
+            }
+
+            & > ul {
+                margin: 0 auto;
+                max-width: $text-max-width;
+                color: $stripe-cloud-blue;
+                font-size: $font-size-smaller;
+                font-weight: $font-weight-regular;
+                line-height: $line-height-regular;
+                letter-spacing: $letter-spacing-copy;
+                list-style: none;
+                padding: 0;
+                & > li {
+                    margin-bottom: 16px;
                 }
             }
         }
