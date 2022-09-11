@@ -1,0 +1,15 @@
+---
+layout: global/layouts/article-base.html
+---
+{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
+<img src="" class="illustration lazyfit" data-add-class="lazyfit--show" data-src="{{ img_article }}?tr=w-{width}" alt="{{ img_alt }}" />
+<div class="article__slant">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="article__content">
+    <p class="article__date">{{ date | postDate }}</p>
+    {{content | safe}}
+    {{ cardList({ collection: collections.featured}) }}
+</div>

@@ -1,20 +1,30 @@
 ---
 layout: global/layouts/base.html
 ---
-{%- from "src/_includes/global/components/navigation.njk" import navigation -%}
-<div class="navigation-container">
-    <nav class="navigation">
-        <ul>
-            <li><a href="/{{home | lower}}">{{home}}</a></li>
-            <div>/</div>
-            {% if home === "blog" %}
-            <li><a aria-label="See all blog posts in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
-            {% else %}
-            <li><a aria-label="See all projects in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+{%- from "src/_includes/global/components/navigation.njk" import navigation -%} {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+<div class="header-container">
+    {% include 'src/_includes/global/components/header.html' %}
+    <div class="navigation-container">
+        <nav class="navigation">
+            <ul>
+                <li><a href="/{{home | lower}}">{{home}}</a></li>
+                <div>/</div>
+                {% if home === "blog" %}
+                <li><a aria-label="See all blog posts in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
+                {% else %}
+                <li><a aria-label="See all projects in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
 </div>
 <article class="article">
-    {{content | safe}}
+    <div class="article__slant">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="article__content">{{content | safe}}</div>
+    {% if list %} {%- from "src/_includes/global/components/card-list.njk" import cardList -%} {{ cardList({ collection: collections[list]}) }} {% endif %}
 </article>
+<div class="footer-container">{% include 'src/_includes/global/components/footer.html' %}</div>

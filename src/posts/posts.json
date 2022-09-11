@@ -1,7 +1,7 @@
 {
     "home": "blog",
     "tags": [],
-    "layout": "global/layouts/article-standard.html",
+    "layout": "global/layouts/article-base.html",
     "style": "css/blog/blog-post.scss",
     "linkButtonData": ["Contact", "/contact/"],
     "permalink": "/blog/{{ title | slug }}/index.html"

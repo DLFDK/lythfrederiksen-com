@@ -1,19 +1,23 @@
 ---
-title: Dollar-store Stripe
+title: New Article Layout
 date: 2022-09-01
 tags: [featured]
+list: new-portfolio-site
 category: Code
-layout: projects-project/new-portfolio-site/new-portfolio-site.html
-style: projects/new-portfolio-site/new-portfolio-site.scss
+style: projects/new-article-layout/new-article-layout.scss
+scripts: ["/js/lazyfit.js"]
 snippet: Does this site remind you of anything? Perhaps a certain well known payment provider? No, not PayPal, come on! This is the story of why and how this site came to be a Stripe.com imitation rather than an original creation pulled from the depths of my artistic mind (ha). Time for a little introspection!
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-colored_3mieB_f-p.png
-scripts: ["/js/lazyfit.js"]
 img_article: https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png
 img_alt: A robot is painting a painting of another robot, pencil drawn, black and white
 ---
-{%- from "src/_includes/global/components/card-list.njk" import cardList -%}
 
 <section>
+
+<img class="lazyfit image image--right image--hero image--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png?tr=w-{width}" alt="">
+
+<p class="article__date">{{ date | postDate }}</p>
+
 <h1 class="title">{{title}}</h1>
 
 There’s a strong connection between the mastery of a skill and the novelty one can display with it. We expect the master to be novel, the apprentice to mimic. Only once you’ve made it to the outskirts of all we know, can you hope to discover something we don’t. For the apprentice, this journey, the display of novelty, becomes the path to advancement.
@@ -21,6 +25,7 @@ There’s a strong connection between the mastery of a skill and the novelty one
 As a largely unproven web developer, it initially seemed obvious to me that my new portfolio site, my new home on the internet, ought to be one such display of novelty. Perhaps a technical feat with three.js? Or a groundbreaking hypermorphism years ahead of Dribbble? What about something unnecessarily rewritten in Rust, made browser-relevant and compiled to Webassembly?!
 
 No - I decided to be the apprentice I still am. I decided to mimic. To reimplement. To recreate what others much more experienced than me had already done. Here’s the story of why and how I decided to create a Stripe.com imitation as my new personal website in lieu of being novel.
+
 </section>
 
 <section>
@@ -40,6 +45,8 @@ It wouldn’t be enough to go in that direction, though. Sometimes the dreadful 
 If the reason for building an imitation rested only on design-aversion that argument could definitely be made. Even more so if the imitation didn’t reveal its heritage in any form and tried to present itself as an original. That’d be straight up, inexcusable plagiarism. Probably illegal too. And I’m not a crook! Here the right way forward would be to buy a finished design. As a bespoke creation according to my needs or picked from a catalog of existing ones. In other words: hire a designer.
 
 But building an imitation is not only about the design - or the UX more generally speaking. It is just as much about the markup, styling and javascript that brings it to life. Because we have access to the full implementation of the original and not merely a design specification, we are granted a wonderful opportunity to marvel at, analyze, learn from and criticize the engineering that went into it. This becomes the foundation on which we are challenged to build our own - one which is perhaps even better.
+
+<img class="lazyfit image image--left image--small image--pop-500" style="shape-outside: polygon(0.98% 0.28%, -0.93% 99.6%, 91.48% 99.17%, 92.29% 92.34%, 88.19% 87.93%, 99.37% -0.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.16.38_cE10BR8-o.png?tr=w-{width}" alt="">
 
 An imitation is not a clone, however. The goal isn’t to build a pixel-perfect lookalike indistinguishable from the original. While that can certainly be worthwhile too, it leaves many learning opportunities untapped. For anything that must reach the global web, there’d also be concerns regarding content copyrights. Instead, a site imitation, as I wish to define it here, takes the key features of the original and applies them to new content, extending the design where needed while maintaining overall consistency. As such, it is not a pathway for those who want to entirely avoid design work. The original design does make for a very helpful and illuminating guide, though! It is a very worthwhile endeavor even for someone as design-averse as I.
 
@@ -69,6 +76,8 @@ But I do reckon there’s a definite step one: Figure out what content you’ll 
 
 The urge to get going with markup and styling got the better of me, I must admit, and I moved on from step one a bit too early. “I’ll just figure out the stuff above the fold and worry about the rest later. It’s fine!” But I suppose iterating over failures is a valid method too!
 
+<img class="lazyfit image image--right image--pop-500" style="shape-outside: polygon(3.46% 26.32%, 9.28% 99.38%, 99.71% 100.12%, 98.68% 79.47%, 100.14% 6.03%, 37.33% 8.44%, 37.55% 26.38%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.52.12_tkX1iXpc7.png?tr=w-{width}" alt="">
+
 A good choice for step two is to derive design tokens - colors, fonts, easing functions, break points, etc. - and load them into your system of choice. I used a combination of CSS custom properties and sass-variables, with an emphasis on the latter as very few needed the cascade. The CSS Overview feature found in Chrome can be a valuable tool here. While you’re unlikely to be able to use the original site’s font for your imitation - bigger sites often use paid, exclusive fonts - using it during prototyping can be helpful.
 
 Other than the obvious upside of not having to remember all these design tokens and retyping them endlessly, doing this also helps you towards developing a sense of the design system. Something you’ll need when adapting your content to it later. Great designs typically rely on a few key ideas, and getting a feel for them early will save you a lot of headache later.
@@ -90,9 +99,11 @@ My chosen target was the latest versions of the big three: Firefox, Chrome, and 
 </section>
 
 <section>
+<img class="lazyfit image image--right image--pop-500" style="shape-outside: polygon(4.03% 45.76%, 3.79% 99.38%, 99.71% 100.12%, 100.14% 6.03%, 28.43% 6.96%, 30.17% 44.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_03.03.30_S5g0qyA8y.png?tr=w-{width}" alt="">
 <h2 id="the-outcome"><a aria-label="Permalink to The outcome" href="#the-outcome">The outcome</a></h2>
 
 So, did I end up with an example of egregious plagiarism badly camouflaged as an attempt at analytical web design, or did I actually succeed at making something interesting, valuable and worth using as my new home on the internet?
+
 
 I think the idea works. I really do. While I can sit here today and argue for why, I didn’t have the arguments laid out plainly when I started. The outcome could just as well have been unpublishable. It didn’t have to be straight up plagiarism for it to be an example of poor taste.
 
@@ -102,7 +113,7 @@ Along the way the idea evolved to encompass not only the landing page, but also 
 
 The process also exposed a decent number of instances in which I found myself disagreeing with the decisions made by the original creators. Things like performance trade-offs, implementation of semantic HTML, excessive use of nested elements and seemingly redundant CSS to name a few. Not having spoken to the original creators, I naturally can’t rule out perfectly valid and convincing reasons for these decisions, but until I’ve heard them, I’ll continue to play the role of a (slightly cocky) beginner who thinks he’s right. After a genuine attempt at arguing for the original decision, I think that’s a reasonable stance to take.
 
-- Article illustration generated by [DALL-E 2](https://openai.com/dall-e-2/) from the prompt "A robot is painting a painting of robots, pencil drawn"
+*Article illustrations generated by [DALL-E 2](https://openai.com/dall-e-2/) from the prompt "A robot is painting a painting of robots, pencil drawn"*
 
 </section>
 

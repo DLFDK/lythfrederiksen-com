@@ -1,0 +1,10 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "projects/projects-project.scss";
+@use "global/components/card-list.scss";
+@use "global/components/card.scss";
+
+.card-list {
+    grid-column: 1/-1;
+}

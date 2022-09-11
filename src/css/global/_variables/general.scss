@@ -1,5 +1,6 @@
 $content-min-width: 320px;
 $content-max-width: 1080px;
+$text-max-width: 600px;
 $grid-content-columns: minmax(0px, 1fr) minmax($content-min-width, $content-max-width) minmax(0px, 1fr);
 $breakpoint-small: 400px;
 $breakpoint-xlsmall: 500px;

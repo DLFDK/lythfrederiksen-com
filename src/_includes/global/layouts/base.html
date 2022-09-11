@@ -15,8 +15,6 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     </head>
     <body>
-        <div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
-        <main>{{content | safe}}</main>
-        <div class="footer-container">{% include 'src/_includes/global/components/footer.html' %}</div>
+        {{content | safe}}
     </body>
 </html>
