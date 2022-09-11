@@ -4,7 +4,7 @@ date: 2022-09-01
 tags: [featured]
 list: new-portfolio-site
 category: Code
-style: projects/new-article-layout/new-article-layout.scss
+style: projects/new-portfolio-site/new-portfolio-site.scss
 scripts: ["/js/lazyfit.js"]
 snippet: Does this site remind you of anything? Perhaps a certain well known payment provider? No, not PayPal, come on! This is the story of why and how this site came to be a Stripe.com imitation rather than an original creation pulled from the depths of my artistic mind (ha). Time for a little introspection!
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-colored_3mieB_f-p.png
