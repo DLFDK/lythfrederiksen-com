@@ -15,20 +15,20 @@ img_alt: Et hus med arme, ben og ansigt trækker vejret dybt, tegning i sort og 
 
 <section>
 
-<img class="lazyfit image image--right image--hero image--pop-500" style="transform: scale(-1, 1); shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-extended_zJUXm9fim.png?tr=w-{width}" alt="">
+<img class="lazyfit image image--right image--hero image--pop-500" style="transform: scale(-1, 1); shape-outside: polygon(34.28% 2.4%, 2.38% 54.13%, 10.65% 60.76%, 7.39% 65.1%, 20.98% 99.80%, 100.61% 100.4%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-extended_zJUXm9fim.png?tr=w-{width}" alt="">
 
 <p class="article__date">{{ date | postDate }}</p>
 
 <h1 class="title">{{title}}</h1>
 
-<!-- <div class="highlight"> -->
-<p class="highlight__title">Sagt helt kort</p>
-<ul class="highlight__list">
-    <li>Fugtbelastningen i en normal bolig kan ikke håndteres ved diffusion gennem klimaskærmen.</li>
-    <li>Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.</li>
-    <li>Fugttransport ved diffusion i selv en ekstremt diffusionsåben konstruktion er absolut minimal</li>
-</ul>
-<!-- </div> -->
+<div class="highlight">
+    <p class="highlight__title">Sagt helt kort</p>
+    <ul class="highlight__list">
+        <li>Fugtbelastningen i en normal bolig kan ikke håndteres ved diffusion gennem klimaskærmen.</li>
+        <li>Fugttransport ved diffusion gennem klimaskærmen har ingen betydning for med hvilket udstyr eller med hvilken mængde, der bør ventileres.</li>
+        <li>Fugttransport ved diffusion i selv en ekstremt diffusionsåben konstruktion er absolut minimal</li>
+    </ul>
+</div>
 
 Byg åndbart og slip for det mekaniske ventilationsanlæg.
 
