@@ -20,10 +20,9 @@
     font-display: swap;
 }
 
-.image {
+.detail-pointer {
     position: relative;
     &__circle {
-        --size: 60px;
         --size: clamp(60px, 32vw - 43px, 150px);
         position: absolute;
         right: 12%;
@@ -55,13 +54,12 @@
 }
 
 .code {
-    border-top: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+    max-width: $text-max-width;
+    margin: 0 auto;
     code {
         font-family: 'Roboto Mono', monospace;
         font-size: 0.8rem;
-        // word-wrap: break-word;
-        // white-space: pre-wrap;
         overflow: scroll;
     }
 }
