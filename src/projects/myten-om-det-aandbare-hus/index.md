@@ -15,7 +15,7 @@ img_alt: Et hus med arme, ben og ansigt trækker vejret dybt, tegning i sort og 
 
 <section>
 
-<img class="lazyfit image image--right image--hero image--pop-500" style="transform: scale(-1, 1); shape-outside: polygon(34.28% 2.4%, 2.38% 54.13%, 10.65% 60.76%, 7.39% 65.1%, 20.98% 99.80%, 100.61% 100.4%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-extended_zJUXm9fim.png?tr=w-{width}" alt="">
+<img class="lazyfit image image--right image--hero image--pop-500" style="transform: scale(-1, 1); shape-outside: polygon(35.8% 3.15%, 24.37% 30.04%, 17.48% 30.30%, 2.38% 54.13%, 10.65% 60.76%, 7.39% 65.1%, 20.98% 99.8%, 100.61% 100.4%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-edgefree_4D2y6Z9Xm.png?tr=w-{width}" alt="{{img_alt}}">
 
 <p class="article__date">{{ date | postDate }}</p>
 
@@ -187,7 +187,7 @@ Sælg nu det klimavenlige, diffusionsåbne hus af hygroskopiske materialer på d
 
 <section>
 
-**Kilder**
+<h2 id="kilder"><a aria-label="Permalink til Kilder" href="#kilder">Kilder</a></h2>
 
 - Forsideillustration genereret af [DALL-E 2](https://openai.com/dall-e-2/) ud fra beskrivelsen "An anthropomorphized house is taking a deep breath"
 -   Allen, Joseph G., Piers MacNaughton, Usha Satish, Suresh Santanam, Jose Vallarino, and John D. Spengler. 2016. _“Associations of cognitive function scores with carbon dioxide, ventilation, and volatile organic compound exposures in office workers: a controlled exposure study of green and conventional office environments.”_ Environmental health perspectives 124 (6): 805-812. [nih.gov](https://ehp.niehs.nih.gov/doi/10.1289/ehp.1510037).
