@@ -6,7 +6,6 @@ category: Write
 topic: Building Science
 snippet: Yet another one of my hobbies is the field of building science. You know, how buildings work and how we make sure they don’t poison their inhabitants. A little while ago I wrote a piece criticizing a field project and its associated report for significant oversights and errors. It’s in Danish, so you international folks might want to sit this one out. It deals with the often repeated myth that a house “needs to breathe”. 
 cta: Læs mere
-layout: projects-project/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.html
 style: projects/myten-om-det-aandbare-hus/myten-om-det-aandbare-hus.scss
 scripts: ["/js/lazyfit.js"]
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house_is_taking_a_deep_breath__primary_color__15be53__digital_art_DXfZd7z2b.png

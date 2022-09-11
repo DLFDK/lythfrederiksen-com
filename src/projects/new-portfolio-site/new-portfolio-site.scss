@@ -1,4 +1,3 @@
-@use "sass:math";
 @use "global/_variables/general.scss" as *;
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
@@ -6,74 +5,6 @@
 @use "global/components/card-list.scss";
 @use "global/components/card.scss";
 
-.article__date {
-    @media (max-width: 1200px) {
-        justify-self: start;
-        grid-column: 2;
-        grid-row: 1;
-        margin: 0;
-        margin-bottom: 8px;
-    }
-}
-
-.title {
-    @media (max-width: 1200px) {
-        width: calc(100vw - 320px - (100vw - 600px) / 2);
-    }
-
-    @media (max-width: 600px) {
-        width: calc(100vw - 300px - (100vw - 600px) / 2);
-    }
-    
-    @media (max-width:550px) {
-        width: 100%;
-    }
-}
-
-.illustration {
-    grid-column: 1/4;
-    grid-row: 2;
-    // background: #000;
-    width: calc((100vw - 600px) / 2);
-    aspect-ratio: 1/1;
-    place-self: start end;
-    transform: scale(-1, 1);
-    margin-top: 64px;
-    z-index: -1;
-    max-width: 1024;
-
-    @media (max-width: 1200px) {
-        grid-row: 1;
-        margin-top: 0px;
-        position: absolute;
-        width: 300px;
-        top: -60px;
-
-    }
-
-    @media (max-width: 850px) {
-        top: -115px;
-    }
-    @media (max-width:600px) {
-        top: -80px;
-        width: 250px;
-    }
-
-    @media (max-width:550px) {
-        position: static;
-        width: 100%;
-        margin-top: -48px;
-    }
-}
-
 .card-list {
     grid-column: 1/-1;
-
-    // & &__content {
-    //     padding-left: 0;
-    // }
-
-    // & &__list {
-    //     padding-left: 0;
-    // }
 }
