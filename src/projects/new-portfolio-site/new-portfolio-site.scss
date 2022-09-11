@@ -7,4 +7,12 @@
 
 .card-list {
     grid-column: 1/-1;
+    // grid-column: 3/4;
+    max-width: 664px;
+    margin: 0 auto;
+
+    &__content {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
