@@ -4,73 +4,10 @@
 @use "global/_variables/colors.scss" as *;
 @use "projects/projects-project.scss";
 
-.article__date {
-    @media (max-width: 1200px) {
-        justify-self: start;
-        grid-column: 2;
-        grid-row: 1;
-        margin: 0;
-        margin-bottom: 8px;
-    }
-}
-
-.title {
-    @media (max-width: 1200px) {
-        width: calc(100vw - 270px - (100vw - 600px) / 2);
-    }
-
-    @media (max-width: 600px) {
-        width: calc(100vw - 300px - (100vw - 600px) / 2);
-    }
-    
-    @media (max-width:450px) {
-        width: 100%;
-    }
-}
-
-.illustration {
-    grid-column: 1/4;
-    grid-row: 2;
-    // background: #000;
-    width: calc((100vw - 600px) / 2);
-    aspect-ratio: 1024/1220;
-    place-self: start end;
-    transform: scale(-1, 1);
-    margin-top: 64px;
-    z-index: -1;
-
-    @media (max-width: 1200px) {
-        grid-row: 1;
-        margin-top: 0px;
-        position: absolute;
-        top: -60px;
-        width: 300px;
-    }
-
-    @media (max-width: 850px) {
-        top: -150px;
-    }
-    @media (max-width:600px) {
-        top: -60px;
-        width: 250px;
-    }
-    @media (max-width:500px) {
-        top: -120px;
-    }
-    @media (max-width:470px) {
-        top: -120px;
-    }
-
-    @media (max-width:450px) {
-        position: static;
-        width: 100%;
-        margin-top: -48px;
-    }
-}
-
 .graph {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
+    max-width: $text-max-width;
     display: grid;
     grid-template-columns: 0 1fr;
     grid-template-areas:
@@ -165,53 +102,24 @@
     }
 }
 
-.highlight {
-    position: relative;
-    &::before {
-        position: absolute;
-        content: "";
-        border-left: 1px solid var(--color-primary, $stripe-purple);
-        left: -16px;
-        height: 100%;
-        transform: scaleY(math.div($font-size-regular, $line-height-small));
-    }
-
-    & > p {
-        color: $stripe-cloud-blue;
-        font-size: $font-size-smaller;
-        font-weight: $font-weight-regular;
-        line-height: $line-height-regular;
-        letter-spacing: $letter-spacing-copy;
-        text-transform: uppercase;
-        font-style: italic;
-        padding-bottom: 8px;
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: "";
-            border-left: 1px solid var(--color-primary, $stripe-purple);
-            left: -16px;
-            height: 100%;
-            transform: scaleY(math.div($font-size-regular, $line-height-small));
-        }
-    }
-
-    & ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
+.highlight__title {
+    text-transform: uppercase;
+    font-style: italic;
+    padding-bottom: 8px;
+}
+.highlight__list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
 
     & li {
-        position: relative;
         color: $stripe-cloud-blue;
         font-size: $font-size-small;
         font-weight: $font-weight-bold;
         line-height: $line-height-regular;
         letter-spacing: $letter-spacing-copy;
         font-style: italic;
+        margin-bottom: 10px;
     }
 }
