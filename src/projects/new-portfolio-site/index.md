@@ -14,7 +14,7 @@ img_alt: A robot is painting a painting of another robot, pencil drawn, black an
 
 <section>
 
-<img class="lazyfit image image--right image--hero image--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png?tr=w-{width}" alt="">
+<img class="lazyfit img-float img-float--right img-float--hero img-float--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-08-31_08.49.32_-_A_robot_is_painting_a_painting_of_robots__pencil_drawn-edited_2UVPtTCuL.png?tr=w-{width}" alt="">
 
 <p class="article__date">{{ date | postDate }}</p>
 
@@ -46,7 +46,7 @@ If the reason for building an imitation rested only on design-aversion that argu
 
 But building an imitation is not only about the design - or the UX more generally speaking. It is just as much about the markup, styling and javascript that brings it to life. Because we have access to the full implementation of the original and not merely a design specification, we are granted a wonderful opportunity to marvel at, analyze, learn from and criticize the engineering that went into it. This becomes the foundation on which we are challenged to build our own - one which is perhaps even better.
 
-<img class="lazyfit image image--left image--small image--pop-500" style="aspect-ratio: 1020/964; shape-outside: polygon(0.98% 0.28%, -0.93% 99.6%, 91.48% 99.17%, 92.29% 92.34%, 88.19% 87.93%, 99.37% -0.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.16.38_cE10BR8-o.png?tr=w-{width}" alt="">
+<img class="lazyfit img-float img-float--left img-float--small img-float--pop-500" style="aspect-ratio: 1020/964; shape-outside: polygon(0.98% 0.28%, -0.93% 99.6%, 91.48% 99.17%, 92.29% 92.34%, 88.19% 87.93%, 99.37% -0.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.16.38_cE10BR8-o.png?tr=w-{width}" alt="">
 
 An imitation is not a clone, however. The goal isn’t to build a pixel-perfect lookalike indistinguishable from the original. While that can certainly be worthwhile too, it leaves many learning opportunities untapped. For anything that must reach the global web, there’d also be concerns regarding content copyrights. Instead, a site imitation, as I wish to define it here, takes the key features of the original and applies them to new content, extending the design where needed while maintaining overall consistency. As such, it is not a pathway for those who want to entirely avoid design work. The original design does make for a very helpful and illuminating guide, though! It is a very worthwhile endeavor even for someone as design-averse as I.
 
@@ -76,7 +76,7 @@ But I do reckon there’s a definite step one: Figure out what content you’ll 
 
 The urge to get going with markup and styling got the better of me, I must admit, and I moved on from step one a bit too early. “I’ll just figure out the stuff above the fold and worry about the rest later. It’s fine!” But I suppose iterating over failures is a valid method too!
 
-<img class="lazyfit image image--right image--pop-500" style="aspect-ratio: 913/870; shape-outside: polygon(3.46% 26.32%, 9.28% 99.38%, 99.71% 100.12%, 98.68% 79.47%, 100.14% 6.03%, 37.33% 8.44%, 37.55% 26.38%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.52.12_tkX1iXpc7.png?tr=w-{width}" alt="">
+<img class="lazyfit img-float img-float--right img-float--pop-500" style="aspect-ratio: 913/870; shape-outside: polygon(3.46% 26.32%, 9.28% 99.38%, 99.71% 100.12%, 98.68% 79.47%, 100.14% 6.03%, 37.33% 8.44%, 37.55% 26.38%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_02.52.12_tkX1iXpc7.png?tr=w-{width}" alt="">
 
 A good choice for step two is to derive design tokens - colors, fonts, easing functions, break points, etc. - and load them into your system of choice. I used a combination of CSS custom properties and sass-variables, with an emphasis on the latter as very few needed the cascade. The CSS Overview feature found in Chrome can be a valuable tool here. While you’re unlikely to be able to use the original site’s font for your imitation - bigger sites often use paid, exclusive fonts - using it during prototyping can be helpful.
 
@@ -99,7 +99,7 @@ My chosen target was the latest versions of the big three: Firefox, Chrome, and 
 </section>
 
 <section>
-<img class="lazyfit image image--right image--pop-500" style="aspect-ratio: 954/896; shape-outside: polygon(4.03% 45.76%, 3.79% 99.38%, 99.71% 100.12%, 100.14% 6.03%, 28.43% 6.96%, 30.17% 44.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_03.03.30_S5g0qyA8y.png?tr=w-{width}" alt="">
+<img class="lazyfit img-float img-float--right img-float--pop-500" style="aspect-ratio: 954/896; shape-outside: polygon(4.03% 45.76%, 3.79% 99.38%, 99.71% 100.12%, 100.14% 6.03%, 28.43% 6.96%, 30.17% 44.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_03.03.30_S5g0qyA8y.png?tr=w-{width}" alt="">
 <h2 id="the-outcome"><a aria-label="Permalink to The outcome" href="#the-outcome">The outcome</a></h2>
 
 So, did I end up with an example of egregious plagiarism badly camouflaged as an attempt at analytical web design, or did I actually succeed at making something interesting, valuable and worth using as my new home on the internet?

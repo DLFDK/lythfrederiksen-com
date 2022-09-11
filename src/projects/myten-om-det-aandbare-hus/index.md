@@ -15,7 +15,7 @@ img_alt: Et hus med arme, ben og ansigt trækker vejret dybt, tegning i sort og 
 
 <section>
 
-<img class="lazyfit image image--right image--hero image--pop-500" style="aspect-ratio: 1024/1220; transform: scale(-1, 1); shape-outside: polygon(35.8% 3.15%, 24.37% 30.04%, 17.48% 30.30%, 2.38% 54.13%, 10.65% 60.76%, 7.39% 65.1%, 20.98% 99.8%, 100.61% 100.4%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-edgefree_4D2y6Z9Xm.png?tr=w-{width}" alt="{{img_alt}}">
+<img class="lazyfit img-float img-float--right img-float--hero img-float--pop-500" style="aspect-ratio: 1024/1220; transform: scale(-1, 1); shape-outside: polygon(35.8% 3.15%, 24.37% 30.04%, 17.48% 30.30%, 2.38% 54.13%, 10.65% 60.76%, 7.39% 65.1%, 20.98% 99.8%, 100.61% 100.4%, 100% 2%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/daah/DALL_E_2022-08-30_07.24.36_-_An_anthropomorphized_house-edgefree_4D2y6Z9Xm.png?tr=w-{width}" alt="{{img_alt}}">
 
 <p class="article__date">{{ date | postDate }}</p>
 
