@@ -8,6 +8,7 @@ category: All
 scripts: ["/js/lazyfit.js", "/js/gradient.js"]
 ---
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+<div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
 {% include 'src/_includes/global/components/title.html' %}
 <section class="introduction">
     <div class="introduction__content">
@@ -38,3 +39,4 @@ scripts: ["/js/lazyfit.js", "/js/gradient.js"]
     </div>
     <div id="canvas-gradient" data-gradient-height="600" class="introduction__slant"></div>
 </section>
+<div class="footer-container">{% include 'src/_includes/global/components/footer.html' %}</div>
