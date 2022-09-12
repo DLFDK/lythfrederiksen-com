@@ -2,6 +2,7 @@
 title: Myten om det åndbare hus
 date: 2021-09-07
 hashtags: [Danish, Nonsens, Fra det pseudo-videnskabelige faktultet]
+tags: featured
 category: Write
 topic: Building Science
 snippet: Yet another one of my hobbies is the field of building science. You know, how buildings work and how we make sure they don’t poison their inhabitants. A little while ago I wrote a piece criticizing a field project and its associated report for significant oversights and errors. It’s in Danish, so you international folks might want to sit this one out. It deals with the often repeated myth that a house “needs to breathe”. 
