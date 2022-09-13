@@ -1,0 +1,11 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+
+:root {
+    --color-primary: #{$stripe-orange};
+    --color-gradient-1: #ff9a15;
+    --color-gradient-2: #ff7600;
+    --color-gradient-3: #ffa829;
+    --color-gradient-4: #ffdf56;
+}

@@ -1,0 +1,30 @@
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "global/layouts/base.scss";
+@use "404/custom-properties/root-local.scss";
+
+.fourofour {
+    place-self: center;
+    padding: 64px 32px;
+    h1 {
+        text-align: center;
+        margin: 0;
+        font-size: $font-size-xxlarge;
+        font-weight: $font-weight-bolder;
+        line-height: $line-height-xlheader;
+        letter-spacing: -0.02em;
+        color: $stripe-dark-blue;
+        margin-bottom: 32px;
+    }
+
+    p {
+        text-align: center;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-regular;
+        letter-spacing: $letter-spacing-copy;
+        color: $stripe-cloud-blue;
+        margin-bottom: 16px;
+    }
+}

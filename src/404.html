@@ -1,15 +1,22 @@
 ---
+title: 404
+layout: global/layouts/base.html
+style: css/404/404.scss
+linkButtonData: ["Home", "/"]
+root: 404
+category: All
 permalink: 404.html
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>404</h1>
-</body>
-</html>
+{%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
+<div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
+
+<main class="fourofour">
+    <h1>404 Not Found</h1>
+    <p>What you were looking for is clearly missing.</p>
+    <p>Maybe I'm at fault? Maybe you're at fault?</p>
+    <p>Look, lets not play the blame game here.</p>
+    <p>What's important is that everything will be fine.</p>
+    <p>Except the climate.</p>
+</main>
+
+<div class="footer-container">{% include 'src/_includes/global/components/footer.html' %}</div>
