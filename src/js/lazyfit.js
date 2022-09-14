@@ -20,8 +20,10 @@ function lazyfit() {
                         offsetHeight = entry.target.offsetHeight;
                         offsetWidth = entry.target.offsetWidth;
                     }
-                    entry.target.style.height = `${offsetHeight}px`;
-                    entry.target.style.width = `${offsetWidth}px`;
+                    if(entry.target.dataset.round){
+                        entry.target.style.height = `${offsetHeight}px`;
+                        entry.target.style.width = `${offsetWidth}px`;
+                    }
                     const pixelHeight = offsetHeight * window.devicePixelRatio;
                     const pixelWidth = offsetWidth * window.devicePixelRatio;
                     const datasetSrc = entry.target.dataset.src;
