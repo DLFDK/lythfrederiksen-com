@@ -1,4 +1,3 @@
-{%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 {%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {% macro card(params) %}
@@ -7,9 +6,9 @@
         <nav class="navigation">
             <ul>
                 {% if params.item.data.home === "blog" %}
-                <li><a aria-label="See all blog posts in the category {{params.item.data.category}}" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                <li><a aria-label="See all blog posts in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
                 {% else %}
-                <li><a aria-label="See all projects in the category {{params.item.data.category}}" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                <li><a aria-label="See all projects in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
                 {% endif %}
             </ul>
         </nav>

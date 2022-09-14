@@ -1,12 +1,11 @@
-{%- from "src/_includes/global/components/navigation.njk" import navigation -%}
 <article class="card-featured">
     <div class="card-featured__navigation-container">
         <nav class="navigation">
             <ul>
                 {% if post.data.home === "blog" %}
-                <li><a aria-label="See all blog posts in the category {{post.data.category}}" href="/{{post.data.home}}/{{post.data.category | lower}}">{{post.data.category}}</a></li>
+                <li><a aria-label="See all blog posts in the category" href="/{{post.data.home}}/{{post.data.category | lower}}">{{post.data.category}}</a></li>
                 {% else %}
-                <li><a aria-label="See all projects in the category {{post.data.category}}" href="/{{post.data.home}}/{{post.data.category | lower}}">{{post.data.category}}</a></li>
+                <li><a aria-label="See all projects in the category" href="/{{post.data.home}}/{{post.data.category | lower}}">{{post.data.category}}</a></li>
                 {% endif %}
             </ul>
         </nav>
