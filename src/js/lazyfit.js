@@ -6,7 +6,7 @@ if (window.requestIdleCallback) {
 
 function lazyfit() {
     const halfWindowHeight = window.innerHeight / 2;
-    const images = [...document.getElementsByClassName("lazyfit")].filter(element => element.dataset.src);
+    const images = [...document.getElementsByClassName("lazyfit")];
 
     const observer = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
