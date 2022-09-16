@@ -12,6 +12,9 @@ function lazyfit() {
         for (const entry of entries) {
             if (entry.isIntersecting) {
                 observer.unobserve(entry.target);
+
+                // const newVar = entry.target.dataset.parent ? entry.target.parentElement.offsetHeight : entry.target.offsetHeight;
+
                 let offsetHeight;
                 let offsetWidth
                 if (entry.target.dataset.parent) {
@@ -25,8 +28,25 @@ function lazyfit() {
                     entry.target.style.height = `${offsetHeight}px`;
                     entry.target.style.width = `${offsetWidth}px`;
                 }
-                const pixelHeight = offsetHeight * window.devicePixelRatio;
-                const pixelWidth = offsetWidth * window.devicePixelRatio;
+                // switch (isNaN(maxDPR) || maxDPR) {
+                //     case true:
+                //         maxDPR = window.devicePixelRatio;
+                //         break;
+                //     case "0":
+                //         maxDPR = 1;
+                //         break;
+                //     default:
+                //         maxDPR = Math.min(maxDPR, window.devicePixelRatio)
+                // }
+                const maxDPR = entry.target.dataset.maxDpr ? Math.min(entry.target.dataset.maxDpr, window.devicePixelRatio) : window.devicePixelRatio;
+                // if (maxDPR) {
+                //     maxDPR = Math.min(maxDPR, window.devicePixelRatio)
+                // } else {
+                //     maxDPR = window.devicePixelRatio;
+                // }
+                console.log(maxDPR);
+                const pixelHeight = offsetHeight * maxDPR;
+                const pixelWidth = offsetWidth * maxDPR;
                 entry.target.src = entry.target.dataset.src.replace("{width}", pixelWidth).replace("{height}", pixelHeight);
 
                 entry.target.addEventListener("load", () => {
