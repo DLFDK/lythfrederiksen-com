@@ -13,18 +13,18 @@ function lazyfit() {
                 observer.unobserve(entry.target);
 
                 const targetParent = entry.target.dataset.parent;
-                const offsetHeight = targetParent ? entry.target.parentElement.height : entry.target.height;
-                const offsetWidth = targetParent ? entry.target.parentElement.width : entry.target.width;
+                const height = targetParent ? entry.target.parentElement.height : entry.target.height;
+                const width = targetParent ? entry.target.parentElement.width : entry.target.width;
 
                 if (entry.target.dataset.round) {
-                    entry.target.style.height = `${offsetHeight}px`;
-                    entry.target.style.width = `${offsetWidth}px`;
+                    entry.target.style.height = `${height}px`;
+                    entry.target.style.width = `${width}px`;
                 }
 
                 const maxDPR = entry.target.dataset.maxDpr;
                 const DPR = maxDPR ? Math.min(maxDPR, window.devicePixelRatio) : window.devicePixelRatio;
                 
-                entry.target.src = entry.target.dataset.src.replace("{width}", offsetWidth * DPR).replace("{height}", offsetHeight * DPR);
+                entry.target.src = entry.target.dataset.src.replace("{width}", width * DPR).replace("{height}", height * DPR);
 
                 entry.target.addEventListener("load", () => {
                     if (entry.target.dataset.addClass) {
