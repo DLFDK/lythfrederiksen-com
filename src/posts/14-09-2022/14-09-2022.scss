@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "blog/blog-post.scss";
+// @use "prism.css";
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/css/_fonts/RobotoMono-Regular-subset.woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/css/_fonts/RobotoMono-Bold-subset.woff2");
+    font-display: swap;
+}
+
+.step {
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+    h3 {
+        display: inline;
+        & + p {
+            display: inline;
+            max-width: calc(600px - 64px);
+        }
+        padding-right: 4px;
+    }
+}
+
+
+s {
+    text-decoration-color: var(--color-slant-upper);
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    display: block;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+    overflow: scroll;
+    background: #0c2e4e;
+    padding: 16px;
+    font-family: 'Roboto Mono', monospace;
+    color: $stripe-cloud-blue;
+    font-size: $font-size-smaller;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-regular;
+    letter-spacing: $letter-spacing-copy;
+    color: $stripe-white;
+    
+    & .punctuation {
+        color: $stripe-white;
+    }
+    & .tag, & .keyword {
+        // color: #8095ff;
+        // color:#526ed3;
+        color:#788ef7;
+    }
+    & .attr-name, & .function {
+        color: $stripe-blue;
+    }
+    & .attr-value, & .string {
+        color: #d679ff;
+    }
+    & .class-name, & .interpolation {
+        color: #ffa956;
+        // color: rgba($color: #0048e5, $alpha: 1.0);
+    }
+    & .parameter  {
+        // color: #96f;
+        color: #ae79ff;
+    }
+
+}
