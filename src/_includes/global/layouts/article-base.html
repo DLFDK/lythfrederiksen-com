@@ -8,7 +8,7 @@ layout: global/layouts/base.html
         <nav class="navigation">
             <ul>
                 <li><a href="/{{home | lower}}">{{home}}</a></li>
-                <div>/</div>
+                <div aria-hidden="true">/</div>
                 {% if home === "blog" %}
                 <li><a aria-label="See all blog posts in the category {{category}}" href="/{{home}}/{{category | lower}}">{{category}}</a></li>
                 {% else %}
