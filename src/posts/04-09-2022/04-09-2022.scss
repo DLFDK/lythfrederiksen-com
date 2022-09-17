@@ -3,7 +3,6 @@
 @use "global/_variables/fonts.scss" as *;
 @use "global/_variables/colors.scss" as *;
 @use "blog/blog-post.scss";
-@use "code-highlight.css";
 
 @font-face {
     font-family: "Roboto Mono";
@@ -53,14 +52,14 @@
     }
 }
 
-.code {
-    border-left: 2px solid var(--color-primary);
-    max-width: $text-max-width;
-    margin: 0 auto;
-    code {
-        font-family: 'Roboto Mono', monospace;
-        font-size: 0.8rem;
-        overflow: scroll;
-    }
-}
+// .code {
+//     border-left: 2px solid var(--color-primary);
+//     max-width: $text-max-width;
+//     margin: 0 auto;
+//     code {
+//         font-family: 'Roboto Mono', monospace;
+//         font-size: 0.8rem;
+//         overflow: scroll;
+//     }
+// }
 
