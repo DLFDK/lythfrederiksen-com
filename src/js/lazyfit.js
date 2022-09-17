@@ -13,8 +13,8 @@ function lazyfit() {
                 observer.unobserve(entry.target);
 
                 const targetParent = entry.target.dataset.parent;
-                const offsetHeight = targetParent ? entry.target.parentElement.offsetHeight : entry.target.offsetHeight;
-                const offsetWidth = targetParent ? entry.target.parentElement.offsetWidth : entry.target.offsetWidth;
+                const offsetHeight = targetParent ? entry.target.parentElement.height : entry.target.height;
+                const offsetWidth = targetParent ? entry.target.parentElement.width : entry.target.width;
 
                 if (entry.target.dataset.round) {
                     entry.target.style.height = `${offsetHeight}px`;
