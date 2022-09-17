@@ -76,8 +76,13 @@
             display: contents;
         }
 
+        & section:last-of-type > :last-child{
+            padding-bottom: 64px;
+        }
+
         & h1,
         & h2,
+        & h3,
         :where(&) p:where(:not(.article__date)) {
             max-width: 600px;
             margin: 0 auto;
@@ -133,6 +138,16 @@
             }
         }
 
+        & h3 {
+            color: $stripe-cloud-blue;
+            font-size: $font-size-small;
+            font-weight: $font-weight-boldest;
+            line-height: $line-height-regular;
+            letter-spacing: $letter-spacing-copy;
+        }
+
+
+
         & h2 + p{
             margin-top: 16px;
         }
@@ -183,7 +198,7 @@
         }
 
         & ul:not([class]) {
-            margin: 16px auto 64px auto;
+            margin: 16px auto 0px auto;
             max-width: $text-max-width;
             color: $stripe-cloud-blue;
             font-size: $font-size-smaller;
