@@ -42,7 +42,7 @@ We certainly can! Here’s how it plays out using a little bit of Javascript:
 
 <div class="step">
     <h3>STEP 1</h3>
-    <p>Each image we wish to load this way gets a special class - let’s call it Lazyfit - and the image-URL is put in the data-src attribute while the regular src-attribute is left empty. Make sure the image-element has its final size even when empty. Note how the URL in data-src contains a placeholder (width) that will later be replaced. A placeholder for height can be added too - it will depend on how you want the image CDN to deliver the image.</p>
+    <p>Each image we wish to load this way gets a special class - let’s call it lazyfit - and the image-URL is put in the data-src attribute while the regular src-attribute is left empty. Make sure the image-element has its final size even when empty. Note how the URL in data-src contains a placeholder (width) that will later be replaced. A placeholder for height can be added too - it will depend on how you want the image CDN to deliver the image.</p>
 </div>
 
 ```html
@@ -51,7 +51,7 @@ We certainly can! Here’s how it plays out using a little bit of Javascript:
 
 <div class="step">
     <h3>STEP 2</h3>
-    <p>The script grabs all elements with the Lazyfit class and registers them with an IntersectionObserver. This way we can implement lazy loading while we’re at it.
+    <p>The script grabs all elements with the lazyfit-class and registers them with an IntersectionObserver. This way we can implement lazy loading while we’re at it.
 </p>
 </div>
 
@@ -185,7 +185,7 @@ entry.target.addEventListener("load", () => {
 });
 ```
 
-And finally, I’ve found some browsers' image rendering to be a bit lacking when it comes to half-pixel-cases. That is, cases where the image is some non-integer number of pixels wide or tall. This appears to be especially troublesome with crisp graphics. Using this option, the script will force the image to take on a rounded size. Note that this also makes it impossible for the image to resize e.g. on a switch between portrait and landscape with a page reload, so use with caution.
+And finally, I’ve found some browsers' image rendering to be a bit lacking when it comes to half-pixel-cases. That is, cases where the image is some non-integer number of pixels wide or tall. This appears to be especially troublesome with crisp graphics. Using this option, the script will force the image to take on a rounded size. Note that this also makes it impossible for the image to resize e.g. on a switch between portrait and landscape, so use with caution.
 
 ```html
 <img class="lazyfit" data-round="true" data-src="..." alt="...">
@@ -205,9 +205,9 @@ if (entry.target.dataset.round) {
 
 Yes, there’s more!
 
-While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers.
+While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose between the linked images [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers only.
 
-Speaking of network conditions, today’s high end smartphones have high DPRs - the iPhone 14 is sitting at 3, the Galaxy S22 Ultra at 4 - and thus loading a full screen, pixel perfect image in a timely manner can require significant bandwidth. Doing so on the S22 Ultra  will result in the request of a 1440 by 3088 pixel behemoth. And you know what kind of device folks tend to carry with them to places with bad reception? Smartphones! Shocking, I know! For this reason, the script includes an option to limit the DPR on a per-image basis.
+Speaking of network conditions, today’s high end smartphones have high DPRs - the iPhone 14 is sitting at 3, the Galaxy S22 Ultra at 4 - and loading a full screen, pixel perfect image in a timely manner can require significant bandwidth on those devices. Doing so on the S22 Ultra  will result in the request of a 1440 by 3088 pixel behemoth. And you know what kind of device folks tend to carry with them to places with bad reception? Smartphones! Shocking, I know! For this reason, the script includes an option to limit the DPR on a per-image basis.
 
 ```html
 <img class="lazyfit" data-max-dpr="2" data-src="..." alt="...">
@@ -231,6 +231,56 @@ Then there’s SEO. It should work? [At least that’s what Google says](https:/
 
 You should probably be weary about implementing this on anything bigger than a side-project or personal portfolio site. I haven’t yet had the opportunity to implement it on a site with traffic of note and I’m pretty sure there’ll be important stuff to discover in the process. There’s not much fun in getting a surprise bill from Cloudinary!
 
-You can find the complete script used on this site right here: [Github Lazyfit](https://github.com/DLFDK/lythfrederiksen-com/blob/main/src/js/lazyfit.js)
+Lazyfit in full:
+
+```js
+const halfWindowHeight = window.innerHeight / 2;
+const images = [...document.getElementsByClassName("lazyfit")];
+const observer = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+        if (entry.isIntersecting) {
+            observer.unobserve(entry.target);
+
+            const targetParent = entry.target.dataset.parent;
+            const height = targetParent ? entry.target.parentElement.height : entry.target.height;
+            const width = targetParent ? entry.target.parentElement.width : entry.target.width;
+
+            if (entry.target.dataset.round) {
+                entry.target.style.height = `${height}px`;
+                entry.target.style.width = `${width}px`;
+            }
+
+            const maxDPR = entry.target.dataset.maxDpr;
+            const DPR = maxDPR ? Math.min(maxDPR, window.devicePixelRatio) : window.devicePixelRatio;
+            
+            entry.target.src = entry.target.dataset.src.replace("{width}", width * DPR).replace("{height}", height * DPR);
+
+            entry.target.addEventListener("load", () => {
+                if (entry.target.dataset.addClass) {
+                    for (const className of entry.target.dataset.addClass.split(" ")) {
+                        entry.target.classList.add(className);
+                    }
+                }
+                if (entry.target.dataset.removeClass) {
+                    for (const className of entry.target.dataset.removeClass.split(" ")) {
+                        entry.target.classList.remove(className);
+                    }
+                }
+                if (entry.target.dataset.toggleClass) {
+                    for (const className of entry.target.dataset.toggleClass.split(" ")) {
+                        entry.target.classList.toggle(className);
+                    }
+                }
+            });
+        }
+    }
+}, {
+    rootMargin: `${halfWindowHeight}px 0px ${halfWindowHeight}px 0px`
+});
+
+for (const image of images) {
+    observer.observe(image);
+}
+```
 
 </section>
