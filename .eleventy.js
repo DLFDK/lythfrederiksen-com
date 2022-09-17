@@ -1,3 +1,4 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("./plugins/htmlmin.js");
 const sass = require("./plugins/sass.js");
 const { minify } = require("terser");
@@ -14,6 +15,9 @@ module.exports = function (eleventyConfig) {
     if (!process.argv.includes("--serve")) {
         eleventyConfig.ignores.add("**/_*.md");
     }
+
+    //Plugins
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     //Filters
     //https://11ty.rocks/eleventyjs/dates/
