@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DLFDK/lythfrederiksen-com#readme",
   "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "glyphhanger": "^5.0.0",
     "http-proxy-middleware": "^2.0.4"
   },
