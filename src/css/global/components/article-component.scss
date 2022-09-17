@@ -121,14 +121,16 @@
                 &::before {
                     position: absolute;
                     content: "#";
-                    color: var(--color-primary);
+                    // color: var(--color-primary);
+                    color: $stripe-light-grey;
                     transform: translateX(-130%);
                     transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
                     font-size: 0.8em;
                     top: 0.15em;
                 }
                 &:hover::before {
-                    color: $stripe-dark-blue;
+                    // color: $stripe-dark-blue;
+                    color: var(--color-primary);
                 }
 
                 &:focus-visible {
@@ -144,6 +146,10 @@
             font-weight: $font-weight-boldest;
             line-height: $line-height-regular;
             letter-spacing: $letter-spacing-copy;
+
+            @media (max-width: $breakpoint-small) {
+                font-size: $font-size-smaller;
+            }
         }
 
 
