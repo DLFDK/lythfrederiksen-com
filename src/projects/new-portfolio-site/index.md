@@ -30,7 +30,7 @@ No - I decided to be the apprentice I still am. I decided to mimic. To reimpleme
 
 <section>
 
-<h2 id="the-why"><a aria-label="Permalink to The why" href="#the-why">The why</a></h2>
+<h2 id="the-why"><a title="Permalink to The why" href="#the-why">The why</a></h2>
 
 A novel site would demand a novel design - and I’m not a designer. Heard that excuse before? It’s true, though!
 
@@ -66,7 +66,7 @@ The web gives us a wonderful opportunity to study the best, the worst and everyo
 
 <section>
 
-<h2 id="the-how"><a aria-label="Permalink to The how" href="#the-how">The how</a></h2>
+<h2 id="the-how"><a title="Permalink to The how" href="#the-how">The how</a></h2>
 
 Is this where I lay out the meticulous 12-step plan to build the perfect imitation that I followed? Yes?! Damn!
 
@@ -100,7 +100,7 @@ My chosen target was the latest versions of the big three: Firefox, Chrome, and 
 
 <section>
 <img class="lazyfit img-float img-float--right img-float--pop-500" style="aspect-ratio: 954/896; shape-outside: polygon(4.03% 45.76%, 3.79% 99.38%, 99.71% 100.12%, 100.14% 6.03%, 28.43% 6.96%, 30.17% 44.9%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/projects/new-portfolio-site/DALL_E_2022-09-11_03.03.30_S5g0qyA8y.png?tr=w-{width}" alt="">
-<h2 id="the-outcome"><a aria-label="Permalink to The outcome" href="#the-outcome">The outcome</a></h2>
+<h2 id="the-outcome"><a title="Permalink to The outcome" href="#the-outcome">The outcome</a></h2>
 
 So, did I end up with an example of egregious plagiarism badly camouflaged as an attempt at analytical web design, or did I actually succeed at making something interesting, valuable and worth using as my new home on the internet?
 
@@ -118,7 +118,7 @@ The process also exposed a decent number of instances in which I found myself di
 </section>
 
 <section>
-<h2 id="further-reading"><a aria-label="Permalink to Further reading" href="#further-reading">Further reading</a></h2>
+<h2 id="further-reading"><a title="Permalink to Further reading" href="#further-reading">Further reading</a></h2>
     
 Many more observations were made in the process of creating the new site than it makes sense to cover in this single piece of writing. They will instead get individual blog posts in the near future as I get around to documenting everything. As they’re published, I will make sure to list them right here.
 
