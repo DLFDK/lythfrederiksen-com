@@ -7,6 +7,7 @@ root: Contact
 category: All
 scripts: ["/js/lazyfit.js", "/js/gradient.js"]
 ---
+
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 <div class="header-container">{% include 'src/_includes/global/components/header.html' %}</div>
 {% include 'src/_includes/global/components/title.html' %}
@@ -26,16 +27,10 @@ scripts: ["/js/lazyfit.js", "/js/gradient.js"]
             <p>Friendly conversations are tolerated too!</p>
         </div>
         <div class="introduction__cta">
-            <div class="introduction__email">
-                {{ linkButton({ text: 'Send me an email', href: "mailto:contact@lythfrederiksen.com" }) }}
-            </div>
-            <div class="introduction__github">
-                {{ linkButton({ text: 'Go to my Github', href: "https://github.com/DLFDK" }) }}
-            </div>
+            <div class="introduction__email">{{ linkButton({ text: 'Send me an email', href: "mailto:contact@lythfrederiksen.com" }) }}</div>
+            <div class="introduction__github">{{ linkButton({ text: 'Go to my Github', href: "https://github.com/DLFDK" }) }}</div>
         </div>
-        <div class="introduction__photo">
-            <img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/contact/20220217_163601_2_gV0ExZo7W.jpg?tr=w-{width}" alt="Dennis, a pasty white dude. You know the type." />
-        </div>
+        <img class="introduction__photo lazyfit" data-add-class="lazyfit--show" src="" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/contact/20220217_163601_2_gV0ExZo7W.jpg?tr=w-{width}" alt="Dennis, a pasty white dude. You know the type." />
     </div>
     <div id="canvas-gradient" data-gradient-height="600" class="introduction__slant"></div>
 </section>

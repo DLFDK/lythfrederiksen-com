@@ -61,7 +61,7 @@
         width: fit-content;
         height: min-content;
         border-radius: 4px;
-        
+
         & a {
             box-shadow: 0 2px 4px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3);
             display: flex;
@@ -83,7 +83,6 @@
             font-size: $font-size-smaller;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-copy;
-
         }
 
         & span:first-child {
@@ -152,26 +151,21 @@
 
     &__photo {
         grid-area: photo;
-        justify-self: center;
+        display: block;
         width: 100%;
+        height: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        object-position: top;
+        filter: var(--look-at-you-finding-a-way-to-see-me-in-full-color-Still-a-pasty-white-dude-though-You-didnt-gain-much, grayscale(100%));
+        border-radius: 8px;
+        box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+        transition: opacity 1s;
 
-        & > img {
-            display: block;
-            width: 100%;
+        @media (max-width: $breakpoint-medium) {
+            height: auto;
+            max-height: 500px;
             aspect-ratio: 3/4;
-            max-height: 600px;
-            object-fit: cover;
-            object-position: top;
-            filter: var(--look-at-you-finding-a-way-to-see-me-in-full-color-Still-a-pasty-white-dude-though-You-didnt-gain-much, grayscale(100%));
-            border-radius: 8px;
-            box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-            transition: opacity 1s;
-
-            @media (max-width: $breakpoint-medium) {
-                width: auto;
-                max-height: 500px;
-                margin: 0 auto;
-            }
         }
     }
 
