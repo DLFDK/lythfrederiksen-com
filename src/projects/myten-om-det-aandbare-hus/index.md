@@ -44,7 +44,7 @@ Det ellers prisværdige projekt undermineres dog af en række helt centrale misf
 
 <section>
 
-<h2 id="hvor-bliver-fugten-af"><a aria-label="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
+<h2 id="hvor-bliver-fugten-af"><a title="Permalink til Hvor bliver fugten af?" href="#hvor-bliver-fugten-af">Hvor bliver fugten af?</a></h2>
 
 Dissekeres projektets hypotese og rapportens argumentation finder vi antagelsen, at det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Heraf følger, at kan fugten håndteres ved diffusion gennem klimaskærmen, vil ventilationsbehovet reduceres. Det mekaniske ventilationsanlæg kan nu undværes til fordel for naturlig ventilation med tilhørende besparelser på både anlægs- og driftsomkostninger.
 
@@ -122,7 +122,7 @@ Intet i denne analyse kræver reelt set, at der bygges et testhus, og man må i 
 
 <section>
 
-<h2 id="der-er-noget-i-luften"><a aria-label="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
+<h2 id="der-er-noget-i-luften"><a title="Permalink til Der er noget i luften" href="#der-er-noget-i-luften">Der er noget i luften</a></h2>
 
 Lad os vende tilbage til rapportens centrale antagelse: At det i boliger primært er fugtbelastningen, der bestemmer ventilationsbehovet. Kun når det er tilfældet, har den diffusionsåbne konstruktion en chance for indflydelse herpå. Men holder antagelsen?
 
@@ -170,7 +170,7 @@ For hvad angår de hygroskopiske egenskaber, er rapporten ordknap. Det lader til
 
 <section>
 
-<h2 id="byg-tæt,-ventilér-korrekt"><a aria-label="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
+<h2 id="byg-tæt,-ventilér-korrekt"><a title="Permalink til Byg tæt, ventilér korrekt" href="#byg-tæt,-ventilér-korrekt">Byg tæt, ventilér korrekt</a></h2>
 
 Pointen med denne analyse er på ingen måde at advare imod brugen af hverken diffusionsåbne konstruktioner eller hygroskopiske materialer, men at påpege den centrale misforståelse, at det automatisk skulle reducere behovet for ventilation eller være en garanti for et godt indeklima. Der kan være mange glimrende grunde til at bygge “åndbart”, men lige de to kvaliteter er altså ikke en del af pakken.
 
@@ -188,7 +188,7 @@ Sælg nu det klimavenlige, diffusionsåbne hus af hygroskopiske materialer på d
 
 <section>
 
-<h2 id="kilder"><a aria-label="Permalink til Kilder" href="#kilder">Kilder</a></h2>
+<h2 id="kilder"><a title="Permalink til Kilder" href="#kilder">Kilder</a></h2>
 
 - Forsideillustration genereret af [DALL-E 2](https://openai.com/dall-e-2/) ud fra beskrivelsen "An anthropomorphized house is taking a deep breath"
 -   Allen, Joseph G., Piers MacNaughton, Usha Satish, Suresh Santanam, Jose Vallarino, and John D. Spengler. 2016. _“Associations of cognitive function scores with carbon dioxide, ventilation, and volatile organic compound exposures in office workers: a controlled exposure study of green and conventional office environments.”_ Environmental health perspectives 124 (6): 805-812. [nih.gov](https://ehp.niehs.nih.gov/doi/10.1289/ehp.1510037).
