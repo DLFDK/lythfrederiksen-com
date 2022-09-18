@@ -17,7 +17,11 @@ module.exports = function (eleventyConfig) {
     }
 
     //Plugins
-    eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(syntaxHighlight, {
+        codeAttributes: {
+            tabindex: 0
+        }
+    });
 
     //Filters
     //https://11ty.rocks/eleventyjs/dates/
