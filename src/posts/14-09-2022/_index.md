@@ -7,9 +7,14 @@ category: Code
 style: posts/14-09-2022/14-09-2022.scss
 scripts: ["/js/lazyfit.js"]
 snippet: ""
-img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/grid-gut/markus-spiske-ruudayIzfJI-unsplash_CftAlZkmV.jpg
+img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png
 ---
 <section>
+
+<div class="image-flair img-float img-float--right img-float--hero img-float--pop-500" style="shape-outside: polygon(3.96% 30.35%, 4.08% 79.52%, 15.89% 97.13%, 95.38% 97.25%, 89.1% 6.28%, 27.19% 11.79%)">
+    <img class="lazyfit image-flair__greyscale" data-max-dpr="1" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting-outside-frame-greyscale_nwLBNVHnZ.png?tr=w-{width}" alt="">
+    <img class="lazyfit image-flair__color" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting-outside-frame-color_4OXQYVM0JQ.png?tr=w-{width}" alt="Empty frame hanging on a wall, light streaming in from the top left casting shadows. The edges of the image are blurred and irregular. Initially in greyscale, but on interaction or hover becomes filled with colors.">
+</div>
 
 <p class="article__date">{{ date | postDate }}</p>
 
@@ -39,6 +44,7 @@ The official solution (src-set-sizes) requires telling the browser what size the
 </section>
 
 <section>
+
 <h2 id="the-much-better-way"><a title="Permalink to The much better way*" href="#the-much-better-way">The much better way*</a></h2>
 
 I’m a pixel-pincher. You know, like a penny-pincher but with pixels? Anyway, I hate sending along pixels that don’t end up on the screen. It’s wasteful and I don’t like it!
@@ -59,7 +65,10 @@ We certainly can! Here’s how it plays out using a little bit of Javascript:
 </div>
 
 ```html
-<img class="lazyfit" src="" data-src="https://ik.imagekit.io/johndoe/awesome_image.jpg?tr=w-{width}" alt="...">
+<img class="lazyfit" 
+     src="" 
+     data-src="https://ik.imagekit.io/johndoe/awesome_image.jpg?tr=w-{width}" 
+     alt="...">
 ```
 
 <div class="step">
@@ -165,7 +174,11 @@ const observer = new IntersectionObserver((entries, observer) => {...}, {
 In rare cases in some (unnamed) browsers, the sane behavior of empty image-elements can’t be counted on and it can be necessary to base the size of the requested image on the parent-element. I’ve added this option using data-attributes.
 
 ```html
-<img class="lazyfit" data-parent="true" src="" data-src="..." alt="...">
+<img class="lazyfit" 
+     data-parent="true" 
+     src="" 
+     data-src="..." 
+     alt="...">
 ```
 
 ```js
@@ -203,7 +216,11 @@ entry.target.addEventListener("load", () => {
 Today’s high end smartphones have high DPRs - the iPhone 14 is sitting at 3, the Galaxy S22 Ultra at 4 - and loading a full screen, pixel perfect image can require significant bandwidth. Doing so on the S22 Ultra  will result in the request of a 1440 by 3088 pixel behemoth. And you know what kind of device folks tend to carry with them to places with bad reception? Smartphones! Shocking, I know! For this reason, the script includes an option to limit the DPR on a per-image basis.
 
 ```html
-<img class="lazyfit" data-max-dpr="2" src="" data-src="..." alt="...">
+<img class="lazyfit" 
+     data-max-dpr="2" 
+     src="" 
+     data-src="..." 
+     alt="...">
 ```
 
 ```js
@@ -214,7 +231,11 @@ const DPR = maxDPR ? Math.min(maxDPR, window.devicePixelRatio) : window.devicePi
 And finally, I’ve found some browsers' image rendering to be a bit lacking when it comes to half-pixel-cases. That is, cases where the image is some non-integer number of pixels wide or tall. This appears to be especially troublesome with crisp graphics. Using this option, the script will force the image to take on a rounded size. Note that this also makes it impossible for the image to resize e.g. on a switch between portrait and landscape, so use with caution.
 
 ```html
-<img class="lazyfit" data-round="true" src="" data-src="..." alt="...">
+<img class="lazyfit" 
+     data-round="true" 
+     src="" 
+     data-src="..." 
+     alt="...">
 ```
 
 ```js
@@ -232,6 +253,8 @@ if (entry.target.dataset.round) {
 Yes, there’s more!
 
 While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose between the linked images [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers only.
+
+<img class="lazyfit img-float img-float--left img-float--small img-float--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%); box-shadow: 0 6px 12px -4px rgba(50, 50, 93, 1), 0 3px 7px -3px rgba(0, 0, 0, 1);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png?tr=w-{width}" alt="Framed painting with multiple sets of borders as if it was a frame within a frame. At the center is a drawing of a galaxy using purple hues only.">
 
 Sometimes you may want to not only deliver a size-appropriate image for a given device, but actually pick an entirely different image altogether. This is what we call [art direction](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#art_direction) and comes as a package deal with the picture-element. My script has none of that.
 
@@ -297,5 +320,5 @@ for (const image of images) {
     observer.observe(image);
 }
 ```
-
+Article illustrations generated by [Stable Diffusion](https://github.com/CompVis/stable-diffusion/)
 </section>

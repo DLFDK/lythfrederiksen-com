@@ -26,3 +26,30 @@ em {
     padding: 0 4px;
     border-radius: 4px;
 }
+
+.image-flair {
+    position: relative;
+    margin-right: -36px;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &__greyscale {
+
+    }
+
+    &__color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.5s opacity ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
