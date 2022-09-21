@@ -190,7 +190,11 @@ const width = targetParent ? entry.target.parentElement.width : entry.target.wid
 To extend styling choices, data-attributes are also used to instruct the script to add, remove and toggle classes on image-load. I use this to add a fade-in transition.
 
 ```html
-<img class="lazyfit" data-add-class="lazyfit--show" src="" data-src="..." alt="...">
+<img class="lazyfit" 
+     data-add-class="lazyfit--show" 
+     src="" 
+     data-src="..." 
+     alt="...">
 ```
 
 ```js
@@ -254,7 +258,7 @@ Yes, there’s more!
 
 While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose between the linked images [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers only.
 
-<img class="lazyfit img-float img-float--left img-float--small img-float--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%); box-shadow: 0 6px 12px -4px rgba(50, 50, 93, 1), 0 3px 7px -3px rgba(0, 0, 0, 1);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png?tr=w-{width}" alt="Framed painting with multiple sets of borders as if it was a frame within a frame. At the center is a drawing of a galaxy using purple hues only.">
+<!-- <img class="lazyfit img-float img-float--left img-float--small img-float--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%); box-shadow: 0 6px 12px -4px rgba(50, 50, 93, 1), 0 3px 7px -3px rgba(0, 0, 0, 1);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png?tr=w-{width}" alt="Framed painting with multiple sets of borders as if it was a frame within a frame. At the center is a drawing of a galaxy using purple hues only."> -->
 
 Sometimes you may want to not only deliver a size-appropriate image for a given device, but actually pick an entirely different image altogether. This is what we call [art direction](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#art_direction) and comes as a package deal with the picture-element. My script has none of that.
 
