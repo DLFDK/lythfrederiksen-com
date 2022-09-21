@@ -29,7 +29,8 @@ em {
 
 .image-flair {
     position: relative;
-    margin-right: -36px;
+    margin-right: -32px;
+    overflow: hidden;
 
     & > img {
         width: 100%;
