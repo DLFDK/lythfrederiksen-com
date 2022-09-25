@@ -19,12 +19,13 @@
 }
 
 em {
+    font-family: 'Roboto Mono', monospace;
     color: #1d2f40;
-    // background: $stripe-light-grey;
     background: rgba($color: $stripe-light-grey, $alpha: 0.5);
     font-style: normal;
     padding: 0 4px;
     border-radius: 4px;
+    font-size: 0.9em;
 }
 
 .image-flair {
