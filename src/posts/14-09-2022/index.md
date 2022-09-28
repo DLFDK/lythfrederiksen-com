@@ -41,6 +41,14 @@ The official solution (src-set-sizes) requires telling the browser what size the
            100vw">
 ```
 
+Using src-set-sizes we could conceivably create so many images and breakpoints that close to every device would get a pixel perfect image. That is, an image the exact size needed - accounting for device pixel ratio (DPR) - to fill the box at any conceivable viewport size. Every pixel shipped would get a physical pixel at the other end. One to one.
+
+While this could be automated - and I’m sure it has been - it requires a hefty amount of work up front. Work we’d need to redo every time the layout changed even slightly. And shuffling all those images around would get old real quick.
+
+The first improvement to this hellish scenario is to use an [image CDN](https://web.dev/image-cdns/). Examples include [Cloudinary](https://cloudinary.com/), [Imagekit](https://imagekit.io/) and [Cloudflare Images](https://www.cloudflare.com/products/cloudflare-images/) to name a few. With an image CDN we can specify the size of the image we need as a query parameter and have the service generate it for us when the request hits their server. Subsequent requests for the same image at the same size is served from cache. Instead of having to create all the image variations upfront, we simply add fitting query parameters to the URLs in the src-set-sizes markup and upload the high quality originals to the image CDN. Oh, and the image CDN will take care of delivering the most optimal format too.
+
+Unfortunately, the fancy image CDNs don't write the markup for us, so we'd still have to figure out what sizes to actually specify. Can’t we just let the users do it themselves?
+
 </section>
 
 <section>
@@ -49,19 +57,11 @@ The official solution (src-set-sizes) requires telling the browser what size the
 
 I’m a pixel-pincher. You know, like a penny-pincher but with pixels? Anyway, I hate sending along pixels that don’t end up on the screen. It’s wasteful and I don’t like it!
 
-Using src-set-sizes we could conceivably create so many images and breakpoints that close to every device would get a pixel perfect image. That is, an image the exact size needed - accounting for device pixel ratio (DPR) - to fill the box. Every pixel shipped would get a physical pixel at the other end. One to one.
-
-While this could be automated - and I’m sure it has been - it requires a hefty amount of work up front. Work we’d need to redo every time the layout changed even slightly. And shuffling all those images around would get old real quick.
-
-The first improvement to this hellish scenario is to use an image CDNs. Instead of creating the images up front, we simply add the src-set image links and let the image CDN send the images when requested. High quality originals are uploaded to the CDN, at the first request resized and compressed, and then served from cache.
-
-We’d still have that whole src-set-sizes markup to generate at every build, of course. Can’t we just let the users do it themselves?
-
-We certainly can! Here’s how it plays out using a little bit of Javascript:
+So, let's instead be mindful and have the user request images of the exact size needed for their specific viewport. Here’s how it plays out with a little bit of Javascript:
 
 <div class="step">
     <h3 tabindex="0">STEP 1</h3>
-    <p>Each image we wish to load this way gets a special class - let’s call it lazyfit - and the image-URL is put in the <em>data-src</em> attribute while the regular <em>src</em> attribute is left empty. Make sure the image-element has its final size even when empty. Note how the URL in <em>data-src</em> contains a placeholder for width that will later be replaced. A placeholder for height can be added too.</p>
+    <p>Each image we wish to load this way gets a special class - I call it lazyfit - and the image-URL is put in the <em>data-src</em> attribute while the regular <em>src</em> attribute is left empty. Make sure the image-element has its final size even when empty. Note how the URL in <em>data-src</em> contains a placeholder for width that will later be replaced. A placeholder for height can be added too.</p>
 </div>
 
 ```html
@@ -256,7 +256,7 @@ if (entry.target.dataset.round) {
 
 Yes, there’s more!
 
-While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose between the linked images [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers only.
+While src-set-sizes is typically sold as a way to load size-appropriate images, browser-vendors are free to pick and choose between the linked images [“depending on the user's screen's pixel density, zoom level, and possibly other factors such as the user's network condition”](https://html.spec.whatwg.org/multipage/images.html#introduction-3). To what extent this actually happens I don’t know - my google-fu wasn’t up to the task of finding any useful answers. The script could use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) to at least account for basic network conditions, but support is currently limited to Chromium-based browsers.
 
 <!-- <img class="lazyfit img-float img-float--left img-float--small img-float--pop-500" style="shape-outside: polygon(30% 2%, 31% 28%, 7% 28%, 8% 40%, 4% 42%, 4% 62%, 8% 65%, 8% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 2%); box-shadow: 0 6px 12px -4px rgba(50, 50, 93, 1), 0 3px 7px -3px rgba(0, 0, 0, 1);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png?tr=w-{width}" alt="Framed painting with multiple sets of borders as if it was a frame within a frame. At the center is a drawing of a galaxy using purple hues only."> -->
 
