@@ -50,16 +50,28 @@ Part of the PageSpeed Insights audit is a report on real world performance metri
 
 Each audit was delivered as a JSON-file, which I parsed with a bit of javascript running in Node.
 
-<!-- <figure class="data-selection">
-    <div class="data-selection__number">27350</div>
-    <div class="data-selection__label">Unique sites on dk.trustpilot.com</div>
-    <div class="data-selection__number">5241</div>
-    <div class="data-selection__label">Sites with min. 100 reviews</div>
-    <div class="data-selection__number">4713</div>
-    <div class="data-selection__label">Audits completed successfully</div>
-    <div class="data-selection__number">3373</div>
-    <div class="data-selection__label">Audits with full data available</div>
-</figure> -->
+<figure class="data-selection">
+    <div class="data-selection__group">
+        <div class="data-selection__bar"></div>
+        <div class="data-selection__number">27350</div>
+        <div class="data-selection__label">Sites on dk.trustpilot.com</div>
+    </div>
+    <div class="data-selection__group">
+        <div class="data-selection__bar"></div>
+        <div class="data-selection__number">5241</div>
+        <div class="data-selection__label">Sites with min. 100 reviews</div>
+    </div>
+    <div class="data-selection__group">
+        <div class="data-selection__bar"></div>
+        <div class="data-selection__number">4713</div>
+        <div class="data-selection__label">Audits completed successfully</div>
+    </div>
+    <div class="data-selection__group">
+        <div class="data-selection__bar"></div>
+        <div class="data-selection__number">3373</div>
+        <div class="data-selection__label">Audits with full data available</div>
+    </div>
+</figure>
 
 </section>
 
