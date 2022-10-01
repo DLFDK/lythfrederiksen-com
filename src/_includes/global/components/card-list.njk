@@ -3,7 +3,7 @@
 <section class="card-list">
     <div class="card-list__content">
         <div class="card-list__list">
-            {%- for item in params.collection -%} 
+            {%- for item in params.collection | reverse  -%} 
                 {{ card({ item: item}) }}
             {%- endfor -%}
         </div>
