@@ -73,13 +73,19 @@ figure {
 
 .histogram {
     margin-top: 48px;
+    --column-gap: 1%;
+
+    @media (max-width: 500px) {
+
+    }
+
     &__bars {
-        height: 400px;
+        height: min(60vw, 400px);
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        column-gap: 8px;
+        column-gap: var(--column-gap);
         align-items: end;
-        
+
         & > div {
             border-radius: 4px;
             background: var(--color-primary);
@@ -91,13 +97,16 @@ figure {
                 display: block;
                 font-size: $font-size-smaller;
                 transition: transform var(--transition-duration);
+
+                @media (max-width: 500px) {
+                    font-size: calc($font-size-smaller * 0.8);
+                }
             }
 
             &:hover {
                 opacity: 0.9;
 
                 &::before {
-                    // font-size: calc($font-size-smaller * 1.1);
                     transform: scale(1.2) translateY(-100%);
                 }
             }
@@ -136,13 +145,17 @@ figure {
     }
 
     &__labels {
-        column-gap: 8px;
+        column-gap: var(--column-gap);
         width: 90%;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         position: relative;
         left: 5%;
         height: 20px;
+
+        @media (max-width: 500px) {
+            font-size: $font-size-smaller;
+        }
     }
 
     & figcaption {
