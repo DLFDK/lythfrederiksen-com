@@ -4,7 +4,7 @@ date: 2022-09-14
 author: Dennis Lyth Frederiksen
 tags: [featured]
 category: Code
-style: posts/14-09-2022/14-09-2022.scss
+style: posts/2022-09-14/2022-09-14.scss
 scripts: ["/js/lazyfit.js"]
 snippet: "I’m a pixel-pincher. You know, like a penny-pincher but with pixels? Anyway, I hate sending along pixels that don’t end up on the screen. It’s wasteful and I don’t like it! In this blog post I detail how I load perfectly sized images using a tiny bit of javascript and an image CDN. Full code included!"
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png
