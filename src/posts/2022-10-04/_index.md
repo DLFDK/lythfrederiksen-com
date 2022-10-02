@@ -48,8 +48,6 @@ Of the remaining 5241 sites, 528 returned errors upon running the audit, resulti
 
 Part of the PageSpeed Insights audit is a report on real world performance metrics collected by actual users as part of CrUX. However, not every site had enough data collected on it to compute these metrics, leaving some or all of these fields empty in the audit. Websites without all metrics available were filtered out. 3373 websites were left.
 
-Each audit was delivered as a JSON-file, which I parsed with a bit of javascript running in Node.
-
 <figure class="data-selection">
     <div class="data-selection__group">
         <div class="data-selection__bar"></div>
@@ -59,19 +57,22 @@ Each audit was delivered as a JSON-file, which I parsed with a bit of javascript
     <div class="data-selection__group">
         <div class="data-selection__bar"></div>
         <div class="data-selection__number">5241</div>
-        <div class="data-selection__label">Sites with min. 100 reviews</div>
+        <div class="data-selection__label">Sites with >100 reviews</div>
     </div>
     <div class="data-selection__group">
         <div class="data-selection__bar"></div>
         <div class="data-selection__number">4713</div>
-        <div class="data-selection__label">Audits completed successfully</div>
+        <div class="data-selection__label">Audits run successfully</div>
     </div>
     <div class="data-selection__group">
         <div class="data-selection__bar"></div>
         <div class="data-selection__number">3373</div>
-        <div class="data-selection__label">Audits with full data available</div>
+        <div class="data-selection__label">Audits with all metrics</div>
     </div>
+    <figcaption>Overview of data selection</figcaption>
 </figure>
+
+Each audit was delivered as a JSON-file, which I parsed with a bit of javascript running in Node.
 
 </section>
 
@@ -116,7 +117,39 @@ The average performance score across the audited sites was 36. Thirty-six. A who
 
 Let’s have a look at the six metrics that make up the overall performance score:
 
-_Overview of the six metrics_
+<figure class="six-metrics">
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>FCP</div>
+        <div>3.6<span> s</span></div>
+    </div>
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>SI</div>
+        <div>8.3<span> s</span></div>
+    </div>
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>LCP</div>
+        <div>10<span> s</span></div>
+    </div>
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>TTI</div>
+        <div>14<span> s</span></div>
+    </div>
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>TBT</div>
+        <div>1.5<span> s</span></div>
+    </div>
+    <div class="six-metrics__metric">
+        <div class="six-metrics__background"></div>
+        <div>CLS</div>
+        <div>0.22</div>
+    </div>
+    <figcaption>Average scores for the six core metrics</figcaption>
+</figure>
 
 Here, only the average cumulative layout shift (CLS) gets anywhere close to acceptable levels. The rest sit firmly in the red. Imagine having to wait 14 seconds for a site to become interactive! That’s of course if you even bother to wait around almost 4 seconds for anything to appear on the page in the first place!
 
