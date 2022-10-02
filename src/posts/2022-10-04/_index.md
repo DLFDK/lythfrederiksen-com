@@ -168,7 +168,7 @@ When possible, the audit also tries to offer suggestions for specific improvemen
         <div>Img</div>
         <div>Total</div>
     </div>
-    <figcaption>Potential for saving data across CSS, JS and images</figcaption>
+    <figcaption>Potential for savings across CSS, JS and images</figcaption>
 </figure>
 
 On average the sites stand to save 1.2 MB. Do you have any idea how much website you can get for one-point-two megabytes?! Well, it’s a lot! Even an image-heavy landing page should be able to fit within that budget if below-the-fold content is deferred.
