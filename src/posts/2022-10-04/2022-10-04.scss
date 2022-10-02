@@ -365,73 +365,45 @@ figcaption {
 
 .le {
     display: grid;
-    grid-template-columns: min-content repeat(3, 80px);
-    grid-template-rows: auto repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(189px, 1fr));
     place-items: center;
-    justify-content: center;
-    margin-top: 0;
+    align-items: end;
+    margin-top: 8px;
+    column-gap: 16px;
+    row-gap: 8px;
 
-    & > div:nth-of-type(1).le__metric {
-        background: #000;
+    &__group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 8px;
+        width: 100%;
+        max-width: 240px;
+        transition: transform var(--transition-duration);
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:hover .le__share div:last-child{
+            opacity: 0.8;
+        }
     }
 
     &__metric {
         position: relative;
-        place-self: end start;
-        margin-right: 16px;
-        font-size: $font-size-regular;
+        font-size: $font-size-smaller;
+        grid-column: 1/-1;
 
-        @media (max-width: 400px) {
+        @media (max-width: 660px) {
             font-size: $font-size-small;
         }
-
-        &::after {
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            content: "";
-            height: 8px;
-            width: 286px;
-            background: var(--color-primary);
-            border-radius: 4px;
-        }
-        &::before {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            transform: translateY(120%);
-            width: max-content;
-            font-size: $font-size-smaller;
-        }
-        &--CLS::before {
-            content: "Cumulative layout shift";
-        }
-        &--INP::before {
-            content: "Interaction to next paint";
-        }
-        &--TFB::before {
-            content: "Time to first byte";
-        }
-        &--FCP::before {
-            content: "First contentful paint";
-        }
-        &--FID::before {
-            content: "First input delay";
-        }
-        &--LCP::before {
-            content: "Largest contentful paint";
-        }
-    }
-
-    &__metric:nth-child(1)::before {
-        content: "Cumulative Shift";
     }
 
     &__share {
-        font-size: $font-size-large;
+        font-size: $font-size-regular;
         justify-self: end;
-        margin: 16px 16px 0 0;
         align-self: end;
+        width: 100%;
 
         @media (max-width: 400px) {
             font-size: $font-size-regular;
@@ -441,25 +413,86 @@ figcaption {
             height: var(--height);
             background: var(--color-primary);
             width: 100%;
-            border-radius: 4px 4px 0 0;
-        }
-    }
-    &__label {
-        margin-top: 32px;
-        margin-bottom: -8px;
-
-        @media (max-width: 400px) {
-            font-size: $font-size-small;
+            border-radius: 4px;
+            transition: opacity var(--transition-duration);
         }
     }
 
     span {
-        font-size: 0.4em;
+        font-size: 0.6em;
         margin-left: 4px;
     }
 
     & figcaption {
-        margin-top: 32px;
+        margin-top: -4px;
         grid-column: 1/-1;
+    }
+}
+
+.le-total {
+    margin-top: 48px;
+    --column-gap: 8px;
+    max-width: 400px;
+
+    &__bars {
+        height: min(50vw, 300px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--column-gap);
+        align-items: end;
+
+        & > div {
+            border-radius: 4px;
+            background: var(--color-gradient-2);
+            height: var(--height);
+            transition: opacity var(--transition-duration);
+
+            &::before {
+                transform: translateY(-110%);
+                display: block;
+                font-size: $font-size-regular;
+                transition: transform var(--transition-duration);
+
+                @media (max-width: 600px) {
+                    font-size: $font-size-regular;
+                }
+                @media (max-width: 500px) {
+                    font-size: $font-size-small;
+                }
+                @media (max-width: 400px) {
+                    font-size: $font-size-smaller;
+                }
+            }
+
+            &:hover {
+                opacity: 0.9;
+
+                &::before {
+                    transform: scale(1.2) translateY(-100%);
+                }
+            }
+        }
+
+        & > div:nth-child(1)::before {
+            content: "29%";
+        }
+        & > div:nth-child(2)::before {
+            content: "53%";
+        }
+        & > div:nth-child(3)::before {
+            content: "18%";
+        }
+    }
+
+    &__labels {
+        column-gap: var(--column-gap);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 20px;
+
+        @media (max-width: 500px) {
+            font-size: $font-size-small;
+        }
     }
 }
