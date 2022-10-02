@@ -175,9 +175,129 @@ On average the sites stand to save 1.2 MB. Do you have any idea how much website
 
 Alright, let’s move to the performance numbers collected from real world users. Like the synthetic results above, we’ll be looking at numbers from mobile devices.
 
-_Overview of LE numbers_
-
 PSI classifies the quality of user experiences into three buckets - Fast, Average, Slow. The specific criteria used are available here. The numbers above show the average distribution across these buckets for each metric.
+
+<figure class="le">
+    <div></div>
+    <div class="le__label">Slow</div>
+    <div class="le__label">Average</div>
+    <div class="le__label">Fast</div>
+    <div class="le__metric le__metric--CLS">CLS</div>
+    <div class="le__share" style="--height: 13px">
+        <div>
+            13<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 10px">
+        <div>
+            10<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            77<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__metric le__metric--INP">INP</div>
+    <div class="le__share" style="--height: 8px">
+        <div>
+            8<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 20px">
+        <div>
+            20<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            72<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__metric le__metric--TFB">TFB</div>
+    <div class="le__share" style="--height: 10px">
+        <div>
+            10<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 22px">
+        <div>
+            22<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            68<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__metric le__metric--FCP">FCP</div>
+    <div class="le__share" style="--height: 7px">
+        <div>
+            7<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 14px">
+        <div>
+            14<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            79<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__metric le__metric--FID">FID</div>
+    <div class="le__share" style="--height: 2px">
+        <div>
+            2<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 5px">
+        <div>
+            5<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            93<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__metric le__metric--LCP">LCP</div>
+    <div class="le__share" style="--height: 8px">
+        <div>
+            8<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 15px">
+        <div>
+            15<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <div class="le__share" style="--height: 70px">
+        <div>
+            77<span>%</span>
+        </div>
+        <div></div>
+    </div>
+    <figcaption>User experience ratios</figcaption>
+</figure>
 
 Suddenly the results aren’t too shabby! At a minimum, two thirds get the Fast experience while the Slow group never makes up more than 13%. Great!
 
