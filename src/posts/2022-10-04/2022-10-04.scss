@@ -295,6 +295,7 @@ figcaption {
 .unused-bytes {
     margin-top: 48px;
     --column-gap: 1%;
+    max-width: 400px;
 
     &__bars {
         height: min(50vw, 300px);
@@ -312,7 +313,7 @@ figcaption {
             &::before {
                 transform: translateY(-110%);
                 display: block;
-                font-size: $font-size-large;
+                font-size: $font-size-regular;
                 transition: transform var(--transition-duration);
 
                 @media (max-width: 600px) {
