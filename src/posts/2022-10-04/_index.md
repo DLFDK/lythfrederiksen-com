@@ -155,7 +155,21 @@ Here, only the average cumulative layout shift (CLS) gets anywhere close to acce
 
 When possible, the audit also tries to offer suggestions for specific improvements. Among these are potential savings from removing unused javascript and CSS and the use of right sized images delivered in modern formats like WebP.
 
-_Overview of unused JS, CSS and savings from MIF_
+<figure class="unused-bytes">
+    <div class="unused-bytes__bars">
+        <div style="--height: 4%"></div>
+        <div style="--height: 26%"></div>
+        <div style="--height: 69%"></div>
+        <div style="--height: 100%"></div>
+    </div>
+    <div class="unused-bytes__labels">
+        <div>CSS</div>
+        <div>JS</div>
+        <div>Img</div>
+        <div>Total</div>
+    </div>
+    <figcaption>Potential for saving data across CSS, JS and images</figcaption>
+</figure>
 
 On average the sites stand to save 1.2 MB. Do you have any idea how much website you can get for one-point-two megabytes?! Well, it’s a lot! Even an image-heavy landing page should be able to fit within that budget if below-the-fold content is deferred.
 

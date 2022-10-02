@@ -292,5 +292,74 @@ figcaption {
 }
 
 .unused-bytes {
-    
+    margin-top: 48px;
+    --column-gap: 1%;
+
+    @media (max-width: 500px) {
+    }
+
+    &__bars {
+        height: min(50vw, 300px);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: var(--column-gap);
+        align-items: end;
+
+        & > div {
+            border-radius: 4px;
+            background: var(--color-gradient-2);
+            height: var(--height);
+            transition: opacity var(--transition-duration);
+
+            &::before {
+                transform: translateY(-110%);
+                display: block;
+                font-size: $font-size-large;
+                transition: transform var(--transition-duration);
+
+                @media (max-width: 600px) {
+                    font-size: $font-size-regular;
+                }
+                @media (max-width: 500px) {
+                    font-size: $font-size-small;
+                }
+                @media (max-width: 400px) {
+                    font-size: $font-size-smaller;
+                }
+            }
+
+            &:hover {
+                opacity: 0.9;
+
+                &::before {
+                    transform: scale(1.2) translateY(-100%);
+                }
+            }
+        }
+
+        & > div:nth-child(1)::before {
+            content: "54 KB";
+        }
+        & > div:nth-child(2)::before {
+            content: "320 KB";
+        }
+        & > div:nth-child(3)::before {
+            content: "840 KB";
+        }
+        & > div:nth-child(4)::before {
+            content: "1210 KB";
+        }
+    }
+
+    &__labels {
+        column-gap: var(--column-gap);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 20px;
+
+        @media (max-width: 500px) {
+            font-size: $font-size-small;
+        }
+    }
 }
