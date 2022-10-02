@@ -4,6 +4,11 @@
 @use "global/_variables/colors.scss" as *;
 
 .article {
+    --default-top-margin: 32px;
+    @media (max-width: $breakpoint-small) {
+        --default-top-margin: 24px;
+    }
+
     display: grid;
     grid-template-columns:
         minmax(0px, 1fr)
@@ -109,7 +114,7 @@
             font-size: $font-size-large;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-copy;
-            margin-top: 32px;
+            margin-top: var(--default-top-margin);
 
             @media (max-width: $breakpoint-xlsmall) {
                 font-size: $font-size-regular;
@@ -165,10 +170,8 @@
             }
         }
 
-
-
         & h2 + p{
-            margin-top: 16px;
+            margin-top: calc(var(--default-top-margin) * 0.5);
         }
 
         :where(&) p:where(:not(.article__date)) {
@@ -177,7 +180,7 @@
             font-weight: $font-weight-regular;
             line-height: $line-height-regular;
             letter-spacing: $letter-spacing-copy;
-            margin-top: 32px;
+            margin-top: var(--default-top-margin);
 
             @media (max-width: $breakpoint-small) {
                 font-size: $font-size-smaller;
