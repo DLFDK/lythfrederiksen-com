@@ -7,28 +7,32 @@ category: Code
 style: posts/2022-10-04/2022-10-04.scss
 scripts: ["/js/lazyfit.js"]
 snippet: "I’m a pixel-pincher. You know, like a penny-pincher but with pixels? Anyway, I hate sending along pixels that don’t end up on the screen. It’s wasteful and I don’t like it! In this blog post I detail how I load perfectly sized images using a tiny bit of javascript and an image CDN. Full code included!"
-img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting_within_a_frame_eBEbYajVG.png
+img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__cropped_Q9ucSk_ga.png
 ---
 
 <section>
 
+<img class="lazyfit img-float img-float--right img-float--hero img-float--pop-500" style="aspect-ratio: 1606/930; shape-outside: polygon(20.21% 11.04%, 18.81% 50.80%, 3.14% 59.81%, 16.99% 99.48%, 98.9% 99.77%, 84.98% 11.78%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__sharpened_peUXawLdP.png?tr=w-{width}" alt="{{img_alt}}">
+
 <p class="article__date">{{ date | postDate }}</p>
 
-<h1 class="title">{{title}}</h1>
+<h1 class="title">The data is in - Your website sucks!</h1>
+
+*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected.*
 
 I have a guilty pleasure.
 
-No, it’s not watching terrible reality shows. Erm, it’s not only watching terrible reality shows.
+No, it’s not watching terrible reality shows.
 
 When I get an ad for a company that makes websites for others, I like to do a performance review of that company’s own site.
 
-Why?
+Why? 
 
 Because I kinda enjoy seeing how badly they perform. It’s like watching motorsports for the crashes. But, you know, without the deaths.
 
-And I can’t help but feel like I’m being lied to, when the company, who wants to sell me a high quality, performant website, have so clearly failed to build their own home on the web to the same standard. If you can’t achieve it at home, there’s no chance in hell you’ll achieve it when the client’s requirements enter the fray.
+And I can’t help but feel like I’m being lied to, when the company, who wants to sell me a high quality, performant website, have so clearly failed to build their own home on the web to the same standard.
 
-While these unsolicited performance reviews don’t amount to any sort of empirical evidence for the sad state of the modern web, their consistent findings have nevertheless made me worried.
+While my unsolicited performance reviews don’t amount to any sort of empirical evidence for the sad state of the modern web, their consistent findings have nevertheless made me worried.
 
 So, instead of worrying without a reason, let’s actually find out! In this post I’ll collect a whole bunch of data to finally conclude that yes, indeed, most websites suck!
 
@@ -47,6 +51,8 @@ To get the number of sites down to a more manageable size, those with less than 
 Of the remaining 5241 sites, 528 returned errors upon running the audit, resulting in 4713 completed. Each audit took between 10 and 40 seconds to finish.
 
 Part of the PageSpeed Insights audit is a report on real world performance metrics collected by actual users as part of CrUX. However, not every site had enough data collected on it to compute these metrics, leaving some or all of these fields empty in the audit. Websites without all metrics available were filtered out. 3373 websites were left.
+
+Each audit was delivered as a JSON-file and then parsed with Node.
 
 <figure class="data-selection">
     <div class="data-selection__group">
@@ -71,8 +77,6 @@ Part of the PageSpeed Insights audit is a report on real world performance metri
     </div>
     <figcaption>Overview of data selection</figcaption>
 </figure>
-
-Each audit was delivered as a JSON-file, which I parsed with a bit of javascript running in Node.
 
 </section>
 
@@ -113,7 +117,7 @@ And no. It’s complicated. But mostly yes, unfortunately. Let’s start with th
     <figcaption>Histogram of performance scores</figcaption>
 </figure>
 
-The average performance score across the audited sites was 36. Thirty-six. A whopping 78% percent scored below 50 - what Google regards as “poor” performance. Only 1.2% scored above 89, achieving the label of “good”. To provide a good user experience, sites should strive to have a good score (90-100), as Google puts it.
+The average performance score across the audited sites was 36. Thirty-six. A whopping 78% percent scored below 50 - what Google regards as “poor” performance. Only 1.2% scored above 89, achieving the label of “good”. [To provide a good user experience, sites should strive to have a good score (90-100)](https://web.dev/performance-scoring/), as Google puts it.
 
 Let’s have a look at the six metrics that make up the overall performance score:
 
@@ -173,9 +177,9 @@ When possible, the audit also tries to offer suggestions for specific improvemen
 
 On average the sites stand to save 1.2 MB. Do you have any idea how much website you can get for one-point-two megabytes?! Well, it’s a lot! Even an image-heavy landing page should be able to fit within that budget if below-the-fold content is deferred.
 
-Alright, let’s move to the performance numbers collected from real world users. Like the synthetic results above, we’ll be looking at numbers from mobile devices.
+There’s a lot of data to look at in a single audit let alone 3373, and there’s no doubt potential for many interesting comparisons and analyses. For now, however, let’s move briskly along to the performance numbers collected from real world users.
 
-PSI classifies the quality of user experiences into three buckets - Slow, Average, Fast. The specific criteria used are available here. The numbers below show the average distribution across these buckets for each metric.
+PSI classifies the quality of user experiences into three buckets - Slow, Average, Fast - and  reports the proportion of users in each. [The specific criteria used are available here](https://developers.google.com/speed/docs/insights/v5/about). The numbers below show the average distribution across these buckets for each metric.
 
 <figure class="le">
     <div class="le__group">
@@ -309,9 +313,9 @@ PSI classifies the quality of user experiences into three buckets - Slow, Averag
 
 Suddenly the results aren’t too shabby! At a minimum, two thirds get the Fast experience while the Slow group never makes up more than 13%. Great!
 
-These are averages, though, and it’s possible for a site to excel in most metrics, but offer such a low score in one or two that it nevertheless makes for a terrible user experience.
+Not too fast, though. As these are averages across all audited sites, it’s possible for a  specific site to excel in most metrics, but offer such a low score in one or two that it nevertheless makes for a terrible user experience.
 
-The audit also gives an overall score for these real world metrics:
+That's what Google accounts for in the overall classification of user experience. Here, [the result will be equal to the lowest performing metric](https://support.google.com/webmasters/answer/9205520?hl=en). If a site scores Fast in 5 out of 6, but Slow in the last, the overall classification will be Slow. Let's take a look at the distribution of those overall classifications now:
 
 <figure class="le-total">
     <div class="le-total__bars">
@@ -327,6 +331,30 @@ The audit also gives an overall score for these real world metrics:
     <figcaption>Overall user experience ratios</figcaption>
 </figure>
 
-The number of sites that can offer a Fast experience shrinks considerably, but at least the Slow group remains a minority.
+The number of sites that can offer a Fast experience shrinks considerably. Now only 18% get that.
+
+It should also be noted that these real world metrics are from a very particular subset of users: [those who use Chrome (iOS-version not included), have enabled usage statistic reporting and and sync their browser history](https://developer.chrome.com/docs/crux/methodology/#user-eligibility).
+
+</section>
+
+
+<section>
+<h2 id="struggling-to-convert-mobile-users"><a title="Permalink to Struggling to convert mobile users?" href="#struggling-to-convert-mobile-users">Struggling to convert mobile users?</a></h2>
+
+It can be tempting to ignore the terrible results from the simulated Moto G4 and focus on the real world user metrics. After all, it’s the real users who count, right? Clearly, they’re mostly getting a decent experience. And only real users can turn into real customers! 
+
+
+<img class="lazyfit img-float img-float--left img-float--pop-500" style="aspect-ratio: 1683/908; shape-outside: polygon(1.18% 10.95%, -0.93% 99.6%, 79.71% 101.52%, 97.91% 49.23%, 83.47% 11.03%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.39.54_-_A_tiny_pickup_truck_with_an_extremely_overweight_elephant_on_its_truckbed__cropped_QbIZYSvJO.png?tr=w-{width}" alt="">
+
+But before you do so, go ahead and look up your conversion rates by device type. Maybe you already know what I’m hinting at. Could it be that your much lower conversion rate on mobile is in part due to the terrible performance those mobile users are likely to experience?
+
+And sure, you probably have a super fancy responsive design that adjusts itself according to screen size - even the smallest ones! But a mobile friendly website requires more than media queries.
+
+
+</section>
+
+<section>
+
+*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected.*
 
 </section>
