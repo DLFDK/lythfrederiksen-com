@@ -17,7 +17,7 @@ img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance
 
 <h1 class="title">{{title}}</h1>
 
-*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected.*
+*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected!*
 
 <img class="lazyfit img-float img-float--right img-float--hero img-float--pop-500" style="aspect-ratio: 1606/930; shape-outside: polygon(20.21% 11.04%, 18.81% 50.80%, 3.14% 59.81%, 16.99% 99.48%, 98.9% 99.77%, 84.98% 11.78%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__sharpened_peUXawLdP.png?tr=w-{width}" alt="{{img_alt}}">
 
