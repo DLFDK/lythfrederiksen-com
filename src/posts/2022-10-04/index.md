@@ -12,12 +12,9 @@ img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance
 
 <section>
 
-
 <p class="article__date">{{ date | postDate }}</p>
 
 <h1 class="title">{{title}}</h1>
-
-*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected!*
 
 <img class="lazyfit img-float img-float--right img-float--hero img-float--pop-500" style="aspect-ratio: 1606/930; shape-outside: polygon(20.21% 11.04%, 18.81% 50.80%, 3.14% 59.81%, 16.99% 99.48%, 98.9% 99.77%, 84.98% 11.78%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__sharpened_peUXawLdP.png?tr=w-{width}" alt="{{img_alt}}">
 
@@ -178,36 +175,17 @@ When possible, the audit also tries to offer suggestions for specific improvemen
 
 On average the sites stand to save 1.2 MB. Do you have any idea how much website you can get for one-point-two megabytes?! Well, it’s a lot! Even an image-heavy landing page should be able to fit within that budget if below-the-fold content is deferred.
 
-There’s a lot of data to look at in a single audit let alone 3373, and there’s no doubt potential for many interesting comparisons and analyses. For now, however, let’s move briskly along to the performance numbers collected from real world users.
+There’s a lot of data to look at in a single audit let alone 3373, and there’s no doubt potential for many interesting comparisons and analyses. For now, however, let’s move briskly along to the performance numbers collected from real world users. Again we're looking at data from mobile only.
 
-PSI classifies the quality of user experiences into three buckets - Slow, Average, Fast - and  reports the proportion of users in each. [The specific criteria used are available here](https://developers.google.com/speed/docs/insights/v5/about). The numbers below show the average distribution across these buckets for each metric.
+PSI classifies the quality of user experiences into three buckets - Poor, Needs Improvement, Good - and reports the proportion of users in each for six different metrics. [The specific criteria used are available here](https://developers.google.com/speed/docs/insights/v5/about). Ideally, all users would get the Good experience, but alas, the real world is complicated. The newest iPhone on an excellent 5G connection is going to perform better than a 10 year old android phone on slow 3G. Google uses the 75th percentile to give a metric its overall classification. That is, at least 75% of users had that experience or better.
+
+The graphic below shows the distribution of overall classifications across the audited sites.
 
 <figure class="le">
     <div class="le__group">
-        <div class="le__share" style="--height: 13px">
+        <div class="le__share" style="--height: 17px">
             <div>
-                13<span>%</span>
-            </div>
-            <div></div>
-        </div>
-        <div class="le__share" style="--height: 10px">
-            <div>
-                10<span>%</span>
-            </div>
-            <div></div>
-        </div>
-        <div class="le__share" style="--height: 70px">
-            <div>
-                77<span>%</span>
-            </div>
-            <div></div>
-         </div>
-        <div class="le__metric">Cumulative layout shift</div>
-    </div>
-    <div class="le__group">
-        <div class="le__share" style="--height: 8px">
-            <div>
-                8<span>%</span>
+                17<span>%</span>
             </div>
             <div></div>
         </div>
@@ -217,106 +195,129 @@ PSI classifies the quality of user experiences into three buckets - Slow, Averag
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 72px">
+        <div class="le__share" style="--height: 63px">
             <div>
-                72<span>%</span>
+                63<span>%</span>
+            </div>
+            <div></div>
+         </div>
+        <div class="le__metric">Cumulative layout shift</div>
+    </div>
+    <div class="le__group">
+        <div class="le__share" style="--height: 3.6px">
+            <div>
+                3.6<span>%</span>
+            </div>
+            <div></div>
+        </div>
+        <div class="le__share" style="--height: 45px">
+            <div>
+                45<span>%</span>
+            </div>
+            <div></div>
+        </div>
+        <div class="le__share" style="--height: 52px">
+            <div>
+                52<span>%</span>
             </div>
             <div></div>
          </div>
         <div class="le__metric">Interaction to next paint</div>
     </div>
     <div class="le__group">
-        <div class="le__share" style="--height: 10px">
+        <div class="le__share" style="--height: 11px">
             <div>
-                10<span>%</span>
+                11<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 22px">
+        <div class="le__share" style="--height: 41px">
             <div>
-                22<span>%</span>
+                41<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 68px">
+        <div class="le__share" style="--height: 48px">
             <div>
-                68<span>%</span>
+                48<span>%</span>
             </div>
             <div></div>
          </div>
         <div class="le__metric">Time to first byte</div>
     </div>
     <div class="le__group">
-        <div class="le__share" style="--height: 7px">
+        <div class="le__share" style="--height: 6.4px">
             <div>
-                7<span>%</span>
+                6.4<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 14px">
+        <div class="le__share" style="--height: 24px">
             <div>
-                14<span>%</span>
+                24<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 79px">
+        <div class="le__share" style="--height: 70px">
             <div>
-                79<span>%</span>
+                70<span>%</span>
             </div>
             <div></div>
          </div>
         <div class="le__metric">First contentful paint</div>
     </div>
     <div class="le__group">
-        <div class="le__share" style="--height: 2px">
+        <div class="le__share" style="--height: 0.3px">
             <div>
-                2<span>%</span>
+                0.3<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 5px">
+        <div class="le__share" style="--height: 1.4px">
             <div>
-                5<span>%</span>
+                1.4<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 93px">
+        <div class="le__share" style="--height: 98px">
             <div>
-                93<span>%</span>
+                98<span>%</span>
             </div>
             <div></div>
          </div>
         <div class="le__metric">First input delay</div>
     </div>
     <div class="le__group">
-        <div class="le__share" style="--height: 8px">
+        <div class="le__share" style="--height: 6.3px">
             <div>
-                8<span>%</span>
+                6.3<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 15px">
+        <div class="le__share" style="--height: 30px">
             <div>
-                15<span>%</span>
+                30<span>%</span>
             </div>
             <div></div>
         </div>
-        <div class="le__share" style="--height: 77px">
+        <div class="le__share" style="--height: 63px">
             <div>
-                77<span>%</span>
+                63<span>%</span>
             </div>
             <div></div>
          </div>
         <div class="le__metric">Largest contentful paint</div>
     </div>
-    <figcaption>User experience ratios (left to right: Slow, Average, Fast)</figcaption>
+    <figcaption>User experience classification across all audited sites (left to right: Poor, Needs improvement, Good)</figcaption>
 </figure>
 
-Suddenly the results aren’t too shabby! At a minimum, two thirds get the Fast experience while the Slow group never makes up more than 13%. Great!
+Suddenly the results aren’t too shabby! In all metrics the majority of sites get the classification Good. Great! The proportion of sites earning the dreaded Poor classification never exceed 17%, and First Input Delay is clearly a complete non-issue.
 
-Not too fast, though. As these are averages across all audited sites, it’s possible for a  specific site to excel in most metrics, but offer such a low score in one or two that it nevertheless makes for a terrible user experience.
+Not so fast, though. It’s possible for a specific site to excel in most metrics, but offer such a low score in one or two that it nevertheless makes for a terrible experience for the majority of users.
 
-That's what Google accounts for in the overall classification of user experience. Here, [the result will be equal to the lowest performing metric](https://support.google.com/webmasters/answer/9205520?hl=en). If a site scores Fast in 5 out of 6, but Slow in the last, the overall classification will be Slow. Let's take a look at the distribution of those overall classifications now:
+That's what Google accounts for in the overall classification of user experience. Here, [the result will be equal to the lowest performing metric](https://support.google.com/webmasters/answer/9205520?hl=en) between Cumulative Layout Shift, First Contentful Paint and First Input Delay (the so-called [core web vitals](https://web.dev/vitals/#core-web-vitals)). If a site scores Good in 2 out of 3, but Poor in the last, the overall classification will be Poor.
+
+Let's take a look at the distribution of those overall classifications:
 
 <figure class="le-total">
     <div class="le-total__bars">
@@ -325,14 +326,14 @@ That's what Google accounts for in the overall classification of user experience
         <div style="--height: 36%"></div>
     </div>
     <div class="le-total__labels">
-        <div>Slow</div>
-        <div>Average</div>
-        <div>Fast</div>
+        <div>Poor</div>
+        <div>Needs improvement</div>
+        <div>Good</div>
     </div>
-    <figcaption>Overall user experience ratios</figcaption>
+    <figcaption>Distribution of overall user experience classification</figcaption>
 </figure>
 
-The number of sites that can offer a Fast experience shrinks considerably. Now only 18% get that.
+The number of sites that can offer a Good experience to most users shrinks considerably. Now only 18% get that. At least Poor remains the minority!
 
 It should also be noted that these real world metrics are from a very particular subset of users: [those who use Chrome (iOS-version not included), have enabled usage statistic reporting and and sync their browser history](https://developer.chrome.com/docs/crux/methodology/#user-eligibility).
 
@@ -344,17 +345,14 @@ It should also be noted that these real world metrics are from a very particular
 
 It can be tempting to ignore the terrible results from the simulated Moto G4 and focus on the real world user metrics. After all, it’s the real users who count, right? Clearly, they’re mostly getting a decent experience. And only real users can turn into real customers! 
 
-
 <img class="lazyfit img-float img-float--left img-float--pop-500" style="aspect-ratio: 1683/908; shape-outside: polygon(1.18% 10.95%, -0.93% 99.6%, 79.71% 101.52%, 97.91% 49.23%, 83.47% 11.03%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.39.54_-_A_tiny_pickup_truck_with_an_extremely_overweight_elephant_on_its_truckbed__cropped_QbIZYSvJO.png?tr=w-{width}" alt="">
 
 But before you do so, go ahead and look up your conversion rates by device type. Maybe you already know what I’m hinting at. Could it be that your much lower conversion rate on mobile is in part due to the terrible performance those mobile users are likely to experience?
 
-And sure, you probably have a super fancy responsive design that adjusts itself according to screen size - even the smallest ones! But a mobile friendly website requires more than media queries.
+Perhaps the conversion rates you see aren't even accurate. Is a mobile user on a slow device and connection going to stick around long enough for your slew of analytics scripts to even count them?
 
-</section>
+And sure, you probably have a super fancy responsive design that adjusts itself according to screen size - even the smallest ones! That's a good start. But a mobile friendly website requires more than media queries.
 
-<section>
-
-*This blog post is still work in progress. Its content will change, links may be broken, nonsense can be expected.*
+*Article illustrations generated by [DALL-E 2](https://openai.com/dall-e-2/)*
 
 </section>
