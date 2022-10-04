@@ -11,3 +11,13 @@ npx glyphhanger ./readme.txt
 
 Whitelist
 ½§1234567890+´´``!"#¤%&/()=?@££$€{[]}|~^*'qw€rtyuiopåasdfghjklæø<\<\>,;.:_-+-,*/QWERTYUIOPÅASDFGHJKLÆØZXCVBNM""“”’é°é©–
+
+https://wakamaifondue.com/beta/
+https://fonttools.readthedocs.io/en/latest/ttx.html
+https://markoskon.com/creating-font-subsets/
+https://rsheeter.github.io/font101/
+https://fonttools.readthedocs.io/en/latest/varLib/instancer.html
+https://www.zachleat.com/web/unicode-range-interchange/
+https://github.com/zachleat/glyphhanger
+https://www.zachleat.com/web/glyphhanger/
+https://morgan.cugerone.com/blog/how-to-disable-variable-fonts-variation-features-with-open-source-solution/
