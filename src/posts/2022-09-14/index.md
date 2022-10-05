@@ -11,10 +11,7 @@ img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfe
 ---
 <section>
 
-<div class="image-flair img-float img-float--right img-float--hero img-float--pop-500" style="shape-outside: polygon(3.96% 30.35%, 4.08% 79.52%, 15.89% 97.13%, 95.38% 97.25%, 89.1% 6.28%, 27.19% 11.79%)">
-    <img class="lazyfit image-flair__greyscale" data-max-dpr="1" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting-outside-frame-greyscale_nwLBNVHnZ.png?tr=w-{width}" alt="">
-    <img class="lazyfit image-flair__color" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting-outside-frame-color_4OXQYVM0JQ.png?tr=w-{width}" alt="Empty frame hanging on a wall, light streaming in from the top left casting shadows. The edges of the image are blurred and irregular. Initially in greyscale, but on interaction or hover becomes filled with colors.">
-</div>
+<img class="lazyfit grayscale img-float img-float--right img-float--hero img-float--pop-500" style="shape-outside: polygon(6.88% 29.7%, 7% 79.52%, 19.54% 94.55%, 95.38% 97.25%, 89.1% 6.28%, 29.74% 12.76%)" data-max-dpr="1" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/pixel-perfect/Painting-outside-frame-color_4OXQYVM0JQ.png?tr=w-{width}" alt="Empty frame hanging on a wall, light streaming in from the top left casting shadows. The edges of the image are blurred and irregular. Initially in greyscale, but on interaction or hover becomes filled with colors.">
 
 <p class="article__date">{{ date | postDate }}</p>
 
