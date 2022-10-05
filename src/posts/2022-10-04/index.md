@@ -6,7 +6,7 @@ tags: [featured]
 category: Code
 style: posts/2022-10-04/2022-10-04.scss
 scripts: ["/js/lazyfit.js"]
-snippet: "I ran 5241 popular Danish webshops through PageSpeed Insights to finally put my low opinion of them to the test. Are they objectively as bad as I’ve suspected? The title above may have spoiled the result. Read on anyway!"
+snippet: "I ran 5241 popular Danish webshops through PageSpeed Insights to finally put my low opinion of them to the test. Are they objectively as bad as I’ve suspected? The title above may spoil the result. Read on anyway!"
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__sharpened_peUXawLdP.png
 ---
 
