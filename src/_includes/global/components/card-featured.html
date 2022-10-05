@@ -1,3 +1,8 @@
+{% if post.data.home === "blog" %}
+    {% set ctaText = "Read post" %}
+{% else %}
+    {% set ctaText = "See project" %}
+{% endif %}
 <article class="card-featured">
     <div class="card-featured__navigation-container">
         <nav class="navigation">
@@ -15,11 +20,9 @@
     <h2 class="card-featured__title"><a href="{{post.url}}">{{ post.data.title }}</a></h2>
     <p class="card-featured__copy">{{ post.data.snippet }}</p>
     <div class="card-featured__cta">
-        {% if post.data.home === "blog" %}
-        {{ linkButton({ text: (post.data.cta if post.data.cta else "Read post"), href: post.url }) }}
-        {% else %}
-        {{ linkButton({ text: (post.data.cta if post.data.cta else "See project"), href: post.url }) }}
-        {% endif %}
+        {{ linkButton({ text: (post.data.cta if post.data.cta else ctaText), href: post.url }) }}
     </div>
-    <img src="" class="card-featured__image lazyfit" data-add-class="lazyfit--show" data-src="{{post.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{post.data.img_alt}}" />
+    <a class="card-featured__image-link" href="{{post.url}}" arial-label="{{(post.data.cta if post.data.cta else ctaText)}}">
+        <img src="" class="card-featured__image lazyfit" data-add-class="lazyfit--show" data-src="{{post.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{post.data.img_alt}}" />
+    </a>
 </article>

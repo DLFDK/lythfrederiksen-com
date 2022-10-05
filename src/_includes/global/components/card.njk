@@ -1,6 +1,11 @@
 {%- from "src/_includes/global/components/hashtag-list.njk" import hashtagList -%}
 {%- from "src/_includes/global/components/link-button.njk" import linkButton -%}
 {% macro card(params) %}
+{% if params.item.data.home === "blog" %}
+    {% set ctaText = "Read post" %}
+{% else %}
+    {% set ctaText = "See project" %}
+{% endif %}
 <article class="card">
     <div class="card__navigation-container">
         <nav class="navigation">
@@ -15,20 +20,12 @@
     </div>
     <h2 class="card__title"><a href="{{params.item.url}}">{{ params.item.data.title }}</a></h2>
     <p class="card__date">{{ params.item.data.date | postDate }}</p>
-    <!-- <div class="card__hashtags">
-        {{ hashtagList({ hashtags: params.item.data.hashtags}) }}
-    </div> -->
     <p class="card__copy">{{ params.item.data.snippet }}</p>
     <div class="card__cta">
-        {% if params.item.data.home === "blog" %}
-        {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "Read post"), href: params.item.url }) }}
-        {% else %}
-        {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else "See project"), href: params.item.url }) }}
-        {% endif %}
+        {{ linkButton({ text: (params.item.data.cta if params.item.data.cta else ctaText), href: params.item.url }) }}
     </div>
-    <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" />
-    <!-- <div class="card__image-container">
-        <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-parent="true" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" />
-    </div> -->
+    <a class="card__image-link" href="{{params.item.url}}" aria-label="{{(params.item.data.cta if params.item.data.cta else ctaText)}}">
+        <img src="" class="card__image lazyfit" data-add-class="lazyfit--show" data-src="{{params.item.data.img}}?tr=w-{width},h-{height},c-maintain_ratio,fo-top" alt="{{ params.item.data.img_alt }}" />
+    </a>
 </article>
 {% endmacro %}
