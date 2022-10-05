@@ -308,6 +308,7 @@ code {
     color: $stripe-white;
     outline: 6px solid rgba($color: $stripe-blue, $alpha: 0.0);
     transition: outline-color var(--transition-duration);
+    scrollbar-width: none;
 
     @media (max-width: $breakpoint-small) {
         font-size: 12px;
