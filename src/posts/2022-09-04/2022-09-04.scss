@@ -8,27 +8,27 @@
 .detail-pointer {
     position: relative;
     &__circle {
-        --size: clamp(60px, 32vw - 43px, 150px);
         position: absolute;
         right: 12%;
-        top: 6%;
-        width: calc(min(10vw, 40px) + var(--size));
-        height: var(--size);
+        top: 7%;
+        width: min(29.5vw, 300px);
+        height: min(15.7vw, 160px);
         background: transparent;
         border-radius: 50%;
         transform: translate(50%, -50%);
-        border: dashed 8px var(--color-primary);
+        border: dashed clamp(4px, 0.8vw, 6px) var(--color-slant-overlap);
     }
 
     &__arrow {
         position: absolute;
-        --size: clamp(60px, 32vw - 43px, 150px);
+        --size: min(14.7vw, 150px);
         height: var(--size);
         width:var(--size);
-        left: 50%;
-        top: 10%;
-        fill: var(--color-primary);
-        transform: rotate(-40deg);
+        left: 73%;
+        top: 14%;
+        fill: var(--color-slant-overlap);
+        transform-origin: 100% 64%;
+        transform: translate(-100%, -64%) rotate(-36deg);
     }
 
     img {
