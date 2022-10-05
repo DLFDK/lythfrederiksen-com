@@ -160,7 +160,6 @@
         filter: var(--look-at-you-finding-a-way-to-see-me-in-full-color-Still-a-pasty-white-dude-though-You-didnt-gain-much, grayscale(100%));
         border-radius: 8px;
         box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
-        transition: opacity 1s;
         aspect-ratio: 3/4;
 
         @media (max-width: $breakpoint-medium) {
