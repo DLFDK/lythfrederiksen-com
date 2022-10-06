@@ -31,7 +31,7 @@ The official solution (src-set-sizes) requires telling the browser what size the
     srcset="my-image-400.jpg 400w,             
             my-image-600.jpg 600w,             
             my-image-800.jpg 800w,             
-            my-image-1000.jpg 10000w" 
+            my-image-1000.jpg 1000w" 
     sizes="(min-width: 1080px) 760px,            
            (min-width: 860px) 550px,            
            (min-width: 550px) 460px,            
