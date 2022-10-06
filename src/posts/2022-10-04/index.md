@@ -48,7 +48,7 @@ To get the number of sites down to a more manageable size, those with less than 
 
 Of the remaining 5241 sites, 528 returned errors upon running the audit, resulting in 4713 completed. Each audit took between 10 and 40 seconds to finish.
 
-Part of the PageSpeed Insights audit is a report on real world performance metrics collected by actual users as part of CrUX. However, not every site had enough data collected on it to compute these metrics, leaving some or all of these fields empty in the audit. Websites without all metrics available were filtered out. 3373 websites were left.
+Part of the PageSpeed Insights audit is a report on real world performance metrics collected by actual users as part of [CrUX](https://developer.chrome.com/docs/crux/). However, not every site had enough data collected on it to compute these metrics, leaving some or all of these fields empty in the audit. Websites without all metrics available were filtered out. 3373 websites were left.
 
 Each audit was delivered as a JSON-file and then parsed with Node.
 
@@ -335,7 +335,7 @@ Let's take a look at the distribution of those overall classifications:
 
 The number of sites that can offer a Good experience to most users shrinks considerably. Now only 18% get that. At least Poor remains the minority!
 
-It should also be noted that these real world metrics are from a very particular subset of users: [those who use Chrome (iOS-version not included), have enabled usage statistic reporting and and sync their browser history](https://developer.chrome.com/docs/crux/methodology/#user-eligibility).
+It should also be noted that these real world metrics are from a very particular subset of users: [those who use Chrome (iOS-version not included), have enabled usage statistic reporting and sync their browser history](https://developer.chrome.com/docs/crux/methodology/#user-eligibility).
 
 </section>
 
