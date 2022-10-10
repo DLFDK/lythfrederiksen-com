@@ -11,9 +11,9 @@
         <nav class="navigation">
             <ul>
                 {% if params.item.data.home === "blog" %}
-                <li><a aria-label="See all blog posts in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                <li><a aria-label="See all blog posts in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}/">{{params.item.data.category}}</a></li>
                 {% else %}
-                <li><a aria-label="See all projects in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}">{{params.item.data.category}}</a></li>
+                <li><a aria-label="See all projects in the category" href="/{{params.item.data.home}}/{{params.item.data.category | lower}}/">{{params.item.data.category}}</a></li>
                 {% endif %}
             </ul>
         </nav>
