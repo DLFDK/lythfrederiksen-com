@@ -8,6 +8,7 @@ style: posts/2022-10-04/2022-10-04.scss
 scripts: ["/js/lazyfit.js"]
 snippet: "I ran 5241 popular Danish webshops through PageSpeed Insights to finally put my low opinion of them to the test. Are they objectively as bad as I’ve suspected? The title above may spoil the result. Read on anyway!"
 img: /images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.23.29_-_A_tiny_race_car_with_an_extremely_overweight_elephant_on_its_roof__sharpened_peUXawLdP.png
+img_alt: Black and white pencil drawing, an elephant is straddling a race car, its stomach resting on the roof. The race car is slightly crushed.
 ---
 
 <section>
@@ -345,7 +346,7 @@ It should also be noted that these real world metrics are from a very particular
 
 It can be tempting to ignore the terrible results from the simulated Moto G4 and focus on the real world user metrics. After all, it’s the real users who count, right? Clearly, they’re mostly getting a decent experience. And only real users can turn into real customers! 
 
-<img class="lazyfit img-float img-float--left img-float--pop-500" style="aspect-ratio: 1683/908; shape-outside: polygon(1.18% 10.95%, -0.93% 99.6%, 79.71% 101.52%, 97.91% 49.23%, 83.47% 11.03%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.39.54_-_A_tiny_pickup_truck_with_an_extremely_overweight_elephant_on_its_truckbed__cropped_QbIZYSvJO.png?tr=w-{width}" alt="">
+<img class="lazyfit img-float img-float--left img-float--pop-500" style="aspect-ratio: 1683/908; shape-outside: polygon(1.18% 10.95%, -0.93% 99.6%, 79.71% 101.52%, 97.91% 49.23%, 83.47% 11.03%);" data-add-class="lazyfit--show" data-src="/images/https://ik.imagekit.io/dlfdk/lythfrederiksen/blog/Posts/performance-wanted/DALL_E_2022-10-03_08.39.54_-_A_tiny_pickup_truck_with_an_extremely_overweight_elephant_on_its_truckbed__cropped_QbIZYSvJO.png?tr=w-{width}" alt="Black and white pencil drawing, an elephant is sitting in the cargo bed of a pickup truck, barely fitting in.">
 
 But before you do so, go ahead and look up your conversion rates by device type. Maybe you already know what I’m hinting at. Could it be that your much lower conversion rate on mobile is in part due to the terrible performance those mobile users are likely to experience?
 
