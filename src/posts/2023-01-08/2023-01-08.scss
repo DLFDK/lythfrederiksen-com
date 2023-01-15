@@ -1,0 +1,105 @@
+@use "sass:math";
+@use "global/_variables/general.scss" as *;
+@use "global/_variables/fonts.scss" as *;
+@use "global/_variables/colors.scss" as *;
+@use "blog/blog-post.scss";
+@use "global/fonts/font-face-code.scss";
+
+figure {
+    max-width: 600px;
+    margin: 0 auto;
+    color: $stripe-cloud-blue;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-regular;
+    letter-spacing: $letter-spacing-copy;
+    text-align: center;
+    margin-top: var(--default-top-margin);
+}
+
+figcaption {
+    margin-top: 8px;
+    margin-bottom: -4px;
+    font-style: italic;
+
+    @media (max-width: 400px) {
+        font-size: $font-size-smaller;
+    }
+}
+
+
+.histogram {
+    margin-top: calc(var(--default-top-margin) + 16px);
+    --column-gap: 8px;
+    max-width: 400px;
+
+    &__bars {
+        height: min(50vw, 300px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--column-gap);
+        align-items: end;
+
+        & > div {
+            border-radius: 4px;
+            background: var(--color-gradient-2);
+            height: var(--height);
+            transition: opacity var(--transition-duration);
+
+            &::before {
+                transform: translateY(-110%);
+                display: block;
+                font-size: $font-size-regular;
+                transition: transform var(--transition-duration);
+
+                @media (max-width: 600px) {
+                    font-size: $font-size-regular;
+                }
+                @media (max-width: 500px) {
+                    font-size: $font-size-small;
+                }
+                @media (max-width: 400px) {
+                    font-size: $font-size-smaller;
+                }
+            }
+
+            &:hover {
+                opacity: 0.9;
+
+                &::before {
+                    transform: scale(1.2) translateY(-100%);
+                }
+            }
+        }
+
+        & > div:nth-child(1)::before {
+            content: "2 kB";
+        }
+        & > div:nth-child(2)::before {
+            content: "0.15 kB";
+        }
+        & > div:nth-child(3)::before {
+            content: "0.07 kB";
+        }
+    }
+
+    &__labels {
+        column-gap: var(--column-gap);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 20px;
+
+        & div:nth-child(2){
+            width: 150%;
+            justify-self: center;
+        }
+
+        @media (max-width: 500px) {
+            font-size: $font-size-small;
+        }
+        @media (max-width: 400px) {
+            font-size: $font-size-smaller;
+        }
+    }
+}
