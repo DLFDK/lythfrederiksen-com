@@ -41,6 +41,7 @@ Here's what the CSS could look like:
 @font-face {
     font-family: "Roboto Flex";
     src: url("/greek-alphabet-lowercase.woff2") format('woff2');
+    font-weight: 300 800;
     unicode-range: U+03B1-U+03C9;
 }
 ```
@@ -65,11 +66,13 @@ It will look something like this:
 @font-face {
     font-family: "Roboto Flex";
     src: url("U+a0.woff2") format('woff2');
+    font-weight: 300 800;
     unicode-range: U+a0;
 }
 @font-face {
     font-family: "Roboto Flex";
     src: url("U+20.woff2") format('woff2');
+    font-weight: 300 800;
     unicode-range: U+20;
 }
 ...
